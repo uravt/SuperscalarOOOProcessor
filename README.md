@@ -1,5 +1,5 @@
 # Prerequisites and description
-The prerequisites and description of tasks are in the document on Piazza. Use this to set up your machine with the required cross compilers and tools necessary.
+The prerequisites and description of tasks are in the document on Piazza/Course website. Use this to set up your machine with the required cross compilers and tools necessary.
 
 # Prepare test program to simulate
 `mipsel-linux-gnu-gcc -mips32 <path-to-benchmark-source> -nostartfiles -Ttext=0 -o <path-to-benchmark-executable>`
