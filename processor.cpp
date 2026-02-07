@@ -121,13 +121,60 @@ void Processor::pipelined_processor_advance() {
     
 }
 
+//pipeline registers
+//values got based on diagram registers in and out
+//data types based on single processor implementation
+struct IF_ID
+{
+    uint32_t pc;
+    uint32_t instruction
+}
+struct ID_EX
+{
+    uint32_t pc;
+    uint32_t read_data_1;
+    uint32_t read_data_2;
+    uint32_t imm; //instruction[15-0]
+    int rt; //instruction[20-16]
+    int rd; //instruction[15-11]
+    //Control controlSigs //QUESTION does the register need control signal in/out
+}
+struct EX_MEM
+{
+    uint32_t branch_target; //NOTE: not found in single impentation?? 
+    uint32_t alu_zero;
+    uint32_t alu_out;
+    uint32_t write_data_mem;
+    int write_reg;
+}
+struct MEM_WB
+{
+    uint32_t read_data_mem;
+    uint32_t alu_out;
+    int write_reg;
+}
+
+//two structs for reg in and reg out
+//set reg out = reg in when stepping. dont set when stalling
+//stage funcs modify reg in, processor step sets reg out
+IF_ID if_id_in, if_id_out;
+ID_EX id_ex_in, id_ex_out;
+EX_MEM ex_mem_in, ex_mem_out;
+MEM_WB mem_wb_in, mem_wb_out;
+
+
+
 void* fetch_stage(void* arg) {
     return NULL;
 }
 
+
+
 void* decode_stage(void* arg) {
     return NULL;
 }
+
+
 
 void* execute_stage(void* arg) {
     return NULL;
