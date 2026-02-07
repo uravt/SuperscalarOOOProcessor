@@ -118,11 +118,12 @@ void Processor::pipelined_processor_advance() {
     // pipelined processor logic goes here
     // does nothing currently -- if you call it from the cmd line, you'll run into an infinite loop
     // might be helpful to implement stages in a separate module
-    fetch_stage(NULL);
-    decode_stage(NULL);
-    execute_stage(NULL);
-    memory_stage(NULL);
-    writeback_stage(NULL);
+    writeback_stage();
+    memory_stage();
+    execute_stage();
+    decode_stage();
+    fetch_stage();
+
     //NOTE: all these null and unused return values feel off
     //intended implementation was probably something close to writeback_stage(memory_stage(execute_stage(decode_stage(fetch_stage(NULL)))));
 
@@ -168,21 +169,12 @@ struct MEM_WB
     control_t control;
 };
 
-//two structs for reg in and reg out
-//set reg out = reg in when stepping. dont set when stalling
-//stage funcs modify reg in, processor step sets reg out
-IF_ID if_id_in, if_id_out;
-ID_EX id_ex_in, id_ex_out;
-EX_MEM ex_mem_in, ex_mem_out;
-MEM_WB mem_wb_in, mem_wb_out;
-
-
 //arg input should be if_id_in?? return should also be if_id_in??
 //im just going to use globals
 
 //these methods are basically copy and paste from single cycle implentaion 
 //but some inputs are from previous reg_out and outputs are put in the next reg_in
-void* fetch_stage(void* arg) {
+void Processor::fetch_stage() {
     // fetch
     uint32_t instruction;
     memory->access(regfile.pc, instruction, 0, 1, 0);
@@ -192,12 +184,11 @@ void* fetch_stage(void* arg) {
 
     if_id_in.instruction = instruction;
     if_id_in.pc = regfile.pc;
-    return NULL;//what do i return???
 }
 
 
 
-void* decode_stage(void* arg) {
+void Processor::decode_stage() {
     control.decode(if_id_out.instruction);
     DEBUG(control.print());
 
@@ -224,12 +215,11 @@ void* decode_stage(void* arg) {
     id_ex_in.control = control;
     id_ex_in.opcode = opcode; //WARNING: NOT FOUND IN DIAGRAM. LOGIC MAY BE OFF
     //id_ex_in.control_EX is connected to control.ALU_src, ALU_op and RegDst
-    return NULL;
 }
 
 
 
-void* execute_stage(void* arg) {
+void Processor::execute_stage() {
     // Execution 
     alu.generate_control_inputs(id_ex_out.control.ALU_op, id_ex_out.imm & 0x3f, id_ex_out.opcode);
    
@@ -245,8 +235,6 @@ void* execute_stage(void* arg) {
     uint32_t alu_zero = 0;
 
     uint32_t alu_result = alu.execute(operand_1, operand_2, alu_zero);
-    
-    
 
     ex_mem_in.branch_target = id_ex_out.pc + (imm << 2); //NOTE: accurate???
     ex_mem_in.alu_zero = alu_zero;
@@ -254,10 +242,9 @@ void* execute_stage(void* arg) {
     ex_mem_in.write_data_mem = id_ex_out.read_data_2;
     ex_mem_in.write_reg = id_ex_out.control.reg_dest ? id_ex_out.rd : id_ex_out.rt;//from end of single cycle.
     ex_mem_in.control = id_ex_out.control;
-    return NULL;
 }
 
-void* memory_stage(void* arg) {
+void Processor::memory_stage() {
     uint32_t read_data_mem = 0;
     uint32_t write_data_mem = 0;
     // Memory
@@ -276,19 +263,16 @@ void* memory_stage(void* arg) {
 
     uint32_t write_data = ex_mem_out.control.link ? regfile.pc+8 : ex_mem_out.control.mem_to_reg ? read_data_mem : ex_mem_out.alu_out;  //NOTE: unused?
 
-
     //WARNING WARNING WARNIGN: PCSrc set is NOT IMPLEMENTATED
     //control does not have a PCSrc field
     mem_wb_in.read_data_mem = read_data_mem;
     mem_wb_in.alu_out = ex_mem_out.alu_out;
     mem_wb_in.write_reg = ex_mem_out.write_reg;
     mem_wb_in.control = ex_mem_out.control;
-    return NULL;
 }
 
-void* writeback_stage(void* arg) {
+void Processor::writeback_stage() {
     uint32_t read_data_2 = 0; //NOTE: i think the single cycle reused a variable. shouldnt matter as this access is just a write
     uint32_t write_data = mem_wb_out.control.mem_to_reg ?  mem_wb_out.read_data_mem : mem_wb_out.alu_out;
     regfile.access(0, 0, read_data_2, read_data_2, mem_wb_out.write_reg, mem_wb_out.control.reg_write, write_data);
-    return NULL;
 }
