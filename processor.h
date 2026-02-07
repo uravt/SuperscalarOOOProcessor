@@ -27,8 +27,11 @@ class Processor {
             uint32_t imm; //instruction[15-0]
             int rt; //instruction[20-16]
             int rd; //instruction[15-11]
-            control_t control;
             uint32_t opcode;
+            uint32_t funct;
+            uint32_t shamt;
+            control_t control;
+            
         };
         struct EX_MEM
         {
