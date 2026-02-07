@@ -1,5 +1,6 @@
 #include <cstdint>
 #include <iostream>
+#include "pipeline.h"
 #include "processor.h"
 using namespace std;
 
@@ -118,4 +119,13 @@ void Processor::pipelined_processor_advance() {
     // pipelined processor logic goes here
     // does nothing currently -- if you call it from the cmd line, you'll run into an infinite loop
     // might be helpful to implement stages in a separate module
+
+    Pipeline pipeline{this};
+
+    pipeline.fetch();
+    pipeline.decode();
+    pipeline.execute();
+    pipeline.memory();
+    pipeline.writeback();
+    
 }

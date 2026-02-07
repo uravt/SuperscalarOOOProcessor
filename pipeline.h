@@ -5,6 +5,7 @@ class Pipeline {
         Processor *processor;
 
     public:
+        Pipeline(Processor *processor) {this->processor = processor;};
         void fetch();
         void decode();
         void execute();
