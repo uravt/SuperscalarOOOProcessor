@@ -124,9 +124,6 @@ void Processor::pipelined_processor_advance() {
     decode_stage();
     fetch_stage();
 
-    //NOTE: all these null and unused return values feel off
-    //intended implementation was probably something close to writeback_stage(memory_stage(execute_stage(decode_stage(fetch_stage(NULL)))));
-
     if_id_out = if_id_in;
     id_ex_out = id_ex_in;
     ex_mem_out = ex_mem_in;
