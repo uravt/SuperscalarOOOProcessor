@@ -218,7 +218,7 @@ void Processor::decode_stage() {
 
 void Processor::execute_stage() {
     // Execution 
-    alu.generate_control_inputs(id_ex_out.control.ALU_op, id_ex_out.imm & 0x3f, id_ex_out.opcode);
+    alu.generate_control_inputs(id_ex_out.control.ALU_op, id_ex_out.funct, id_ex_out.opcode);
    
     // Sign Extend Or Zero Extend the immediate
     // Using Arithmetic right shift in order to replicate 1 
@@ -227,7 +227,7 @@ void Processor::execute_stage() {
     // Find operands for the ALU Execution
     // Operand 1 is always R[rs] -> read_data_1, except sll and srl
     // Operand 2 is immediate if ALU_src = 1, for I-type
-    uint32_t operand_1 = id_ex_out.read_data_1;
+    uint32_t operand_1 = id_ex_out.control.shift ? id_ex_out.shamt : id_ex_out.read_data_1;
     uint32_t operand_2 = id_ex_out.control.ALU_src ? imm : id_ex_out.read_data_2;
     uint32_t alu_zero = 0;
 
