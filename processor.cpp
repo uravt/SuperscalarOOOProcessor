@@ -137,7 +137,9 @@ struct ID_EX
     uint32_t imm; //instruction[15-0]
     int rt; //instruction[20-16]
     int rd; //instruction[15-11]
-    //Control controlSigs //QUESTION does the register need control signal in/out
+    bool control_WB;
+    bool control_M;
+    bool control_EX
 }
 struct EX_MEM
 {
@@ -146,12 +148,15 @@ struct EX_MEM
     uint32_t alu_out;
     uint32_t write_data_mem;
     int write_reg;
+    bool control_WB;
+    bool control_M;
 }
 struct MEM_WB
 {
     uint32_t read_data_mem;
     uint32_t alu_out;
     int write_reg;
+    bool control_WB;
 }
 
 //two structs for reg in and reg out
@@ -188,6 +193,7 @@ void* decode_stage(void* arg) {
     DEBUG(control.print());
 
     // extract rs, rt, rd, imm, funct 
+    int opcode = (if_id_out.instruction >> 26) & 0x3f;
     int rs = (if_id_out.instruction >> 21) & 0x1f;
     int rt = (if_id_out.instruction >> 16) & 0x1f;
     int rd = (if_id_out.instruction >> 11) & 0x1f;
@@ -198,21 +204,50 @@ void* decode_stage(void* arg) {
     // Variables to read data into
     uint32_t read_data_1 = 0;
     uint32_t read_data_2 = 0;
-    
+    // Read from reg file
+    regfile.access(rs, rt, read_data_1, read_data_2, 0, 0, 0);
     id_ex_in.pc = if_id_out.pc;
     id_ex_in.read_data_1 = read_data_1;
     id_ex_in.read_data_2 = read_data_2;
     id_ex_in.imm = imm;
     id_ex_in.rt = rt;
     id_ex_in.rd = rd;
-    // Read from reg file
-    regfile.access(rs, rt, read_data_1, read_data_2, 0, 0, 0);
+    id_ex_in.control_WB = control.reg_write; //determined from single cycle processor diagram
+    id_ex_in.control_M = control.mem_write;
+    id_ex_in.control_EX = control.ALU_src; //WARNING: I am not confident about these values. where should the control sigs come from
+    //id_ex_in.control_EX is connected to control.ALU_src, ALU_op and RegDst
     return NULL;
 }
 
 
 
 void* execute_stage(void* arg) {
+    // Execution 
+    alu.generate_control_inputs(control.ALU_op, funct, opcode);
+   
+    // Sign Extend Or Zero Extend the immediate
+    // Using Arithmetic right shift in order to replicate 1 
+    imm = control.zero_extend ? id_ex_out.imm : (id_ex_out.imm >> 15) ? 0xffff0000 | id_ex_out.imm : id_ex_out.imm;
+    
+    // Find operands for the ALU Execution
+    // Operand 1 is always R[rs] -> read_data_1, except sll and srl
+    // Operand 2 is immediate if ALU_src = 1, for I-type
+    uint32_t operand_1 = id_ex_out.read_data_1;
+    uint32_t operand_2 = id_ex_out.control_EX ? imm : id_ex_out.read_data_2;
+    uint32_t alu_zero = 0;
+
+    uint32_t alu_result = alu.execute(operand_1, operand_2, alu_zero);
+    
+    
+    uint32_t read_data_mem = 0;
+    uint32_t write_data_mem = 0;
+
+
+    ex_mem_in.branch_target = id_ex_out.pc + (id_ex_in.imm << 2) //NOTE: accurate???
+    ex_mem_in.alu_zero = alu_zero;
+    ex_mem_in.alu_out = alu_result;
+    ex_mem_in.write_data_mem = id_ex_out.read_data_2;
+    ex_mem_in.write_reg = id_ex_out.control_EX? id_ex_out.rd : id_ex_out.rt;//from line 105
     return NULL;
 }
 
