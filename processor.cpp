@@ -118,7 +118,18 @@ void Processor::pipelined_processor_advance() {
     // pipelined processor logic goes here
     // does nothing currently -- if you call it from the cmd line, you'll run into an infinite loop
     // might be helpful to implement stages in a separate module
-    
+    fetch_stage(NULL);
+    decode_stage(NULL);
+    execute_stage(NULL);
+    memory_stage(NULL);
+    writeback_stage(NULL);
+    //NOTE: all these null and unused return values feel off
+    //intended implementation was probably something close to writeback_stage(memory_stage(execute_stage(decode_stage(fetch_stage(NULL)))));
+
+    if_id_out = if_id_in;
+    id_ex_out = id_ex_in;
+    ex_mem_out = ex_mem_in;
+    mem_wb_out = mem_wb_in;
 }
 
 //pipeline registers
