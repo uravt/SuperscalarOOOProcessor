@@ -7,7 +7,10 @@ EXE_NAME=processor
 SRCS := main.cpp memory.cpp processor.cpp
 OBJS := $(SRCS:.cpp=.o)
 
-.PHONY: all clean
+ZIP_NAME = submission.zip
+ZIP_FILES = main.cpp memory.cpp processor.cpp regfile.h ALU.h control.h processor.h memory.h
+
+.PHONY: all clean zip
 
 all: $(EXE_NAME)
 
@@ -17,6 +20,9 @@ $(EXE_NAME): $(OBJS)
 processor.o: regfile.h ALU.h control.h processor.h
 memory.o: memory.h
 main.o: memory.h processor.h
+
+zip:
+	zip $(ZIP_NAME) $(ZIP_FILES)
 
 clean:
 	$(RM) $(EXE_NAME) $(OBJS)
