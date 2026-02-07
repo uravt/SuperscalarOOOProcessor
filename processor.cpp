@@ -179,6 +179,9 @@ void Processor::decode_stage() {
     id_ex_in.imm = imm;
     id_ex_in.rt = rt;
     id_ex_in.rd = rd;
+    id_ex_in.shamt = shamt;
+    id_ex_in.funct = funct;
+    id_ex_in.addr = addr;
     id_ex_in.control = control;
     id_ex_in.opcode = opcode; //WARNING: NOT FOUND IN DIAGRAM. LOGIC MAY BE OFF
     //id_ex_in.control_EX is connected to control.ALU_src, ALU_op and RegDst
@@ -208,6 +211,8 @@ void Processor::execute_stage() {
     ex_mem_in.alu_out = alu_result;
     ex_mem_in.write_data_mem = id_ex_out.read_data_2;
     ex_mem_in.write_reg = id_ex_out.control.reg_dest ? id_ex_out.rd : id_ex_out.rt;//from end of single cycle.
+    ex_mem_in.addr = id_ex_out.addr;
+    ex_mem_in.branch_reg = id_ex_out.read_data_1;
     ex_mem_in.control = id_ex_out.control;
 }
 
@@ -230,6 +235,8 @@ void Processor::memory_stage() {
 
     uint32_t write_data = ex_mem_out.control.link ? regfile.pc+8 : ex_mem_out.control.mem_to_reg ? read_data_mem : ex_mem_out.alu_out;  //NOTE: unused?
 
+    regfile.pc = (ex_mem_out.control.branch && !ex_mem_out.control.bne && ex_mem_out.alu_zero) || (ex_mem_out.control.bne && !ex_mem_out.alu_zero) ? ex_mem_out.branch_target : 0; 
+    regfile.pc = ex_mem_out.control.jump_reg ? ex_mem_out.branch_reg : ex_mem_out.control.jump ? (regfile.pc & 0xf0000000) & (ex_mem_out.addr << 2): regfile.pc;
     //WARNING WARNING WARNIGN: PCSrc set is NOT IMPLEMENTATED
     //control does not have a PCSrc field
     mem_wb_in.read_data_mem = read_data_mem;

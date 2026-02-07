@@ -34,6 +34,7 @@ class Processor {
             uint32_t opcode;
             uint32_t funct;
             uint32_t shamt;
+            uint32_t addr;
             control_t control;
             string toString() const 
             {
@@ -47,6 +48,8 @@ class Processor {
             uint32_t alu_out;
             uint32_t write_data_mem;
             int write_reg;
+            uint32_t addr;
+            uint32_t branch_reg;
             control_t control;
             string toString() const
             {
