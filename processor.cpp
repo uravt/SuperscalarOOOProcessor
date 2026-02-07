@@ -239,22 +239,49 @@ void* execute_stage(void* arg) {
     uint32_t alu_result = alu.execute(operand_1, operand_2, alu_zero);
     
     
-    uint32_t read_data_mem = 0;
-    uint32_t write_data_mem = 0;
-
 
     ex_mem_in.branch_target = id_ex_out.pc + (id_ex_in.imm << 2) //NOTE: accurate???
     ex_mem_in.alu_zero = alu_zero;
     ex_mem_in.alu_out = alu_result;
     ex_mem_in.write_data_mem = id_ex_out.read_data_2;
-    ex_mem_in.write_reg = id_ex_out.control_EX? id_ex_out.rd : id_ex_out.rt;//from line 105
+    ex_mem_in.write_reg = id_ex_out.control_EX ? id_ex_out.rd : id_ex_out.rt;//from end of single cycle.
+    ex_mem_in.control_WB = id_ex_out.control_WB;
+    ex_mem_in.control_M = id_ex_out.control_M;
     return NULL;
 }
 
 void* memory_stage(void* arg) {
+    uint32_t read_data_mem = 0;
+    uint32_t write_data_mem = 0;
+    // Memory
+    // First read no matter whether it is a load or a store
+    memory->access(ex_mem_out.alu_out, read_data_mem, 0, ex_mem_out.control_M  | ex_mem_out.control_M , 0);
+    // Stores: sb or sh mask and preserve original leftmost bits
+    /*write_data_mem = control.halfword ? (read_data_mem & 0xffff0000) | (read_data_2 & 0xffff) : 
+                    control.byte ? (read_data_mem & 0xffffff00) | (read_data_2 & 0xff): read_data_2;*/
+    write_data_mem = ex_mem_out.write_data_mem;
+    // Write to memory only if mem_write is 1, i.e store
+    memory->access(ex_mem_out.alu_out, read_data_mem, write_data_mem, ex_mem_out.control_M , ex_mem_out.control_M);
+    // Loads: lbu or lhu modify read data by masking
+    read_data_mem &= control.halfword ? 0xffff : control.byte ? 0xff : 0xffffffff;
+
+    int write_reg = control.link ? 31 : control.reg_dest ? rd : rt;
+
+    uint32_t write_data = control.link ? regfile.pc+8 : control.mem_to_reg ? read_data_mem : alu_result;  //NOTE: unused?
+
+
+    //WARNING WARNING WARNIGN: PCSrc set is NOT IMPLEMENTATED
+    //control does not have a PCSrc field
+    mem_wb_in.read_data_mem = read_data_mem;
+    mem_wb_in.alu_out = ex_mem_out.alu_out;
+    mem_wb_in.write_reg = ex_mem.out.write_reg;
+    mem_wb_in.control_WB = ex_mem.out.control_WB;
     return NULL;
 }
 
 void* writeback_stage(void* arg) {
+    uint32_t read_data2 = 0; //NOTE: i think the single cycle reused a variable. shouldnt matter as this access is just a write
+    uint32_t write_data = mem_wb_out.control_WB ?  mem_wb_out.read_data_mem : mem_wb_out.alu_out
+    regfile.access(0, 0, read_data_2, read_data_2, mem_wb_out.write_reg, mem_wb_out.control_WB, write_data);
     return NULL;
 }
