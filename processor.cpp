@@ -133,38 +133,8 @@ void Processor::pipelined_processor_advance() {
 //pipeline registers
 //values got based on diagram registers in and out
 //data types based on single processor implementation
-struct IF_ID
-{
-    uint32_t pc;
-    uint32_t instruction;
-};
-struct ID_EX
-{
-    uint32_t pc;
-    uint32_t read_data_1;
-    uint32_t read_data_2;
-    uint32_t imm; //instruction[15-0]
-    int rt; //instruction[20-16]
-    int rd; //instruction[15-11]
-    control_t control;
-    uint32_t opcode;
-};
-struct EX_MEM
-{
-    uint32_t branch_target; //NOTE: not found in single impentation?? 
-    uint32_t alu_zero;
-    uint32_t alu_out;
-    uint32_t write_data_mem;
-    int write_reg;
-    control_t control;
-};
-struct MEM_WB
-{
-    uint32_t read_data_mem;
-    uint32_t alu_out;
-    int write_reg;
-    control_t control;
-};
+
+
 
 //arg input should be if_id_in?? return should also be if_id_in??
 //im just going to use globals

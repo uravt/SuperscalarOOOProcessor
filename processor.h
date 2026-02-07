@@ -17,6 +17,10 @@ class Processor {
         {
             uint32_t pc;
             uint32_t instruction;
+            string toString() const 
+            {
+                return std::format("pc: {}|instruction:{}");
+            }
         };
 
         struct ID_EX
@@ -31,7 +35,10 @@ class Processor {
             uint32_t funct;
             uint32_t shamt;
             control_t control;
-            
+            string toString() const 
+            {
+                return std::format("pc: {}|read_data_1:{}|read_data_2{}|imm{}|rt{}|rd{}|opcode{}|funct{}|shamt{}|control{}", pc, read_data_1, read_data_2, imm, rt, rd, opcode, funct, sham, control);
+            }
         };
         struct EX_MEM
         {
@@ -41,6 +48,10 @@ class Processor {
             uint32_t write_data_mem;
             int write_reg;
             control_t control;
+            string toString() const
+            {
+                return std::format("branch_target{}|alu_zero{}|alu_out{}|write_data_mem{}|write_reg{}|control{}", branch_target, alu_zero, alu_out, write_data_mem, write_reg, control)
+            }
         };
         struct MEM_WB
         {
@@ -48,6 +59,10 @@ class Processor {
             uint32_t alu_out;
             int write_reg;
             control_t control;
+            string toString() const
+            {
+                return std::formot("read_data_mem{}|alu_out{}|write_reg{}|control{}", read_data_mem, alu_out, write_reg, control)
+            }
         };
 
         //two structs for reg in and reg out
