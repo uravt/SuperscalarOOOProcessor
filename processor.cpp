@@ -163,14 +163,50 @@ EX_MEM ex_mem_in, ex_mem_out;
 MEM_WB mem_wb_in, mem_wb_out;
 
 
+//arg input should be if_id_in?? return should also be if_id_in??
+//im just going to use globals
 
+//these methods are basically copy and paste from single cycle implentaion 
+//but some inputs are from previous reg_out and outputs are put in the next reg_in
 void* fetch_stage(void* arg) {
-    return NULL;
+    // fetch
+    uint32_t instruction;
+    memory->access(regfile.pc, instruction, 0, 1, 0);
+    DEBUG(cout << "\nPC: 0x" << std::hex << regfile.pc << std::dec << "\n");
+    // increment pc
+    reg_file.pc += 4;
+
+    if_id_in.instruction = instruction;
+    if_id_in.pc = reg_file.pc;
+    return NULL;//what do i return???
 }
 
 
 
 void* decode_stage(void* arg) {
+    control.decode(if_id_out.instruction);
+    DEBUG(control.print());
+
+    // extract rs, rt, rd, imm, funct 
+    int rs = (if_id_out.instruction >> 21) & 0x1f;
+    int rt = (if_id_out.instruction >> 16) & 0x1f;
+    int rd = (if_id_out.instruction >> 11) & 0x1f;
+    int shamt = (if_id_out.instruction >> 6) & 0x1f;
+    int funct = if_id_out.instruction & 0x3f;
+    uint32_t imm = (if_id_out.instruction & 0xffff);
+    int addr = if_id_out.instruction & 0x3ffffff;
+    // Variables to read data into
+    uint32_t read_data_1 = 0;
+    uint32_t read_data_2 = 0;
+    
+    id_ex_in.pc = if_id_out.pc;
+    id_ex_in.read_data_1 = read_data_1;
+    id_ex_in.read_data_2 = read_data_2;
+    id_ex_in.imm = imm;
+    id_ex_in.rt = rt;
+    id_ex_in.rd = rd;
+    // Read from reg file
+    regfile.access(rs, rt, read_data_1, read_data_2, 0, 0, 0);
     return NULL;
 }
 
