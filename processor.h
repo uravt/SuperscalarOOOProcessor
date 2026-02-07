@@ -10,9 +10,24 @@ class Processor {
         Memory *memory;
         Registers regfile;
         // add other structures as needed
+        struct DecodeData {
+            int opcode;
+            int rs;
+            int rd;
+            int shamt;
+            int funct;
+            uint32_t imm;
+            int addr;
+            uint32_t read_data_1;
+            uint32_t read_data_2;
+        };
 
         // pipelined processor
-
+        void* fetch_stage(void* arg);
+        void* decode_stage(void* arg);
+        void* execute_stage(void* arg);
+        void* memory_stage(void* arg);
+        void* writeback_stage(void* arg);
         // add private functions
         void single_cycle_processor_advance();
         void pipelined_processor_advance();
