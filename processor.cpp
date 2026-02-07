@@ -118,25 +118,158 @@ void Processor::pipelined_processor_advance() {
     // pipelined processor logic goes here
     // does nothing currently -- if you call it from the cmd line, you'll run into an infinite loop
     // might be helpful to implement stages in a separate module
+    writeback_stage();
+    memory_stage();
+    execute_stage();
+    decode_stage();
+    fetch_stage();
+
+    if_id_out = if_id_in;
+    id_ex_out = id_ex_in;
+    ex_mem_out = ex_mem_in;
+    mem_wb_out = mem_wb_in;
+}
+
+//pipeline registers
+//values got based on diagram registers in and out
+//data types based on single processor implementation
+struct IF_ID
+{
+    uint32_t pc;
+    uint32_t instruction;
+};
+struct ID_EX
+{
+    uint32_t pc;
+    uint32_t read_data_1;
+    uint32_t read_data_2;
+    uint32_t imm; //instruction[15-0]
+    int rt; //instruction[20-16]
+    int rd; //instruction[15-11]
+    control_t control;
+    uint32_t opcode;
+};
+struct EX_MEM
+{
+    uint32_t branch_target; //NOTE: not found in single impentation?? 
+    uint32_t alu_zero;
+    uint32_t alu_out;
+    uint32_t write_data_mem;
+    int write_reg;
+    control_t control;
+};
+struct MEM_WB
+{
+    uint32_t read_data_mem;
+    uint32_t alu_out;
+    int write_reg;
+    control_t control;
+};
+
+//arg input should be if_id_in?? return should also be if_id_in??
+//im just going to use globals
+
+//these methods are basically copy and paste from single cycle implentaion 
+//but some inputs are from previous reg_out and outputs are put in the next reg_in
+void Processor::fetch_stage() {
+    // fetch
+    uint32_t instruction;
+    memory->access(regfile.pc, instruction, 0, 1, 0);
+    DEBUG(cout << "\nPC: 0x" << std::hex << regfile.pc << std::dec << "\n");
+    // increment pc
+    regfile.pc += 4;//WARNING: In single cycle PC is updated at the end. verify that when adding branching pc is not updated twice.
+
+    if_id_in.instruction = instruction;
+    if_id_in.pc = regfile.pc;
+}
+
+
+
+void Processor::decode_stage() {
+    control.decode(if_id_out.instruction);
+    DEBUG(control.print());
+
+    // extract rs, rt, rd, imm, funct 
+    int opcode = (if_id_out.instruction >> 26) & 0x3f;
+    int rs = (if_id_out.instruction >> 21) & 0x1f;
+    int rt = (if_id_out.instruction >> 16) & 0x1f;
+    int rd = (if_id_out.instruction >> 11) & 0x1f;
+    int shamt = (if_id_out.instruction >> 6) & 0x1f;
+    int funct = if_id_out.instruction & 0x3f;
+    uint32_t imm = (if_id_out.instruction & 0xffff);
+    int addr = if_id_out.instruction & 0x3ffffff;
+    // Variables to read data into
+    uint32_t read_data_1 = 0;
+    uint32_t read_data_2 = 0;
+    // Read from reg file
+    regfile.access(rs, rt, read_data_1, read_data_2, 0, 0, 0);
+    id_ex_in.pc = if_id_out.pc;
+    id_ex_in.read_data_1 = read_data_1;
+    id_ex_in.read_data_2 = read_data_2;
+    id_ex_in.imm = imm;
+    id_ex_in.rt = rt;
+    id_ex_in.rd = rd;
+    id_ex_in.control = control;
+    id_ex_in.opcode = opcode; //WARNING: NOT FOUND IN DIAGRAM. LOGIC MAY BE OFF
+    //id_ex_in.control_EX is connected to control.ALU_src, ALU_op and RegDst
+}
+
+
+
+void Processor::execute_stage() {
+    // Execution 
+    alu.generate_control_inputs(id_ex_out.control.ALU_op, id_ex_out.imm & 0x3f, id_ex_out.opcode);
+   
+    // Sign Extend Or Zero Extend the immediate
+    // Using Arithmetic right shift in order to replicate 1 
+    uint32_t imm = id_ex_out.control.zero_extend ? id_ex_out.imm : (id_ex_out.imm >> 15) ? 0xffff0000 | id_ex_out.imm : id_ex_out.imm;
     
+    // Find operands for the ALU Execution
+    // Operand 1 is always R[rs] -> read_data_1, except sll and srl
+    // Operand 2 is immediate if ALU_src = 1, for I-type
+    uint32_t operand_1 = id_ex_out.read_data_1;
+    uint32_t operand_2 = id_ex_out.control.ALU_src ? imm : id_ex_out.read_data_2;
+    uint32_t alu_zero = 0;
+
+    uint32_t alu_result = alu.execute(operand_1, operand_2, alu_zero);
+
+    ex_mem_in.branch_target = id_ex_out.pc + (imm << 2); //NOTE: accurate???
+    ex_mem_in.alu_zero = alu_zero;
+    ex_mem_in.alu_out = alu_result;
+    ex_mem_in.write_data_mem = id_ex_out.read_data_2;
+    ex_mem_in.write_reg = id_ex_out.control.reg_dest ? id_ex_out.rd : id_ex_out.rt;//from end of single cycle.
+    ex_mem_in.control = id_ex_out.control;
 }
 
-void* fetch_stage(void* arg) {
-    return NULL;
+void Processor::memory_stage() {
+    uint32_t read_data_mem = 0;
+    uint32_t write_data_mem = 0;
+    // Memory
+    // First read no matter whether it is a load or a store
+    memory->access(ex_mem_out.alu_out, read_data_mem, 0, ex_mem_out.control.mem_read  | ex_mem_out.control.mem_write , 0);
+    // Stores: sb or sh mask and preserve original leftmost bits
+    /*write_data_mem = control.halfword ? (read_data_mem & 0xffff0000) | (read_data_2 & 0xffff) : 
+                    control.byte ? (read_data_mem & 0xffffff00) | (read_data_2 & 0xff): read_data_2;*/
+    write_data_mem = ex_mem_out.write_data_mem;
+    // Write to memory only if mem_write is 1, i.e store
+    memory->access(ex_mem_out.alu_out, read_data_mem, write_data_mem, ex_mem_out.control.mem_read , ex_mem_out.control.mem_write);
+    // Loads: lbu or lhu modify read data by masking
+    read_data_mem &= ex_mem_out.control.halfword ? 0xffff : ex_mem_out.control.byte ? 0xff : 0xffffffff;
+
+    int write_reg = ex_mem_out.control.link ? 31 : ex_mem_out.write_reg;
+
+    uint32_t write_data = ex_mem_out.control.link ? regfile.pc+8 : ex_mem_out.control.mem_to_reg ? read_data_mem : ex_mem_out.alu_out;  //NOTE: unused?
+
+    //WARNING WARNING WARNIGN: PCSrc set is NOT IMPLEMENTATED
+    //control does not have a PCSrc field
+    mem_wb_in.read_data_mem = read_data_mem;
+    mem_wb_in.alu_out = ex_mem_out.alu_out;
+    mem_wb_in.write_reg = ex_mem_out.write_reg;
+    mem_wb_in.control = ex_mem_out.control;
 }
 
-void* decode_stage(void* arg) {
-    return NULL;
-}
-
-void* execute_stage(void* arg) {
-    return NULL;
-}
-
-void* memory_stage(void* arg) {
-    return NULL;
-}
-
-void* writeback_stage(void* arg) {
-    return NULL;
+void Processor::writeback_stage() {
+    uint32_t read_data_2 = 0; //NOTE: i think the single cycle reused a variable. shouldnt matter as this access is just a write
+    uint32_t write_data = mem_wb_out.control.mem_to_reg ?  mem_wb_out.read_data_mem : mem_wb_out.alu_out;
+    regfile.access(0, 0, read_data_2, read_data_2, mem_wb_out.write_reg, mem_wb_out.control.reg_write, write_data);
 }
