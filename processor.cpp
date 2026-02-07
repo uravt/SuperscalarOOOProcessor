@@ -188,7 +188,7 @@ void* fetch_stage(void* arg) {
     memory->access(regfile.pc, instruction, 0, 1, 0);
     DEBUG(cout << "\nPC: 0x" << std::hex << regfile.pc << std::dec << "\n");
     // increment pc
-    regfile.pc += 4;
+    regfile.pc += 4;//WARNING: In single cycle PC is updated at the end. verify that when adding branching pc is not updated twice.
 
     if_id_in.instruction = instruction;
     if_id_in.pc = regfile.pc;
