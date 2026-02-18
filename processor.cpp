@@ -235,10 +235,14 @@ void Processor::memory_stage() {
 
     uint32_t write_data = ex_mem_out.control.link ? regfile.pc+8 : ex_mem_out.control.mem_to_reg ? read_data_mem : ex_mem_out.alu_out;  //NOTE: unused?
 
-    regfile.pc = (ex_mem_out.control.branch && !ex_mem_out.control.bne && ex_mem_out.alu_zero) || (ex_mem_out.control.bne && !ex_mem_out.alu_zero) ? ex_mem_out.branch_target : 0; 
-    regfile.pc = ex_mem_out.control.jump_reg ? ex_mem_out.branch_reg : ex_mem_out.control.jump ? (regfile.pc & 0xf0000000) & (ex_mem_out.addr << 2): regfile.pc;
-    //WARNING WARNING WARNIGN: PCSrc set is NOT IMPLEMENTATED
-    //control does not have a PCSrc field
+    /*
+    regfile.pc += (control.branch && !control.bne && alu_zero) || (control.bne && !alu_zero) ? imm << 2 : 0; 
+    regfile.pc = control.jump_reg ? read_data_1 : control.jump ? (regfile.pc & 0xf0000000) & (addr << 2): regfile.pc;
+    */
+    regfile.pc = (ex_mem_out.control.branch && !ex_mem_out.control.bne && ex_mem_out.alu_zero) || (ex_mem_out.control.bne && !ex_mem_out.alu_zero) ? ex_mem_out.branch_target : regfile.pc; 
+    //regfile.pc = ex_mem_out.control.jump_reg ? ex_mem_out.branch_reg : ex_mem_out.control.jump ? (regfile.pc & 0xf0000000) & (ex_mem_out.addr << 2): regfile.pc;
+    
+    //WARNING WARNING WARNIGN: JUMP REG IS UNIMPLEMENTED
     mem_wb_in.read_data_mem = read_data_mem;
     mem_wb_in.alu_out = ex_mem_out.alu_out;
     mem_wb_in.write_reg = ex_mem_out.write_reg;
