@@ -2,6 +2,9 @@
 #include "regfile.h"
 #include "ALU.h"
 #include "control.h"
+#include <sstream>
+#include <queue>
+#include <set>
 class Processor {
     private:
         int opt_level;
@@ -112,6 +115,8 @@ class Processor {
         ID_EX id_ex_in, id_ex_out;
         EX_MEM ex_mem_in, ex_mem_out;
         MEM_WB mem_wb_in, mem_wb_out;
+        std::queue<int> hazard_regs_queue;
+        std::set<int> hazard_regs_set;
 
         // pipelined processor
         void fetch_stage();
@@ -122,6 +127,9 @@ class Processor {
         // add private functions
         void single_cycle_processor_advance();
         void pipelined_processor_advance();
+        
+        void pop_hazard_regs();
+        void push_hazard_regs(int _reg);
  
     public:
         Processor(Memory *mem) { regfile.pc = 0; memory = mem;}

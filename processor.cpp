@@ -1,5 +1,7 @@
 #include <cstdint>
 #include <iostream>
+#include <queue>
+#include <set>
 #include "processor.h"
 using namespace std;
 
@@ -113,6 +115,16 @@ void Processor::single_cycle_processor_advance() {
     regfile.pc += (control.branch && !control.bne && alu_zero) || (control.bne && !alu_zero) ? imm << 2 : 0; 
     regfile.pc = control.jump_reg ? read_data_1 : control.jump ? (regfile.pc & 0xf0000000) & (addr << 2): regfile.pc;
 }
+void Processor::push_hazard_regs(int _reg)
+{
+    hazard_regs_queue.push(_reg);
+    hazard_regs_set.insert(_reg);
+}
+void Processor::pop_hazard_regs()
+{
+    hazard_regs_set.erase(hazard_regs_queue.front());
+    hazard_regs_queue.pop();
+}
 
 void Processor::pipelined_processor_advance() {
     // pipelined processor logic goes here
@@ -171,6 +183,9 @@ void Processor::decode_stage() {
     // Variables to read data into
     uint32_t read_data_1 = 0;
     uint32_t read_data_2 = 0;
+
+    
+
     // Read from reg file
     regfile.access(rs, rt, read_data_1, read_data_2, 0, 0, 0);
     id_ex_in.pc = if_id_out.pc;
@@ -183,8 +198,10 @@ void Processor::decode_stage() {
     id_ex_in.funct = funct;
     id_ex_in.addr = addr;
     id_ex_in.control = control;
-    id_ex_in.opcode = opcode; //WARNING: NOT FOUND IN DIAGRAM. LOGIC MAY BE OFF
-    //id_ex_in.control_EX is connected to control.ALU_src, ALU_op and RegDst
+    id_ex_in.opcode = opcode;
+    id_ex_in.forwarding = (opcode == 0) && (hazard_regs_set.find(rt) != hazard_regs_set.end() || hazard_regs_set.find(rs) != hazard_regs_set.end() || hazard_regs_set.find(rd) != hazard_regs_set.end());
+    push_hazard_regs(rd);
+    
 }
 
 
@@ -214,6 +231,13 @@ void Processor::execute_stage() {
     ex_mem_in.addr = id_ex_out.addr;
     ex_mem_in.branch_reg = id_ex_out.read_data_1;
     ex_mem_in.control = id_ex_out.control;
+
+    //forwarding
+    if(id_ex_in.forwarding)
+    {
+        id_ex_in.read_data_1 = alu_result;
+    }
+
 }
 
 void Processor::memory_stage() {

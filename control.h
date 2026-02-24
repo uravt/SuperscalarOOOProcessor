@@ -3,6 +3,7 @@
 #include <vector>
 #include <cstdint>
 #include <iostream>
+#include <ostream>
 using namespace std;
 
 // Control signals for the processor
@@ -23,7 +24,7 @@ struct control_t {
     bool ALU_src;            // 0 if second operand is from reg_file, 1 if imm
     bool reg_write;          // 1 if need to write back to reg file
     bool zero_extend;        // 1 if immediate needs to be zero-extended
-    
+
     void print() {      // Prints the generated contol signals
         cout << "REG_DEST: " << reg_dest << "\n";
         cout << "JUMP: " << jump << "\n";
@@ -141,8 +142,30 @@ struct control_t {
 
         }// end I-Type
     }
+    
 };
-
+    inline std::ostream& operator<<(std::ostream& os, const control_t& c)
+    {
+        os << "{"
+        << "reg_dest:" << c.reg_dest
+        << ", jump:" << c.jump
+        << ", jump_reg:" << c.jump_reg
+        << ", link:" << c.link
+        << ", shift:" << c.shift
+        << ", branch:" << c.branch
+        << ", bne:" << c.bne
+        << ", mem_read:" << c.mem_read
+        << ", mem_to_reg:" << c.mem_to_reg
+        << ", ALU_op:" << c.ALU_op
+        << ", mem_write:" << c.mem_write
+        << ", halfword:" << c.halfword
+        << ", byte:" << c.byte
+        << ", ALU_src:" << c.ALU_src
+        << ", reg_write:" << c.reg_write
+        << ", zero_extend:" << c.zero_extend
+        << "}";
+        return os;
+    }
 
 
 
