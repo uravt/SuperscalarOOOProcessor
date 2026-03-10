@@ -118,6 +118,7 @@ class Processor {
         MEM_WB mem_wb_in, mem_wb_out;
         std::queue<int> hazard_regs_queue;
         std::set<int> hazard_regs_set;
+        bool flush_pipeline = false;
 
         // pipelined processor
         void fetch_stage();

@@ -1,4 +1,5 @@
 #include <cstdint>
+#include <cstring>
 #include <iostream>
 #include <queue>
 #include <set>
@@ -13,7 +14,6 @@ using namespace std;
 #endif
 
 void Processor::initialize(int level) {
-    cout << "hi" << "\n";
     // Initialize Control
     control = {.reg_dest = 0, 
                .jump = 0,
@@ -72,7 +72,6 @@ void Processor::single_cycle_processor_advance() {
     uint32_t read_data_1 = 0;
     uint32_t read_data_2 = 0;
 
-    cout << "Rd: " << rd << "\n";
     
     // Read from reg file
     regfile.access(rs, rt, read_data_1, read_data_2, 0, 0, 0);
@@ -159,6 +158,14 @@ void Processor::pipelined_processor_advance() {
 //but some inputs are from previous reg_out and outputs are put in the next reg_in
 void Processor::fetch_stage() {
     // fetch
+    if(flush_pipeline) {
+        cout << "here" << "\n";
+        memset(&if_id_in, 0, sizeof(if_id_in));
+
+        flush_pipeline = false;
+        return;
+    }
+
     uint32_t instruction;
     memory->access(regfile.pc, instruction, 0, 1, 0);
     DEBUG(cout << "\nPC: 0x" << std::hex << regfile.pc << std::dec << "\n");
@@ -172,8 +179,13 @@ void Processor::fetch_stage() {
 
 
 void Processor::decode_stage() {
+    if(flush_pipeline) {
+        memset(&id_ex_in, 0, sizeof(id_ex_in));
+        return;
+    }
+
     control.decode(if_id_out.instruction);
-    DEBUG(control.print());
+    DEBUG(if_id_out.toString());
 
     // extract rs, rt, rd, imm, funct 
     int opcode = (if_id_out.instruction >> 26) & 0x3f;
@@ -183,7 +195,8 @@ void Processor::decode_stage() {
     int shamt = (if_id_out.instruction >> 6) & 0x1f;
     int funct = if_id_out.instruction & 0x3f;
     uint32_t imm = (if_id_out.instruction & 0xffff);
-    cout << rs << "\n";
+    cout << "imm: " << imm << "\n";
+    cout << rt << "\n";
     int addr = if_id_out.instruction & 0x3ffffff;
     // Variables to read data into
     uint32_t read_data_1 = 0;
@@ -193,6 +206,7 @@ void Processor::decode_stage() {
 
     // Read from reg file
     regfile.access(rs, rt, read_data_1, read_data_2, 0, 0, 0);
+        cout << "read_data " << read_data_1 << "\n";
     id_ex_in.pc = if_id_out.pc;
     id_ex_in.read_data_1 = read_data_1;
     id_ex_in.read_data_2 = read_data_2;
@@ -227,6 +241,26 @@ void Processor::execute_stage() {
     uint32_t alu_zero = 0;
 
     uint32_t alu_result = alu.execute(operand_1, operand_2, alu_zero);
+
+    bool branch_taken = id_ex_out.control.branch && 
+    ((id_ex_out.control.bne && !alu_zero) || 
+    (!id_ex_out.control.bne && alu_zero));
+
+    bool jump = id_ex_out.control.jump || id_ex_out.control.jump_reg;
+    
+    if(branch_taken || jump) {
+        if(branch_taken) {
+            regfile.pc = id_ex_out.pc + (imm << 2);
+        }
+        else if(id_ex_out.control.jump) {
+            regfile.pc = (id_ex_out.pc & 0xf0000000) | (id_ex_out.addr << 2);
+        } 
+        else {
+            regfile.pc = id_ex_out.read_data_1;
+        }
+
+        flush_pipeline = true;
+    }
 
     ex_mem_in.branch_target = id_ex_out.pc + (imm << 2); //NOTE: accurate???
     ex_mem_in.alu_zero = alu_zero;
@@ -268,8 +302,6 @@ void Processor::memory_stage() {
     regfile.pc += (control.branch && !control.bne && alu_zero) || (control.bne && !alu_zero) ? imm << 2 : 0; 
     regfile.pc = control.jump_reg ? read_data_1 : control.jump ? (regfile.pc & 0xf0000000) & (addr << 2): regfile.pc;
     */
-    regfile.pc = (ex_mem_out.control.branch && !ex_mem_out.control.bne && ex_mem_out.alu_zero) || (ex_mem_out.control.bne && !ex_mem_out.alu_zero) ? ex_mem_out.branch_target : regfile.pc; 
-    regfile.pc = ex_mem_out.control.jump_reg ? ex_mem_out.branch_reg : ex_mem_out.control.jump ? (regfile.pc & 0xf0000000) & (ex_mem_out.addr << 2): regfile.pc;
     
     //WARNING WARNING WARNIGN: JUMP REG IS UNIMPLEMENTED
     mem_wb_in.read_data_mem = read_data_mem;
