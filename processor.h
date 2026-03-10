@@ -25,8 +25,8 @@ class Processor {
         std::string toString() const
         {
             std::ostringstream oss;
-            oss << "pc:" << pc
-                << "|instruction:" << instruction;
+            oss << "pc:" << std::hex << pc
+                << "|instruction:" << std::hex << instruction;
             return oss.str();
         }
     };
@@ -49,17 +49,19 @@ class Processor {
         std::string toString() const
         {
             std::ostringstream oss;
-            oss << "pc:" << pc
-                << "|read_data_1:" << read_data_1
-                << "|read_data_2:" << read_data_2
-                << "|imm:" << imm
+            oss << "pc:" << std::hex << pc
+                << "|read_data_1:" << std::hex << read_data_1
+                << "|read_data_2:" << std::hex << read_data_2
+                << "|imm:" << std::hex << imm
                 << "|rt:" << rt
                 << "|rd:" << rd
-                << "|opcode:" << opcode
-                << "|funct:" << funct
+                << "|opcode:" << std::hex << opcode
+                << "|funct:" << std::hex << funct
                 << "|shamt:" << shamt
                 << "|addr:" << addr
-                << "|control:" << control;
+                << "|forwarding:" << forwarding
+                //<< "|control:" << control
+                ;
             return oss.str();
         }
     };
@@ -73,19 +75,22 @@ class Processor {
         int write_reg;
         uint32_t addr;
         uint32_t branch_reg;
+        bool forwarding;
         control_t control;
 
         std::string toString() const
         {
             std::ostringstream oss;
-            oss << "branch_target:" << branch_target
+            oss << "branch_target:" << std::hex << branch_target
                 << "|alu_zero:" << alu_zero
                 << "|alu_out:" << alu_out
                 << "|write_data_mem:" << write_data_mem
                 << "|write_reg:" << write_reg
-                << "|addr:" << addr
+                << "|addr:" << std::hex << addr
                 << "|branch_reg:" << branch_reg
-                << "|control:" << control;
+                << "|forwarding:" << forwarding
+                //<< "|control:" << control
+                ;
             return oss.str();
         }
     };
@@ -103,7 +108,8 @@ class Processor {
             oss << "read_data_mem:" << read_data_mem
                 << "|alu_out:" << alu_out
                 << "|write_reg:" << write_reg
-                << "|control:" << control;
+                //<< "|control:" << control
+                ;
             return oss.str();
         }
     };

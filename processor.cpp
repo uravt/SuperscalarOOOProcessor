@@ -13,7 +13,6 @@ using namespace std;
 #endif
 
 void Processor::initialize(int level) {
-    cout << "hi" << "\n";
     // Initialize Control
     control = {.reg_dest = 0, 
                .jump = 0,
@@ -72,7 +71,7 @@ void Processor::single_cycle_processor_advance() {
     uint32_t read_data_1 = 0;
     uint32_t read_data_2 = 0;
 
-    cout << "Rd: " << rd << "\n";
+    //cout << "Rd: " << rd << "\n";
     
     // Read from reg file
     regfile.access(rs, rt, read_data_1, read_data_2, 0, 0, 0);
@@ -126,8 +125,12 @@ void Processor::push_hazard_regs(int _reg)
 }
 void Processor::pop_hazard_regs()
 {
-    hazard_regs_set.erase(hazard_regs_queue.front());
-    hazard_regs_queue.pop();
+    if(!hazard_regs_queue.empty())
+    {
+        hazard_regs_set.erase(hazard_regs_queue.front());
+        hazard_regs_queue.pop();
+    }
+
 }
 
 void Processor::pipelined_processor_advance() {
@@ -144,6 +147,17 @@ void Processor::pipelined_processor_advance() {
     id_ex_out = id_ex_in;
     ex_mem_out = ex_mem_in;
     mem_wb_out = mem_wb_in;
+
+    DEBUG(std::cout << if_id_out.toString() << "\n";)
+    DEBUG(std::cout << id_ex_out.toString() << "\n";)
+    DEBUG(std::cout << ex_mem_out.toString() << "\n";)
+    DEBUG(std::cout << mem_wb_out.toString() << "\n";)
+    DEBUG(    
+        for (int const& r : hazard_regs_set)
+        {
+            std::cout << r << ' ';
+        }
+        ;)
 }
 
 //pipeline registers
@@ -206,6 +220,10 @@ void Processor::decode_stage() {
     id_ex_in.opcode = opcode;
     id_ex_in.forwarding = (opcode == 0) && (hazard_regs_set.find(rt) != hazard_regs_set.end() || hazard_regs_set.find(rs) != hazard_regs_set.end() || hazard_regs_set.find(rd) != hazard_regs_set.end());
     push_hazard_regs(rd);
+    if(hazard_regs_set.size() >= 3)
+    {
+        pop_hazard_regs();
+    }
     
 }
 
@@ -238,7 +256,7 @@ void Processor::execute_stage() {
     ex_mem_in.control = id_ex_out.control;
 
     //forwarding
-    if(id_ex_in.forwarding)
+    if(id_ex_out.forwarding)
     {
         id_ex_in.read_data_1 = alu_result;
     }
@@ -276,11 +294,15 @@ void Processor::memory_stage() {
     mem_wb_in.alu_out = ex_mem_out.alu_out;
     mem_wb_in.write_reg = ex_mem_out.write_reg;
     mem_wb_in.control = ex_mem_out.control;
+
+    if(ex_mem_out.forwarding)
+    {
+        id_ex_in.read_data_1 = ex_mem_in.alu_out;
+    }
 }
 
 void Processor::writeback_stage() {
     uint32_t read_data_2 = 0; //NOTE: i think the single cycle reused a variable. shouldnt matter as this access is just a write
     uint32_t write_data = mem_wb_out.control.mem_to_reg ?  mem_wb_out.read_data_mem : mem_wb_out.alu_out;
     regfile.access(0, 0, read_data_2, read_data_2, mem_wb_out.write_reg, mem_wb_out.control.reg_write, write_data);
-    pop_hazard_regs();
 }
