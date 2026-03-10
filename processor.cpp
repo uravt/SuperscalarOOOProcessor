@@ -267,7 +267,7 @@ void Processor::memory_stage() {
     regfile.pc = control.jump_reg ? read_data_1 : control.jump ? (regfile.pc & 0xf0000000) & (addr << 2): regfile.pc;
     */
     regfile.pc = (ex_mem_out.control.branch && !ex_mem_out.control.bne && ex_mem_out.alu_zero) || (ex_mem_out.control.bne && !ex_mem_out.alu_zero) ? ex_mem_out.branch_target : regfile.pc; 
-    //regfile.pc = ex_mem_out.control.jump_reg ? ex_mem_out.branch_reg : ex_mem_out.control.jump ? (regfile.pc & 0xf0000000) & (ex_mem_out.addr << 2): regfile.pc;
+    regfile.pc = ex_mem_out.control.jump_reg ? ex_mem_out.branch_reg : ex_mem_out.control.jump ? (regfile.pc & 0xf0000000) & (ex_mem_out.addr << 2): regfile.pc;
     
     //WARNING WARNING WARNIGN: JUMP REG IS UNIMPLEMENTED
     mem_wb_in.read_data_mem = read_data_mem;
@@ -280,4 +280,5 @@ void Processor::writeback_stage() {
     uint32_t read_data_2 = 0; //NOTE: i think the single cycle reused a variable. shouldnt matter as this access is just a write
     uint32_t write_data = mem_wb_out.control.mem_to_reg ?  mem_wb_out.read_data_mem : mem_wb_out.alu_out;
     regfile.access(0, 0, read_data_2, read_data_2, mem_wb_out.write_reg, mem_wb_out.control.reg_write, write_data);
+    pop_hazard_regs();
 }
