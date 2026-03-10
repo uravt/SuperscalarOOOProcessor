@@ -5,6 +5,7 @@
 #include "processor.h"
 using namespace std;
 
+#define ENABLE_DEBUG
 #ifdef ENABLE_DEBUG
 #define DEBUG(x) x
 #else
@@ -12,6 +13,7 @@ using namespace std;
 #endif
 
 void Processor::initialize(int level) {
+    cout << "hi" << "\n";
     // Initialize Control
     control = {.reg_dest = 0, 
                .jump = 0,
