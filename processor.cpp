@@ -69,6 +69,8 @@ void Processor::single_cycle_processor_advance() {
     // Variables to read data into
     uint32_t read_data_1 = 0;
     uint32_t read_data_2 = 0;
+
+    cout << "Rd: " << rd << "\n";
     
     // Read from reg file
     regfile.access(rs, rt, read_data_1, read_data_2, 0, 0, 0);
@@ -179,6 +181,7 @@ void Processor::decode_stage() {
     int shamt = (if_id_out.instruction >> 6) & 0x1f;
     int funct = if_id_out.instruction & 0x3f;
     uint32_t imm = (if_id_out.instruction & 0xffff);
+    cout << rs << "\n";
     int addr = if_id_out.instruction & 0x3ffffff;
     // Variables to read data into
     uint32_t read_data_1 = 0;
