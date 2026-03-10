@@ -71,11 +71,6 @@ void Processor::single_cycle_processor_advance() {
     // Variables to read data into
     uint32_t read_data_1 = 0;
     uint32_t read_data_2 = 0;
-
-<<<<<<< HEAD
-=======
-    //cout << "Rd: " << rd << "\n";
->>>>>>> b2562a01e751b9b28cb972ebfd3e2842ed4e5322
     
     // Read from reg file
     regfile.access(rs, rt, read_data_1, read_data_2, 0, 0, 0);
@@ -342,9 +337,6 @@ void Processor::writeback_stage() {
     uint32_t read_data_2 = 0; //NOTE: i think the single cycle reused a variable. shouldnt matter as this access is just a write
     uint32_t write_data = mem_wb_out.control.mem_to_reg ?  mem_wb_out.read_data_mem : mem_wb_out.alu_out;
     regfile.access(0, 0, read_data_2, read_data_2, mem_wb_out.write_reg, mem_wb_out.control.reg_write, write_data);
-<<<<<<< HEAD
-    pop_hazard_regs();
+
 }
-=======
-}
->>>>>>> b2562a01e751b9b28cb972ebfd3e2842ed4e5322
+
