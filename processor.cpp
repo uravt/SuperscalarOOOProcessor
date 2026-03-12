@@ -234,16 +234,7 @@ void Processor::execute_stage() {
 
 
     //FORWARDING
-    if(ex_mem_out.control.reg_write)
-    {
-        if(ex_mem_out.write_reg == id_ex_out.rs)
-            operand_1 = ex_mem_out.alu_out;
-
-        if(ex_mem_out.write_reg == id_ex_out.rt)
-            operand_2 = ex_mem_out.alu_out;
-    }
-
-    if(mem_wb_out.control.reg_write)
+    if(mem_wb_out.control.reg_write && mem_wb_out.write_reg != 0)
     {
         uint32_t wb_val =
             mem_wb_out.control.mem_to_reg ?
@@ -251,12 +242,36 @@ void Processor::execute_stage() {
             mem_wb_out.alu_out;
 
         if(mem_wb_out.write_reg == id_ex_out.rs)
+        {
+            DEBUG(printf("Fowarding from wb, rs %d, operand_1 = %d\n",id_ex_out.rs,wb_val);)
             operand_1 = wb_val;
+        }
+
 
         if(mem_wb_out.write_reg == id_ex_out.rt)
+        {
+            DEBUG(printf("Fowarding from wb, rt %d, operand_2 = %d\n",id_ex_out.rt,wb_val);)
             operand_2 = wb_val;
+        }
+
+    }
+    if(ex_mem_out.control.reg_write && ex_mem_out.write_reg != 0)
+    {
+        if(ex_mem_out.write_reg == id_ex_out.rs)
+        {
+            operand_1 = ex_mem_out.alu_out;
+            DEBUG(printf("Fowarding from mem, rs %d, operand_1 = %d\n",id_ex_out.rs,ex_mem_out.alu_out);)
+        }
+
+
+        if(ex_mem_out.write_reg == id_ex_out.rt)
+        {
+            operand_2 = ex_mem_out.alu_out;
+            DEBUG(printf("Fowarding from mem, rt %d, operand_2 = %d\n",id_ex_out.rt,ex_mem_out.alu_out);)
+        }
     }
 
+    DEBUG(printf("operand 1: %d | operand 2: %d\n", operand_1, operand_2);)
 
     uint32_t alu_result = alu.execute(operand_1, operand_2, alu_zero);
 
@@ -283,7 +298,7 @@ void Processor::execute_stage() {
     ex_mem_in.branch_target = id_ex_out.pc + (imm << 2); //NOTE: accurate???
     ex_mem_in.alu_zero = alu_zero;
     ex_mem_in.alu_out = alu_result;
-    ex_mem_in.write_data_mem = operand_2;
+    ex_mem_in.write_data_mem = id_ex_out.read_data_2;
     ex_mem_in.write_reg = id_ex_out.control.reg_dest ? id_ex_out.rd : id_ex_out.rt;//from end of single cycle.
     ex_mem_in.addr = id_ex_out.addr;
     ex_mem_in.branch_reg = id_ex_out.read_data_1;
