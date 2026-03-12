@@ -196,7 +196,11 @@ void Processor::decode_stage() {
     uint32_t read_data_1 = 0;
     uint32_t read_data_2 = 0;
 
-    
+    //stall check
+    if(ex_mem_out.control.mem_read && (ex_mem_out.write_reg == rt || ex_mem_out.write_reg == rs))
+    {
+        //STALL NEEDS TO BE ADDED HERE
+    }
 
     // Read from reg file
     regfile.access(rs, rt, read_data_1, read_data_2, 0, 0, 0);
@@ -234,6 +238,8 @@ void Processor::execute_stage() {
 
 
     //FORWARDING
+
+    //MEM
     if(mem_wb_out.control.reg_write && mem_wb_out.write_reg != 0)
     {
         uint32_t wb_val =
@@ -255,6 +261,7 @@ void Processor::execute_stage() {
         }
 
     }
+    //EX
     if(ex_mem_out.control.reg_write && ex_mem_out.write_reg != 0)
     {
         if(ex_mem_out.write_reg == id_ex_out.rs)
@@ -334,7 +341,6 @@ void Processor::memory_stage() {
     regfile.pc = control.jump_reg ? read_data_1 : control.jump ? (regfile.pc & 0xf0000000) & (addr << 2): regfile.pc;
     */
     
-    //WARNING WARNING WARNIGN: JUMP REG IS UNIMPLEMENTED
     mem_wb_in.read_data_mem = read_data_mem;
     mem_wb_in.alu_out = ex_mem_out.alu_out;
     mem_wb_in.write_reg = ex_mem_out.write_reg;
