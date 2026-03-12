@@ -1,0 +1,7713 @@
+Compiling test_data_pipeline/MIPSPipeline-simple_no_branch_no_dep/test.s...
+
+=======================================================
+               SINGLE CYCLE OUTPUT (-O0)                 
+=======================================================
+
+PC: 0x0
+REG_DEST: 0
+JUMP: 0
+BRANCH: 0
+MEM_READ: 0
+MEM_TO_REG: 0
+ALU_OP: 3
+MEM_WRITE: 0
+ALU_SRC: 1
+REG_WRITE: 1
+
+CYCLE 0
+R[0]: 0
+R[1]: 5
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+PC: 0x4
+REG_DEST: 0
+JUMP: 0
+BRANCH: 0
+MEM_READ: 0
+MEM_TO_REG: 0
+ALU_OP: 3
+MEM_WRITE: 0
+ALU_SRC: 1
+REG_WRITE: 1
+
+CYCLE 1
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+PC: 0x8
+REG_DEST: 0
+JUMP: 0
+BRANCH: 0
+MEM_READ: 0
+MEM_TO_REG: 0
+ALU_OP: 3
+MEM_WRITE: 0
+ALU_SRC: 1
+REG_WRITE: 1
+
+CYCLE 2
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+PC: 0xc
+REG_DEST: 0
+JUMP: 0
+BRANCH: 0
+MEM_READ: 0
+MEM_TO_REG: 0
+ALU_OP: 0
+MEM_WRITE: 1
+ALU_SRC: 1
+REG_WRITE: 0
+
+CYCLE 3
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+PC: 0x10
+REG_DEST: 0
+JUMP: 0
+BRANCH: 0
+MEM_READ: 0
+MEM_TO_REG: 0
+ALU_OP: 0
+MEM_WRITE: 1
+ALU_SRC: 1
+REG_WRITE: 0
+
+CYCLE 4
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+PC: 0x14
+REG_DEST: 0
+JUMP: 0
+BRANCH: 0
+MEM_READ: 0
+MEM_TO_REG: 0
+ALU_OP: 0
+MEM_WRITE: 1
+ALU_SRC: 1
+REG_WRITE: 0
+
+CYCLE 5
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+PC: 0x18
+REG_DEST: 0
+JUMP: 0
+BRANCH: 0
+MEM_READ: 1
+MEM_TO_REG: 1
+ALU_OP: 0
+MEM_WRITE: 0
+ALU_SRC: 1
+REG_WRITE: 1
+
+CYCLE 6
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+PC: 0x1c
+REG_DEST: 0
+JUMP: 0
+BRANCH: 0
+MEM_READ: 1
+MEM_TO_REG: 1
+ALU_OP: 0
+MEM_WRITE: 0
+ALU_SRC: 1
+REG_WRITE: 1
+
+CYCLE 7
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+PC: 0x20
+REG_DEST: 0
+JUMP: 0
+BRANCH: 0
+MEM_READ: 1
+MEM_TO_REG: 1
+ALU_OP: 0
+MEM_WRITE: 0
+ALU_SRC: 1
+REG_WRITE: 1
+
+CYCLE 8
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+PC: 0x24
+REG_DEST: 0
+JUMP: 0
+BRANCH: 0
+MEM_READ: 1
+MEM_TO_REG: 1
+ALU_OP: 0
+MEM_WRITE: 0
+ALU_SRC: 1
+REG_WRITE: 1
+
+CYCLE 9
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+PC: 0x28
+REG_DEST: 0
+JUMP: 0
+BRANCH: 0
+MEM_READ: 0
+MEM_TO_REG: 0
+ALU_OP: 3
+MEM_WRITE: 0
+ALU_SRC: 1
+REG_WRITE: 1
+
+CYCLE 10
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 2293760
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+PC: 0x2c
+REG_DEST: 0
+JUMP: 0
+BRANCH: 0
+MEM_READ: 0
+MEM_TO_REG: 0
+ALU_OP: 3
+MEM_WRITE: 0
+ALU_SRC: 1
+REG_WRITE: 1
+
+CYCLE 11
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 2293760
+R[9]: 2
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+PC: 0x30
+REG_DEST: 0
+JUMP: 0
+BRANCH: 0
+MEM_READ: 0
+MEM_TO_REG: 0
+ALU_OP: 3
+MEM_WRITE: 0
+ALU_SRC: 1
+REG_WRITE: 1
+
+CYCLE 12
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 2293760
+R[9]: 2
+R[10]: 1
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+PC: 0x34
+REG_DEST: 0
+JUMP: 0
+BRANCH: 0
+MEM_READ: 0
+MEM_TO_REG: 0
+ALU_OP: 3
+MEM_WRITE: 0
+ALU_SRC: 1
+REG_WRITE: 1
+
+CYCLE 13
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 2293760
+R[9]: 2
+R[10]: 1
+R[11]: 1
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+PC: 0x38
+REG_DEST: 1
+JUMP: 0
+BRANCH: 0
+MEM_READ: 0
+MEM_TO_REG: 0
+ALU_OP: 2
+MEM_WRITE: 0
+ALU_SRC: 0
+REG_WRITE: 1
+
+CYCLE 14
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 2293760
+R[9]: 2
+R[10]: 1
+R[11]: 1
+R[12]: 15
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+PC: 0x3c
+REG_DEST: 1
+JUMP: 0
+BRANCH: 0
+MEM_READ: 0
+MEM_TO_REG: 0
+ALU_OP: 2
+MEM_WRITE: 0
+ALU_SRC: 0
+REG_WRITE: 1
+
+CYCLE 15
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 2293760
+R[9]: 2
+R[10]: 1
+R[11]: 1
+R[12]: 15
+R[13]: 15
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+PC: 0x40
+REG_DEST: 1
+JUMP: 0
+BRANCH: 0
+MEM_READ: 0
+MEM_TO_REG: 0
+ALU_OP: 2
+MEM_WRITE: 0
+ALU_SRC: 0
+REG_WRITE: 1
+
+CYCLE 16
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 2293760
+R[9]: 2
+R[10]: 1
+R[11]: 1
+R[12]: 15
+R[13]: 15
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+PC: 0x44
+REG_DEST: 1
+JUMP: 0
+BRANCH: 0
+MEM_READ: 0
+MEM_TO_REG: 0
+ALU_OP: 2
+MEM_WRITE: 0
+ALU_SRC: 0
+REG_WRITE: 1
+
+CYCLE 17
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 2293760
+R[9]: 2
+R[10]: 1
+R[11]: 1
+R[12]: 15
+R[13]: 15
+R[14]: 0
+R[15]: -16
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+PC: 0x48
+REG_DEST: 1
+JUMP: 0
+BRANCH: 0
+MEM_READ: 0
+MEM_TO_REG: 0
+ALU_OP: 2
+MEM_WRITE: 0
+ALU_SRC: 0
+REG_WRITE: 1
+
+CYCLE 18
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 2293760
+R[9]: 2
+R[10]: 1
+R[11]: 1
+R[12]: 15
+R[13]: 15
+R[14]: 0
+R[15]: -16
+R[16]: 15
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+PC: 0x4c
+REG_DEST: 1
+JUMP: 0
+BRANCH: 0
+MEM_READ: 0
+MEM_TO_REG: 0
+ALU_OP: 2
+MEM_WRITE: 0
+ALU_SRC: 0
+REG_WRITE: 1
+
+CYCLE 19
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 2293760
+R[9]: 2
+R[10]: 1
+R[11]: 1
+R[12]: 15
+R[13]: 15
+R[14]: 0
+R[15]: -16
+R[16]: 15
+R[17]: 1
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+PC: 0x50
+REG_DEST: 1
+JUMP: 0
+BRANCH: 0
+MEM_READ: 0
+MEM_TO_REG: 0
+ALU_OP: 2
+MEM_WRITE: 0
+ALU_SRC: 0
+REG_WRITE: 1
+
+CYCLE 20
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 2293760
+R[9]: 2
+R[10]: 1
+R[11]: 1
+R[12]: 15
+R[13]: 15
+R[14]: 0
+R[15]: -16
+R[16]: 15
+R[17]: 1
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+PC: 0x54
+REG_DEST: 1
+JUMP: 0
+BRANCH: 0
+MEM_READ: 0
+MEM_TO_REG: 0
+ALU_OP: 2
+MEM_WRITE: 0
+ALU_SRC: 0
+REG_WRITE: 1
+
+CYCLE 21
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 2293760
+R[9]: 2
+R[10]: 1
+R[11]: 1
+R[12]: 15
+R[13]: 15
+R[14]: 0
+R[15]: -16
+R[16]: 15
+R[17]: 1
+R[18]: 0
+R[19]: 20
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+PC: 0x58
+REG_DEST: 1
+JUMP: 0
+BRANCH: 0
+MEM_READ: 0
+MEM_TO_REG: 0
+ALU_OP: 2
+MEM_WRITE: 0
+ALU_SRC: 0
+REG_WRITE: 1
+
+CYCLE 22
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 2293760
+R[9]: 2
+R[10]: 1
+R[11]: 1
+R[12]: 15
+R[13]: 15
+R[14]: 0
+R[15]: -16
+R[16]: 15
+R[17]: 1
+R[18]: 0
+R[19]: 20
+R[20]: 5
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+PC: 0x5c
+REG_DEST: 1
+JUMP: 0
+BRANCH: 0
+MEM_READ: 0
+MEM_TO_REG: 0
+ALU_OP: 2
+MEM_WRITE: 0
+ALU_SRC: 0
+REG_WRITE: 1
+
+CYCLE 23
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 2293760
+R[9]: 2
+R[10]: 1
+R[11]: 1
+R[12]: 15
+R[13]: 15
+R[14]: 0
+R[15]: -16
+R[16]: 15
+R[17]: 1
+R[18]: 0
+R[19]: 20
+R[20]: 5
+R[21]: -5
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+PC: 0x60
+REG_DEST: 1
+JUMP: 0
+BRANCH: 0
+MEM_READ: 0
+MEM_TO_REG: 0
+ALU_OP: 2
+MEM_WRITE: 0
+ALU_SRC: 0
+REG_WRITE: 1
+
+CYCLE 24
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 2293760
+R[9]: 2
+R[10]: 1
+R[11]: 1
+R[12]: 15
+R[13]: 15
+R[14]: 0
+R[15]: -16
+R[16]: 15
+R[17]: 1
+R[18]: 0
+R[19]: 20
+R[20]: 5
+R[21]: -5
+R[22]: -5
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+PC: 0x64
+REG_DEST: 1
+JUMP: 0
+BRANCH: 0
+MEM_READ: 0
+MEM_TO_REG: 0
+ALU_OP: 2
+MEM_WRITE: 0
+ALU_SRC: 0
+REG_WRITE: 1
+
+CYCLE 25
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 2293760
+R[9]: 2
+R[10]: 1
+R[11]: 1
+R[12]: 15
+R[13]: 15
+R[14]: 0
+R[15]: -16
+R[16]: 15
+R[17]: 1
+R[18]: 0
+R[19]: 20
+R[20]: 5
+R[21]: -5
+R[22]: -5
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+PC: 0x68
+REG_DEST: 1
+JUMP: 0
+BRANCH: 0
+MEM_READ: 0
+MEM_TO_REG: 0
+ALU_OP: 2
+MEM_WRITE: 0
+ALU_SRC: 0
+REG_WRITE: 1
+
+CYCLE 26
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 2293760
+R[9]: 2
+R[10]: 1
+R[11]: 1
+R[12]: 15
+R[13]: 15
+R[14]: 0
+R[15]: -16
+R[16]: 15
+R[17]: 1
+R[18]: 0
+R[19]: 20
+R[20]: 5
+R[21]: -5
+R[22]: -5
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+PC: 0x6c
+REG_DEST: 1
+JUMP: 0
+BRANCH: 0
+MEM_READ: 0
+MEM_TO_REG: 0
+ALU_OP: 2
+MEM_WRITE: 0
+ALU_SRC: 0
+REG_WRITE: 1
+
+CYCLE 27
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 2293760
+R[9]: 2
+R[10]: 1
+R[11]: 1
+R[12]: 15
+R[13]: 15
+R[14]: 0
+R[15]: -16
+R[16]: 15
+R[17]: 1
+R[18]: 0
+R[19]: 20
+R[20]: 5
+R[21]: -5
+R[22]: -5
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+PC: 0x70
+REG_DEST: 1
+JUMP: 0
+BRANCH: 0
+MEM_READ: 0
+MEM_TO_REG: 0
+ALU_OP: 2
+MEM_WRITE: 0
+ALU_SRC: 0
+REG_WRITE: 1
+
+CYCLE 28
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 2293760
+R[9]: 2
+R[10]: 1
+R[11]: 1
+R[12]: 15
+R[13]: 15
+R[14]: 0
+R[15]: -16
+R[16]: 15
+R[17]: 1
+R[18]: 0
+R[19]: 20
+R[20]: 5
+R[21]: -5
+R[22]: -5
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+Completed execution in 1812.5 nanoseconds.
+
+=======================================================
+                PIPELINED OUTPUT (-O1)                   
+=======================================================
+imm: 32382
+0
+read_data 0
+
+PC: 0x0
+pc:4|instruction:0
+pc:74c74338|read_data_1:0|read_data_2:0|imm:7e7e|rt:0|rd:f|opcode:0|funct:3e|shamt:19|addr:7e7e|forwarding:0
+branch_target:0|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0|forwarding:0
+read_data_mem:0|alu_out:0|write_reg:0
+15 
+CYCLE 0
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+imm: 0
+0
+read_data 0
+
+PC: 0x4
+pc:8|instruction:0
+pc:4|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|opcode:0|funct:0|shamt:0|addr:0|forwarding:0
+branch_target:74c93d30|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:f|addr:7e7e|branch_reg:0|forwarding:0
+read_data_mem:0|alu_out:0|write_reg:0
+0 15 
+CYCLE 1
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+imm: 0
+0
+read_data 0
+
+PC: 0x8
+pc:c|instruction:0
+pc:8|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|opcode:0|funct:0|shamt:0|addr:0|forwarding:1
+branch_target:4|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0|forwarding:0
+read_data_mem:0|alu_out:0|write_reg:15
+0 15 
+CYCLE 2
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+imm: 0
+0
+read_data 0
+
+PC: 0xc
+pc:10|instruction:0
+pc:c|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|opcode:0|funct:0|shamt:0|addr:0|forwarding:1
+branch_target:8|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0|forwarding:0
+read_data_mem:0|alu_out:0|write_reg:0
+0 15 
+CYCLE 3
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+imm: 0
+0
+read_data 0
+
+PC: 0x10
+pc:14|instruction:0
+pc:10|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|opcode:0|funct:0|shamt:0|addr:0|forwarding:1
+branch_target:c|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0|forwarding:0
+read_data_mem:0|alu_out:0|write_reg:0
+0 15 
+CYCLE 4
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+imm: 0
+0
+read_data 0
+
+PC: 0x14
+pc:18|instruction:0
+pc:14|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|opcode:0|funct:0|shamt:0|addr:0|forwarding:1
+branch_target:10|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0|forwarding:0
+read_data_mem:0|alu_out:0|write_reg:0
+0 15 
+CYCLE 5
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+imm: 0
+0
+read_data 0
+
+PC: 0x18
+pc:1c|instruction:0
+pc:18|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|opcode:0|funct:0|shamt:0|addr:0|forwarding:1
+branch_target:14|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0|forwarding:0
+read_data_mem:0|alu_out:0|write_reg:0
+0 15 
+CYCLE 6
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+imm: 0
+0
+read_data 0
+
+PC: 0x1c
+pc:20|instruction:0
+pc:1c|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|opcode:0|funct:0|shamt:0|addr:0|forwarding:1
+branch_target:18|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0|forwarding:0
+read_data_mem:0|alu_out:0|write_reg:0
+0 15 
+CYCLE 7
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+imm: 0
+0
+read_data 0
+
+PC: 0x20
+pc:24|instruction:0
+pc:20|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|opcode:0|funct:0|shamt:0|addr:0|forwarding:1
+branch_target:1c|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0|forwarding:0
+read_data_mem:0|alu_out:0|write_reg:0
+0 15 
+CYCLE 8
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+imm: 0
+0
+read_data 0
+
+PC: 0x24
+pc:28|instruction:0
+pc:24|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|opcode:0|funct:0|shamt:0|addr:0|forwarding:1
+branch_target:20|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0|forwarding:0
+read_data_mem:0|alu_out:0|write_reg:0
+0 15 
+CYCLE 9
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+imm: 0
+0
+read_data 0
+
+PC: 0x28
+pc:2c|instruction:0
+pc:28|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|opcode:0|funct:0|shamt:0|addr:0|forwarding:1
+branch_target:24|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0|forwarding:0
+read_data_mem:0|alu_out:0|write_reg:0
+0 15 
+CYCLE 10
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+imm: 0
+0
+read_data 0
+
+PC: 0x2c
+pc:30|instruction:0
+pc:2c|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|opcode:0|funct:0|shamt:0|addr:0|forwarding:1
+branch_target:28|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0|forwarding:0
+read_data_mem:0|alu_out:0|write_reg:0
+0 15 
+CYCLE 11
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+imm: 0
+0
+read_data 0
+
+PC: 0x30
+pc:34|instruction:0
+pc:30|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|opcode:0|funct:0|shamt:0|addr:0|forwarding:1
+branch_target:2c|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0|forwarding:0
+read_data_mem:0|alu_out:0|write_reg:0
+0 15 
+CYCLE 12
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+imm: 0
+0
+read_data 0
+
+PC: 0x34
+pc:38|instruction:0
+pc:34|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|opcode:0|funct:0|shamt:0|addr:0|forwarding:1
+branch_target:30|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0|forwarding:0
+read_data_mem:0|alu_out:0|write_reg:0
+0 15 
+CYCLE 13
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+imm: 0
+0
+read_data 0
+
+PC: 0x38
+pc:3c|instruction:0
+pc:38|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|opcode:0|funct:0|shamt:0|addr:0|forwarding:1
+branch_target:34|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0|forwarding:0
+read_data_mem:0|alu_out:0|write_reg:0
+0 15 
+CYCLE 14
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+imm: 0
+0
+read_data 0
+
+PC: 0x3c
+pc:40|instruction:0
+pc:3c|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|opcode:0|funct:0|shamt:0|addr:0|forwarding:1
+branch_target:38|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0|forwarding:0
+read_data_mem:0|alu_out:0|write_reg:0
+0 15 
+CYCLE 15
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+imm: 0
+0
+read_data 0
+
+PC: 0x40
+pc:44|instruction:0
+pc:40|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|opcode:0|funct:0|shamt:0|addr:0|forwarding:1
+branch_target:3c|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0|forwarding:0
+read_data_mem:0|alu_out:0|write_reg:0
+0 15 
+CYCLE 16
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+imm: 0
+0
+read_data 0
+
+PC: 0x44
+pc:48|instruction:0
+pc:44|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|opcode:0|funct:0|shamt:0|addr:0|forwarding:1
+branch_target:40|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0|forwarding:0
+read_data_mem:0|alu_out:0|write_reg:0
+0 15 
+CYCLE 17
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+imm: 0
+0
+read_data 0
+
+PC: 0x48
+pc:4c|instruction:0
+pc:48|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|opcode:0|funct:0|shamt:0|addr:0|forwarding:1
+branch_target:44|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0|forwarding:0
+read_data_mem:0|alu_out:0|write_reg:0
+0 15 
+CYCLE 18
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+imm: 0
+0
+read_data 0
+
+PC: 0x4c
+pc:50|instruction:0
+pc:4c|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|opcode:0|funct:0|shamt:0|addr:0|forwarding:1
+branch_target:48|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0|forwarding:0
+read_data_mem:0|alu_out:0|write_reg:0
+0 15 
+CYCLE 19
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+imm: 0
+0
+read_data 0
+
+PC: 0x50
+pc:54|instruction:0
+pc:50|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|opcode:0|funct:0|shamt:0|addr:0|forwarding:1
+branch_target:4c|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0|forwarding:0
+read_data_mem:0|alu_out:0|write_reg:0
+0 15 
+CYCLE 20
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+imm: 0
+0
+read_data 0
+
+PC: 0x54
+pc:58|instruction:0
+pc:54|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|opcode:0|funct:0|shamt:0|addr:0|forwarding:1
+branch_target:50|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0|forwarding:0
+read_data_mem:0|alu_out:0|write_reg:0
+0 15 
+CYCLE 21
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+imm: 0
+0
+read_data 0
+
+PC: 0x58
+pc:5c|instruction:0
+pc:58|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|opcode:0|funct:0|shamt:0|addr:0|forwarding:1
+branch_target:54|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0|forwarding:0
+read_data_mem:0|alu_out:0|write_reg:0
+0 15 
+CYCLE 22
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+imm: 0
+0
+read_data 0
+
+PC: 0x5c
+pc:60|instruction:0
+pc:5c|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|opcode:0|funct:0|shamt:0|addr:0|forwarding:1
+branch_target:58|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0|forwarding:0
+read_data_mem:0|alu_out:0|write_reg:0
+0 15 
+CYCLE 23
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+imm: 0
+0
+read_data 0
+
+PC: 0x60
+pc:64|instruction:0
+pc:60|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|opcode:0|funct:0|shamt:0|addr:0|forwarding:1
+branch_target:5c|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0|forwarding:0
+read_data_mem:0|alu_out:0|write_reg:0
+0 15 
+CYCLE 24
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+imm: 0
+0
+read_data 0
+
+PC: 0x64
+pc:68|instruction:0
+pc:64|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|opcode:0|funct:0|shamt:0|addr:0|forwarding:1
+branch_target:60|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0|forwarding:0
+read_data_mem:0|alu_out:0|write_reg:0
+0 15 
+CYCLE 25
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+imm: 0
+0
+read_data 0
+
+PC: 0x68
+pc:6c|instruction:0
+pc:68|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|opcode:0|funct:0|shamt:0|addr:0|forwarding:1
+branch_target:64|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0|forwarding:0
+read_data_mem:0|alu_out:0|write_reg:0
+0 15 
+CYCLE 26
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+imm: 0
+0
+read_data 0
+
+PC: 0x6c
+pc:70|instruction:0
+pc:6c|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|opcode:0|funct:0|shamt:0|addr:0|forwarding:1
+branch_target:68|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0|forwarding:0
+read_data_mem:0|alu_out:0|write_reg:0
+0 15 
+CYCLE 27
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+imm: 0
+0
+read_data 0
+
+PC: 0x70
+pc:74|instruction:0
+pc:70|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|opcode:0|funct:0|shamt:0|addr:0|forwarding:1
+branch_target:6c|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0|forwarding:0
+read_data_mem:0|alu_out:0|write_reg:0
+0 15 
+CYCLE 28
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+Completed execution in 14.5 nanoseconds.
+
+=======================================================
+                    FINAL SUMMARY                        
+=======================================================
+Test Name            : MIPSPipeline-simple_no_branch_no_dep
+Single-Cycle Cycles  : 28
+Compiling test_data_pipeline/MIPSPipeline-simple_no_branch_no_dep/test.s...
+
+=======================================================
+               SINGLE CYCLE OUTPUT (-O0)                 
+=======================================================
+
+PC: 0x0
+REG_DEST: 0
+JUMP: 0
+BRANCH: 0
+MEM_READ: 0
+MEM_TO_REG: 0
+ALU_OP: 3
+MEM_WRITE: 0
+ALU_SRC: 1
+REG_WRITE: 1
+
+CYCLE 0
+R[0]: 0
+R[1]: 5
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+PC: 0x4
+REG_DEST: 0
+JUMP: 0
+BRANCH: 0
+MEM_READ: 0
+MEM_TO_REG: 0
+ALU_OP: 3
+MEM_WRITE: 0
+ALU_SRC: 1
+REG_WRITE: 1
+
+CYCLE 1
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+PC: 0x8
+REG_DEST: 0
+JUMP: 0
+BRANCH: 0
+MEM_READ: 0
+MEM_TO_REG: 0
+ALU_OP: 3
+MEM_WRITE: 0
+ALU_SRC: 1
+REG_WRITE: 1
+
+CYCLE 2
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+PC: 0xc
+REG_DEST: 0
+JUMP: 0
+BRANCH: 0
+MEM_READ: 0
+MEM_TO_REG: 0
+ALU_OP: 0
+MEM_WRITE: 1
+ALU_SRC: 1
+REG_WRITE: 0
+
+CYCLE 3
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+PC: 0x10
+REG_DEST: 0
+JUMP: 0
+BRANCH: 0
+MEM_READ: 0
+MEM_TO_REG: 0
+ALU_OP: 0
+MEM_WRITE: 1
+ALU_SRC: 1
+REG_WRITE: 0
+
+CYCLE 4
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+PC: 0x14
+REG_DEST: 0
+JUMP: 0
+BRANCH: 0
+MEM_READ: 0
+MEM_TO_REG: 0
+ALU_OP: 0
+MEM_WRITE: 1
+ALU_SRC: 1
+REG_WRITE: 0
+
+CYCLE 5
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+PC: 0x18
+REG_DEST: 0
+JUMP: 0
+BRANCH: 0
+MEM_READ: 1
+MEM_TO_REG: 1
+ALU_OP: 0
+MEM_WRITE: 0
+ALU_SRC: 1
+REG_WRITE: 1
+
+CYCLE 6
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+PC: 0x1c
+REG_DEST: 0
+JUMP: 0
+BRANCH: 0
+MEM_READ: 1
+MEM_TO_REG: 1
+ALU_OP: 0
+MEM_WRITE: 0
+ALU_SRC: 1
+REG_WRITE: 1
+
+CYCLE 7
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+PC: 0x20
+REG_DEST: 0
+JUMP: 0
+BRANCH: 0
+MEM_READ: 1
+MEM_TO_REG: 1
+ALU_OP: 0
+MEM_WRITE: 0
+ALU_SRC: 1
+REG_WRITE: 1
+
+CYCLE 8
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+PC: 0x24
+REG_DEST: 0
+JUMP: 0
+BRANCH: 0
+MEM_READ: 1
+MEM_TO_REG: 1
+ALU_OP: 0
+MEM_WRITE: 0
+ALU_SRC: 1
+REG_WRITE: 1
+
+CYCLE 9
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+PC: 0x28
+REG_DEST: 0
+JUMP: 0
+BRANCH: 0
+MEM_READ: 0
+MEM_TO_REG: 0
+ALU_OP: 3
+MEM_WRITE: 0
+ALU_SRC: 1
+REG_WRITE: 1
+
+CYCLE 10
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 2293760
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+PC: 0x2c
+REG_DEST: 0
+JUMP: 0
+BRANCH: 0
+MEM_READ: 0
+MEM_TO_REG: 0
+ALU_OP: 3
+MEM_WRITE: 0
+ALU_SRC: 1
+REG_WRITE: 1
+
+CYCLE 11
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 2293760
+R[9]: 2
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+PC: 0x30
+REG_DEST: 0
+JUMP: 0
+BRANCH: 0
+MEM_READ: 0
+MEM_TO_REG: 0
+ALU_OP: 3
+MEM_WRITE: 0
+ALU_SRC: 1
+REG_WRITE: 1
+
+CYCLE 12
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 2293760
+R[9]: 2
+R[10]: 1
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+PC: 0x34
+REG_DEST: 0
+JUMP: 0
+BRANCH: 0
+MEM_READ: 0
+MEM_TO_REG: 0
+ALU_OP: 3
+MEM_WRITE: 0
+ALU_SRC: 1
+REG_WRITE: 1
+
+CYCLE 13
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 2293760
+R[9]: 2
+R[10]: 1
+R[11]: 1
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+PC: 0x38
+REG_DEST: 1
+JUMP: 0
+BRANCH: 0
+MEM_READ: 0
+MEM_TO_REG: 0
+ALU_OP: 2
+MEM_WRITE: 0
+ALU_SRC: 0
+REG_WRITE: 1
+
+CYCLE 14
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 2293760
+R[9]: 2
+R[10]: 1
+R[11]: 1
+R[12]: 15
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+PC: 0x3c
+REG_DEST: 1
+JUMP: 0
+BRANCH: 0
+MEM_READ: 0
+MEM_TO_REG: 0
+ALU_OP: 2
+MEM_WRITE: 0
+ALU_SRC: 0
+REG_WRITE: 1
+
+CYCLE 15
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 2293760
+R[9]: 2
+R[10]: 1
+R[11]: 1
+R[12]: 15
+R[13]: 15
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+PC: 0x40
+REG_DEST: 1
+JUMP: 0
+BRANCH: 0
+MEM_READ: 0
+MEM_TO_REG: 0
+ALU_OP: 2
+MEM_WRITE: 0
+ALU_SRC: 0
+REG_WRITE: 1
+
+CYCLE 16
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 2293760
+R[9]: 2
+R[10]: 1
+R[11]: 1
+R[12]: 15
+R[13]: 15
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+PC: 0x44
+REG_DEST: 1
+JUMP: 0
+BRANCH: 0
+MEM_READ: 0
+MEM_TO_REG: 0
+ALU_OP: 2
+MEM_WRITE: 0
+ALU_SRC: 0
+REG_WRITE: 1
+
+CYCLE 17
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 2293760
+R[9]: 2
+R[10]: 1
+R[11]: 1
+R[12]: 15
+R[13]: 15
+R[14]: 0
+R[15]: -16
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+PC: 0x48
+REG_DEST: 1
+JUMP: 0
+BRANCH: 0
+MEM_READ: 0
+MEM_TO_REG: 0
+ALU_OP: 2
+MEM_WRITE: 0
+ALU_SRC: 0
+REG_WRITE: 1
+
+CYCLE 18
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 2293760
+R[9]: 2
+R[10]: 1
+R[11]: 1
+R[12]: 15
+R[13]: 15
+R[14]: 0
+R[15]: -16
+R[16]: 15
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+PC: 0x4c
+REG_DEST: 1
+JUMP: 0
+BRANCH: 0
+MEM_READ: 0
+MEM_TO_REG: 0
+ALU_OP: 2
+MEM_WRITE: 0
+ALU_SRC: 0
+REG_WRITE: 1
+
+CYCLE 19
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 2293760
+R[9]: 2
+R[10]: 1
+R[11]: 1
+R[12]: 15
+R[13]: 15
+R[14]: 0
+R[15]: -16
+R[16]: 15
+R[17]: 1
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+PC: 0x50
+REG_DEST: 1
+JUMP: 0
+BRANCH: 0
+MEM_READ: 0
+MEM_TO_REG: 0
+ALU_OP: 2
+MEM_WRITE: 0
+ALU_SRC: 0
+REG_WRITE: 1
+
+CYCLE 20
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 2293760
+R[9]: 2
+R[10]: 1
+R[11]: 1
+R[12]: 15
+R[13]: 15
+R[14]: 0
+R[15]: -16
+R[16]: 15
+R[17]: 1
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+PC: 0x54
+REG_DEST: 1
+JUMP: 0
+BRANCH: 0
+MEM_READ: 0
+MEM_TO_REG: 0
+ALU_OP: 2
+MEM_WRITE: 0
+ALU_SRC: 0
+REG_WRITE: 1
+
+CYCLE 21
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 2293760
+R[9]: 2
+R[10]: 1
+R[11]: 1
+R[12]: 15
+R[13]: 15
+R[14]: 0
+R[15]: -16
+R[16]: 15
+R[17]: 1
+R[18]: 0
+R[19]: 20
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+PC: 0x58
+REG_DEST: 1
+JUMP: 0
+BRANCH: 0
+MEM_READ: 0
+MEM_TO_REG: 0
+ALU_OP: 2
+MEM_WRITE: 0
+ALU_SRC: 0
+REG_WRITE: 1
+
+CYCLE 22
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 2293760
+R[9]: 2
+R[10]: 1
+R[11]: 1
+R[12]: 15
+R[13]: 15
+R[14]: 0
+R[15]: -16
+R[16]: 15
+R[17]: 1
+R[18]: 0
+R[19]: 20
+R[20]: 5
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+PC: 0x5c
+REG_DEST: 1
+JUMP: 0
+BRANCH: 0
+MEM_READ: 0
+MEM_TO_REG: 0
+ALU_OP: 2
+MEM_WRITE: 0
+ALU_SRC: 0
+REG_WRITE: 1
+
+CYCLE 23
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 2293760
+R[9]: 2
+R[10]: 1
+R[11]: 1
+R[12]: 15
+R[13]: 15
+R[14]: 0
+R[15]: -16
+R[16]: 15
+R[17]: 1
+R[18]: 0
+R[19]: 20
+R[20]: 5
+R[21]: -5
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+PC: 0x60
+REG_DEST: 1
+JUMP: 0
+BRANCH: 0
+MEM_READ: 0
+MEM_TO_REG: 0
+ALU_OP: 2
+MEM_WRITE: 0
+ALU_SRC: 0
+REG_WRITE: 1
+
+CYCLE 24
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 2293760
+R[9]: 2
+R[10]: 1
+R[11]: 1
+R[12]: 15
+R[13]: 15
+R[14]: 0
+R[15]: -16
+R[16]: 15
+R[17]: 1
+R[18]: 0
+R[19]: 20
+R[20]: 5
+R[21]: -5
+R[22]: -5
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+PC: 0x64
+REG_DEST: 1
+JUMP: 0
+BRANCH: 0
+MEM_READ: 0
+MEM_TO_REG: 0
+ALU_OP: 2
+MEM_WRITE: 0
+ALU_SRC: 0
+REG_WRITE: 1
+
+CYCLE 25
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 2293760
+R[9]: 2
+R[10]: 1
+R[11]: 1
+R[12]: 15
+R[13]: 15
+R[14]: 0
+R[15]: -16
+R[16]: 15
+R[17]: 1
+R[18]: 0
+R[19]: 20
+R[20]: 5
+R[21]: -5
+R[22]: -5
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+PC: 0x68
+REG_DEST: 1
+JUMP: 0
+BRANCH: 0
+MEM_READ: 0
+MEM_TO_REG: 0
+ALU_OP: 2
+MEM_WRITE: 0
+ALU_SRC: 0
+REG_WRITE: 1
+
+CYCLE 26
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 2293760
+R[9]: 2
+R[10]: 1
+R[11]: 1
+R[12]: 15
+R[13]: 15
+R[14]: 0
+R[15]: -16
+R[16]: 15
+R[17]: 1
+R[18]: 0
+R[19]: 20
+R[20]: 5
+R[21]: -5
+R[22]: -5
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+PC: 0x6c
+REG_DEST: 1
+JUMP: 0
+BRANCH: 0
+MEM_READ: 0
+MEM_TO_REG: 0
+ALU_OP: 2
+MEM_WRITE: 0
+ALU_SRC: 0
+REG_WRITE: 1
+
+CYCLE 27
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 2293760
+R[9]: 2
+R[10]: 1
+R[11]: 1
+R[12]: 15
+R[13]: 15
+R[14]: 0
+R[15]: -16
+R[16]: 15
+R[17]: 1
+R[18]: 0
+R[19]: 20
+R[20]: 5
+R[21]: -5
+R[22]: -5
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+PC: 0x70
+REG_DEST: 1
+JUMP: 0
+BRANCH: 0
+MEM_READ: 0
+MEM_TO_REG: 0
+ALU_OP: 2
+MEM_WRITE: 0
+ALU_SRC: 0
+REG_WRITE: 1
+
+CYCLE 28
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 2293760
+R[9]: 2
+R[10]: 1
+R[11]: 1
+R[12]: 15
+R[13]: 15
+R[14]: 0
+R[15]: -16
+R[16]: 15
+R[17]: 1
+R[18]: 0
+R[19]: 20
+R[20]: 5
+R[21]: -5
+R[22]: -5
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+Completed execution in 1812.5 nanoseconds.
+
+=======================================================
+                PIPELINED OUTPUT (-O1)                   
+=======================================================
+imm: 0
+0
+read_data 0
+
+PC: 0x0
+pc:4|instruction:0
+pc:0|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|opcode:0|funct:0|shamt:0|addr:0|forwarding:0
+branch_target:0|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0|forwarding:1a
+read_data_mem:0|alu_out:0|write_reg:0
+0 
+CYCLE 0
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+imm: 0
+0
+read_data 0
+
+PC: 0x4
+pc:8|instruction:0
+pc:4|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|opcode:0|funct:0|shamt:0|addr:0|forwarding:1
+branch_target:0|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0|forwarding:1a
+read_data_mem:0|alu_out:0|write_reg:0
+0 
+CYCLE 1
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+imm: 0
+0
+read_data 0
+
+PC: 0x8
+pc:c|instruction:0
+pc:8|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|opcode:0|funct:0|shamt:0|addr:0|forwarding:1
+branch_target:4|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0|forwarding:1a
+read_data_mem:0|alu_out:0|write_reg:0
+0 
+CYCLE 2
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+imm: 0
+0
+read_data 0
+
+PC: 0xc
+pc:10|instruction:0
+pc:c|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|opcode:0|funct:0|shamt:0|addr:0|forwarding:1
+branch_target:8|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0|forwarding:1a
+read_data_mem:0|alu_out:0|write_reg:0
+0 
+CYCLE 3
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+imm: 0
+0
+read_data 0
+
+PC: 0x10
+pc:14|instruction:0
+pc:10|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|opcode:0|funct:0|shamt:0|addr:0|forwarding:1
+branch_target:c|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0|forwarding:1a
+read_data_mem:0|alu_out:0|write_reg:0
+0 
+CYCLE 4
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+imm: 0
+0
+read_data 0
+
+PC: 0x14
+pc:18|instruction:0
+pc:14|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|opcode:0|funct:0|shamt:0|addr:0|forwarding:1
+branch_target:10|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0|forwarding:1a
+read_data_mem:0|alu_out:0|write_reg:0
+0 
+CYCLE 5
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+imm: 0
+0
+read_data 0
+
+PC: 0x18
+pc:1c|instruction:0
+pc:18|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|opcode:0|funct:0|shamt:0|addr:0|forwarding:1
+branch_target:14|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0|forwarding:1a
+read_data_mem:0|alu_out:0|write_reg:0
+0 
+CYCLE 6
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+imm: 0
+0
+read_data 0
+
+PC: 0x1c
+pc:20|instruction:0
+pc:1c|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|opcode:0|funct:0|shamt:0|addr:0|forwarding:1
+branch_target:18|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0|forwarding:1a
+read_data_mem:0|alu_out:0|write_reg:0
+0 
+CYCLE 7
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+imm: 0
+0
+read_data 0
+
+PC: 0x20
+pc:24|instruction:0
+pc:20|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|opcode:0|funct:0|shamt:0|addr:0|forwarding:1
+branch_target:1c|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0|forwarding:1a
+read_data_mem:0|alu_out:0|write_reg:0
+0 
+CYCLE 8
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+imm: 0
+0
+read_data 0
+
+PC: 0x24
+pc:28|instruction:0
+pc:24|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|opcode:0|funct:0|shamt:0|addr:0|forwarding:1
+branch_target:20|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0|forwarding:1a
+read_data_mem:0|alu_out:0|write_reg:0
+0 
+CYCLE 9
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+imm: 0
+0
+read_data 0
+
+PC: 0x28
+pc:2c|instruction:0
+pc:28|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|opcode:0|funct:0|shamt:0|addr:0|forwarding:1
+branch_target:24|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0|forwarding:1a
+read_data_mem:0|alu_out:0|write_reg:0
+0 
+CYCLE 10
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+imm: 0
+0
+read_data 0
+
+PC: 0x2c
+pc:30|instruction:0
+pc:2c|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|opcode:0|funct:0|shamt:0|addr:0|forwarding:1
+branch_target:28|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0|forwarding:1a
+read_data_mem:0|alu_out:0|write_reg:0
+0 
+CYCLE 11
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+imm: 0
+0
+read_data 0
+
+PC: 0x30
+pc:34|instruction:0
+pc:30|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|opcode:0|funct:0|shamt:0|addr:0|forwarding:1
+branch_target:2c|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0|forwarding:1a
+read_data_mem:0|alu_out:0|write_reg:0
+0 
+CYCLE 12
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+imm: 0
+0
+read_data 0
+
+PC: 0x34
+pc:38|instruction:0
+pc:34|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|opcode:0|funct:0|shamt:0|addr:0|forwarding:1
+branch_target:30|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0|forwarding:1a
+read_data_mem:0|alu_out:0|write_reg:0
+0 
+CYCLE 13
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+imm: 0
+0
+read_data 0
+
+PC: 0x38
+pc:3c|instruction:0
+pc:38|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|opcode:0|funct:0|shamt:0|addr:0|forwarding:1
+branch_target:34|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0|forwarding:1a
+read_data_mem:0|alu_out:0|write_reg:0
+0 
+CYCLE 14
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+imm: 0
+0
+read_data 0
+
+PC: 0x3c
+pc:40|instruction:0
+pc:3c|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|opcode:0|funct:0|shamt:0|addr:0|forwarding:1
+branch_target:38|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0|forwarding:1a
+read_data_mem:0|alu_out:0|write_reg:0
+0 
+CYCLE 15
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+imm: 0
+0
+read_data 0
+
+PC: 0x40
+pc:44|instruction:0
+pc:40|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|opcode:0|funct:0|shamt:0|addr:0|forwarding:1
+branch_target:3c|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0|forwarding:1a
+read_data_mem:0|alu_out:0|write_reg:0
+0 
+CYCLE 16
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+imm: 0
+0
+read_data 0
+
+PC: 0x44
+pc:48|instruction:0
+pc:44|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|opcode:0|funct:0|shamt:0|addr:0|forwarding:1
+branch_target:40|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0|forwarding:1a
+read_data_mem:0|alu_out:0|write_reg:0
+0 
+CYCLE 17
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+imm: 0
+0
+read_data 0
+
+PC: 0x48
+pc:4c|instruction:0
+pc:48|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|opcode:0|funct:0|shamt:0|addr:0|forwarding:1
+branch_target:44|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0|forwarding:1a
+read_data_mem:0|alu_out:0|write_reg:0
+0 
+CYCLE 18
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+imm: 0
+0
+read_data 0
+
+PC: 0x4c
+pc:50|instruction:0
+pc:4c|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|opcode:0|funct:0|shamt:0|addr:0|forwarding:1
+branch_target:48|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0|forwarding:1a
+read_data_mem:0|alu_out:0|write_reg:0
+0 
+CYCLE 19
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+imm: 0
+0
+read_data 0
+
+PC: 0x50
+pc:54|instruction:0
+pc:50|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|opcode:0|funct:0|shamt:0|addr:0|forwarding:1
+branch_target:4c|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0|forwarding:1a
+read_data_mem:0|alu_out:0|write_reg:0
+0 
+CYCLE 20
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+imm: 0
+0
+read_data 0
+
+PC: 0x54
+pc:58|instruction:0
+pc:54|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|opcode:0|funct:0|shamt:0|addr:0|forwarding:1
+branch_target:50|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0|forwarding:1a
+read_data_mem:0|alu_out:0|write_reg:0
+0 
+CYCLE 21
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+imm: 0
+0
+read_data 0
+
+PC: 0x58
+pc:5c|instruction:0
+pc:58|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|opcode:0|funct:0|shamt:0|addr:0|forwarding:1
+branch_target:54|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0|forwarding:1a
+read_data_mem:0|alu_out:0|write_reg:0
+0 
+CYCLE 22
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+imm: 0
+0
+read_data 0
+
+PC: 0x5c
+pc:60|instruction:0
+pc:5c|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|opcode:0|funct:0|shamt:0|addr:0|forwarding:1
+branch_target:58|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0|forwarding:1a
+read_data_mem:0|alu_out:0|write_reg:0
+0 
+CYCLE 23
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+imm: 0
+0
+read_data 0
+
+PC: 0x60
+pc:64|instruction:0
+pc:60|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|opcode:0|funct:0|shamt:0|addr:0|forwarding:1
+branch_target:5c|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0|forwarding:1a
+read_data_mem:0|alu_out:0|write_reg:0
+0 
+CYCLE 24
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+imm: 0
+0
+read_data 0
+
+PC: 0x64
+pc:68|instruction:0
+pc:64|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|opcode:0|funct:0|shamt:0|addr:0|forwarding:1
+branch_target:60|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0|forwarding:1a
+read_data_mem:0|alu_out:0|write_reg:0
+0 
+CYCLE 25
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+imm: 0
+0
+read_data 0
+
+PC: 0x68
+pc:6c|instruction:0
+pc:68|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|opcode:0|funct:0|shamt:0|addr:0|forwarding:1
+branch_target:64|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0|forwarding:1a
+read_data_mem:0|alu_out:0|write_reg:0
+0 
+CYCLE 26
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+imm: 0
+0
+read_data 0
+
+PC: 0x6c
+pc:70|instruction:0
+pc:6c|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|opcode:0|funct:0|shamt:0|addr:0|forwarding:1
+branch_target:68|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0|forwarding:1a
+read_data_mem:0|alu_out:0|write_reg:0
+0 
+CYCLE 27
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+imm: 0
+0
+read_data 0
+
+PC: 0x70
+pc:74|instruction:0
+pc:70|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|opcode:0|funct:0|shamt:0|addr:0|forwarding:1
+branch_target:6c|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0|forwarding:1a
+read_data_mem:0|alu_out:0|write_reg:0
+0 
+CYCLE 28
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+Completed execution in 14.5 nanoseconds.
+
+=======================================================
+                    FINAL SUMMARY                        
+=======================================================
+Test Name            : MIPSPipeline-simple_no_branch_no_dep
+Single-Cycle Cycles  : 28
+Compiling test_data_pipeline/MIPSPipeline-simple_no_branch_no_dep/test.s...
+
+=======================================================
+               SINGLE CYCLE OUTPUT (-O0)                 
+=======================================================
+
+PC: 0x0
+REG_DEST: 0
+JUMP: 0
+BRANCH: 0
+MEM_READ: 0
+MEM_TO_REG: 0
+ALU_OP: 3
+MEM_WRITE: 0
+ALU_SRC: 1
+REG_WRITE: 1
+
+CYCLE 0
+R[0]: 0
+R[1]: 5
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+PC: 0x4
+REG_DEST: 0
+JUMP: 0
+BRANCH: 0
+MEM_READ: 0
+MEM_TO_REG: 0
+ALU_OP: 3
+MEM_WRITE: 0
+ALU_SRC: 1
+REG_WRITE: 1
+
+CYCLE 1
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+PC: 0x8
+REG_DEST: 0
+JUMP: 0
+BRANCH: 0
+MEM_READ: 0
+MEM_TO_REG: 0
+ALU_OP: 3
+MEM_WRITE: 0
+ALU_SRC: 1
+REG_WRITE: 1
+
+CYCLE 2
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+PC: 0xc
+REG_DEST: 0
+JUMP: 0
+BRANCH: 0
+MEM_READ: 0
+MEM_TO_REG: 0
+ALU_OP: 0
+MEM_WRITE: 1
+ALU_SRC: 1
+REG_WRITE: 0
+
+CYCLE 3
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+PC: 0x10
+REG_DEST: 0
+JUMP: 0
+BRANCH: 0
+MEM_READ: 0
+MEM_TO_REG: 0
+ALU_OP: 0
+MEM_WRITE: 1
+ALU_SRC: 1
+REG_WRITE: 0
+
+CYCLE 4
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+PC: 0x14
+REG_DEST: 0
+JUMP: 0
+BRANCH: 0
+MEM_READ: 0
+MEM_TO_REG: 0
+ALU_OP: 0
+MEM_WRITE: 1
+ALU_SRC: 1
+REG_WRITE: 0
+
+CYCLE 5
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+PC: 0x18
+REG_DEST: 0
+JUMP: 0
+BRANCH: 0
+MEM_READ: 1
+MEM_TO_REG: 1
+ALU_OP: 0
+MEM_WRITE: 0
+ALU_SRC: 1
+REG_WRITE: 1
+
+CYCLE 6
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+PC: 0x1c
+REG_DEST: 0
+JUMP: 0
+BRANCH: 0
+MEM_READ: 1
+MEM_TO_REG: 1
+ALU_OP: 0
+MEM_WRITE: 0
+ALU_SRC: 1
+REG_WRITE: 1
+
+CYCLE 7
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+PC: 0x20
+REG_DEST: 0
+JUMP: 0
+BRANCH: 0
+MEM_READ: 1
+MEM_TO_REG: 1
+ALU_OP: 0
+MEM_WRITE: 0
+ALU_SRC: 1
+REG_WRITE: 1
+
+CYCLE 8
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+PC: 0x24
+REG_DEST: 0
+JUMP: 0
+BRANCH: 0
+MEM_READ: 1
+MEM_TO_REG: 1
+ALU_OP: 0
+MEM_WRITE: 0
+ALU_SRC: 1
+REG_WRITE: 1
+
+CYCLE 9
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+PC: 0x28
+REG_DEST: 0
+JUMP: 0
+BRANCH: 0
+MEM_READ: 0
+MEM_TO_REG: 0
+ALU_OP: 3
+MEM_WRITE: 0
+ALU_SRC: 1
+REG_WRITE: 1
+
+CYCLE 10
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 2293760
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+PC: 0x2c
+REG_DEST: 0
+JUMP: 0
+BRANCH: 0
+MEM_READ: 0
+MEM_TO_REG: 0
+ALU_OP: 3
+MEM_WRITE: 0
+ALU_SRC: 1
+REG_WRITE: 1
+
+CYCLE 11
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 2293760
+R[9]: 2
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+PC: 0x30
+REG_DEST: 0
+JUMP: 0
+BRANCH: 0
+MEM_READ: 0
+MEM_TO_REG: 0
+ALU_OP: 3
+MEM_WRITE: 0
+ALU_SRC: 1
+REG_WRITE: 1
+
+CYCLE 12
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 2293760
+R[9]: 2
+R[10]: 1
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+PC: 0x34
+REG_DEST: 0
+JUMP: 0
+BRANCH: 0
+MEM_READ: 0
+MEM_TO_REG: 0
+ALU_OP: 3
+MEM_WRITE: 0
+ALU_SRC: 1
+REG_WRITE: 1
+
+CYCLE 13
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 2293760
+R[9]: 2
+R[10]: 1
+R[11]: 1
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+PC: 0x38
+REG_DEST: 1
+JUMP: 0
+BRANCH: 0
+MEM_READ: 0
+MEM_TO_REG: 0
+ALU_OP: 2
+MEM_WRITE: 0
+ALU_SRC: 0
+REG_WRITE: 1
+
+CYCLE 14
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 2293760
+R[9]: 2
+R[10]: 1
+R[11]: 1
+R[12]: 15
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+PC: 0x3c
+REG_DEST: 1
+JUMP: 0
+BRANCH: 0
+MEM_READ: 0
+MEM_TO_REG: 0
+ALU_OP: 2
+MEM_WRITE: 0
+ALU_SRC: 0
+REG_WRITE: 1
+
+CYCLE 15
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 2293760
+R[9]: 2
+R[10]: 1
+R[11]: 1
+R[12]: 15
+R[13]: 15
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+PC: 0x40
+REG_DEST: 1
+JUMP: 0
+BRANCH: 0
+MEM_READ: 0
+MEM_TO_REG: 0
+ALU_OP: 2
+MEM_WRITE: 0
+ALU_SRC: 0
+REG_WRITE: 1
+
+CYCLE 16
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 2293760
+R[9]: 2
+R[10]: 1
+R[11]: 1
+R[12]: 15
+R[13]: 15
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+PC: 0x44
+REG_DEST: 1
+JUMP: 0
+BRANCH: 0
+MEM_READ: 0
+MEM_TO_REG: 0
+ALU_OP: 2
+MEM_WRITE: 0
+ALU_SRC: 0
+REG_WRITE: 1
+
+CYCLE 17
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 2293760
+R[9]: 2
+R[10]: 1
+R[11]: 1
+R[12]: 15
+R[13]: 15
+R[14]: 0
+R[15]: -16
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+PC: 0x48
+REG_DEST: 1
+JUMP: 0
+BRANCH: 0
+MEM_READ: 0
+MEM_TO_REG: 0
+ALU_OP: 2
+MEM_WRITE: 0
+ALU_SRC: 0
+REG_WRITE: 1
+
+CYCLE 18
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 2293760
+R[9]: 2
+R[10]: 1
+R[11]: 1
+R[12]: 15
+R[13]: 15
+R[14]: 0
+R[15]: -16
+R[16]: 15
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+PC: 0x4c
+REG_DEST: 1
+JUMP: 0
+BRANCH: 0
+MEM_READ: 0
+MEM_TO_REG: 0
+ALU_OP: 2
+MEM_WRITE: 0
+ALU_SRC: 0
+REG_WRITE: 1
+
+CYCLE 19
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 2293760
+R[9]: 2
+R[10]: 1
+R[11]: 1
+R[12]: 15
+R[13]: 15
+R[14]: 0
+R[15]: -16
+R[16]: 15
+R[17]: 1
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+PC: 0x50
+REG_DEST: 1
+JUMP: 0
+BRANCH: 0
+MEM_READ: 0
+MEM_TO_REG: 0
+ALU_OP: 2
+MEM_WRITE: 0
+ALU_SRC: 0
+REG_WRITE: 1
+
+CYCLE 20
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 2293760
+R[9]: 2
+R[10]: 1
+R[11]: 1
+R[12]: 15
+R[13]: 15
+R[14]: 0
+R[15]: -16
+R[16]: 15
+R[17]: 1
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+PC: 0x54
+REG_DEST: 1
+JUMP: 0
+BRANCH: 0
+MEM_READ: 0
+MEM_TO_REG: 0
+ALU_OP: 2
+MEM_WRITE: 0
+ALU_SRC: 0
+REG_WRITE: 1
+
+CYCLE 21
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 2293760
+R[9]: 2
+R[10]: 1
+R[11]: 1
+R[12]: 15
+R[13]: 15
+R[14]: 0
+R[15]: -16
+R[16]: 15
+R[17]: 1
+R[18]: 0
+R[19]: 20
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+PC: 0x58
+REG_DEST: 1
+JUMP: 0
+BRANCH: 0
+MEM_READ: 0
+MEM_TO_REG: 0
+ALU_OP: 2
+MEM_WRITE: 0
+ALU_SRC: 0
+REG_WRITE: 1
+
+CYCLE 22
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 2293760
+R[9]: 2
+R[10]: 1
+R[11]: 1
+R[12]: 15
+R[13]: 15
+R[14]: 0
+R[15]: -16
+R[16]: 15
+R[17]: 1
+R[18]: 0
+R[19]: 20
+R[20]: 5
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+PC: 0x5c
+REG_DEST: 1
+JUMP: 0
+BRANCH: 0
+MEM_READ: 0
+MEM_TO_REG: 0
+ALU_OP: 2
+MEM_WRITE: 0
+ALU_SRC: 0
+REG_WRITE: 1
+
+CYCLE 23
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 2293760
+R[9]: 2
+R[10]: 1
+R[11]: 1
+R[12]: 15
+R[13]: 15
+R[14]: 0
+R[15]: -16
+R[16]: 15
+R[17]: 1
+R[18]: 0
+R[19]: 20
+R[20]: 5
+R[21]: -5
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+PC: 0x60
+REG_DEST: 1
+JUMP: 0
+BRANCH: 0
+MEM_READ: 0
+MEM_TO_REG: 0
+ALU_OP: 2
+MEM_WRITE: 0
+ALU_SRC: 0
+REG_WRITE: 1
+
+CYCLE 24
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 2293760
+R[9]: 2
+R[10]: 1
+R[11]: 1
+R[12]: 15
+R[13]: 15
+R[14]: 0
+R[15]: -16
+R[16]: 15
+R[17]: 1
+R[18]: 0
+R[19]: 20
+R[20]: 5
+R[21]: -5
+R[22]: -5
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+PC: 0x64
+REG_DEST: 1
+JUMP: 0
+BRANCH: 0
+MEM_READ: 0
+MEM_TO_REG: 0
+ALU_OP: 2
+MEM_WRITE: 0
+ALU_SRC: 0
+REG_WRITE: 1
+
+CYCLE 25
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 2293760
+R[9]: 2
+R[10]: 1
+R[11]: 1
+R[12]: 15
+R[13]: 15
+R[14]: 0
+R[15]: -16
+R[16]: 15
+R[17]: 1
+R[18]: 0
+R[19]: 20
+R[20]: 5
+R[21]: -5
+R[22]: -5
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+PC: 0x68
+REG_DEST: 1
+JUMP: 0
+BRANCH: 0
+MEM_READ: 0
+MEM_TO_REG: 0
+ALU_OP: 2
+MEM_WRITE: 0
+ALU_SRC: 0
+REG_WRITE: 1
+
+CYCLE 26
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 2293760
+R[9]: 2
+R[10]: 1
+R[11]: 1
+R[12]: 15
+R[13]: 15
+R[14]: 0
+R[15]: -16
+R[16]: 15
+R[17]: 1
+R[18]: 0
+R[19]: 20
+R[20]: 5
+R[21]: -5
+R[22]: -5
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+PC: 0x6c
+REG_DEST: 1
+JUMP: 0
+BRANCH: 0
+MEM_READ: 0
+MEM_TO_REG: 0
+ALU_OP: 2
+MEM_WRITE: 0
+ALU_SRC: 0
+REG_WRITE: 1
+
+CYCLE 27
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 2293760
+R[9]: 2
+R[10]: 1
+R[11]: 1
+R[12]: 15
+R[13]: 15
+R[14]: 0
+R[15]: -16
+R[16]: 15
+R[17]: 1
+R[18]: 0
+R[19]: 20
+R[20]: 5
+R[21]: -5
+R[22]: -5
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+PC: 0x70
+REG_DEST: 1
+JUMP: 0
+BRANCH: 0
+MEM_READ: 0
+MEM_TO_REG: 0
+ALU_OP: 2
+MEM_WRITE: 0
+ALU_SRC: 0
+REG_WRITE: 1
+
+CYCLE 28
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 2293760
+R[9]: 2
+R[10]: 1
+R[11]: 1
+R[12]: 15
+R[13]: 15
+R[14]: 0
+R[15]: -16
+R[16]: 15
+R[17]: 1
+R[18]: 0
+R[19]: 20
+R[20]: 5
+R[21]: -5
+R[22]: -5
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+Completed execution in 1812.5 nanoseconds.
+
+=======================================================
+                PIPELINED OUTPUT (-O1)                   
+=======================================================
+imm: 32042
+0
+read_data 0
+
+PC: 0x0
+pc:4|instruction:20010005
+pc:e1474338|read_data_1:0|read_data_2:0|imm:7d2a|rt:0|rd:f|opcode:0|funct:2a|shamt:14|addr:7d2a|forwarding:0
+branch_target:0|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0|forwarding:0
+read_data_mem:0|alu_out:0|write_reg:0
+15 
+CYCLE 0
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+imm: 5
+1
+read_data 0
+
+PC: 0x4
+pc:8|instruction:2402000a
+pc:4|read_data_1:0|read_data_2:0|imm:5|rt:1|rd:0|opcode:8|funct:5|shamt:0|addr:10005|forwarding:0
+branch_target:e14937e0|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:f|addr:7d2a|branch_reg:0|forwarding:0
+read_data_mem:0|alu_out:0|write_reg:0
+0 15 
+CYCLE 1
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+imm: 10
+2
+read_data 0
+
+PC: 0x8
+pc:c|instruction:30030002
+pc:8|read_data_1:0|read_data_2:0|imm:a|rt:2|rd:0|opcode:9|funct:a|shamt:0|addr:2000a|forwarding:0
+branch_target:18|alu_zero:0|alu_out:5|write_data_mem:0|write_reg:1|addr:10005|branch_reg:0|forwarding:0
+read_data_mem:0|alu_out:0|write_reg:15
+0 15 
+CYCLE 2
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+imm: 2
+3
+read_data 0
+
+PC: 0xc
+pc:10|instruction:ac000000
+pc:c|read_data_1:0|read_data_2:0|imm:2|rt:3|rd:0|opcode:c|funct:2|shamt:0|addr:30002|forwarding:0
+branch_target:30|alu_zero:0|alu_out:a|write_data_mem:0|write_reg:2|addr:2000a|branch_reg:0|forwarding:0
+read_data_mem:0|alu_out:5|write_reg:1
+0 15 
+CYCLE 3
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+imm: 0
+0
+read_data 0
+
+PC: 0x10
+pc:14|instruction:ac000000
+pc:10|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|opcode:2b|funct:0|shamt:0|addr:0|forwarding:0
+branch_target:14|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:3|addr:30002|branch_reg:0|forwarding:0
+read_data_mem:0|alu_out:10|write_reg:2
+0 15 
+CYCLE 4
+R[0]: 0
+R[1]: 5
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+imm: 0
+0
+read_data 0
+
+PC: 0x14
+pc:18|instruction:ac000000
+pc:14|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|opcode:2b|funct:0|shamt:0|addr:0|forwarding:0
+branch_target:10|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0|forwarding:0
+read_data_mem:0|alu_out:0|write_reg:3
+0 15 
+CYCLE 5
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+imm: 0
+0
+read_data 0
+
+PC: 0x18
+pc:1c|instruction:8c040000
+pc:18|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|opcode:2b|funct:0|shamt:0|addr:0|forwarding:0
+branch_target:14|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0|forwarding:0
+read_data_mem:536936453|alu_out:0|write_reg:0
+0 15 
+CYCLE 6
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+imm: 0
+4
+read_data 0
+
+PC: 0x1c
+pc:20|instruction:8c050000
+pc:1c|read_data_1:0|read_data_2:0|imm:0|rt:4|rd:0|opcode:23|funct:0|shamt:0|addr:40000|forwarding:0
+branch_target:18|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0|forwarding:0
+read_data_mem:0|alu_out:0|write_reg:0
+0 15 
+CYCLE 7
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+imm: 0
+5
+read_data 0
+
+PC: 0x20
+pc:24|instruction:8c060000
+pc:20|read_data_1:0|read_data_2:0|imm:0|rt:5|rd:0|opcode:23|funct:0|shamt:0|addr:50000|forwarding:0
+branch_target:1c|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:4|addr:40000|branch_reg:0|forwarding:0
+read_data_mem:0|alu_out:0|write_reg:0
+0 15 
+CYCLE 8
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+imm: 0
+6
+read_data 0
+
+PC: 0x24
+pc:28|instruction:8c070000
+pc:24|read_data_1:0|read_data_2:0|imm:0|rt:6|rd:0|opcode:23|funct:0|shamt:0|addr:60000|forwarding:0
+branch_target:20|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:5|addr:50000|branch_reg:0|forwarding:0
+read_data_mem:0|alu_out:0|write_reg:4
+0 15 
+CYCLE 9
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+imm: 0
+7
+read_data 0
+
+PC: 0x28
+pc:2c|instruction:3c080023
+pc:28|read_data_1:0|read_data_2:0|imm:0|rt:7|rd:0|opcode:23|funct:0|shamt:0|addr:70000|forwarding:0
+branch_target:24|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:6|addr:60000|branch_reg:0|forwarding:0
+read_data_mem:0|alu_out:0|write_reg:5
+0 15 
+CYCLE 10
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+imm: 35
+8
+read_data 0
+
+PC: 0x2c
+pc:30|instruction:34090002
+pc:2c|read_data_1:0|read_data_2:0|imm:23|rt:8|rd:0|opcode:f|funct:23|shamt:0|addr:80023|forwarding:0
+branch_target:28|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:7|addr:70000|branch_reg:0|forwarding:0
+read_data_mem:0|alu_out:0|write_reg:6
+0 15 
+CYCLE 11
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+imm: 2
+9
+read_data 0
+
+PC: 0x30
+pc:34|instruction:280a0001
+pc:30|read_data_1:0|read_data_2:0|imm:2|rt:9|rd:0|opcode:d|funct:2|shamt:0|addr:90002|forwarding:0
+branch_target:b8|alu_zero:0|alu_out:230000|write_data_mem:0|write_reg:8|addr:80023|branch_reg:0|forwarding:0
+read_data_mem:0|alu_out:0|write_reg:7
+0 15 
+CYCLE 12
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+imm: 1
+10
+read_data 0
+
+PC: 0x34
+pc:38|instruction:2c0b0001
+pc:34|read_data_1:0|read_data_2:0|imm:1|rt:a|rd:0|opcode:a|funct:1|shamt:0|addr:a0001|forwarding:0
+branch_target:38|alu_zero:0|alu_out:2|write_data_mem:0|write_reg:9|addr:90002|branch_reg:0|forwarding:0
+read_data_mem:0|alu_out:2293760|write_reg:8
+0 15 
+CYCLE 13
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+imm: 1
+11
+read_data 0
+
+PC: 0x38
+pc:3c|instruction:226020
+pc:38|read_data_1:0|read_data_2:0|imm:1|rt:b|rd:0|opcode:b|funct:1|shamt:0|addr:b0001|forwarding:0
+branch_target:38|alu_zero:0|alu_out:1|write_data_mem:0|write_reg:a|addr:a0001|branch_reg:0|forwarding:0
+read_data_mem:0|alu_out:2|write_reg:9
+0 15 
+CYCLE 14
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 2293760
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+imm: 24608
+2
+read_data 5
+
+PC: 0x3c
+pc:40|instruction:226821
+pc:3c|read_data_1:5|read_data_2:a|imm:6020|rt:2|rd:c|opcode:0|funct:20|shamt:0|addr:226020|forwarding:0
+branch_target:3c|alu_zero:0|alu_out:1|write_data_mem:0|write_reg:b|addr:b0001|branch_reg:0|forwarding:0
+read_data_mem:0|alu_out:1|write_reg:10
+0 12 
+CYCLE 15
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 2293760
+R[9]: 2
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+imm: 26657
+2
+read_data 5
+
+PC: 0x40
+pc:44|instruction:227024
+pc:40|read_data_1:5|read_data_2:a|imm:6821|rt:2|rd:d|opcode:0|funct:21|shamt:0|addr:226821|forwarding:0
+branch_target:180bc|alu_zero:0|alu_out:f|write_data_mem:a|write_reg:c|addr:226020|branch_reg:5|forwarding:0
+read_data_mem:0|alu_out:1|write_reg:11
+12 13 
+CYCLE 16
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 2293760
+R[9]: 2
+R[10]: 1
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+imm: 28708
+2
+read_data 5
+
+PC: 0x44
+pc:48|instruction:227827
+pc:44|read_data_1:5|read_data_2:a|imm:7024|rt:2|rd:e|opcode:0|funct:24|shamt:0|addr:227024|forwarding:0
+branch_target:1a0c4|alu_zero:0|alu_out:f|write_data_mem:a|write_reg:d|addr:226821|branch_reg:5|forwarding:0
+read_data_mem:0|alu_out:15|write_reg:12
+12 13 14 
+CYCLE 17
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 2293760
+R[9]: 2
+R[10]: 1
+R[11]: 1
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+imm: 30759
+2
+read_data 5
+
+PC: 0x48
+pc:4c|instruction:228025
+pc:48|read_data_1:5|read_data_2:a|imm:7827|rt:2|rd:f|opcode:0|funct:27|shamt:0|addr:227827|forwarding:0
+branch_target:1c0d4|alu_zero:1|alu_out:0|write_data_mem:a|write_reg:e|addr:227024|branch_reg:5|forwarding:0
+read_data_mem:0|alu_out:15|write_reg:13
+12 13 14 15 
+CYCLE 18
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 2293760
+R[9]: 2
+R[10]: 1
+R[11]: 1
+R[12]: 15
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+imm: 32805
+2
+read_data 5
+
+PC: 0x4c
+pc:50|instruction:22882a
+pc:4c|read_data_1:5|read_data_2:a|imm:8025|rt:2|rd:10|opcode:0|funct:25|shamt:0|addr:228025|forwarding:0
+branch_target:1e0e4|alu_zero:0|alu_out:fffffff0|write_data_mem:a|write_reg:f|addr:227827|branch_reg:5|forwarding:0
+read_data_mem:0|alu_out:0|write_reg:14
+12 13 14 15 16 
+CYCLE 19
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 2293760
+R[9]: 2
+R[10]: 1
+R[11]: 1
+R[12]: 15
+R[13]: 15
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+imm: 34858
+2
+read_data 5
+
+PC: 0x50
+pc:54|instruction:41902b
+pc:50|read_data_1:5|read_data_2:a|imm:882a|rt:2|rd:11|opcode:0|funct:2a|shamt:0|addr:22882a|forwarding:0
+branch_target:fffe00e0|alu_zero:0|alu_out:f|write_data_mem:a|write_reg:10|addr:228025|branch_reg:5|forwarding:0
+read_data_mem:0|alu_out:4294967280|write_reg:15
+12 13 14 15 16 17 
+CYCLE 20
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 2293760
+R[9]: 2
+R[10]: 1
+R[11]: 1
+R[12]: 15
+R[13]: 15
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+imm: 36907
+1
+read_data 10
+
+PC: 0x54
+pc:58|instruction:19880
+pc:54|read_data_1:a|read_data_2:5|imm:902b|rt:1|rd:12|opcode:0|funct:2b|shamt:0|addr:41902b|forwarding:0
+branch_target:fffe20f8|alu_zero:0|alu_out:1|write_data_mem:a|write_reg:11|addr:22882a|branch_reg:5|forwarding:0
+read_data_mem:0|alu_out:15|write_reg:16
+12 13 14 15 16 17 18 
+CYCLE 21
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 2293760
+R[9]: 2
+R[10]: 1
+R[11]: 1
+R[12]: 15
+R[13]: 15
+R[14]: 0
+R[15]: -16
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+imm: 39040
+1
+read_data 0
+
+PC: 0x58
+pc:5c|instruction:2a042
+pc:58|read_data_1:0|read_data_2:5|imm:9880|rt:1|rd:13|opcode:0|funct:0|shamt:2|addr:19880|forwarding:0
+branch_target:fffe4100|alu_zero:1|alu_out:0|write_data_mem:5|write_reg:12|addr:41902b|branch_reg:a|forwarding:0
+read_data_mem:0|alu_out:1|write_reg:17
+12 13 14 15 16 17 18 19 
+CYCLE 22
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 2293760
+R[9]: 2
+R[10]: 1
+R[11]: 1
+R[12]: 15
+R[13]: 15
+R[14]: 0
+R[15]: -16
+R[16]: 15
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+imm: 41026
+2
+read_data 0
+
+PC: 0x5c
+pc:60|instruction:22a822
+pc:5c|read_data_1:0|read_data_2:a|imm:a042|rt:2|rd:14|opcode:0|funct:2|shamt:1|addr:2a042|forwarding:0
+branch_target:fffe6258|alu_zero:0|alu_out:14|write_data_mem:5|write_reg:13|addr:19880|branch_reg:0|forwarding:0
+read_data_mem:0|alu_out:0|write_reg:18
+12 13 14 15 16 17 18 19 20 
+CYCLE 23
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 2293760
+R[9]: 2
+R[10]: 1
+R[11]: 1
+R[12]: 15
+R[13]: 15
+R[14]: 0
+R[15]: -16
+R[16]: 15
+R[17]: 1
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+imm: 43042
+2
+read_data 5
+
+PC: 0x60
+pc:64|instruction:22b023
+pc:60|read_data_1:5|read_data_2:a|imm:a822|rt:2|rd:15|opcode:0|funct:22|shamt:0|addr:22a822|forwarding:0
+branch_target:fffe8164|alu_zero:0|alu_out:5|write_data_mem:a|write_reg:14|addr:2a042|branch_reg:0|forwarding:0
+read_data_mem:0|alu_out:20|write_reg:19
+12 13 14 15 16 17 18 19 20 21 
+CYCLE 24
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 2293760
+R[9]: 2
+R[10]: 1
+R[11]: 1
+R[12]: 15
+R[13]: 15
+R[14]: 0
+R[15]: -16
+R[16]: 15
+R[17]: 1
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+imm: 45091
+2
+read_data 5
+
+PC: 0x64
+pc:68|instruction:0
+pc:64|read_data_1:5|read_data_2:a|imm:b023|rt:2|rd:16|opcode:0|funct:23|shamt:0|addr:22b023|forwarding:0
+branch_target:fffea0e8|alu_zero:0|alu_out:fffffffb|write_data_mem:a|write_reg:15|addr:22a822|branch_reg:5|forwarding:0
+read_data_mem:0|alu_out:5|write_reg:20
+12 13 14 15 16 17 18 19 20 21 22 
+CYCLE 25
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 2293760
+R[9]: 2
+R[10]: 1
+R[11]: 1
+R[12]: 15
+R[13]: 15
+R[14]: 0
+R[15]: -16
+R[16]: 15
+R[17]: 1
+R[18]: 0
+R[19]: 20
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+imm: 0
+0
+read_data 0
+
+PC: 0x68
+pc:6c|instruction:0
+pc:68|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|opcode:0|funct:0|shamt:0|addr:0|forwarding:0
+branch_target:fffec0f0|alu_zero:0|alu_out:fffffffb|write_data_mem:a|write_reg:16|addr:22b023|branch_reg:5|forwarding:0
+read_data_mem:0|alu_out:4294967291|write_reg:21
+12 13 14 15 16 17 18 19 20 21 22 
+CYCLE 26
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 2293760
+R[9]: 2
+R[10]: 1
+R[11]: 1
+R[12]: 15
+R[13]: 15
+R[14]: 0
+R[15]: -16
+R[16]: 15
+R[17]: 1
+R[18]: 0
+R[19]: 20
+R[20]: 5
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+imm: 0
+0
+read_data 0
+
+PC: 0x6c
+pc:70|instruction:0
+pc:6c|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|opcode:0|funct:0|shamt:0|addr:0|forwarding:0
+branch_target:68|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0|forwarding:0
+read_data_mem:0|alu_out:4294967291|write_reg:22
+12 13 14 15 16 17 18 19 20 21 22 
+CYCLE 27
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 2293760
+R[9]: 2
+R[10]: 1
+R[11]: 1
+R[12]: 15
+R[13]: 15
+R[14]: 0
+R[15]: -16
+R[16]: 15
+R[17]: 1
+R[18]: 0
+R[19]: 20
+R[20]: 5
+R[21]: -5
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+imm: 0
+0
+read_data 0
+
+PC: 0x70
+pc:74|instruction:0
+pc:70|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|opcode:0|funct:0|shamt:0|addr:0|forwarding:0
+branch_target:6c|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0|forwarding:0
+read_data_mem:0|alu_out:0|write_reg:0
+12 13 14 15 16 17 18 19 20 21 22 
+CYCLE 28
+R[0]: 0
+R[1]: 5
+R[2]: 10
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 2293760
+R[9]: 2
+R[10]: 1
+R[11]: 1
+R[12]: 15
+R[13]: 15
+R[14]: 0
+R[15]: -16
+R[16]: 15
+R[17]: 1
+R[18]: 0
+R[19]: 20
+R[20]: 5
+R[21]: -5
+R[22]: -5
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+
+Completed execution in 14.5 nanoseconds.
+
+=======================================================
+                    FINAL SUMMARY                        
+=======================================================
+Test Name            : MIPSPipeline-simple_no_branch_no_dep
+Single-Cycle Cycles  : 28

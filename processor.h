@@ -44,6 +44,7 @@ class Processor {
         uint32_t shamt;
         uint32_t addr;
         control_t control;
+        bool stall;
         bool forwarding;
 
         std::string toString() const
