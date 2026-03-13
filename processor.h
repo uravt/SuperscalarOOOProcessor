@@ -39,13 +39,14 @@ class Processor {
         uint32_t imm;     // instruction[15-0]
         int rt;           // instruction[20-16]
         int rd;           // instruction[15-11]
+        int rs; 
         uint32_t opcode;
         uint32_t funct;
         uint32_t shamt;
         uint32_t addr;
         control_t control;
         bool stall;
-        bool forwarding;
+
 
         std::string toString() const
         {
@@ -56,11 +57,11 @@ class Processor {
                 << "|imm:" << std::hex << imm
                 << "|rt:" << rt
                 << "|rd:" << rd
+                << "|rs:" << rs
                 << "|opcode:" << std::hex << opcode
                 << "|funct:" << std::hex << funct
                 << "|shamt:" << shamt
                 << "|addr:" << addr
-                << "|forwarding:" << forwarding
                 //<< "|control:" << control
                 ;
             return oss.str();
@@ -76,7 +77,9 @@ class Processor {
         int write_reg;
         uint32_t addr;
         uint32_t branch_reg;
-        bool forwarding;
+        int rt;           // instruction[20-16]
+        int rd;           // instruction[15-11]
+        int rs; 
         control_t control;
 
         std::string toString() const
@@ -89,7 +92,6 @@ class Processor {
                 << "|write_reg:" << write_reg
                 << "|addr:" << std::hex << addr
                 << "|branch_reg:" << branch_reg
-                << "|forwarding:" << forwarding
                 //<< "|control:" << control
                 ;
             return oss.str();
@@ -101,6 +103,9 @@ class Processor {
         uint32_t read_data_mem;
         uint32_t alu_out;
         int write_reg;
+        int rt;           // instruction[20-16]
+        int rd;           // instruction[15-11]
+        int rs; 
         control_t control;
 
         std::string toString() const
@@ -123,8 +128,6 @@ class Processor {
         ID_EX id_ex_in, id_ex_out;
         EX_MEM ex_mem_in, ex_mem_out;
         MEM_WB mem_wb_in, mem_wb_out;
-        std::queue<int> hazard_regs_queue;
-        std::set<int> hazard_regs_set;
         bool flush_pipeline = false;
 
         // pipelined processor
@@ -141,7 +144,20 @@ class Processor {
         void push_hazard_regs(int _reg);
  
     public:
-        Processor(Memory *mem) { regfile.pc = 0; memory = mem;}
+        Processor(Memory *mem)
+        {
+            regfile.pc = 0;
+            memory = mem;
+
+            memset(&if_id_in, 0, sizeof(if_id_in));
+            memset(&if_id_out, 0, sizeof(if_id_out));
+            memset(&id_ex_in, 0, sizeof(id_ex_in));
+            memset(&id_ex_out, 0, sizeof(id_ex_out));
+            memset(&ex_mem_in, 0, sizeof(ex_mem_in));
+            memset(&ex_mem_out, 0, sizeof(ex_mem_out));
+            memset(&mem_wb_in, 0, sizeof(mem_wb_in));
+            memset(&mem_wb_out, 0, sizeof(mem_wb_out));
+        }
 
         // Get PC
         uint32_t getPC() { return regfile.pc; }
