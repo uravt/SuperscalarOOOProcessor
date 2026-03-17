@@ -124,9 +124,17 @@ void Processor::pipelined_processor_advance() {
     // might be helpful to implement stages in a separate module
     writeback_stage();
     memory_stage();
+
+    if(!cache_hit) { //cache miss -> need to stall
+        memset(&mem_wb_in, 0, sizeof(mem_wb_in));
+        mem_wb_out = mem_wb_in;
+        return;
+    } 
+
     execute_stage();
     decode_stage();
     fetch_stage();
+
 
     if_id_out = if_id_in;
     id_ex_out = id_ex_in;
@@ -320,15 +328,17 @@ void Processor::execute_stage() {
 void Processor::memory_stage() {
     uint32_t read_data_mem = 0;
     uint32_t write_data_mem = 0;
+
+    cache_hit = true;
     // Memory
     // First read no matter whether it is a load or a store
-    memory->access(ex_mem_out.alu_out, read_data_mem, 0, ex_mem_out.control.mem_read  | ex_mem_out.control.mem_write , 0);
+    cache_hit &= memory->access(ex_mem_out.alu_out, read_data_mem, 0, ex_mem_out.control.mem_read  | ex_mem_out.control.mem_write , 0);
     // Stores: sb or sh mask and preserve original leftmost bits
     /*write_data_mem = control.halfword ? (read_data_mem & 0xffff0000) | (read_data_2 & 0xffff) : 
                     control.byte ? (read_data_mem & 0xffffff00) | (read_data_2 & 0xff): read_data_2;*/
     write_data_mem = ex_mem_out.write_data_mem;
     // Write to memory only if mem_write is 1, i.e store
-    memory->access(ex_mem_out.alu_out, read_data_mem, write_data_mem, ex_mem_out.control.mem_read , ex_mem_out.control.mem_write);
+    cache_hit &= memory->access(ex_mem_out.alu_out, read_data_mem, write_data_mem, ex_mem_out.control.mem_read , ex_mem_out.control.mem_write);
     // Loads: lbu or lhu modify read data by masking
     read_data_mem &= ex_mem_out.control.halfword ? 0xffff : ex_mem_out.control.byte ? 0xff : 0xffffffff;
 
@@ -340,6 +350,11 @@ void Processor::memory_stage() {
     regfile.pc += (control.branch && !control.bne && alu_zero) || (control.bne && !alu_zero) ? imm << 2 : 0; 
     regfile.pc = control.jump_reg ? read_data_1 : control.jump ? (regfile.pc & 0xf0000000) & (addr << 2): regfile.pc;
     */
+    cout << cache_hit << "\n";
+    if(!cache_hit) {
+        
+        return;
+    }
     
     mem_wb_in.read_data_mem = read_data_mem;
     mem_wb_in.alu_out = ex_mem_out.alu_out;

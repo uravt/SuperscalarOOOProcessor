@@ -129,6 +129,7 @@ class Processor {
         EX_MEM ex_mem_in, ex_mem_out;
         MEM_WB mem_wb_in, mem_wb_out;
         bool flush_pipeline = false;
+        bool cache_hit = false;
 
         // pipelined processor
         void fetch_stage();

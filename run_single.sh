@@ -66,4 +66,5 @@ echo "                    FINAL SUMMARY                        "
 echo "======================================================="
 printf "%-20s : %s\n" "Test Name" "$test_name"
 printf "%-20s : %s\n" "Single-Cycle Cycles" "${single_cycles:-ERR/CRASH}"
-printf "%-20s
+printf "%-20s : %s\n" "Pipelined Cycles" "${pipe_cycles:-ERR/CRASH}"
+printf "%-20s"
