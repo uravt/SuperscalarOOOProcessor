@@ -168,10 +168,15 @@ void Processor::fetch_stage() {
         return;
     }
 
+    cache_hit = true;
     uint32_t instruction;
-    memory->access(regfile.pc, instruction, 0, 1, 0);
+    cache_hit &= memory->access(regfile.pc, instruction, 0, 1, 0);
     DEBUG(cout << "\nPC: 0x" << std::hex << regfile.pc << std::dec << "\n");
     // increment pc
+    
+    if(!cache_hit) {
+        return;
+    }
     regfile.pc += 4;//WARNING: In single cycle PC is updated at the end. verify that when adding branching pc is not updated twice.
 
     if_id_in.instruction = instruction;
@@ -352,7 +357,6 @@ void Processor::memory_stage() {
     */
     cout << cache_hit << "\n";
     if(!cache_hit) {
-        
         return;
     }
     
