@@ -256,7 +256,7 @@ void Processor::execute_stage() {
     uint32_t operand_1 = id_ex_out.control.shift ? id_ex_out.shamt : id_ex_out.read_data_1;
     uint32_t operand_2 = id_ex_out.control.ALU_src ? imm : id_ex_out.read_data_2;
     uint32_t alu_zero = 0;
-
+    uint32_t store_data = id_ex_out.read_data_2;
 
     //FORWARDING
 
@@ -275,10 +275,17 @@ void Processor::execute_stage() {
         }
 
 
-        if(mem_wb_out.write_reg == id_ex_out.rt && !id_ex_out.control.ALU_src)
+        if(mem_wb_out.write_reg == id_ex_out.rt)
         {
-            DEBUG(printf("Fowarding from wb, rt %d, operand_2 = %d\n",id_ex_out.rt,wb_val);)
-            operand_2 = wb_val;
+            if(id_ex_out.control.mem_write)
+            {
+                store_data = wb_val;
+            }
+            else if(!id_ex_out.control.ALU_src)
+            {
+                DEBUG(printf("Fowarding from wb, rt %d, operand_2 = %d\n",id_ex_out.rt,wb_val);)
+                operand_2 = wb_val;
+            }
         }
 
     }
@@ -292,29 +299,20 @@ void Processor::execute_stage() {
         }
 
 
-        if(ex_mem_out.write_reg == id_ex_out.rt && !id_ex_out.control.ALU_src)
+        if(ex_mem_out.write_reg == id_ex_out.rt)
         {
-            operand_2 = ex_mem_out.alu_out;
-            DEBUG(printf("Fowarding from mem, rt %d, operand_2 = %d\n",id_ex_out.rt,ex_mem_out.alu_out);)
+            if(id_ex_out.control.mem_write)
+            {
+                store_data = ex_mem_out.alu_out;
+            }
+            else if(!id_ex_out.control.ALU_src)
+            {
+                operand_2 = ex_mem_out.alu_out;
+                DEBUG(printf("Fowarding from mem, rt %d, operand_2 = %d\n",id_ex_out.rt,ex_mem_out.alu_out);)
+            }
         }
     }
-    uint32_t store_data = id_ex_out.read_data_2;
-
-    // Forward into store data (rt)
-    if (ex_mem_out.control.reg_write && ex_mem_out.write_reg != 0) {
-        if (ex_mem_out.write_reg == id_ex_out.rt) {
-            store_data = ex_mem_out.alu_out;
-        }
-    }
-    if (mem_wb_out.control.reg_write && mem_wb_out.write_reg != 0) {
-        uint32_t wb_val =
-            mem_wb_out.control.mem_to_reg ?
-            mem_wb_out.read_data_mem :
-            mem_wb_out.alu_out;
-        if (mem_wb_out.write_reg == id_ex_out.rt) {
-            store_data = wb_val;
-        }
-    }
+    
 
 
     DEBUG(printf("operand 1: %d | operand 2: %d\n", operand_1, operand_2);)
