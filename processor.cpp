@@ -122,14 +122,14 @@ void Processor::pipelined_processor_advance() {
     // pipelined processor logic goes here
     // does nothing currently -- if you call it from the cmd line, you'll run into an infinite loop
     // might be helpful to implement stages in a separate module
+    if(!cache_hit) { //cache miss -> need to stall
+        memory_stage();
+        return;//replaced with just return. memory just needs to rerun
+    } 
     writeback_stage();
     memory_stage();
 
-    if(!cache_hit) { //cache miss -> need to stall
-        memset(&mem_wb_in, 0, sizeof(mem_wb_in));
-        mem_wb_out = mem_wb_in;
-        return;
-    } 
+
 
     execute_stage();
     decode_stage();
@@ -165,6 +165,11 @@ void Processor::fetch_stage() {
         memset(&if_id_in, 0, sizeof(if_id_in));
 
         flush_pipeline = false;
+        return;
+    }
+    if(stall)
+    {
+        stall = false;
         return;
     }
 
@@ -209,12 +214,15 @@ void Processor::decode_stage() {
     uint32_t read_data_1 = 0;
     uint32_t read_data_2 = 0;
 
-    //stall check
-    if(ex_mem_out.control.mem_read && (ex_mem_out.write_reg == rt || ex_mem_out.write_reg == rs))
-    {
-        //STALL NEEDS TO BE ADDED HERE
-    }
 
+    //stall check
+    if (id_ex_out.control.mem_read &&
+        (id_ex_out.rt == rs || id_ex_out.rt == rt)) 
+    {
+        stall = true;
+        memset(&id_ex_in, 0, sizeof(id_ex_in));
+        return;
+    }
     // Read from reg file
     regfile.access(rs, rt, read_data_1, read_data_2, 0, 0, 0);
         cout << "read_data " << read_data_1 << "\n";
@@ -267,7 +275,7 @@ void Processor::execute_stage() {
         }
 
 
-        if(mem_wb_out.write_reg == id_ex_out.rt)
+        if(mem_wb_out.write_reg == id_ex_out.rt && !id_ex_out.control.ALU_src)
         {
             DEBUG(printf("Fowarding from wb, rt %d, operand_2 = %d\n",id_ex_out.rt,wb_val);)
             operand_2 = wb_val;
@@ -284,12 +292,30 @@ void Processor::execute_stage() {
         }
 
 
-        if(ex_mem_out.write_reg == id_ex_out.rt)
+        if(ex_mem_out.write_reg == id_ex_out.rt && !id_ex_out.control.ALU_src)
         {
             operand_2 = ex_mem_out.alu_out;
             DEBUG(printf("Fowarding from mem, rt %d, operand_2 = %d\n",id_ex_out.rt,ex_mem_out.alu_out);)
         }
     }
+    uint32_t store_data = id_ex_out.read_data_2;
+
+    // Forward into store data (rt)
+    if (ex_mem_out.control.reg_write && ex_mem_out.write_reg != 0) {
+        if (ex_mem_out.write_reg == id_ex_out.rt) {
+            store_data = ex_mem_out.alu_out;
+        }
+    }
+    if (mem_wb_out.control.reg_write && mem_wb_out.write_reg != 0) {
+        uint32_t wb_val =
+            mem_wb_out.control.mem_to_reg ?
+            mem_wb_out.read_data_mem :
+            mem_wb_out.alu_out;
+        if (mem_wb_out.write_reg == id_ex_out.rt) {
+            store_data = wb_val;
+        }
+    }
+
 
     DEBUG(printf("operand 1: %d | operand 2: %d\n", operand_1, operand_2);)
 
@@ -318,7 +344,7 @@ void Processor::execute_stage() {
     ex_mem_in.branch_target = id_ex_out.pc + (imm << 2); //NOTE: accurate???
     ex_mem_in.alu_zero = alu_zero;
     ex_mem_in.alu_out = alu_result;
-    ex_mem_in.write_data_mem = id_ex_out.read_data_2;
+    ex_mem_in.write_data_mem = store_data;
     ex_mem_in.write_reg = id_ex_out.control.reg_dest ? id_ex_out.rd : id_ex_out.rt;//from end of single cycle.
     ex_mem_in.addr = id_ex_out.addr;
     ex_mem_in.branch_reg = id_ex_out.read_data_1;

@@ -1,1330 +1,4 @@
-Compiling test_data_pipeline/MIPSPipeline-simple_no_branch_no_dep/test.s...
-
-=======================================================
-               SINGLE CYCLE OUTPUT (-O0)                 
-=======================================================
-
-PC: 0x0
-REG_DEST: 0
-JUMP: 0
-BRANCH: 0
-MEM_READ: 0
-MEM_TO_REG: 0
-ALU_OP: 3
-MEM_WRITE: 0
-ALU_SRC: 1
-REG_WRITE: 1
-
-CYCLE 0
-R[0]: 0
-R[1]: 5
-R[2]: 0
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 0
-R[9]: 0
-R[10]: 0
-R[11]: 0
-R[12]: 0
-R[13]: 0
-R[14]: 0
-R[15]: 0
-R[16]: 0
-R[17]: 0
-R[18]: 0
-R[19]: 0
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-
-PC: 0x4
-REG_DEST: 0
-JUMP: 0
-BRANCH: 0
-MEM_READ: 0
-MEM_TO_REG: 0
-ALU_OP: 3
-MEM_WRITE: 0
-ALU_SRC: 1
-REG_WRITE: 1
-
-CYCLE 1
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 0
-R[9]: 0
-R[10]: 0
-R[11]: 0
-R[12]: 0
-R[13]: 0
-R[14]: 0
-R[15]: 0
-R[16]: 0
-R[17]: 0
-R[18]: 0
-R[19]: 0
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-
-PC: 0x8
-REG_DEST: 0
-JUMP: 0
-BRANCH: 0
-MEM_READ: 0
-MEM_TO_REG: 0
-ALU_OP: 3
-MEM_WRITE: 0
-ALU_SRC: 1
-REG_WRITE: 1
-
-CYCLE 2
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 0
-R[9]: 0
-R[10]: 0
-R[11]: 0
-R[12]: 0
-R[13]: 0
-R[14]: 0
-R[15]: 0
-R[16]: 0
-R[17]: 0
-R[18]: 0
-R[19]: 0
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-
-PC: 0xc
-REG_DEST: 0
-JUMP: 0
-BRANCH: 0
-MEM_READ: 0
-MEM_TO_REG: 0
-ALU_OP: 0
-MEM_WRITE: 1
-ALU_SRC: 1
-REG_WRITE: 0
-
-CYCLE 3
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 0
-R[9]: 0
-R[10]: 0
-R[11]: 0
-R[12]: 0
-R[13]: 0
-R[14]: 0
-R[15]: 0
-R[16]: 0
-R[17]: 0
-R[18]: 0
-R[19]: 0
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-
-PC: 0x10
-REG_DEST: 0
-JUMP: 0
-BRANCH: 0
-MEM_READ: 0
-MEM_TO_REG: 0
-ALU_OP: 0
-MEM_WRITE: 1
-ALU_SRC: 1
-REG_WRITE: 0
-
-CYCLE 4
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 0
-R[9]: 0
-R[10]: 0
-R[11]: 0
-R[12]: 0
-R[13]: 0
-R[14]: 0
-R[15]: 0
-R[16]: 0
-R[17]: 0
-R[18]: 0
-R[19]: 0
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-
-PC: 0x14
-REG_DEST: 0
-JUMP: 0
-BRANCH: 0
-MEM_READ: 0
-MEM_TO_REG: 0
-ALU_OP: 0
-MEM_WRITE: 1
-ALU_SRC: 1
-REG_WRITE: 0
-
-CYCLE 5
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 0
-R[9]: 0
-R[10]: 0
-R[11]: 0
-R[12]: 0
-R[13]: 0
-R[14]: 0
-R[15]: 0
-R[16]: 0
-R[17]: 0
-R[18]: 0
-R[19]: 0
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-
-PC: 0x18
-REG_DEST: 0
-JUMP: 0
-BRANCH: 0
-MEM_READ: 1
-MEM_TO_REG: 1
-ALU_OP: 0
-MEM_WRITE: 0
-ALU_SRC: 1
-REG_WRITE: 1
-
-CYCLE 6
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 0
-R[9]: 0
-R[10]: 0
-R[11]: 0
-R[12]: 0
-R[13]: 0
-R[14]: 0
-R[15]: 0
-R[16]: 0
-R[17]: 0
-R[18]: 0
-R[19]: 0
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-
-PC: 0x1c
-REG_DEST: 0
-JUMP: 0
-BRANCH: 0
-MEM_READ: 1
-MEM_TO_REG: 1
-ALU_OP: 0
-MEM_WRITE: 0
-ALU_SRC: 1
-REG_WRITE: 1
-
-CYCLE 7
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 0
-R[9]: 0
-R[10]: 0
-R[11]: 0
-R[12]: 0
-R[13]: 0
-R[14]: 0
-R[15]: 0
-R[16]: 0
-R[17]: 0
-R[18]: 0
-R[19]: 0
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-
-PC: 0x20
-REG_DEST: 0
-JUMP: 0
-BRANCH: 0
-MEM_READ: 1
-MEM_TO_REG: 1
-ALU_OP: 0
-MEM_WRITE: 0
-ALU_SRC: 1
-REG_WRITE: 1
-
-CYCLE 8
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 0
-R[9]: 0
-R[10]: 0
-R[11]: 0
-R[12]: 0
-R[13]: 0
-R[14]: 0
-R[15]: 0
-R[16]: 0
-R[17]: 0
-R[18]: 0
-R[19]: 0
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-
-PC: 0x24
-REG_DEST: 0
-JUMP: 0
-BRANCH: 0
-MEM_READ: 1
-MEM_TO_REG: 1
-ALU_OP: 0
-MEM_WRITE: 0
-ALU_SRC: 1
-REG_WRITE: 1
-
-CYCLE 9
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 0
-R[9]: 0
-R[10]: 0
-R[11]: 0
-R[12]: 0
-R[13]: 0
-R[14]: 0
-R[15]: 0
-R[16]: 0
-R[17]: 0
-R[18]: 0
-R[19]: 0
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-
-PC: 0x28
-REG_DEST: 0
-JUMP: 0
-BRANCH: 0
-MEM_READ: 0
-MEM_TO_REG: 0
-ALU_OP: 3
-MEM_WRITE: 0
-ALU_SRC: 1
-REG_WRITE: 1
-
-CYCLE 10
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 2293760
-R[9]: 0
-R[10]: 0
-R[11]: 0
-R[12]: 0
-R[13]: 0
-R[14]: 0
-R[15]: 0
-R[16]: 0
-R[17]: 0
-R[18]: 0
-R[19]: 0
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-
-PC: 0x2c
-REG_DEST: 0
-JUMP: 0
-BRANCH: 0
-MEM_READ: 0
-MEM_TO_REG: 0
-ALU_OP: 3
-MEM_WRITE: 0
-ALU_SRC: 1
-REG_WRITE: 1
-
-CYCLE 11
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 2293760
-R[9]: 2
-R[10]: 0
-R[11]: 0
-R[12]: 0
-R[13]: 0
-R[14]: 0
-R[15]: 0
-R[16]: 0
-R[17]: 0
-R[18]: 0
-R[19]: 0
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-
-PC: 0x30
-REG_DEST: 0
-JUMP: 0
-BRANCH: 0
-MEM_READ: 0
-MEM_TO_REG: 0
-ALU_OP: 3
-MEM_WRITE: 0
-ALU_SRC: 1
-REG_WRITE: 1
-
-CYCLE 12
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 2293760
-R[9]: 2
-R[10]: 1
-R[11]: 0
-R[12]: 0
-R[13]: 0
-R[14]: 0
-R[15]: 0
-R[16]: 0
-R[17]: 0
-R[18]: 0
-R[19]: 0
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-
-PC: 0x34
-REG_DEST: 0
-JUMP: 0
-BRANCH: 0
-MEM_READ: 0
-MEM_TO_REG: 0
-ALU_OP: 3
-MEM_WRITE: 0
-ALU_SRC: 1
-REG_WRITE: 1
-
-CYCLE 13
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 2293760
-R[9]: 2
-R[10]: 1
-R[11]: 1
-R[12]: 0
-R[13]: 0
-R[14]: 0
-R[15]: 0
-R[16]: 0
-R[17]: 0
-R[18]: 0
-R[19]: 0
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-
-PC: 0x38
-REG_DEST: 1
-JUMP: 0
-BRANCH: 0
-MEM_READ: 0
-MEM_TO_REG: 0
-ALU_OP: 2
-MEM_WRITE: 0
-ALU_SRC: 0
-REG_WRITE: 1
-
-CYCLE 14
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 2293760
-R[9]: 2
-R[10]: 1
-R[11]: 1
-R[12]: 15
-R[13]: 0
-R[14]: 0
-R[15]: 0
-R[16]: 0
-R[17]: 0
-R[18]: 0
-R[19]: 0
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-
-PC: 0x3c
-REG_DEST: 1
-JUMP: 0
-BRANCH: 0
-MEM_READ: 0
-MEM_TO_REG: 0
-ALU_OP: 2
-MEM_WRITE: 0
-ALU_SRC: 0
-REG_WRITE: 1
-
-CYCLE 15
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 2293760
-R[9]: 2
-R[10]: 1
-R[11]: 1
-R[12]: 15
-R[13]: 15
-R[14]: 0
-R[15]: 0
-R[16]: 0
-R[17]: 0
-R[18]: 0
-R[19]: 0
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-
-PC: 0x40
-REG_DEST: 1
-JUMP: 0
-BRANCH: 0
-MEM_READ: 0
-MEM_TO_REG: 0
-ALU_OP: 2
-MEM_WRITE: 0
-ALU_SRC: 0
-REG_WRITE: 1
-
-CYCLE 16
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 2293760
-R[9]: 2
-R[10]: 1
-R[11]: 1
-R[12]: 15
-R[13]: 15
-R[14]: 0
-R[15]: 0
-R[16]: 0
-R[17]: 0
-R[18]: 0
-R[19]: 0
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-
-PC: 0x44
-REG_DEST: 1
-JUMP: 0
-BRANCH: 0
-MEM_READ: 0
-MEM_TO_REG: 0
-ALU_OP: 2
-MEM_WRITE: 0
-ALU_SRC: 0
-REG_WRITE: 1
-
-CYCLE 17
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 2293760
-R[9]: 2
-R[10]: 1
-R[11]: 1
-R[12]: 15
-R[13]: 15
-R[14]: 0
-R[15]: -16
-R[16]: 0
-R[17]: 0
-R[18]: 0
-R[19]: 0
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-
-PC: 0x48
-REG_DEST: 1
-JUMP: 0
-BRANCH: 0
-MEM_READ: 0
-MEM_TO_REG: 0
-ALU_OP: 2
-MEM_WRITE: 0
-ALU_SRC: 0
-REG_WRITE: 1
-
-CYCLE 18
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 2293760
-R[9]: 2
-R[10]: 1
-R[11]: 1
-R[12]: 15
-R[13]: 15
-R[14]: 0
-R[15]: -16
-R[16]: 15
-R[17]: 0
-R[18]: 0
-R[19]: 0
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-
-PC: 0x4c
-REG_DEST: 1
-JUMP: 0
-BRANCH: 0
-MEM_READ: 0
-MEM_TO_REG: 0
-ALU_OP: 2
-MEM_WRITE: 0
-ALU_SRC: 0
-REG_WRITE: 1
-
-CYCLE 19
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 2293760
-R[9]: 2
-R[10]: 1
-R[11]: 1
-R[12]: 15
-R[13]: 15
-R[14]: 0
-R[15]: -16
-R[16]: 15
-R[17]: 1
-R[18]: 0
-R[19]: 0
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-
-PC: 0x50
-REG_DEST: 1
-JUMP: 0
-BRANCH: 0
-MEM_READ: 0
-MEM_TO_REG: 0
-ALU_OP: 2
-MEM_WRITE: 0
-ALU_SRC: 0
-REG_WRITE: 1
-
-CYCLE 20
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 2293760
-R[9]: 2
-R[10]: 1
-R[11]: 1
-R[12]: 15
-R[13]: 15
-R[14]: 0
-R[15]: -16
-R[16]: 15
-R[17]: 1
-R[18]: 0
-R[19]: 0
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-
-PC: 0x54
-REG_DEST: 1
-JUMP: 0
-BRANCH: 0
-MEM_READ: 0
-MEM_TO_REG: 0
-ALU_OP: 2
-MEM_WRITE: 0
-ALU_SRC: 0
-REG_WRITE: 1
-
-CYCLE 21
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 2293760
-R[9]: 2
-R[10]: 1
-R[11]: 1
-R[12]: 15
-R[13]: 15
-R[14]: 0
-R[15]: -16
-R[16]: 15
-R[17]: 1
-R[18]: 0
-R[19]: 20
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-
-PC: 0x58
-REG_DEST: 1
-JUMP: 0
-BRANCH: 0
-MEM_READ: 0
-MEM_TO_REG: 0
-ALU_OP: 2
-MEM_WRITE: 0
-ALU_SRC: 0
-REG_WRITE: 1
-
-CYCLE 22
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 2293760
-R[9]: 2
-R[10]: 1
-R[11]: 1
-R[12]: 15
-R[13]: 15
-R[14]: 0
-R[15]: -16
-R[16]: 15
-R[17]: 1
-R[18]: 0
-R[19]: 20
-R[20]: 5
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-
-PC: 0x5c
-REG_DEST: 1
-JUMP: 0
-BRANCH: 0
-MEM_READ: 0
-MEM_TO_REG: 0
-ALU_OP: 2
-MEM_WRITE: 0
-ALU_SRC: 0
-REG_WRITE: 1
-
-CYCLE 23
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 2293760
-R[9]: 2
-R[10]: 1
-R[11]: 1
-R[12]: 15
-R[13]: 15
-R[14]: 0
-R[15]: -16
-R[16]: 15
-R[17]: 1
-R[18]: 0
-R[19]: 20
-R[20]: 5
-R[21]: -5
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-
-PC: 0x60
-REG_DEST: 1
-JUMP: 0
-BRANCH: 0
-MEM_READ: 0
-MEM_TO_REG: 0
-ALU_OP: 2
-MEM_WRITE: 0
-ALU_SRC: 0
-REG_WRITE: 1
-
-CYCLE 24
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 2293760
-R[9]: 2
-R[10]: 1
-R[11]: 1
-R[12]: 15
-R[13]: 15
-R[14]: 0
-R[15]: -16
-R[16]: 15
-R[17]: 1
-R[18]: 0
-R[19]: 20
-R[20]: 5
-R[21]: -5
-R[22]: -5
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-
-PC: 0x64
-REG_DEST: 1
-JUMP: 0
-BRANCH: 0
-MEM_READ: 0
-MEM_TO_REG: 0
-ALU_OP: 2
-MEM_WRITE: 0
-ALU_SRC: 0
-REG_WRITE: 1
-
-CYCLE 25
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 2293760
-R[9]: 2
-R[10]: 1
-R[11]: 1
-R[12]: 15
-R[13]: 15
-R[14]: 0
-R[15]: -16
-R[16]: 15
-R[17]: 1
-R[18]: 0
-R[19]: 20
-R[20]: 5
-R[21]: -5
-R[22]: -5
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-
-PC: 0x68
-REG_DEST: 1
-JUMP: 0
-BRANCH: 0
-MEM_READ: 0
-MEM_TO_REG: 0
-ALU_OP: 2
-MEM_WRITE: 0
-ALU_SRC: 0
-REG_WRITE: 1
-
-CYCLE 26
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 2293760
-R[9]: 2
-R[10]: 1
-R[11]: 1
-R[12]: 15
-R[13]: 15
-R[14]: 0
-R[15]: -16
-R[16]: 15
-R[17]: 1
-R[18]: 0
-R[19]: 20
-R[20]: 5
-R[21]: -5
-R[22]: -5
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-
-PC: 0x6c
-REG_DEST: 1
-JUMP: 0
-BRANCH: 0
-MEM_READ: 0
-MEM_TO_REG: 0
-ALU_OP: 2
-MEM_WRITE: 0
-ALU_SRC: 0
-REG_WRITE: 1
-
-CYCLE 27
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 2293760
-R[9]: 2
-R[10]: 1
-R[11]: 1
-R[12]: 15
-R[13]: 15
-R[14]: 0
-R[15]: -16
-R[16]: 15
-R[17]: 1
-R[18]: 0
-R[19]: 20
-R[20]: 5
-R[21]: -5
-R[22]: -5
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-
-PC: 0x70
-REG_DEST: 1
-JUMP: 0
-BRANCH: 0
-MEM_READ: 0
-MEM_TO_REG: 0
-ALU_OP: 2
-MEM_WRITE: 0
-ALU_SRC: 0
-REG_WRITE: 1
-
-CYCLE 28
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 2293760
-R[9]: 2
-R[10]: 1
-R[11]: 1
-R[12]: 15
-R[13]: 15
-R[14]: 0
-R[15]: -16
-R[16]: 15
-R[17]: 1
-R[18]: 0
-R[19]: 20
-R[20]: 5
-R[21]: -5
-R[22]: -5
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-
-Completed execution in 1812.5 nanoseconds.
-
-=======================================================
-                PIPELINED OUTPUT (-O1)                   
-=======================================================
 1
-operand 1: 0 | operand 2: 0
-imm: 0
-0
-read_data 0
-
-PC: 0x0
-pc:0|instruction:0
-pc:0|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:0|funct:0|shamt:0|addr:0
-branch_target:0|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
-read_data_mem:0|alu_out:0|write_reg:0
 
 CYCLE 0
 R[0]: 0
@@ -1405,16 +79,6 @@ R[29]: 0
 R[30]: 0
 R[31]: 0
 1
-operand 1: 0 | operand 2: 0
-imm: 0
-0
-read_data 0
-
-PC: 0x0
-pc:0|instruction:0
-pc:0|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:0|funct:0|shamt:0|addr:0
-branch_target:0|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
-read_data_mem:0|alu_out:0|write_reg:0
 
 CYCLE 2
 R[0]: 0
@@ -1495,16 +159,6 @@ R[29]: 0
 R[30]: 0
 R[31]: 0
 1
-operand 1: 0 | operand 2: 0
-imm: 0
-0
-read_data 0
-
-PC: 0x0
-pc:0|instruction:0
-pc:0|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:0|funct:0|shamt:0|addr:0
-branch_target:0|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
-read_data_mem:0|alu_out:0|write_reg:0
 
 CYCLE 4
 R[0]: 0
@@ -1585,16 +239,6 @@ R[29]: 0
 R[30]: 0
 R[31]: 0
 1
-operand 1: 0 | operand 2: 0
-imm: 0
-0
-read_data 0
-
-PC: 0x0
-pc:0|instruction:0
-pc:0|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:0|funct:0|shamt:0|addr:0
-branch_target:0|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
-read_data_mem:0|alu_out:0|write_reg:0
 
 CYCLE 6
 R[0]: 0
@@ -1675,16 +319,6 @@ R[29]: 0
 R[30]: 0
 R[31]: 0
 1
-operand 1: 0 | operand 2: 0
-imm: 0
-0
-read_data 0
-
-PC: 0x0
-pc:0|instruction:0
-pc:0|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:0|funct:0|shamt:0|addr:0
-branch_target:0|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
-read_data_mem:0|alu_out:0|write_reg:0
 
 CYCLE 8
 R[0]: 0
@@ -1765,16 +399,6 @@ R[29]: 0
 R[30]: 0
 R[31]: 0
 1
-operand 1: 0 | operand 2: 0
-imm: 0
-0
-read_data 0
-
-PC: 0x0
-pc:0|instruction:0
-pc:0|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:0|funct:0|shamt:0|addr:0
-branch_target:0|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
-read_data_mem:0|alu_out:0|write_reg:0
 
 CYCLE 10
 R[0]: 0
@@ -1855,16 +479,6 @@ R[29]: 0
 R[30]: 0
 R[31]: 0
 1
-operand 1: 0 | operand 2: 0
-imm: 0
-0
-read_data 0
-
-PC: 0x0
-pc:0|instruction:0
-pc:0|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:0|funct:0|shamt:0|addr:0
-branch_target:0|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
-read_data_mem:0|alu_out:0|write_reg:0
 
 CYCLE 12
 R[0]: 0
@@ -1945,16 +559,6 @@ R[29]: 0
 R[30]: 0
 R[31]: 0
 1
-operand 1: 0 | operand 2: 0
-imm: 0
-0
-read_data 0
-
-PC: 0x0
-pc:0|instruction:0
-pc:0|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:0|funct:0|shamt:0|addr:0
-branch_target:0|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
-read_data_mem:0|alu_out:0|write_reg:0
 
 CYCLE 14
 R[0]: 0
@@ -2035,16 +639,6 @@ R[29]: 0
 R[30]: 0
 R[31]: 0
 1
-operand 1: 0 | operand 2: 0
-imm: 0
-0
-read_data 0
-
-PC: 0x0
-pc:0|instruction:0
-pc:0|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:0|funct:0|shamt:0|addr:0
-branch_target:0|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
-read_data_mem:0|alu_out:0|write_reg:0
 
 CYCLE 16
 R[0]: 0
@@ -2125,16 +719,6 @@ R[29]: 0
 R[30]: 0
 R[31]: 0
 1
-operand 1: 0 | operand 2: 0
-imm: 0
-0
-read_data 0
-
-PC: 0x0
-pc:0|instruction:0
-pc:0|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:0|funct:0|shamt:0|addr:0
-branch_target:0|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
-read_data_mem:0|alu_out:0|write_reg:0
 
 CYCLE 18
 R[0]: 0
@@ -2215,16 +799,6 @@ R[29]: 0
 R[30]: 0
 R[31]: 0
 1
-operand 1: 0 | operand 2: 0
-imm: 0
-0
-read_data 0
-
-PC: 0x0
-pc:0|instruction:0
-pc:0|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:0|funct:0|shamt:0|addr:0
-branch_target:0|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
-read_data_mem:0|alu_out:0|write_reg:0
 
 CYCLE 20
 R[0]: 0
@@ -2305,16 +879,6 @@ R[29]: 0
 R[30]: 0
 R[31]: 0
 1
-operand 1: 0 | operand 2: 0
-imm: 0
-0
-read_data 0
-
-PC: 0x0
-pc:0|instruction:0
-pc:0|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:0|funct:0|shamt:0|addr:0
-branch_target:0|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
-read_data_mem:0|alu_out:0|write_reg:0
 
 CYCLE 22
 R[0]: 0
@@ -2395,16 +959,6 @@ R[29]: 0
 R[30]: 0
 R[31]: 0
 1
-operand 1: 0 | operand 2: 0
-imm: 0
-0
-read_data 0
-
-PC: 0x0
-pc:0|instruction:0
-pc:0|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:0|funct:0|shamt:0|addr:0
-branch_target:0|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
-read_data_mem:0|alu_out:0|write_reg:0
 
 CYCLE 24
 R[0]: 0
@@ -2485,16 +1039,6 @@ R[29]: 0
 R[30]: 0
 R[31]: 0
 1
-operand 1: 0 | operand 2: 0
-imm: 0
-0
-read_data 0
-
-PC: 0x0
-pc:0|instruction:0
-pc:0|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:0|funct:0|shamt:0|addr:0
-branch_target:0|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
-read_data_mem:0|alu_out:0|write_reg:0
 
 CYCLE 26
 R[0]: 0
@@ -2575,16 +1119,6 @@ R[29]: 0
 R[30]: 0
 R[31]: 0
 1
-operand 1: 0 | operand 2: 0
-imm: 0
-0
-read_data 0
-
-PC: 0x0
-pc:0|instruction:0
-pc:0|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:0|funct:0|shamt:0|addr:0
-branch_target:0|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
-read_data_mem:0|alu_out:0|write_reg:0
 
 CYCLE 28
 R[0]: 0
@@ -2665,16 +1199,6 @@ R[29]: 0
 R[30]: 0
 R[31]: 0
 1
-operand 1: 0 | operand 2: 0
-imm: 0
-0
-read_data 0
-
-PC: 0x0
-pc:0|instruction:0
-pc:0|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:0|funct:0|shamt:0|addr:0
-branch_target:0|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
-read_data_mem:0|alu_out:0|write_reg:0
 
 CYCLE 30
 R[0]: 0
@@ -2755,16 +1279,6 @@ R[29]: 0
 R[30]: 0
 R[31]: 0
 1
-operand 1: 0 | operand 2: 0
-imm: 0
-0
-read_data 0
-
-PC: 0x0
-pc:0|instruction:0
-pc:0|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:0|funct:0|shamt:0|addr:0
-branch_target:0|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
-read_data_mem:0|alu_out:0|write_reg:0
 
 CYCLE 32
 R[0]: 0
@@ -2845,16 +1359,6 @@ R[29]: 0
 R[30]: 0
 R[31]: 0
 1
-operand 1: 0 | operand 2: 0
-imm: 0
-0
-read_data 0
-
-PC: 0x0
-pc:0|instruction:0
-pc:0|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:0|funct:0|shamt:0|addr:0
-branch_target:0|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
-read_data_mem:0|alu_out:0|write_reg:0
 
 CYCLE 34
 R[0]: 0
@@ -2935,16 +1439,6 @@ R[29]: 0
 R[30]: 0
 R[31]: 0
 1
-operand 1: 0 | operand 2: 0
-imm: 0
-0
-read_data 0
-
-PC: 0x0
-pc:0|instruction:0
-pc:0|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:0|funct:0|shamt:0|addr:0
-branch_target:0|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
-read_data_mem:0|alu_out:0|write_reg:0
 
 CYCLE 36
 R[0]: 0
@@ -3025,16 +1519,6 @@ R[29]: 0
 R[30]: 0
 R[31]: 0
 1
-operand 1: 0 | operand 2: 0
-imm: 0
-0
-read_data 0
-
-PC: 0x0
-pc:0|instruction:0
-pc:0|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:0|funct:0|shamt:0|addr:0
-branch_target:0|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
-read_data_mem:0|alu_out:0|write_reg:0
 
 CYCLE 38
 R[0]: 0
@@ -3115,16 +1599,6 @@ R[29]: 0
 R[30]: 0
 R[31]: 0
 1
-operand 1: 0 | operand 2: 0
-imm: 0
-0
-read_data 0
-
-PC: 0x0
-pc:0|instruction:0
-pc:0|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:0|funct:0|shamt:0|addr:0
-branch_target:0|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
-read_data_mem:0|alu_out:0|write_reg:0
 
 CYCLE 40
 R[0]: 0
@@ -3205,16 +1679,6 @@ R[29]: 0
 R[30]: 0
 R[31]: 0
 1
-operand 1: 0 | operand 2: 0
-imm: 0
-0
-read_data 0
-
-PC: 0x0
-pc:0|instruction:0
-pc:0|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:0|funct:0|shamt:0|addr:0
-branch_target:0|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
-read_data_mem:0|alu_out:0|write_reg:0
 
 CYCLE 42
 R[0]: 0
@@ -3295,16 +1759,6 @@ R[29]: 0
 R[30]: 0
 R[31]: 0
 1
-operand 1: 0 | operand 2: 0
-imm: 0
-0
-read_data 0
-
-PC: 0x0
-pc:0|instruction:0
-pc:0|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:0|funct:0|shamt:0|addr:0
-branch_target:0|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
-read_data_mem:0|alu_out:0|write_reg:0
 
 CYCLE 44
 R[0]: 0
@@ -3385,16 +1839,6 @@ R[29]: 0
 R[30]: 0
 R[31]: 0
 1
-operand 1: 0 | operand 2: 0
-imm: 0
-0
-read_data 0
-
-PC: 0x0
-pc:0|instruction:0
-pc:0|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:0|funct:0|shamt:0|addr:0
-branch_target:0|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
-read_data_mem:0|alu_out:0|write_reg:0
 
 CYCLE 46
 R[0]: 0
@@ -3475,16 +1919,6 @@ R[29]: 0
 R[30]: 0
 R[31]: 0
 1
-operand 1: 0 | operand 2: 0
-imm: 0
-0
-read_data 0
-
-PC: 0x0
-pc:0|instruction:0
-pc:0|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:0|funct:0|shamt:0|addr:0
-branch_target:0|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
-read_data_mem:0|alu_out:0|write_reg:0
 
 CYCLE 48
 R[0]: 0
@@ -3565,16 +1999,6 @@ R[29]: 0
 R[30]: 0
 R[31]: 0
 1
-operand 1: 0 | operand 2: 0
-imm: 0
-0
-read_data 0
-
-PC: 0x0
-pc:0|instruction:0
-pc:0|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:0|funct:0|shamt:0|addr:0
-branch_target:0|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
-read_data_mem:0|alu_out:0|write_reg:0
 
 CYCLE 50
 R[0]: 0
@@ -3655,16 +2079,6 @@ R[29]: 0
 R[30]: 0
 R[31]: 0
 1
-operand 1: 0 | operand 2: 0
-imm: 0
-0
-read_data 0
-
-PC: 0x0
-pc:0|instruction:0
-pc:0|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:0|funct:0|shamt:0|addr:0
-branch_target:0|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
-read_data_mem:0|alu_out:0|write_reg:0
 
 CYCLE 52
 R[0]: 0
@@ -3745,16 +2159,6 @@ R[29]: 0
 R[30]: 0
 R[31]: 0
 1
-operand 1: 0 | operand 2: 0
-imm: 0
-0
-read_data 0
-
-PC: 0x0
-pc:0|instruction:0
-pc:0|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:0|funct:0|shamt:0|addr:0
-branch_target:0|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
-read_data_mem:0|alu_out:0|write_reg:0
 
 CYCLE 54
 R[0]: 0
@@ -3835,16 +2239,6 @@ R[29]: 0
 R[30]: 0
 R[31]: 0
 1
-operand 1: 0 | operand 2: 0
-imm: 0
-0
-read_data 0
-
-PC: 0x0
-pc:0|instruction:0
-pc:0|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:0|funct:0|shamt:0|addr:0
-branch_target:0|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
-read_data_mem:0|alu_out:0|write_reg:0
 
 CYCLE 56
 R[0]: 0
@@ -3925,16 +2319,6 @@ R[29]: 0
 R[30]: 0
 R[31]: 0
 1
-operand 1: 0 | operand 2: 0
-imm: 0
-0
-read_data 0
-
-PC: 0x0
-pc:0|instruction:0
-pc:0|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:0|funct:0|shamt:0|addr:0
-branch_target:0|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
-read_data_mem:0|alu_out:0|write_reg:0
 
 CYCLE 58
 R[0]: 0
@@ -4015,16 +2399,6 @@ R[29]: 0
 R[30]: 0
 R[31]: 0
 1
-operand 1: 0 | operand 2: 0
-imm: 0
-0
-read_data 0
-
-PC: 0x0
-pc:4|instruction:20010005
-pc:0|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:0|funct:0|shamt:0|addr:0
-branch_target:0|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
-read_data_mem:0|alu_out:0|write_reg:0
 
 CYCLE 60
 R[0]: 0
@@ -4061,13 +2435,13 @@ R[30]: 0
 R[31]: 0
 1
 operand 1: 0 | operand 2: 0
-imm: 5
-1
+imm: 0
+0
 read_data 0
 
-PC: 0x4
-pc:8|instruction:2402000a
-pc:4|read_data_1:0|read_data_2:0|imm:5|rt:1|rd:0|rs:0|opcode:8|funct:5|shamt:0|addr:10005
+PC: 0x0
+pc:0|instruction:0
+pc:0|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:0|funct:0|shamt:0|addr:0
 branch_target:0|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
 read_data_mem:0|alu_out:0|write_reg:0
 
@@ -4105,16 +2479,6 @@ R[29]: 0
 R[30]: 0
 R[31]: 0
 1
-operand 1: 0 | operand 2: 5
-imm: 10
-2
-read_data 0
-
-PC: 0x8
-pc:c|instruction:30030002
-pc:8|read_data_1:0|read_data_2:0|imm:a|rt:2|rd:0|rs:0|opcode:9|funct:a|shamt:0|addr:2000a
-branch_target:18|alu_zero:0|alu_out:5|write_data_mem:0|write_reg:1|addr:10005|branch_reg:0
-read_data_mem:0|alu_out:0|write_reg:0
 
 CYCLE 62
 R[0]: 0
@@ -4150,16 +2514,16 @@ R[29]: 0
 R[30]: 0
 R[31]: 0
 1
-operand 1: 0 | operand 2: 10
-imm: 2
-3
+operand 1: 0 | operand 2: 0
+imm: 0
+0
 read_data 0
 
-PC: 0xc
-pc:10|instruction:ac000000
-pc:c|read_data_1:0|read_data_2:0|imm:2|rt:3|rd:0|rs:0|opcode:c|funct:2|shamt:0|addr:30002
-branch_target:30|alu_zero:0|alu_out:a|write_data_mem:0|write_reg:2|addr:2000a|branch_reg:0
-read_data_mem:0|alu_out:5|write_reg:1
+PC: 0x0
+pc:0|instruction:0
+pc:0|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:0|funct:0|shamt:0|addr:0
+branch_target:0|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
+read_data_mem:0|alu_out:0|write_reg:0
 
 CYCLE 63
 R[0]: 0
@@ -4195,20 +2559,10 @@ R[29]: 0
 R[30]: 0
 R[31]: 0
 1
-operand 1: 0 | operand 2: 2
-imm: 0
-0
-read_data 0
-
-PC: 0x10
-pc:14|instruction:ac000000
-pc:10|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:2b|funct:0|shamt:0|addr:0
-branch_target:14|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:3|addr:30002|branch_reg:0
-read_data_mem:0|alu_out:10|write_reg:2
 
 CYCLE 64
 R[0]: 0
-R[1]: 5
+R[1]: 0
 R[2]: 0
 R[3]: 0
 R[4]: 0
@@ -4245,16 +2599,51 @@ imm: 0
 0
 read_data 0
 
-PC: 0x14
-pc:18|instruction:ac000000
-pc:14|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:2b|funct:0|shamt:0|addr:0
-branch_target:10|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
-read_data_mem:0|alu_out:0|write_reg:3
+PC: 0x0
+pc:0|instruction:0
+pc:0|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:0|funct:0|shamt:0|addr:0
+branch_target:0|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
+read_data_mem:0|alu_out:0|write_reg:0
 
 CYCLE 65
 R[0]: 0
-R[1]: 5
-R[2]: 10
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+
+CYCLE 66
+R[0]: 0
+R[1]: 0
+R[2]: 0
 R[3]: 0
 R[4]: 0
 R[5]: 0
@@ -4290,16 +2679,16 @@ imm: 0
 0
 read_data 0
 
-PC: 0x18
-pc:1c|instruction:8c040000
-pc:18|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:2b|funct:0|shamt:0|addr:0
-branch_target:14|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
-read_data_mem:536936453|alu_out:0|write_reg:0
+PC: 0x0
+pc:0|instruction:0
+pc:0|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:0|funct:0|shamt:0|addr:0
+branch_target:0|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
+read_data_mem:0|alu_out:0|write_reg:0
 
-CYCLE 66
+CYCLE 67
 R[0]: 0
-R[1]: 5
-R[2]: 10
+R[1]: 0
+R[2]: 0
 R[3]: 0
 R[4]: 0
 R[5]: 0
@@ -4308,6 +2697,2661 @@ R[7]: 0
 R[8]: 0
 R[9]: 0
 R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+
+CYCLE 68
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+operand 1: 0 | operand 2: 0
+imm: 0
+0
+read_data 0
+
+PC: 0x0
+pc:0|instruction:0
+pc:0|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:0|funct:0|shamt:0|addr:0
+branch_target:0|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
+read_data_mem:0|alu_out:0|write_reg:0
+
+CYCLE 69
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+
+CYCLE 70
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+operand 1: 0 | operand 2: 0
+imm: 0
+0
+read_data 0
+
+PC: 0x0
+pc:0|instruction:0
+pc:0|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:0|funct:0|shamt:0|addr:0
+branch_target:0|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
+read_data_mem:0|alu_out:0|write_reg:0
+
+CYCLE 71
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+
+CYCLE 72
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+operand 1: 0 | operand 2: 0
+imm: 0
+0
+read_data 0
+
+PC: 0x0
+pc:0|instruction:0
+pc:0|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:0|funct:0|shamt:0|addr:0
+branch_target:0|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
+read_data_mem:0|alu_out:0|write_reg:0
+
+CYCLE 73
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+
+CYCLE 74
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+operand 1: 0 | operand 2: 0
+imm: 0
+0
+read_data 0
+
+PC: 0x0
+pc:0|instruction:0
+pc:0|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:0|funct:0|shamt:0|addr:0
+branch_target:0|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
+read_data_mem:0|alu_out:0|write_reg:0
+
+CYCLE 75
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+
+CYCLE 76
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+operand 1: 0 | operand 2: 0
+imm: 0
+0
+read_data 0
+
+PC: 0x0
+pc:0|instruction:0
+pc:0|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:0|funct:0|shamt:0|addr:0
+branch_target:0|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
+read_data_mem:0|alu_out:0|write_reg:0
+
+CYCLE 77
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+
+CYCLE 78
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+operand 1: 0 | operand 2: 0
+imm: 0
+0
+read_data 0
+
+PC: 0x0
+pc:0|instruction:0
+pc:0|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:0|funct:0|shamt:0|addr:0
+branch_target:0|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
+read_data_mem:0|alu_out:0|write_reg:0
+
+CYCLE 79
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+
+CYCLE 80
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+operand 1: 0 | operand 2: 0
+imm: 0
+0
+read_data 0
+
+PC: 0x0
+pc:0|instruction:0
+pc:0|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:0|funct:0|shamt:0|addr:0
+branch_target:0|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
+read_data_mem:0|alu_out:0|write_reg:0
+
+CYCLE 81
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+
+CYCLE 82
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+operand 1: 0 | operand 2: 0
+imm: 0
+0
+read_data 0
+
+PC: 0x0
+pc:0|instruction:0
+pc:0|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:0|funct:0|shamt:0|addr:0
+branch_target:0|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
+read_data_mem:0|alu_out:0|write_reg:0
+
+CYCLE 83
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+
+CYCLE 84
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+operand 1: 0 | operand 2: 0
+imm: 0
+0
+read_data 0
+
+PC: 0x0
+pc:0|instruction:0
+pc:0|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:0|funct:0|shamt:0|addr:0
+branch_target:0|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
+read_data_mem:0|alu_out:0|write_reg:0
+
+CYCLE 85
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+
+CYCLE 86
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+operand 1: 0 | operand 2: 0
+imm: 0
+0
+read_data 0
+
+PC: 0x0
+pc:0|instruction:0
+pc:0|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:0|funct:0|shamt:0|addr:0
+branch_target:0|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
+read_data_mem:0|alu_out:0|write_reg:0
+
+CYCLE 87
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+
+CYCLE 88
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+operand 1: 0 | operand 2: 0
+imm: 0
+0
+read_data 0
+
+PC: 0x0
+pc:0|instruction:0
+pc:0|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:0|funct:0|shamt:0|addr:0
+branch_target:0|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
+read_data_mem:0|alu_out:0|write_reg:0
+
+CYCLE 89
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+
+CYCLE 90
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+operand 1: 0 | operand 2: 0
+imm: 0
+0
+read_data 0
+
+PC: 0x0
+pc:0|instruction:0
+pc:0|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:0|funct:0|shamt:0|addr:0
+branch_target:0|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
+read_data_mem:0|alu_out:0|write_reg:0
+
+CYCLE 91
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+
+CYCLE 92
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+operand 1: 0 | operand 2: 0
+imm: 0
+0
+read_data 0
+
+PC: 0x0
+pc:0|instruction:0
+pc:0|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:0|funct:0|shamt:0|addr:0
+branch_target:0|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
+read_data_mem:0|alu_out:0|write_reg:0
+
+CYCLE 93
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+
+CYCLE 94
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+operand 1: 0 | operand 2: 0
+imm: 0
+0
+read_data 0
+
+PC: 0x0
+pc:0|instruction:0
+pc:0|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:0|funct:0|shamt:0|addr:0
+branch_target:0|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
+read_data_mem:0|alu_out:0|write_reg:0
+
+CYCLE 95
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+
+CYCLE 96
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+operand 1: 0 | operand 2: 0
+imm: 0
+0
+read_data 0
+
+PC: 0x0
+pc:0|instruction:0
+pc:0|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:0|funct:0|shamt:0|addr:0
+branch_target:0|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
+read_data_mem:0|alu_out:0|write_reg:0
+
+CYCLE 97
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+
+CYCLE 98
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+operand 1: 0 | operand 2: 0
+imm: 0
+0
+read_data 0
+
+PC: 0x0
+pc:0|instruction:0
+pc:0|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:0|funct:0|shamt:0|addr:0
+branch_target:0|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
+read_data_mem:0|alu_out:0|write_reg:0
+
+CYCLE 99
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+
+CYCLE 100
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+operand 1: 0 | operand 2: 0
+imm: 0
+0
+read_data 0
+
+PC: 0x0
+pc:0|instruction:0
+pc:0|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:0|funct:0|shamt:0|addr:0
+branch_target:0|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
+read_data_mem:0|alu_out:0|write_reg:0
+
+CYCLE 101
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+
+CYCLE 102
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+operand 1: 0 | operand 2: 0
+imm: 0
+0
+read_data 0
+
+PC: 0x0
+pc:0|instruction:0
+pc:0|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:0|funct:0|shamt:0|addr:0
+branch_target:0|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
+read_data_mem:0|alu_out:0|write_reg:0
+
+CYCLE 103
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+
+CYCLE 104
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+operand 1: 0 | operand 2: 0
+imm: 0
+0
+read_data 0
+
+PC: 0x0
+pc:0|instruction:0
+pc:0|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:0|funct:0|shamt:0|addr:0
+branch_target:0|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
+read_data_mem:0|alu_out:0|write_reg:0
+
+CYCLE 105
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+
+CYCLE 106
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+operand 1: 0 | operand 2: 0
+imm: 0
+0
+read_data 0
+
+PC: 0x0
+pc:0|instruction:0
+pc:0|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:0|funct:0|shamt:0|addr:0
+branch_target:0|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
+read_data_mem:0|alu_out:0|write_reg:0
+
+CYCLE 107
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+
+CYCLE 108
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+operand 1: 0 | operand 2: 0
+imm: 0
+0
+read_data 0
+
+PC: 0x0
+pc:0|instruction:0
+pc:0|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:0|funct:0|shamt:0|addr:0
+branch_target:0|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
+read_data_mem:0|alu_out:0|write_reg:0
+
+CYCLE 109
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+
+CYCLE 110
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+operand 1: 0 | operand 2: 0
+imm: 0
+0
+read_data 0
+
+PC: 0x0
+pc:0|instruction:0
+pc:0|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:0|funct:0|shamt:0|addr:0
+branch_target:0|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
+read_data_mem:0|alu_out:0|write_reg:0
+
+CYCLE 111
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+
+CYCLE 112
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+operand 1: 0 | operand 2: 0
+imm: 0
+0
+read_data 0
+
+PC: 0x0
+pc:0|instruction:0
+pc:0|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:0|funct:0|shamt:0|addr:0
+branch_target:0|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
+read_data_mem:0|alu_out:0|write_reg:0
+
+CYCLE 113
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+
+CYCLE 114
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+operand 1: 0 | operand 2: 0
+imm: 0
+0
+read_data 0
+
+PC: 0x0
+pc:0|instruction:0
+pc:0|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:0|funct:0|shamt:0|addr:0
+branch_target:0|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
+read_data_mem:0|alu_out:0|write_reg:0
+
+CYCLE 115
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+
+CYCLE 116
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+operand 1: 0 | operand 2: 0
+imm: 0
+0
+read_data 0
+
+PC: 0x0
+pc:0|instruction:0
+pc:0|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:0|funct:0|shamt:0|addr:0
+branch_target:0|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
+read_data_mem:0|alu_out:0|write_reg:0
+
+CYCLE 117
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+
+CYCLE 118
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+operand 1: 0 | operand 2: 0
+imm: 0
+0
+read_data 0
+
+PC: 0x0
+pc:0|instruction:0
+pc:0|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:0|funct:0|shamt:0|addr:0
+branch_target:0|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
+read_data_mem:0|alu_out:0|write_reg:0
+
+CYCLE 119
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+
+CYCLE 120
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+operand 1: 0 | operand 2: 0
+imm: 0
+0
+read_data 0
+
+PC: 0x0
+pc:4|instruction:20010001
+pc:0|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:0|funct:0|shamt:0|addr:0
+branch_target:0|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
+read_data_mem:0|alu_out:0|write_reg:0
+
+CYCLE 121
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+operand 1: 0 | operand 2: 0
+imm: 1
+1
+read_data 0
+
+PC: 0x4
+pc:8|instruction:ac010000
+pc:4|read_data_1:0|read_data_2:0|imm:1|rt:1|rd:0|rs:0|opcode:8|funct:1|shamt:0|addr:10001
+branch_target:0|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
+read_data_mem:0|alu_out:0|write_reg:0
+
+CYCLE 122
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+operand 1: 0 | operand 2: 1
+imm: 0
+1
+read_data 0
+
+PC: 0x8
+pc:c|instruction:8c0a0000
+pc:8|read_data_1:0|read_data_2:0|imm:0|rt:1|rd:0|rs:0|opcode:2b|funct:0|shamt:0|addr:10000
+branch_target:8|alu_zero:0|alu_out:1|write_data_mem:0|write_reg:1|addr:10001|branch_reg:0
+read_data_mem:0|alu_out:0|write_reg:0
+
+CYCLE 123
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+operand 1: 0 | operand 2: 0
+imm: 0
+10
+read_data 0
+
+PC: 0xc
+pc:10|instruction:0
+pc:c|read_data_1:0|read_data_2:0|imm:0|rt:a|rd:0|rs:0|opcode:23|funct:0|shamt:0|addr:a0000
+branch_target:8|alu_zero:1|alu_out:0|write_data_mem:1|write_reg:1|addr:10000|branch_reg:0
+read_data_mem:0|alu_out:1|write_reg:1
+
+CYCLE 124
+R[0]: 0
+R[1]: 0
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+operand 1: 0 | operand 2: 0
+imm: 0
+0
+read_data 0
+
+PC: 0x10
+pc:14|instruction:ac0a0004
+pc:10|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:0|funct:0|shamt:0|addr:0
+branch_target:c|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:a|addr:a0000|branch_reg:0
+read_data_mem:536936449|alu_out:0|write_reg:1
+
+CYCLE 125
+R[0]: 0
+R[1]: 1
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+operand 1: 0 | operand 2: 0
+imm: 4
+10
+read_data 0
+
+PC: 0x14
+pc:18|instruction:8c020004
+pc:14|read_data_1:0|read_data_2:0|imm:4|rt:a|rd:0|rs:0|opcode:2b|funct:4|shamt:0|addr:a0004
+branch_target:10|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
+read_data_mem:1|alu_out:0|write_reg:10
+
+CYCLE 126
+R[0]: 0
+R[1]: 1
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 0
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+operand 1: 0 | operand 2: 4
+imm: 4
+2
+read_data 0
+
+PC: 0x18
+pc:1c|instruction:210820
+pc:18|read_data_1:0|read_data_2:0|imm:4|rt:2|rd:0|rs:0|opcode:23|funct:4|shamt:0|addr:20004
+branch_target:24|alu_zero:0|alu_out:4|write_data_mem:1|write_reg:a|addr:a0004|branch_reg:0
+read_data_mem:0|alu_out:0|write_reg:0
+
+CYCLE 127
+R[0]: 0
+R[1]: 1
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 1
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+operand 1: 0 | operand 2: 4
+imm: 2080
+1
+read_data 1
+
+PC: 0x1c
+pc:20|instruction:ac020008
+pc:1c|read_data_1:1|read_data_2:1|imm:820|rt:1|rd:1|rs:1|opcode:0|funct:20|shamt:0|addr:210820
+branch_target:28|alu_zero:0|alu_out:4|write_data_mem:0|write_reg:2|addr:20004|branch_reg:0
+read_data_mem:2885746688|alu_out:4|write_reg:10
+
+CYCLE 128
+R[0]: 0
+R[1]: 1
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 1
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+operand 1: 1 | operand 2: 1
+imm: 8
+2
+read_data 0
+
+PC: 0x20
+pc:24|instruction:8c030008
+pc:20|read_data_1:0|read_data_2:0|imm:8|rt:2|rd:0|rs:0|opcode:2b|funct:8|shamt:0|addr:20008
+branch_target:209c|alu_zero:0|alu_out:2|write_data_mem:1|write_reg:1|addr:210820|branch_reg:1
+read_data_mem:1|alu_out:4|write_reg:2
+
+CYCLE 129
+R[0]: 0
+R[1]: 1
+R[2]: 0
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 1
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+operand 1: 0 | operand 2: 8
+imm: 8
+3
+read_data 0
+
+PC: 0x24
+pc:28|instruction:210820
+pc:24|read_data_1:0|read_data_2:0|imm:8|rt:3|rd:0|rs:0|opcode:23|funct:8|shamt:0|addr:30008
+branch_target:40|alu_zero:0|alu_out:8|write_data_mem:1|write_reg:2|addr:20008|branch_reg:0
+read_data_mem:0|alu_out:2|write_reg:1
+
+CYCLE 130
+R[0]: 0
+R[1]: 1
+R[2]: 1
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 1
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+operand 1: 0 | operand 2: 8
+imm: 2080
+1
+read_data 2
+
+PC: 0x28
+pc:2c|instruction:ac010000
+pc:28|read_data_1:2|read_data_2:2|imm:820|rt:1|rd:1|rs:1|opcode:0|funct:20|shamt:0|addr:210820
+branch_target:44|alu_zero:0|alu_out:8|write_data_mem:0|write_reg:3|addr:30008|branch_reg:0
+read_data_mem:2349465600|alu_out:8|write_reg:2
+
+CYCLE 131
+R[0]: 0
+R[1]: 2
+R[2]: 1
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 1
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+operand 1: 2 | operand 2: 2
+imm: 0
+1
+read_data 0
+
+PC: 0x2c
+pc:30|instruction:8c040000
+pc:2c|read_data_1:0|read_data_2:2|imm:0|rt:1|rd:0|rs:0|opcode:2b|funct:0|shamt:0|addr:10000
+branch_target:20a8|alu_zero:0|alu_out:4|write_data_mem:2|write_reg:1|addr:210820|branch_reg:2
+read_data_mem:1|alu_out:8|write_reg:3
+
+CYCLE 132
+R[0]: 0
+R[1]: 2
+R[2]: 1
+R[3]: 0
+R[4]: 0
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 1
 R[11]: 0
 R[12]: 0
 R[13]: 0
@@ -4335,2997 +5379,27 @@ imm: 0
 4
 read_data 0
 
-PC: 0x1c
-pc:20|instruction:8c050000
-pc:1c|read_data_1:0|read_data_2:0|imm:0|rt:4|rd:0|rs:0|opcode:23|funct:0|shamt:0|addr:40000
-branch_target:18|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
-read_data_mem:0|alu_out:0|write_reg:0
-
-CYCLE 67
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 0
-R[9]: 0
-R[10]: 0
-R[11]: 0
-R[12]: 0
-R[13]: 0
-R[14]: 0
-R[15]: 0
-R[16]: 0
-R[17]: 0
-R[18]: 0
-R[19]: 0
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-1
-operand 1: 0 | operand 2: 0
-imm: 0
-5
-read_data 0
-
-PC: 0x20
-pc:24|instruction:8c060000
-pc:20|read_data_1:0|read_data_2:0|imm:0|rt:5|rd:0|rs:0|opcode:23|funct:0|shamt:0|addr:50000
-branch_target:1c|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:4|addr:40000|branch_reg:0
-read_data_mem:0|alu_out:0|write_reg:0
-
-CYCLE 68
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 0
-R[9]: 0
-R[10]: 0
-R[11]: 0
-R[12]: 0
-R[13]: 0
-R[14]: 0
-R[15]: 0
-R[16]: 0
-R[17]: 0
-R[18]: 0
-R[19]: 0
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-1
-operand 1: 0 | operand 2: 0
-imm: 0
-6
-read_data 0
-
-PC: 0x24
-pc:28|instruction:8c070000
-pc:24|read_data_1:0|read_data_2:0|imm:0|rt:6|rd:0|rs:0|opcode:23|funct:0|shamt:0|addr:60000
-branch_target:20|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:5|addr:50000|branch_reg:0
-read_data_mem:0|alu_out:0|write_reg:4
-
-CYCLE 69
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 0
-R[9]: 0
-R[10]: 0
-R[11]: 0
-R[12]: 0
-R[13]: 0
-R[14]: 0
-R[15]: 0
-R[16]: 0
-R[17]: 0
-R[18]: 0
-R[19]: 0
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-1
-operand 1: 0 | operand 2: 0
-imm: 0
-7
-read_data 0
-
-PC: 0x28
-pc:2c|instruction:3c080023
-pc:28|read_data_1:0|read_data_2:0|imm:0|rt:7|rd:0|rs:0|opcode:23|funct:0|shamt:0|addr:70000
-branch_target:24|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:6|addr:60000|branch_reg:0
-read_data_mem:0|alu_out:0|write_reg:5
-
-CYCLE 70
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 0
-R[9]: 0
-R[10]: 0
-R[11]: 0
-R[12]: 0
-R[13]: 0
-R[14]: 0
-R[15]: 0
-R[16]: 0
-R[17]: 0
-R[18]: 0
-R[19]: 0
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-1
-operand 1: 0 | operand 2: 0
-imm: 35
-8
-read_data 0
-
-PC: 0x2c
-pc:30|instruction:34090002
-pc:2c|read_data_1:0|read_data_2:0|imm:23|rt:8|rd:0|rs:0|opcode:f|funct:23|shamt:0|addr:80023
-branch_target:28|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:7|addr:70000|branch_reg:0
-read_data_mem:0|alu_out:0|write_reg:6
-
-CYCLE 71
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 0
-R[9]: 0
-R[10]: 0
-R[11]: 0
-R[12]: 0
-R[13]: 0
-R[14]: 0
-R[15]: 0
-R[16]: 0
-R[17]: 0
-R[18]: 0
-R[19]: 0
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-1
-operand 1: 0 | operand 2: 35
-imm: 2
-9
-read_data 0
-
 PC: 0x30
-pc:34|instruction:280a0001
-pc:30|read_data_1:0|read_data_2:0|imm:2|rt:9|rd:0|rs:0|opcode:d|funct:2|shamt:0|addr:90002
-branch_target:b8|alu_zero:0|alu_out:230000|write_data_mem:0|write_reg:8|addr:80023|branch_reg:0
-read_data_mem:0|alu_out:0|write_reg:7
-
-CYCLE 72
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 0
-R[9]: 0
-R[10]: 0
-R[11]: 0
-R[12]: 0
-R[13]: 0
-R[14]: 0
-R[15]: 0
-R[16]: 0
-R[17]: 0
-R[18]: 0
-R[19]: 0
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-1
-operand 1: 0 | operand 2: 2
-imm: 1
-10
-read_data 0
-
-PC: 0x34
-pc:38|instruction:2c0b0001
-pc:34|read_data_1:0|read_data_2:0|imm:1|rt:a|rd:0|rs:0|opcode:a|funct:1|shamt:0|addr:a0001
-branch_target:38|alu_zero:0|alu_out:2|write_data_mem:0|write_reg:9|addr:90002|branch_reg:0
-read_data_mem:0|alu_out:2293760|write_reg:8
-
-CYCLE 73
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 0
-R[9]: 0
-R[10]: 0
-R[11]: 0
-R[12]: 0
-R[13]: 0
-R[14]: 0
-R[15]: 0
-R[16]: 0
-R[17]: 0
-R[18]: 0
-R[19]: 0
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-1
-operand 1: 0 | operand 2: 1
-imm: 1
-11
-read_data 0
-
-PC: 0x38
-pc:3c|instruction:226020
-pc:38|read_data_1:0|read_data_2:0|imm:1|rt:b|rd:0|rs:0|opcode:b|funct:1|shamt:0|addr:b0001
-branch_target:38|alu_zero:0|alu_out:1|write_data_mem:0|write_reg:a|addr:a0001|branch_reg:0
-read_data_mem:0|alu_out:2|write_reg:9
-
-CYCLE 74
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 2293760
-R[9]: 0
-R[10]: 0
-R[11]: 0
-R[12]: 0
-R[13]: 0
-R[14]: 0
-R[15]: 0
-R[16]: 0
-R[17]: 0
-R[18]: 0
-R[19]: 0
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-1
-operand 1: 0 | operand 2: 1
-imm: 24608
-2
-read_data 5
-
-PC: 0x3c
-pc:40|instruction:226821
-pc:3c|read_data_1:5|read_data_2:a|imm:6020|rt:2|rd:c|rs:1|opcode:0|funct:20|shamt:0|addr:226020
-branch_target:3c|alu_zero:0|alu_out:1|write_data_mem:0|write_reg:b|addr:b0001|branch_reg:0
-read_data_mem:0|alu_out:1|write_reg:10
-
-CYCLE 75
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 2293760
-R[9]: 2
-R[10]: 0
-R[11]: 0
-R[12]: 0
-R[13]: 0
-R[14]: 0
-R[15]: 0
-R[16]: 0
-R[17]: 0
-R[18]: 0
-R[19]: 0
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-1
-operand 1: 5 | operand 2: 10
-imm: 26657
-2
-read_data 5
-
-PC: 0x40
-pc:40|instruction:226821
-pc:40|read_data_1:5|read_data_2:a|imm:6821|rt:2|rd:d|rs:1|opcode:0|funct:21|shamt:0|addr:226821
-branch_target:180bc|alu_zero:0|alu_out:f|write_data_mem:a|write_reg:c|addr:226020|branch_reg:5
-read_data_mem:0|alu_out:1|write_reg:11
-
-CYCLE 76
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 2293760
-R[9]: 2
-R[10]: 1
-R[11]: 0
-R[12]: 0
-R[13]: 0
-R[14]: 0
-R[15]: 0
-R[16]: 0
-R[17]: 0
-R[18]: 0
-R[19]: 0
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-1
-operand 1: 5 | operand 2: 10
-imm: 26657
-2
-read_data 5
-
-PC: 0x40
-pc:40|instruction:226821
-pc:40|read_data_1:5|read_data_2:a|imm:6821|rt:2|rd:d|rs:1|opcode:0|funct:21|shamt:0|addr:226821
-branch_target:1a0c4|alu_zero:0|alu_out:f|write_data_mem:a|write_reg:d|addr:226821|branch_reg:5
-read_data_mem:0|alu_out:15|write_reg:12
-
-CYCLE 77
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 2293760
-R[9]: 2
-R[10]: 1
-R[11]: 1
-R[12]: 0
-R[13]: 0
-R[14]: 0
-R[15]: 0
-R[16]: 0
-R[17]: 0
-R[18]: 0
-R[19]: 0
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-1
-operand 1: 5 | operand 2: 10
-imm: 26657
-2
-read_data 5
-
-PC: 0x40
-pc:40|instruction:226821
-pc:40|read_data_1:5|read_data_2:a|imm:6821|rt:2|rd:d|rs:1|opcode:0|funct:21|shamt:0|addr:226821
-branch_target:1a0c4|alu_zero:0|alu_out:f|write_data_mem:a|write_reg:d|addr:226821|branch_reg:5
-read_data_mem:0|alu_out:15|write_reg:13
-
-CYCLE 78
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 2293760
-R[9]: 2
-R[10]: 1
-R[11]: 1
-R[12]: 15
-R[13]: 0
-R[14]: 0
-R[15]: 0
-R[16]: 0
-R[17]: 0
-R[18]: 0
-R[19]: 0
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-1
-operand 1: 5 | operand 2: 10
-imm: 26657
-2
-read_data 5
-
-PC: 0x40
-pc:40|instruction:226821
-pc:40|read_data_1:5|read_data_2:a|imm:6821|rt:2|rd:d|rs:1|opcode:0|funct:21|shamt:0|addr:226821
-branch_target:1a0c4|alu_zero:0|alu_out:f|write_data_mem:a|write_reg:d|addr:226821|branch_reg:5
-read_data_mem:0|alu_out:15|write_reg:13
-
-CYCLE 79
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 2293760
-R[9]: 2
-R[10]: 1
-R[11]: 1
-R[12]: 15
-R[13]: 15
-R[14]: 0
-R[15]: 0
-R[16]: 0
-R[17]: 0
-R[18]: 0
-R[19]: 0
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-1
-operand 1: 5 | operand 2: 10
-imm: 26657
-2
-read_data 5
-
-PC: 0x40
-pc:40|instruction:226821
-pc:40|read_data_1:5|read_data_2:a|imm:6821|rt:2|rd:d|rs:1|opcode:0|funct:21|shamt:0|addr:226821
-branch_target:1a0c4|alu_zero:0|alu_out:f|write_data_mem:a|write_reg:d|addr:226821|branch_reg:5
-read_data_mem:0|alu_out:15|write_reg:13
-
-CYCLE 80
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 2293760
-R[9]: 2
-R[10]: 1
-R[11]: 1
-R[12]: 15
-R[13]: 15
-R[14]: 0
-R[15]: 0
-R[16]: 0
-R[17]: 0
-R[18]: 0
-R[19]: 0
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-1
-operand 1: 5 | operand 2: 10
-imm: 26657
-2
-read_data 5
-
-PC: 0x40
-pc:40|instruction:226821
-pc:40|read_data_1:5|read_data_2:a|imm:6821|rt:2|rd:d|rs:1|opcode:0|funct:21|shamt:0|addr:226821
-branch_target:1a0c4|alu_zero:0|alu_out:f|write_data_mem:a|write_reg:d|addr:226821|branch_reg:5
-read_data_mem:0|alu_out:15|write_reg:13
-
-CYCLE 81
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 2293760
-R[9]: 2
-R[10]: 1
-R[11]: 1
-R[12]: 15
-R[13]: 15
-R[14]: 0
-R[15]: 0
-R[16]: 0
-R[17]: 0
-R[18]: 0
-R[19]: 0
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-1
-operand 1: 5 | operand 2: 10
-imm: 26657
-2
-read_data 5
-
-PC: 0x40
-pc:40|instruction:226821
-pc:40|read_data_1:5|read_data_2:a|imm:6821|rt:2|rd:d|rs:1|opcode:0|funct:21|shamt:0|addr:226821
-branch_target:1a0c4|alu_zero:0|alu_out:f|write_data_mem:a|write_reg:d|addr:226821|branch_reg:5
-read_data_mem:0|alu_out:15|write_reg:13
-
-CYCLE 82
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 2293760
-R[9]: 2
-R[10]: 1
-R[11]: 1
-R[12]: 15
-R[13]: 15
-R[14]: 0
-R[15]: 0
-R[16]: 0
-R[17]: 0
-R[18]: 0
-R[19]: 0
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-1
-operand 1: 5 | operand 2: 10
-imm: 26657
-2
-read_data 5
-
-PC: 0x40
-pc:40|instruction:226821
-pc:40|read_data_1:5|read_data_2:a|imm:6821|rt:2|rd:d|rs:1|opcode:0|funct:21|shamt:0|addr:226821
-branch_target:1a0c4|alu_zero:0|alu_out:f|write_data_mem:a|write_reg:d|addr:226821|branch_reg:5
-read_data_mem:0|alu_out:15|write_reg:13
-
-CYCLE 83
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 2293760
-R[9]: 2
-R[10]: 1
-R[11]: 1
-R[12]: 15
-R[13]: 15
-R[14]: 0
-R[15]: 0
-R[16]: 0
-R[17]: 0
-R[18]: 0
-R[19]: 0
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-1
-operand 1: 5 | operand 2: 10
-imm: 26657
-2
-read_data 5
-
-PC: 0x40
-pc:40|instruction:226821
-pc:40|read_data_1:5|read_data_2:a|imm:6821|rt:2|rd:d|rs:1|opcode:0|funct:21|shamt:0|addr:226821
-branch_target:1a0c4|alu_zero:0|alu_out:f|write_data_mem:a|write_reg:d|addr:226821|branch_reg:5
-read_data_mem:0|alu_out:15|write_reg:13
-
-CYCLE 84
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 2293760
-R[9]: 2
-R[10]: 1
-R[11]: 1
-R[12]: 15
-R[13]: 15
-R[14]: 0
-R[15]: 0
-R[16]: 0
-R[17]: 0
-R[18]: 0
-R[19]: 0
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-1
-operand 1: 5 | operand 2: 10
-imm: 26657
-2
-read_data 5
-
-PC: 0x40
-pc:40|instruction:226821
-pc:40|read_data_1:5|read_data_2:a|imm:6821|rt:2|rd:d|rs:1|opcode:0|funct:21|shamt:0|addr:226821
-branch_target:1a0c4|alu_zero:0|alu_out:f|write_data_mem:a|write_reg:d|addr:226821|branch_reg:5
-read_data_mem:0|alu_out:15|write_reg:13
-
-CYCLE 85
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 2293760
-R[9]: 2
-R[10]: 1
-R[11]: 1
-R[12]: 15
-R[13]: 15
-R[14]: 0
-R[15]: 0
-R[16]: 0
-R[17]: 0
-R[18]: 0
-R[19]: 0
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-1
-operand 1: 5 | operand 2: 10
-imm: 26657
-2
-read_data 5
-
-PC: 0x40
-pc:40|instruction:226821
-pc:40|read_data_1:5|read_data_2:a|imm:6821|rt:2|rd:d|rs:1|opcode:0|funct:21|shamt:0|addr:226821
-branch_target:1a0c4|alu_zero:0|alu_out:f|write_data_mem:a|write_reg:d|addr:226821|branch_reg:5
-read_data_mem:0|alu_out:15|write_reg:13
-
-CYCLE 86
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 2293760
-R[9]: 2
-R[10]: 1
-R[11]: 1
-R[12]: 15
-R[13]: 15
-R[14]: 0
-R[15]: 0
-R[16]: 0
-R[17]: 0
-R[18]: 0
-R[19]: 0
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-1
-operand 1: 5 | operand 2: 10
-imm: 26657
-2
-read_data 5
-
-PC: 0x40
-pc:40|instruction:226821
-pc:40|read_data_1:5|read_data_2:a|imm:6821|rt:2|rd:d|rs:1|opcode:0|funct:21|shamt:0|addr:226821
-branch_target:1a0c4|alu_zero:0|alu_out:f|write_data_mem:a|write_reg:d|addr:226821|branch_reg:5
-read_data_mem:0|alu_out:15|write_reg:13
-
-CYCLE 87
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 2293760
-R[9]: 2
-R[10]: 1
-R[11]: 1
-R[12]: 15
-R[13]: 15
-R[14]: 0
-R[15]: 0
-R[16]: 0
-R[17]: 0
-R[18]: 0
-R[19]: 0
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-1
-operand 1: 5 | operand 2: 10
-imm: 26657
-2
-read_data 5
-
-PC: 0x40
-pc:40|instruction:226821
-pc:40|read_data_1:5|read_data_2:a|imm:6821|rt:2|rd:d|rs:1|opcode:0|funct:21|shamt:0|addr:226821
-branch_target:1a0c4|alu_zero:0|alu_out:f|write_data_mem:a|write_reg:d|addr:226821|branch_reg:5
-read_data_mem:0|alu_out:15|write_reg:13
-
-CYCLE 88
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 2293760
-R[9]: 2
-R[10]: 1
-R[11]: 1
-R[12]: 15
-R[13]: 15
-R[14]: 0
-R[15]: 0
-R[16]: 0
-R[17]: 0
-R[18]: 0
-R[19]: 0
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-1
-operand 1: 5 | operand 2: 10
-imm: 26657
-2
-read_data 5
-
-PC: 0x40
-pc:40|instruction:226821
-pc:40|read_data_1:5|read_data_2:a|imm:6821|rt:2|rd:d|rs:1|opcode:0|funct:21|shamt:0|addr:226821
-branch_target:1a0c4|alu_zero:0|alu_out:f|write_data_mem:a|write_reg:d|addr:226821|branch_reg:5
-read_data_mem:0|alu_out:15|write_reg:13
-
-CYCLE 89
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 2293760
-R[9]: 2
-R[10]: 1
-R[11]: 1
-R[12]: 15
-R[13]: 15
-R[14]: 0
-R[15]: 0
-R[16]: 0
-R[17]: 0
-R[18]: 0
-R[19]: 0
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-1
-operand 1: 5 | operand 2: 10
-imm: 26657
-2
-read_data 5
-
-PC: 0x40
-pc:40|instruction:226821
-pc:40|read_data_1:5|read_data_2:a|imm:6821|rt:2|rd:d|rs:1|opcode:0|funct:21|shamt:0|addr:226821
-branch_target:1a0c4|alu_zero:0|alu_out:f|write_data_mem:a|write_reg:d|addr:226821|branch_reg:5
-read_data_mem:0|alu_out:15|write_reg:13
-
-CYCLE 90
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 2293760
-R[9]: 2
-R[10]: 1
-R[11]: 1
-R[12]: 15
-R[13]: 15
-R[14]: 0
-R[15]: 0
-R[16]: 0
-R[17]: 0
-R[18]: 0
-R[19]: 0
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-1
-operand 1: 5 | operand 2: 10
-imm: 26657
-2
-read_data 5
-
-PC: 0x40
-pc:40|instruction:226821
-pc:40|read_data_1:5|read_data_2:a|imm:6821|rt:2|rd:d|rs:1|opcode:0|funct:21|shamt:0|addr:226821
-branch_target:1a0c4|alu_zero:0|alu_out:f|write_data_mem:a|write_reg:d|addr:226821|branch_reg:5
-read_data_mem:0|alu_out:15|write_reg:13
-
-CYCLE 91
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 2293760
-R[9]: 2
-R[10]: 1
-R[11]: 1
-R[12]: 15
-R[13]: 15
-R[14]: 0
-R[15]: 0
-R[16]: 0
-R[17]: 0
-R[18]: 0
-R[19]: 0
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-1
-operand 1: 5 | operand 2: 10
-imm: 26657
-2
-read_data 5
-
-PC: 0x40
-pc:40|instruction:226821
-pc:40|read_data_1:5|read_data_2:a|imm:6821|rt:2|rd:d|rs:1|opcode:0|funct:21|shamt:0|addr:226821
-branch_target:1a0c4|alu_zero:0|alu_out:f|write_data_mem:a|write_reg:d|addr:226821|branch_reg:5
-read_data_mem:0|alu_out:15|write_reg:13
-
-CYCLE 92
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 2293760
-R[9]: 2
-R[10]: 1
-R[11]: 1
-R[12]: 15
-R[13]: 15
-R[14]: 0
-R[15]: 0
-R[16]: 0
-R[17]: 0
-R[18]: 0
-R[19]: 0
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-1
-operand 1: 5 | operand 2: 10
-imm: 26657
-2
-read_data 5
-
-PC: 0x40
-pc:40|instruction:226821
-pc:40|read_data_1:5|read_data_2:a|imm:6821|rt:2|rd:d|rs:1|opcode:0|funct:21|shamt:0|addr:226821
-branch_target:1a0c4|alu_zero:0|alu_out:f|write_data_mem:a|write_reg:d|addr:226821|branch_reg:5
-read_data_mem:0|alu_out:15|write_reg:13
-
-CYCLE 93
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 2293760
-R[9]: 2
-R[10]: 1
-R[11]: 1
-R[12]: 15
-R[13]: 15
-R[14]: 0
-R[15]: 0
-R[16]: 0
-R[17]: 0
-R[18]: 0
-R[19]: 0
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-1
-operand 1: 5 | operand 2: 10
-imm: 26657
-2
-read_data 5
-
-PC: 0x40
-pc:40|instruction:226821
-pc:40|read_data_1:5|read_data_2:a|imm:6821|rt:2|rd:d|rs:1|opcode:0|funct:21|shamt:0|addr:226821
-branch_target:1a0c4|alu_zero:0|alu_out:f|write_data_mem:a|write_reg:d|addr:226821|branch_reg:5
-read_data_mem:0|alu_out:15|write_reg:13
-
-CYCLE 94
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 2293760
-R[9]: 2
-R[10]: 1
-R[11]: 1
-R[12]: 15
-R[13]: 15
-R[14]: 0
-R[15]: 0
-R[16]: 0
-R[17]: 0
-R[18]: 0
-R[19]: 0
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-1
-operand 1: 5 | operand 2: 10
-imm: 26657
-2
-read_data 5
-
-PC: 0x40
-pc:40|instruction:226821
-pc:40|read_data_1:5|read_data_2:a|imm:6821|rt:2|rd:d|rs:1|opcode:0|funct:21|shamt:0|addr:226821
-branch_target:1a0c4|alu_zero:0|alu_out:f|write_data_mem:a|write_reg:d|addr:226821|branch_reg:5
-read_data_mem:0|alu_out:15|write_reg:13
-
-CYCLE 95
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 2293760
-R[9]: 2
-R[10]: 1
-R[11]: 1
-R[12]: 15
-R[13]: 15
-R[14]: 0
-R[15]: 0
-R[16]: 0
-R[17]: 0
-R[18]: 0
-R[19]: 0
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-1
-operand 1: 5 | operand 2: 10
-imm: 26657
-2
-read_data 5
-
-PC: 0x40
-pc:40|instruction:226821
-pc:40|read_data_1:5|read_data_2:a|imm:6821|rt:2|rd:d|rs:1|opcode:0|funct:21|shamt:0|addr:226821
-branch_target:1a0c4|alu_zero:0|alu_out:f|write_data_mem:a|write_reg:d|addr:226821|branch_reg:5
-read_data_mem:0|alu_out:15|write_reg:13
-
-CYCLE 96
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 2293760
-R[9]: 2
-R[10]: 1
-R[11]: 1
-R[12]: 15
-R[13]: 15
-R[14]: 0
-R[15]: 0
-R[16]: 0
-R[17]: 0
-R[18]: 0
-R[19]: 0
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-1
-operand 1: 5 | operand 2: 10
-imm: 26657
-2
-read_data 5
-
-PC: 0x40
-pc:40|instruction:226821
-pc:40|read_data_1:5|read_data_2:a|imm:6821|rt:2|rd:d|rs:1|opcode:0|funct:21|shamt:0|addr:226821
-branch_target:1a0c4|alu_zero:0|alu_out:f|write_data_mem:a|write_reg:d|addr:226821|branch_reg:5
-read_data_mem:0|alu_out:15|write_reg:13
-
-CYCLE 97
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 2293760
-R[9]: 2
-R[10]: 1
-R[11]: 1
-R[12]: 15
-R[13]: 15
-R[14]: 0
-R[15]: 0
-R[16]: 0
-R[17]: 0
-R[18]: 0
-R[19]: 0
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-1
-operand 1: 5 | operand 2: 10
-imm: 26657
-2
-read_data 5
-
-PC: 0x40
-pc:40|instruction:226821
-pc:40|read_data_1:5|read_data_2:a|imm:6821|rt:2|rd:d|rs:1|opcode:0|funct:21|shamt:0|addr:226821
-branch_target:1a0c4|alu_zero:0|alu_out:f|write_data_mem:a|write_reg:d|addr:226821|branch_reg:5
-read_data_mem:0|alu_out:15|write_reg:13
-
-CYCLE 98
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 2293760
-R[9]: 2
-R[10]: 1
-R[11]: 1
-R[12]: 15
-R[13]: 15
-R[14]: 0
-R[15]: 0
-R[16]: 0
-R[17]: 0
-R[18]: 0
-R[19]: 0
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-1
-operand 1: 5 | operand 2: 10
-imm: 26657
-2
-read_data 5
-
-PC: 0x40
-pc:40|instruction:226821
-pc:40|read_data_1:5|read_data_2:a|imm:6821|rt:2|rd:d|rs:1|opcode:0|funct:21|shamt:0|addr:226821
-branch_target:1a0c4|alu_zero:0|alu_out:f|write_data_mem:a|write_reg:d|addr:226821|branch_reg:5
-read_data_mem:0|alu_out:15|write_reg:13
-
-CYCLE 99
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 2293760
-R[9]: 2
-R[10]: 1
-R[11]: 1
-R[12]: 15
-R[13]: 15
-R[14]: 0
-R[15]: 0
-R[16]: 0
-R[17]: 0
-R[18]: 0
-R[19]: 0
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-1
-operand 1: 5 | operand 2: 10
-imm: 26657
-2
-read_data 5
-
-PC: 0x40
-pc:40|instruction:226821
-pc:40|read_data_1:5|read_data_2:a|imm:6821|rt:2|rd:d|rs:1|opcode:0|funct:21|shamt:0|addr:226821
-branch_target:1a0c4|alu_zero:0|alu_out:f|write_data_mem:a|write_reg:d|addr:226821|branch_reg:5
-read_data_mem:0|alu_out:15|write_reg:13
-
-CYCLE 100
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 2293760
-R[9]: 2
-R[10]: 1
-R[11]: 1
-R[12]: 15
-R[13]: 15
-R[14]: 0
-R[15]: 0
-R[16]: 0
-R[17]: 0
-R[18]: 0
-R[19]: 0
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-1
-operand 1: 5 | operand 2: 10
-imm: 26657
-2
-read_data 5
-
-PC: 0x40
-pc:40|instruction:226821
-pc:40|read_data_1:5|read_data_2:a|imm:6821|rt:2|rd:d|rs:1|opcode:0|funct:21|shamt:0|addr:226821
-branch_target:1a0c4|alu_zero:0|alu_out:f|write_data_mem:a|write_reg:d|addr:226821|branch_reg:5
-read_data_mem:0|alu_out:15|write_reg:13
-
-CYCLE 101
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 2293760
-R[9]: 2
-R[10]: 1
-R[11]: 1
-R[12]: 15
-R[13]: 15
-R[14]: 0
-R[15]: 0
-R[16]: 0
-R[17]: 0
-R[18]: 0
-R[19]: 0
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-1
-operand 1: 5 | operand 2: 10
-imm: 26657
-2
-read_data 5
-
-PC: 0x40
-pc:40|instruction:226821
-pc:40|read_data_1:5|read_data_2:a|imm:6821|rt:2|rd:d|rs:1|opcode:0|funct:21|shamt:0|addr:226821
-branch_target:1a0c4|alu_zero:0|alu_out:f|write_data_mem:a|write_reg:d|addr:226821|branch_reg:5
-read_data_mem:0|alu_out:15|write_reg:13
-
-CYCLE 102
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 2293760
-R[9]: 2
-R[10]: 1
-R[11]: 1
-R[12]: 15
-R[13]: 15
-R[14]: 0
-R[15]: 0
-R[16]: 0
-R[17]: 0
-R[18]: 0
-R[19]: 0
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-1
-operand 1: 5 | operand 2: 10
-imm: 26657
-2
-read_data 5
-
-PC: 0x40
-pc:40|instruction:226821
-pc:40|read_data_1:5|read_data_2:a|imm:6821|rt:2|rd:d|rs:1|opcode:0|funct:21|shamt:0|addr:226821
-branch_target:1a0c4|alu_zero:0|alu_out:f|write_data_mem:a|write_reg:d|addr:226821|branch_reg:5
-read_data_mem:0|alu_out:15|write_reg:13
-
-CYCLE 103
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 2293760
-R[9]: 2
-R[10]: 1
-R[11]: 1
-R[12]: 15
-R[13]: 15
-R[14]: 0
-R[15]: 0
-R[16]: 0
-R[17]: 0
-R[18]: 0
-R[19]: 0
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-1
-operand 1: 5 | operand 2: 10
-imm: 26657
-2
-read_data 5
-
-PC: 0x40
-pc:40|instruction:226821
-pc:40|read_data_1:5|read_data_2:a|imm:6821|rt:2|rd:d|rs:1|opcode:0|funct:21|shamt:0|addr:226821
-branch_target:1a0c4|alu_zero:0|alu_out:f|write_data_mem:a|write_reg:d|addr:226821|branch_reg:5
-read_data_mem:0|alu_out:15|write_reg:13
-
-CYCLE 104
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 2293760
-R[9]: 2
-R[10]: 1
-R[11]: 1
-R[12]: 15
-R[13]: 15
-R[14]: 0
-R[15]: 0
-R[16]: 0
-R[17]: 0
-R[18]: 0
-R[19]: 0
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-1
-operand 1: 5 | operand 2: 10
-imm: 26657
-2
-read_data 5
-
-PC: 0x40
-pc:40|instruction:226821
-pc:40|read_data_1:5|read_data_2:a|imm:6821|rt:2|rd:d|rs:1|opcode:0|funct:21|shamt:0|addr:226821
-branch_target:1a0c4|alu_zero:0|alu_out:f|write_data_mem:a|write_reg:d|addr:226821|branch_reg:5
-read_data_mem:0|alu_out:15|write_reg:13
-
-CYCLE 105
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 2293760
-R[9]: 2
-R[10]: 1
-R[11]: 1
-R[12]: 15
-R[13]: 15
-R[14]: 0
-R[15]: 0
-R[16]: 0
-R[17]: 0
-R[18]: 0
-R[19]: 0
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-1
-operand 1: 5 | operand 2: 10
-imm: 26657
-2
-read_data 5
-
-PC: 0x40
-pc:40|instruction:226821
-pc:40|read_data_1:5|read_data_2:a|imm:6821|rt:2|rd:d|rs:1|opcode:0|funct:21|shamt:0|addr:226821
-branch_target:1a0c4|alu_zero:0|alu_out:f|write_data_mem:a|write_reg:d|addr:226821|branch_reg:5
-read_data_mem:0|alu_out:15|write_reg:13
-
-CYCLE 106
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 2293760
-R[9]: 2
-R[10]: 1
-R[11]: 1
-R[12]: 15
-R[13]: 15
-R[14]: 0
-R[15]: 0
-R[16]: 0
-R[17]: 0
-R[18]: 0
-R[19]: 0
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-1
-operand 1: 5 | operand 2: 10
-imm: 26657
-2
-read_data 5
-
-PC: 0x40
-pc:40|instruction:226821
-pc:40|read_data_1:5|read_data_2:a|imm:6821|rt:2|rd:d|rs:1|opcode:0|funct:21|shamt:0|addr:226821
-branch_target:1a0c4|alu_zero:0|alu_out:f|write_data_mem:a|write_reg:d|addr:226821|branch_reg:5
-read_data_mem:0|alu_out:15|write_reg:13
-
-CYCLE 107
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 2293760
-R[9]: 2
-R[10]: 1
-R[11]: 1
-R[12]: 15
-R[13]: 15
-R[14]: 0
-R[15]: 0
-R[16]: 0
-R[17]: 0
-R[18]: 0
-R[19]: 0
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-1
-operand 1: 5 | operand 2: 10
-imm: 26657
-2
-read_data 5
-
-PC: 0x40
-pc:40|instruction:226821
-pc:40|read_data_1:5|read_data_2:a|imm:6821|rt:2|rd:d|rs:1|opcode:0|funct:21|shamt:0|addr:226821
-branch_target:1a0c4|alu_zero:0|alu_out:f|write_data_mem:a|write_reg:d|addr:226821|branch_reg:5
-read_data_mem:0|alu_out:15|write_reg:13
-
-CYCLE 108
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 2293760
-R[9]: 2
-R[10]: 1
-R[11]: 1
-R[12]: 15
-R[13]: 15
-R[14]: 0
-R[15]: 0
-R[16]: 0
-R[17]: 0
-R[18]: 0
-R[19]: 0
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-1
-operand 1: 5 | operand 2: 10
-imm: 26657
-2
-read_data 5
-
-PC: 0x40
-pc:40|instruction:226821
-pc:40|read_data_1:5|read_data_2:a|imm:6821|rt:2|rd:d|rs:1|opcode:0|funct:21|shamt:0|addr:226821
-branch_target:1a0c4|alu_zero:0|alu_out:f|write_data_mem:a|write_reg:d|addr:226821|branch_reg:5
-read_data_mem:0|alu_out:15|write_reg:13
-
-CYCLE 109
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 2293760
-R[9]: 2
-R[10]: 1
-R[11]: 1
-R[12]: 15
-R[13]: 15
-R[14]: 0
-R[15]: 0
-R[16]: 0
-R[17]: 0
-R[18]: 0
-R[19]: 0
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-1
-operand 1: 5 | operand 2: 10
-imm: 26657
-2
-read_data 5
-
-PC: 0x40
-pc:40|instruction:226821
-pc:40|read_data_1:5|read_data_2:a|imm:6821|rt:2|rd:d|rs:1|opcode:0|funct:21|shamt:0|addr:226821
-branch_target:1a0c4|alu_zero:0|alu_out:f|write_data_mem:a|write_reg:d|addr:226821|branch_reg:5
-read_data_mem:0|alu_out:15|write_reg:13
-
-CYCLE 110
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 2293760
-R[9]: 2
-R[10]: 1
-R[11]: 1
-R[12]: 15
-R[13]: 15
-R[14]: 0
-R[15]: 0
-R[16]: 0
-R[17]: 0
-R[18]: 0
-R[19]: 0
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-1
-operand 1: 5 | operand 2: 10
-imm: 26657
-2
-read_data 5
-
-PC: 0x40
-pc:40|instruction:226821
-pc:40|read_data_1:5|read_data_2:a|imm:6821|rt:2|rd:d|rs:1|opcode:0|funct:21|shamt:0|addr:226821
-branch_target:1a0c4|alu_zero:0|alu_out:f|write_data_mem:a|write_reg:d|addr:226821|branch_reg:5
-read_data_mem:0|alu_out:15|write_reg:13
-
-CYCLE 111
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 2293760
-R[9]: 2
-R[10]: 1
-R[11]: 1
-R[12]: 15
-R[13]: 15
-R[14]: 0
-R[15]: 0
-R[16]: 0
-R[17]: 0
-R[18]: 0
-R[19]: 0
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-1
-operand 1: 5 | operand 2: 10
-imm: 26657
-2
-read_data 5
-
-PC: 0x40
-pc:40|instruction:226821
-pc:40|read_data_1:5|read_data_2:a|imm:6821|rt:2|rd:d|rs:1|opcode:0|funct:21|shamt:0|addr:226821
-branch_target:1a0c4|alu_zero:0|alu_out:f|write_data_mem:a|write_reg:d|addr:226821|branch_reg:5
-read_data_mem:0|alu_out:15|write_reg:13
-
-CYCLE 112
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 2293760
-R[9]: 2
-R[10]: 1
-R[11]: 1
-R[12]: 15
-R[13]: 15
-R[14]: 0
-R[15]: 0
-R[16]: 0
-R[17]: 0
-R[18]: 0
-R[19]: 0
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-1
-operand 1: 5 | operand 2: 10
-imm: 26657
-2
-read_data 5
-
-PC: 0x40
-pc:40|instruction:226821
-pc:40|read_data_1:5|read_data_2:a|imm:6821|rt:2|rd:d|rs:1|opcode:0|funct:21|shamt:0|addr:226821
-branch_target:1a0c4|alu_zero:0|alu_out:f|write_data_mem:a|write_reg:d|addr:226821|branch_reg:5
-read_data_mem:0|alu_out:15|write_reg:13
-
-CYCLE 113
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 2293760
-R[9]: 2
-R[10]: 1
-R[11]: 1
-R[12]: 15
-R[13]: 15
-R[14]: 0
-R[15]: 0
-R[16]: 0
-R[17]: 0
-R[18]: 0
-R[19]: 0
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-1
-operand 1: 5 | operand 2: 10
-imm: 26657
-2
-read_data 5
-
-PC: 0x40
-pc:40|instruction:226821
-pc:40|read_data_1:5|read_data_2:a|imm:6821|rt:2|rd:d|rs:1|opcode:0|funct:21|shamt:0|addr:226821
-branch_target:1a0c4|alu_zero:0|alu_out:f|write_data_mem:a|write_reg:d|addr:226821|branch_reg:5
-read_data_mem:0|alu_out:15|write_reg:13
-
-CYCLE 114
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 2293760
-R[9]: 2
-R[10]: 1
-R[11]: 1
-R[12]: 15
-R[13]: 15
-R[14]: 0
-R[15]: 0
-R[16]: 0
-R[17]: 0
-R[18]: 0
-R[19]: 0
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-1
-operand 1: 5 | operand 2: 10
-imm: 26657
-2
-read_data 5
-
-PC: 0x40
-pc:40|instruction:226821
-pc:40|read_data_1:5|read_data_2:a|imm:6821|rt:2|rd:d|rs:1|opcode:0|funct:21|shamt:0|addr:226821
-branch_target:1a0c4|alu_zero:0|alu_out:f|write_data_mem:a|write_reg:d|addr:226821|branch_reg:5
-read_data_mem:0|alu_out:15|write_reg:13
-
-CYCLE 115
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 2293760
-R[9]: 2
-R[10]: 1
-R[11]: 1
-R[12]: 15
-R[13]: 15
-R[14]: 0
-R[15]: 0
-R[16]: 0
-R[17]: 0
-R[18]: 0
-R[19]: 0
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-1
-operand 1: 5 | operand 2: 10
-imm: 26657
-2
-read_data 5
-
-PC: 0x40
-pc:40|instruction:226821
-pc:40|read_data_1:5|read_data_2:a|imm:6821|rt:2|rd:d|rs:1|opcode:0|funct:21|shamt:0|addr:226821
-branch_target:1a0c4|alu_zero:0|alu_out:f|write_data_mem:a|write_reg:d|addr:226821|branch_reg:5
-read_data_mem:0|alu_out:15|write_reg:13
-
-CYCLE 116
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 2293760
-R[9]: 2
-R[10]: 1
-R[11]: 1
-R[12]: 15
-R[13]: 15
-R[14]: 0
-R[15]: 0
-R[16]: 0
-R[17]: 0
-R[18]: 0
-R[19]: 0
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-1
-operand 1: 5 | operand 2: 10
-imm: 26657
-2
-read_data 5
-
-PC: 0x40
-pc:40|instruction:226821
-pc:40|read_data_1:5|read_data_2:a|imm:6821|rt:2|rd:d|rs:1|opcode:0|funct:21|shamt:0|addr:226821
-branch_target:1a0c4|alu_zero:0|alu_out:f|write_data_mem:a|write_reg:d|addr:226821|branch_reg:5
-read_data_mem:0|alu_out:15|write_reg:13
-
-CYCLE 117
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 2293760
-R[9]: 2
-R[10]: 1
-R[11]: 1
-R[12]: 15
-R[13]: 15
-R[14]: 0
-R[15]: 0
-R[16]: 0
-R[17]: 0
-R[18]: 0
-R[19]: 0
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-1
-operand 1: 5 | operand 2: 10
-imm: 26657
-2
-read_data 5
-
-PC: 0x40
-pc:40|instruction:226821
-pc:40|read_data_1:5|read_data_2:a|imm:6821|rt:2|rd:d|rs:1|opcode:0|funct:21|shamt:0|addr:226821
-branch_target:1a0c4|alu_zero:0|alu_out:f|write_data_mem:a|write_reg:d|addr:226821|branch_reg:5
-read_data_mem:0|alu_out:15|write_reg:13
-
-CYCLE 118
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 2293760
-R[9]: 2
-R[10]: 1
-R[11]: 1
-R[12]: 15
-R[13]: 15
-R[14]: 0
-R[15]: 0
-R[16]: 0
-R[17]: 0
-R[18]: 0
-R[19]: 0
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-1
-operand 1: 5 | operand 2: 10
-imm: 26657
-2
-read_data 5
-
-PC: 0x40
-pc:40|instruction:226821
-pc:40|read_data_1:5|read_data_2:a|imm:6821|rt:2|rd:d|rs:1|opcode:0|funct:21|shamt:0|addr:226821
-branch_target:1a0c4|alu_zero:0|alu_out:f|write_data_mem:a|write_reg:d|addr:226821|branch_reg:5
-read_data_mem:0|alu_out:15|write_reg:13
-
-CYCLE 119
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 2293760
-R[9]: 2
-R[10]: 1
-R[11]: 1
-R[12]: 15
-R[13]: 15
-R[14]: 0
-R[15]: 0
-R[16]: 0
-R[17]: 0
-R[18]: 0
-R[19]: 0
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-1
-operand 1: 5 | operand 2: 10
-imm: 26657
-2
-read_data 5
-
-PC: 0x40
-pc:40|instruction:226821
-pc:40|read_data_1:5|read_data_2:a|imm:6821|rt:2|rd:d|rs:1|opcode:0|funct:21|shamt:0|addr:226821
-branch_target:1a0c4|alu_zero:0|alu_out:f|write_data_mem:a|write_reg:d|addr:226821|branch_reg:5
-read_data_mem:0|alu_out:15|write_reg:13
-
-CYCLE 120
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 2293760
-R[9]: 2
-R[10]: 1
-R[11]: 1
-R[12]: 15
-R[13]: 15
-R[14]: 0
-R[15]: 0
-R[16]: 0
-R[17]: 0
-R[18]: 0
-R[19]: 0
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-1
-operand 1: 5 | operand 2: 10
-imm: 26657
-2
-read_data 5
-
-PC: 0x40
-pc:40|instruction:226821
-pc:40|read_data_1:5|read_data_2:a|imm:6821|rt:2|rd:d|rs:1|opcode:0|funct:21|shamt:0|addr:226821
-branch_target:1a0c4|alu_zero:0|alu_out:f|write_data_mem:a|write_reg:d|addr:226821|branch_reg:5
-read_data_mem:0|alu_out:15|write_reg:13
-
-CYCLE 121
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 2293760
-R[9]: 2
-R[10]: 1
-R[11]: 1
-R[12]: 15
-R[13]: 15
-R[14]: 0
-R[15]: 0
-R[16]: 0
-R[17]: 0
-R[18]: 0
-R[19]: 0
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-1
-operand 1: 5 | operand 2: 10
-imm: 26657
-2
-read_data 5
-
-PC: 0x40
-pc:40|instruction:226821
-pc:40|read_data_1:5|read_data_2:a|imm:6821|rt:2|rd:d|rs:1|opcode:0|funct:21|shamt:0|addr:226821
-branch_target:1a0c4|alu_zero:0|alu_out:f|write_data_mem:a|write_reg:d|addr:226821|branch_reg:5
-read_data_mem:0|alu_out:15|write_reg:13
-
-CYCLE 122
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 2293760
-R[9]: 2
-R[10]: 1
-R[11]: 1
-R[12]: 15
-R[13]: 15
-R[14]: 0
-R[15]: 0
-R[16]: 0
-R[17]: 0
-R[18]: 0
-R[19]: 0
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-1
-operand 1: 5 | operand 2: 10
-imm: 26657
-2
-read_data 5
-
-PC: 0x40
-pc:40|instruction:226821
-pc:40|read_data_1:5|read_data_2:a|imm:6821|rt:2|rd:d|rs:1|opcode:0|funct:21|shamt:0|addr:226821
-branch_target:1a0c4|alu_zero:0|alu_out:f|write_data_mem:a|write_reg:d|addr:226821|branch_reg:5
-read_data_mem:0|alu_out:15|write_reg:13
-
-CYCLE 123
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 2293760
-R[9]: 2
-R[10]: 1
-R[11]: 1
-R[12]: 15
-R[13]: 15
-R[14]: 0
-R[15]: 0
-R[16]: 0
-R[17]: 0
-R[18]: 0
-R[19]: 0
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-1
-operand 1: 5 | operand 2: 10
-imm: 26657
-2
-read_data 5
-
-PC: 0x40
-pc:40|instruction:226821
-pc:40|read_data_1:5|read_data_2:a|imm:6821|rt:2|rd:d|rs:1|opcode:0|funct:21|shamt:0|addr:226821
-branch_target:1a0c4|alu_zero:0|alu_out:f|write_data_mem:a|write_reg:d|addr:226821|branch_reg:5
-read_data_mem:0|alu_out:15|write_reg:13
-
-CYCLE 124
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 2293760
-R[9]: 2
-R[10]: 1
-R[11]: 1
-R[12]: 15
-R[13]: 15
-R[14]: 0
-R[15]: 0
-R[16]: 0
-R[17]: 0
-R[18]: 0
-R[19]: 0
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-1
-operand 1: 5 | operand 2: 10
-imm: 26657
-2
-read_data 5
-
-PC: 0x40
-pc:40|instruction:226821
-pc:40|read_data_1:5|read_data_2:a|imm:6821|rt:2|rd:d|rs:1|opcode:0|funct:21|shamt:0|addr:226821
-branch_target:1a0c4|alu_zero:0|alu_out:f|write_data_mem:a|write_reg:d|addr:226821|branch_reg:5
-read_data_mem:0|alu_out:15|write_reg:13
-
-CYCLE 125
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 2293760
-R[9]: 2
-R[10]: 1
-R[11]: 1
-R[12]: 15
-R[13]: 15
-R[14]: 0
-R[15]: 0
-R[16]: 0
-R[17]: 0
-R[18]: 0
-R[19]: 0
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-1
-operand 1: 5 | operand 2: 10
-imm: 26657
-2
-read_data 5
-
-PC: 0x40
-pc:40|instruction:226821
-pc:40|read_data_1:5|read_data_2:a|imm:6821|rt:2|rd:d|rs:1|opcode:0|funct:21|shamt:0|addr:226821
-branch_target:1a0c4|alu_zero:0|alu_out:f|write_data_mem:a|write_reg:d|addr:226821|branch_reg:5
-read_data_mem:0|alu_out:15|write_reg:13
-
-CYCLE 126
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 2293760
-R[9]: 2
-R[10]: 1
-R[11]: 1
-R[12]: 15
-R[13]: 15
-R[14]: 0
-R[15]: 0
-R[16]: 0
-R[17]: 0
-R[18]: 0
-R[19]: 0
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-1
-operand 1: 5 | operand 2: 10
-imm: 26657
-2
-read_data 5
-
-PC: 0x40
-pc:40|instruction:226821
-pc:40|read_data_1:5|read_data_2:a|imm:6821|rt:2|rd:d|rs:1|opcode:0|funct:21|shamt:0|addr:226821
-branch_target:1a0c4|alu_zero:0|alu_out:f|write_data_mem:a|write_reg:d|addr:226821|branch_reg:5
-read_data_mem:0|alu_out:15|write_reg:13
-
-CYCLE 127
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 2293760
-R[9]: 2
-R[10]: 1
-R[11]: 1
-R[12]: 15
-R[13]: 15
-R[14]: 0
-R[15]: 0
-R[16]: 0
-R[17]: 0
-R[18]: 0
-R[19]: 0
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-1
-operand 1: 5 | operand 2: 10
-imm: 26657
-2
-read_data 5
-
-PC: 0x40
-pc:40|instruction:226821
-pc:40|read_data_1:5|read_data_2:a|imm:6821|rt:2|rd:d|rs:1|opcode:0|funct:21|shamt:0|addr:226821
-branch_target:1a0c4|alu_zero:0|alu_out:f|write_data_mem:a|write_reg:d|addr:226821|branch_reg:5
-read_data_mem:0|alu_out:15|write_reg:13
-
-CYCLE 128
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 2293760
-R[9]: 2
-R[10]: 1
-R[11]: 1
-R[12]: 15
-R[13]: 15
-R[14]: 0
-R[15]: 0
-R[16]: 0
-R[17]: 0
-R[18]: 0
-R[19]: 0
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-1
-operand 1: 5 | operand 2: 10
-imm: 26657
-2
-read_data 5
-
-PC: 0x40
-pc:40|instruction:226821
-pc:40|read_data_1:5|read_data_2:a|imm:6821|rt:2|rd:d|rs:1|opcode:0|funct:21|shamt:0|addr:226821
-branch_target:1a0c4|alu_zero:0|alu_out:f|write_data_mem:a|write_reg:d|addr:226821|branch_reg:5
-read_data_mem:0|alu_out:15|write_reg:13
-
-CYCLE 129
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 2293760
-R[9]: 2
-R[10]: 1
-R[11]: 1
-R[12]: 15
-R[13]: 15
-R[14]: 0
-R[15]: 0
-R[16]: 0
-R[17]: 0
-R[18]: 0
-R[19]: 0
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-1
-operand 1: 5 | operand 2: 10
-imm: 26657
-2
-read_data 5
-
-PC: 0x40
-pc:40|instruction:226821
-pc:40|read_data_1:5|read_data_2:a|imm:6821|rt:2|rd:d|rs:1|opcode:0|funct:21|shamt:0|addr:226821
-branch_target:1a0c4|alu_zero:0|alu_out:f|write_data_mem:a|write_reg:d|addr:226821|branch_reg:5
-read_data_mem:0|alu_out:15|write_reg:13
-
-CYCLE 130
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 2293760
-R[9]: 2
-R[10]: 1
-R[11]: 1
-R[12]: 15
-R[13]: 15
-R[14]: 0
-R[15]: 0
-R[16]: 0
-R[17]: 0
-R[18]: 0
-R[19]: 0
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-1
-operand 1: 5 | operand 2: 10
-imm: 26657
-2
-read_data 5
-
-PC: 0x40
-pc:40|instruction:226821
-pc:40|read_data_1:5|read_data_2:a|imm:6821|rt:2|rd:d|rs:1|opcode:0|funct:21|shamt:0|addr:226821
-branch_target:1a0c4|alu_zero:0|alu_out:f|write_data_mem:a|write_reg:d|addr:226821|branch_reg:5
-read_data_mem:0|alu_out:15|write_reg:13
-
-CYCLE 131
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 2293760
-R[9]: 2
-R[10]: 1
-R[11]: 1
-R[12]: 15
-R[13]: 15
-R[14]: 0
-R[15]: 0
-R[16]: 0
-R[17]: 0
-R[18]: 0
-R[19]: 0
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-1
-operand 1: 5 | operand 2: 10
-imm: 26657
-2
-read_data 5
-
-PC: 0x40
-pc:40|instruction:226821
-pc:40|read_data_1:5|read_data_2:a|imm:6821|rt:2|rd:d|rs:1|opcode:0|funct:21|shamt:0|addr:226821
-branch_target:1a0c4|alu_zero:0|alu_out:f|write_data_mem:a|write_reg:d|addr:226821|branch_reg:5
-read_data_mem:0|alu_out:15|write_reg:13
-
-CYCLE 132
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 2293760
-R[9]: 2
-R[10]: 1
-R[11]: 1
-R[12]: 15
-R[13]: 15
-R[14]: 0
-R[15]: 0
-R[16]: 0
-R[17]: 0
-R[18]: 0
-R[19]: 0
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-1
-operand 1: 5 | operand 2: 10
-imm: 26657
-2
-read_data 5
-
-PC: 0x40
-pc:40|instruction:226821
-pc:40|read_data_1:5|read_data_2:a|imm:6821|rt:2|rd:d|rs:1|opcode:0|funct:21|shamt:0|addr:226821
-branch_target:1a0c4|alu_zero:0|alu_out:f|write_data_mem:a|write_reg:d|addr:226821|branch_reg:5
-read_data_mem:0|alu_out:15|write_reg:13
+pc:34|instruction:210820
+pc:30|read_data_1:0|read_data_2:0|imm:0|rt:4|rd:0|rs:0|opcode:23|funct:0|shamt:0|addr:40000
+branch_target:2c|alu_zero:1|alu_out:0|write_data_mem:4|write_reg:1|addr:10000|branch_reg:0
+read_data_mem:0|alu_out:4|write_reg:1
 
 CYCLE 133
 R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
+R[1]: 2
+R[2]: 1
+R[3]: 1
 R[4]: 0
 R[5]: 0
 R[6]: 0
 R[7]: 0
-R[8]: 2293760
-R[9]: 2
+R[8]: 0
+R[9]: 0
 R[10]: 1
-R[11]: 1
-R[12]: 15
-R[13]: 15
+R[11]: 0
+R[12]: 0
+R[13]: 0
 R[14]: 0
 R[15]: 0
 R[16]: 0
@@ -7345,32 +5419,32 @@ R[29]: 0
 R[30]: 0
 R[31]: 0
 1
-operand 1: 5 | operand 2: 10
-imm: 26657
-2
-read_data 5
+operand 1: 0 | operand 2: 0
+imm: 2080
+1
+read_data 4
 
-PC: 0x40
-pc:40|instruction:226821
-pc:40|read_data_1:5|read_data_2:a|imm:6821|rt:2|rd:d|rs:1|opcode:0|funct:21|shamt:0|addr:226821
-branch_target:1a0c4|alu_zero:0|alu_out:f|write_data_mem:a|write_reg:d|addr:226821|branch_reg:5
-read_data_mem:0|alu_out:15|write_reg:13
+PC: 0x34
+pc:38|instruction:421020
+pc:34|read_data_1:4|read_data_2:4|imm:820|rt:1|rd:1|rs:1|opcode:0|funct:20|shamt:0|addr:210820
+branch_target:30|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:4|addr:40000|branch_reg:0
+read_data_mem:1|alu_out:0|write_reg:1
 
 CYCLE 134
 R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
+R[1]: 4
+R[2]: 1
+R[3]: 1
 R[4]: 0
 R[5]: 0
 R[6]: 0
 R[7]: 0
-R[8]: 2293760
-R[9]: 2
+R[8]: 0
+R[9]: 0
 R[10]: 1
-R[11]: 1
-R[12]: 15
-R[13]: 15
+R[11]: 0
+R[12]: 0
+R[13]: 0
 R[14]: 0
 R[15]: 0
 R[16]: 0
@@ -7390,32 +5464,32 @@ R[29]: 0
 R[30]: 0
 R[31]: 0
 1
-operand 1: 5 | operand 2: 10
-imm: 26657
+operand 1: 4 | operand 2: 4
+imm: 4128
 2
-read_data 5
+read_data 1
 
-PC: 0x40
-pc:40|instruction:226821
-pc:40|read_data_1:5|read_data_2:a|imm:6821|rt:2|rd:d|rs:1|opcode:0|funct:21|shamt:0|addr:226821
-branch_target:1a0c4|alu_zero:0|alu_out:f|write_data_mem:a|write_reg:d|addr:226821|branch_reg:5
-read_data_mem:0|alu_out:15|write_reg:13
+PC: 0x38
+pc:3c|instruction:ac010004
+pc:38|read_data_1:1|read_data_2:1|imm:1020|rt:2|rd:2|rs:2|opcode:0|funct:20|shamt:0|addr:421020
+branch_target:20b4|alu_zero:0|alu_out:8|write_data_mem:4|write_reg:1|addr:210820|branch_reg:4
+read_data_mem:4|alu_out:0|write_reg:4
 
 CYCLE 135
 R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
+R[1]: 4
+R[2]: 1
+R[3]: 1
 R[4]: 0
 R[5]: 0
 R[6]: 0
 R[7]: 0
-R[8]: 2293760
-R[9]: 2
+R[8]: 0
+R[9]: 0
 R[10]: 1
-R[11]: 1
-R[12]: 15
-R[13]: 15
+R[11]: 0
+R[12]: 0
+R[13]: 0
 R[14]: 0
 R[15]: 0
 R[16]: 0
@@ -7435,32 +5509,32 @@ R[29]: 0
 R[30]: 0
 R[31]: 0
 1
-operand 1: 5 | operand 2: 10
-imm: 26657
-2
-read_data 5
+operand 1: 1 | operand 2: 1
+imm: 4
+1
+read_data 0
 
-PC: 0x40
-pc:44|instruction:227024
-pc:40|read_data_1:5|read_data_2:a|imm:6821|rt:2|rd:d|rs:1|opcode:0|funct:21|shamt:0|addr:226821
-branch_target:1a0c4|alu_zero:0|alu_out:f|write_data_mem:a|write_reg:d|addr:226821|branch_reg:5
-read_data_mem:0|alu_out:15|write_reg:13
+PC: 0x3c
+pc:40|instruction:8c050004
+pc:3c|read_data_1:0|read_data_2:4|imm:4|rt:1|rd:0|rs:0|opcode:2b|funct:4|shamt:0|addr:10004
+branch_target:40b8|alu_zero:0|alu_out:2|write_data_mem:1|write_reg:2|addr:421020|branch_reg:1
+read_data_mem:0|alu_out:8|write_reg:1
 
 CYCLE 136
 R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
+R[1]: 4
+R[2]: 1
+R[3]: 1
+R[4]: 4
 R[5]: 0
 R[6]: 0
 R[7]: 0
-R[8]: 2293760
-R[9]: 2
+R[8]: 0
+R[9]: 0
 R[10]: 1
-R[11]: 1
-R[12]: 15
-R[13]: 15
+R[11]: 0
+R[12]: 0
+R[13]: 0
 R[14]: 0
 R[15]: 0
 R[16]: 0
@@ -7480,32 +5554,32 @@ R[29]: 0
 R[30]: 0
 R[31]: 0
 1
-operand 1: 5 | operand 2: 10
-imm: 28708
-2
-read_data 5
+operand 1: 0 | operand 2: 4
+imm: 4
+5
+read_data 0
 
-PC: 0x44
-pc:48|instruction:227827
-pc:44|read_data_1:5|read_data_2:a|imm:7024|rt:2|rd:e|rs:1|opcode:0|funct:24|shamt:0|addr:227024
-branch_target:1a0c4|alu_zero:0|alu_out:f|write_data_mem:a|write_reg:d|addr:226821|branch_reg:5
-read_data_mem:0|alu_out:15|write_reg:13
+PC: 0x40
+pc:40|instruction:8c050004
+pc:40|read_data_1:0|read_data_2:0|imm:4|rt:5|rd:0|rs:0|opcode:23|funct:4|shamt:0|addr:50004
+branch_target:4c|alu_zero:0|alu_out:4|write_data_mem:8|write_reg:1|addr:10004|branch_reg:0
+read_data_mem:0|alu_out:2|write_reg:2
 
 CYCLE 137
 R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
+R[1]: 8
+R[2]: 1
+R[3]: 1
+R[4]: 4
 R[5]: 0
 R[6]: 0
 R[7]: 0
-R[8]: 2293760
-R[9]: 2
+R[8]: 0
+R[9]: 0
 R[10]: 1
-R[11]: 1
-R[12]: 15
-R[13]: 15
+R[11]: 0
+R[12]: 0
+R[13]: 0
 R[14]: 0
 R[15]: 0
 R[16]: 0
@@ -7524,33 +5598,23 @@ R[28]: 0
 R[29]: 0
 R[30]: 0
 R[31]: 0
-1
-operand 1: 5 | operand 2: 10
-imm: 30759
-2
-read_data 5
-
-PC: 0x48
-pc:4c|instruction:228025
-pc:48|read_data_1:5|read_data_2:a|imm:7827|rt:2|rd:f|rs:1|opcode:0|funct:27|shamt:0|addr:227827
-branch_target:1c0d4|alu_zero:1|alu_out:0|write_data_mem:a|write_reg:e|addr:227024|branch_reg:5
-read_data_mem:0|alu_out:15|write_reg:13
+0
 
 CYCLE 138
 R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
+R[1]: 8
+R[2]: 1
+R[3]: 1
+R[4]: 4
 R[5]: 0
 R[6]: 0
 R[7]: 0
-R[8]: 2293760
-R[9]: 2
+R[8]: 0
+R[9]: 0
 R[10]: 1
-R[11]: 1
-R[12]: 15
-R[13]: 15
+R[11]: 0
+R[12]: 0
+R[13]: 0
 R[14]: 0
 R[15]: 0
 R[16]: 0
@@ -7569,33 +5633,23 @@ R[28]: 0
 R[29]: 0
 R[30]: 0
 R[31]: 0
-1
-operand 1: 5 | operand 2: 10
-imm: 32805
-2
-read_data 5
-
-PC: 0x4c
-pc:50|instruction:22882a
-pc:4c|read_data_1:5|read_data_2:a|imm:8025|rt:2|rd:10|rs:1|opcode:0|funct:25|shamt:0|addr:228025
-branch_target:1e0e4|alu_zero:0|alu_out:fffffff0|write_data_mem:a|write_reg:f|addr:227827|branch_reg:5
-read_data_mem:0|alu_out:0|write_reg:14
+0
 
 CYCLE 139
 R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
+R[1]: 8
+R[2]: 1
+R[3]: 1
+R[4]: 4
 R[5]: 0
 R[6]: 0
 R[7]: 0
-R[8]: 2293760
-R[9]: 2
+R[8]: 0
+R[9]: 0
 R[10]: 1
-R[11]: 1
-R[12]: 15
-R[13]: 15
+R[11]: 0
+R[12]: 0
+R[13]: 0
 R[14]: 0
 R[15]: 0
 R[16]: 0
@@ -7614,33 +5668,128 @@ R[28]: 0
 R[29]: 0
 R[30]: 0
 R[31]: 0
-1
-operand 1: 5 | operand 2: 10
-imm: 34858
-2
-read_data 5
-
-PC: 0x50
-pc:54|instruction:41902b
-pc:50|read_data_1:5|read_data_2:a|imm:882a|rt:2|rd:11|rs:1|opcode:0|funct:2a|shamt:0|addr:22882a
-branch_target:fffe00e0|alu_zero:0|alu_out:f|write_data_mem:a|write_reg:10|addr:228025|branch_reg:5
-read_data_mem:0|alu_out:4294967280|write_reg:15
+0
 
 CYCLE 140
 R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
+R[1]: 8
+R[2]: 1
+R[3]: 1
+R[4]: 4
 R[5]: 0
 R[6]: 0
 R[7]: 0
-R[8]: 2293760
-R[9]: 2
+R[8]: 0
+R[9]: 0
 R[10]: 1
-R[11]: 1
-R[12]: 15
-R[13]: 15
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+0
+
+CYCLE 141
+R[0]: 0
+R[1]: 8
+R[2]: 1
+R[3]: 1
+R[4]: 4
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 1
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+0
+
+CYCLE 142
+R[0]: 0
+R[1]: 8
+R[2]: 1
+R[3]: 1
+R[4]: 4
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 1
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+0
+
+CYCLE 143
+R[0]: 0
+R[1]: 8
+R[2]: 1
+R[3]: 1
+R[4]: 4
+R[5]: 0
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 1
+R[11]: 0
+R[12]: 0
+R[13]: 0
 R[14]: 0
 R[15]: 0
 R[16]: 0
@@ -7660,34 +5809,24 @@ R[29]: 0
 R[30]: 0
 R[31]: 0
 1
-operand 1: 5 | operand 2: 10
-imm: 36907
-1
-read_data 10
 
-PC: 0x54
-pc:58|instruction:19880
-pc:54|read_data_1:a|read_data_2:5|imm:902b|rt:1|rd:12|rs:2|opcode:0|funct:2b|shamt:0|addr:41902b
-branch_target:fffe20f8|alu_zero:0|alu_out:1|write_data_mem:a|write_reg:11|addr:22882a|branch_reg:5
-read_data_mem:0|alu_out:15|write_reg:16
-
-CYCLE 141
+CYCLE 144
 R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
+R[1]: 8
+R[2]: 1
+R[3]: 1
+R[4]: 4
 R[5]: 0
 R[6]: 0
 R[7]: 0
-R[8]: 2293760
-R[9]: 2
+R[8]: 0
+R[9]: 0
 R[10]: 1
-R[11]: 1
-R[12]: 15
-R[13]: 15
+R[11]: 0
+R[12]: 0
+R[13]: 0
 R[14]: 0
-R[15]: -16
+R[15]: 0
 R[16]: 0
 R[17]: 0
 R[18]: 0
@@ -7705,35 +5844,32 @@ R[29]: 0
 R[30]: 0
 R[31]: 0
 1
-operand 1: 10 | operand 2: 5
-imm: 39040
-1
-read_data 0
+operand 1: 0 | operand 2: 4
+imm: 4
+5
+pc:40|instruction:8c050004
+pc:0|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:0|funct:0|shamt:0|addr:0
+branch_target:50|alu_zero:0|alu_out:4|write_data_mem:0|write_reg:5|addr:50004|branch_reg:0
+read_data_mem:8|alu_out:4|write_reg:1
 
-PC: 0x58
-pc:5c|instruction:2a042
-pc:58|read_data_1:0|read_data_2:5|imm:9880|rt:1|rd:13|rs:0|opcode:0|funct:0|shamt:2|addr:19880
-branch_target:fffe4100|alu_zero:1|alu_out:0|write_data_mem:5|write_reg:12|addr:41902b|branch_reg:a
-read_data_mem:0|alu_out:1|write_reg:17
-
-CYCLE 142
+CYCLE 145
 R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
+R[1]: 8
+R[2]: 2
+R[3]: 1
+R[4]: 4
 R[5]: 0
 R[6]: 0
 R[7]: 0
-R[8]: 2293760
-R[9]: 2
+R[8]: 0
+R[9]: 0
 R[10]: 1
-R[11]: 1
-R[12]: 15
-R[13]: 15
+R[11]: 0
+R[12]: 0
+R[13]: 0
 R[14]: 0
-R[15]: -16
-R[16]: 15
+R[15]: 0
+R[16]: 0
 R[17]: 0
 R[18]: 0
 R[19]: 0
@@ -7750,174 +5886,39 @@ R[29]: 0
 R[30]: 0
 R[31]: 0
 1
-operand 1: 2 | operand 2: 5
-imm: 41026
-2
+operand 1: 0 | operand 2: 0
+imm: 4
+5
 read_data 0
 
-PC: 0x5c
-pc:60|instruction:22a822
-pc:5c|read_data_1:0|read_data_2:a|imm:a042|rt:2|rd:14|rs:0|opcode:0|funct:2|shamt:1|addr:2a042
-branch_target:fffe6258|alu_zero:0|alu_out:14|write_data_mem:5|write_reg:13|addr:19880|branch_reg:0
-read_data_mem:0|alu_out:0|write_reg:18
-
-CYCLE 143
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 2293760
-R[9]: 2
-R[10]: 1
-R[11]: 1
-R[12]: 15
-R[13]: 15
-R[14]: 0
-R[15]: -16
-R[16]: 15
-R[17]: 1
-R[18]: 0
-R[19]: 0
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-1
-operand 1: 1 | operand 2: 10
-imm: 43042
-2
-read_data 5
-
-PC: 0x60
-pc:64|instruction:22b023
-pc:60|read_data_1:5|read_data_2:a|imm:a822|rt:2|rd:15|rs:1|opcode:0|funct:22|shamt:0|addr:22a822
-branch_target:fffe8164|alu_zero:0|alu_out:5|write_data_mem:a|write_reg:14|addr:2a042|branch_reg:0
-read_data_mem:0|alu_out:20|write_reg:19
-
-CYCLE 144
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 2293760
-R[9]: 2
-R[10]: 1
-R[11]: 1
-R[12]: 15
-R[13]: 15
-R[14]: 0
-R[15]: -16
-R[16]: 15
-R[17]: 1
-R[18]: 0
-R[19]: 0
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-1
-operand 1: 5 | operand 2: 10
-imm: 45091
-2
-read_data 5
-
-PC: 0x64
-pc:68|instruction:0
-pc:64|read_data_1:5|read_data_2:a|imm:b023|rt:2|rd:16|rs:1|opcode:0|funct:23|shamt:0|addr:22b023
-branch_target:fffea0e8|alu_zero:0|alu_out:fffffffb|write_data_mem:a|write_reg:15|addr:22a822|branch_reg:5
-read_data_mem:0|alu_out:5|write_reg:20
-
-CYCLE 145
-R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
-R[6]: 0
-R[7]: 0
-R[8]: 2293760
-R[9]: 2
-R[10]: 1
-R[11]: 1
-R[12]: 15
-R[13]: 15
-R[14]: 0
-R[15]: -16
-R[16]: 15
-R[17]: 1
-R[18]: 0
-R[19]: 20
-R[20]: 0
-R[21]: 0
-R[22]: 0
-R[23]: 0
-R[24]: 0
-R[25]: 0
-R[26]: 0
-R[27]: 0
-R[28]: 0
-R[29]: 0
-R[30]: 0
-R[31]: 0
-1
-operand 1: 5 | operand 2: 10
-imm: 0
-0
-read_data 0
-
-PC: 0x68
-pc:6c|instruction:0
-pc:68|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:0|funct:0|shamt:0|addr:0
-branch_target:fffec0f0|alu_zero:0|alu_out:fffffffb|write_data_mem:a|write_reg:16|addr:22b023|branch_reg:5
-read_data_mem:0|alu_out:4294967291|write_reg:21
+PC: 0x40
+pc:40|instruction:8c050004
+pc:40|read_data_1:0|read_data_2:0|imm:4|rt:5|rd:0|rs:0|opcode:23|funct:4|shamt:0|addr:50004
+branch_target:0|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
+read_data_mem:8|alu_out:4|write_reg:5
 
 CYCLE 146
 R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
+R[1]: 8
+R[2]: 2
+R[3]: 1
+R[4]: 4
 R[5]: 0
 R[6]: 0
 R[7]: 0
-R[8]: 2293760
-R[9]: 2
+R[8]: 0
+R[9]: 0
 R[10]: 1
-R[11]: 1
-R[12]: 15
-R[13]: 15
+R[11]: 0
+R[12]: 0
+R[13]: 0
 R[14]: 0
-R[15]: -16
-R[16]: 15
-R[17]: 1
+R[15]: 0
+R[16]: 0
+R[17]: 0
 R[18]: 0
-R[19]: 20
-R[20]: 5
+R[19]: 0
+R[20]: 0
 R[21]: 0
 R[22]: 0
 R[23]: 0
@@ -7930,40 +5931,30 @@ R[29]: 0
 R[30]: 0
 R[31]: 0
 1
-operand 1: 0 | operand 2: 0
-imm: 0
-0
-read_data 0
-
-PC: 0x6c
-pc:70|instruction:0
-pc:6c|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:0|funct:0|shamt:0|addr:0
-branch_target:68|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
-read_data_mem:0|alu_out:4294967291|write_reg:22
 
 CYCLE 147
 R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
+R[1]: 8
+R[2]: 2
+R[3]: 1
+R[4]: 4
 R[5]: 0
 R[6]: 0
 R[7]: 0
-R[8]: 2293760
-R[9]: 2
+R[8]: 0
+R[9]: 0
 R[10]: 1
-R[11]: 1
-R[12]: 15
-R[13]: 15
+R[11]: 0
+R[12]: 0
+R[13]: 0
 R[14]: 0
-R[15]: -16
-R[16]: 15
-R[17]: 1
+R[15]: 0
+R[16]: 0
+R[17]: 0
 R[18]: 0
-R[19]: 20
-R[20]: 5
-R[21]: -5
+R[19]: 0
+R[20]: 0
+R[21]: 0
 R[22]: 0
 R[23]: 0
 R[24]: 0
@@ -7975,41 +5966,2401 @@ R[29]: 0
 R[30]: 0
 R[31]: 0
 1
-operand 1: 0 | operand 2: 0
-imm: 0
-0
-read_data 0
-
-PC: 0x70
-pc:74|instruction:0
-pc:70|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:0|funct:0|shamt:0|addr:0
-branch_target:6c|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
+operand 1: 0 | operand 2: 4
+imm: 4
+5
+pc:40|instruction:8c050004
+pc:0|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:0|funct:0|shamt:0|addr:0
+branch_target:50|alu_zero:0|alu_out:4|write_data_mem:8|write_reg:5|addr:50004|branch_reg:0
 read_data_mem:0|alu_out:0|write_reg:0
 
 CYCLE 148
 R[0]: 0
-R[1]: 5
-R[2]: 10
-R[3]: 0
-R[4]: 0
-R[5]: 0
+R[1]: 8
+R[2]: 2
+R[3]: 1
+R[4]: 4
+R[5]: 8
 R[6]: 0
 R[7]: 0
-R[8]: 2293760
-R[9]: 2
+R[8]: 0
+R[9]: 0
 R[10]: 1
-R[11]: 1
-R[12]: 15
-R[13]: 15
+R[11]: 0
+R[12]: 0
+R[13]: 0
 R[14]: 0
-R[15]: -16
-R[16]: 15
-R[17]: 1
+R[15]: 0
+R[16]: 0
+R[17]: 0
 R[18]: 0
-R[19]: 20
-R[20]: 5
-R[21]: -5
-R[22]: -5
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+0
+operand 1: 0 | operand 2: 0
+imm: 4
+5
+read_data 0
+
+PC: 0x40
+pc:40|instruction:8c050004
+pc:40|read_data_1:0|read_data_2:8|imm:4|rt:5|rd:0|rs:0|opcode:23|funct:4|shamt:0|addr:50004
+branch_target:0|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
+read_data_mem:0|alu_out:0|write_reg:0
+
+CYCLE 149
+R[0]: 0
+R[1]: 8
+R[2]: 2
+R[3]: 1
+R[4]: 4
+R[5]: 8
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 1
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+
+CYCLE 150
+R[0]: 0
+R[1]: 8
+R[2]: 2
+R[3]: 1
+R[4]: 4
+R[5]: 8
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 1
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+operand 1: 0 | operand 2: 4
+imm: 4
+5
+pc:40|instruction:8c050004
+pc:0|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:0|funct:0|shamt:0|addr:0
+branch_target:50|alu_zero:0|alu_out:4|write_data_mem:8|write_reg:5|addr:50004|branch_reg:0
+read_data_mem:0|alu_out:0|write_reg:0
+
+CYCLE 151
+R[0]: 0
+R[1]: 8
+R[2]: 2
+R[3]: 1
+R[4]: 4
+R[5]: 8
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 1
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+0
+operand 1: 0 | operand 2: 0
+imm: 4
+5
+read_data 0
+
+PC: 0x40
+pc:40|instruction:8c050004
+pc:40|read_data_1:0|read_data_2:8|imm:4|rt:5|rd:0|rs:0|opcode:23|funct:4|shamt:0|addr:50004
+branch_target:0|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
+read_data_mem:0|alu_out:0|write_reg:0
+
+CYCLE 152
+R[0]: 0
+R[1]: 8
+R[2]: 2
+R[3]: 1
+R[4]: 4
+R[5]: 8
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 1
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+
+CYCLE 153
+R[0]: 0
+R[1]: 8
+R[2]: 2
+R[3]: 1
+R[4]: 4
+R[5]: 8
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 1
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+operand 1: 0 | operand 2: 4
+imm: 4
+5
+pc:40|instruction:8c050004
+pc:0|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:0|funct:0|shamt:0|addr:0
+branch_target:50|alu_zero:0|alu_out:4|write_data_mem:8|write_reg:5|addr:50004|branch_reg:0
+read_data_mem:0|alu_out:0|write_reg:0
+
+CYCLE 154
+R[0]: 0
+R[1]: 8
+R[2]: 2
+R[3]: 1
+R[4]: 4
+R[5]: 8
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 1
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+0
+operand 1: 0 | operand 2: 0
+imm: 4
+5
+read_data 0
+
+PC: 0x40
+pc:40|instruction:8c050004
+pc:40|read_data_1:0|read_data_2:8|imm:4|rt:5|rd:0|rs:0|opcode:23|funct:4|shamt:0|addr:50004
+branch_target:0|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
+read_data_mem:0|alu_out:0|write_reg:0
+
+CYCLE 155
+R[0]: 0
+R[1]: 8
+R[2]: 2
+R[3]: 1
+R[4]: 4
+R[5]: 8
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 1
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+
+CYCLE 156
+R[0]: 0
+R[1]: 8
+R[2]: 2
+R[3]: 1
+R[4]: 4
+R[5]: 8
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 1
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+operand 1: 0 | operand 2: 4
+imm: 4
+5
+pc:40|instruction:8c050004
+pc:0|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:0|funct:0|shamt:0|addr:0
+branch_target:50|alu_zero:0|alu_out:4|write_data_mem:8|write_reg:5|addr:50004|branch_reg:0
+read_data_mem:0|alu_out:0|write_reg:0
+
+CYCLE 157
+R[0]: 0
+R[1]: 8
+R[2]: 2
+R[3]: 1
+R[4]: 4
+R[5]: 8
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 1
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+0
+operand 1: 0 | operand 2: 0
+imm: 4
+5
+read_data 0
+
+PC: 0x40
+pc:40|instruction:8c050004
+pc:40|read_data_1:0|read_data_2:8|imm:4|rt:5|rd:0|rs:0|opcode:23|funct:4|shamt:0|addr:50004
+branch_target:0|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
+read_data_mem:0|alu_out:0|write_reg:0
+
+CYCLE 158
+R[0]: 0
+R[1]: 8
+R[2]: 2
+R[3]: 1
+R[4]: 4
+R[5]: 8
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 1
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+
+CYCLE 159
+R[0]: 0
+R[1]: 8
+R[2]: 2
+R[3]: 1
+R[4]: 4
+R[5]: 8
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 1
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+operand 1: 0 | operand 2: 4
+imm: 4
+5
+pc:40|instruction:8c050004
+pc:0|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:0|funct:0|shamt:0|addr:0
+branch_target:50|alu_zero:0|alu_out:4|write_data_mem:8|write_reg:5|addr:50004|branch_reg:0
+read_data_mem:0|alu_out:0|write_reg:0
+
+CYCLE 160
+R[0]: 0
+R[1]: 8
+R[2]: 2
+R[3]: 1
+R[4]: 4
+R[5]: 8
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 1
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+0
+operand 1: 0 | operand 2: 0
+imm: 4
+5
+read_data 0
+
+PC: 0x40
+pc:40|instruction:8c050004
+pc:40|read_data_1:0|read_data_2:8|imm:4|rt:5|rd:0|rs:0|opcode:23|funct:4|shamt:0|addr:50004
+branch_target:0|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
+read_data_mem:0|alu_out:0|write_reg:0
+
+CYCLE 161
+R[0]: 0
+R[1]: 8
+R[2]: 2
+R[3]: 1
+R[4]: 4
+R[5]: 8
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 1
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+
+CYCLE 162
+R[0]: 0
+R[1]: 8
+R[2]: 2
+R[3]: 1
+R[4]: 4
+R[5]: 8
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 1
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+operand 1: 0 | operand 2: 4
+imm: 4
+5
+pc:40|instruction:8c050004
+pc:0|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:0|funct:0|shamt:0|addr:0
+branch_target:50|alu_zero:0|alu_out:4|write_data_mem:8|write_reg:5|addr:50004|branch_reg:0
+read_data_mem:0|alu_out:0|write_reg:0
+
+CYCLE 163
+R[0]: 0
+R[1]: 8
+R[2]: 2
+R[3]: 1
+R[4]: 4
+R[5]: 8
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 1
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+0
+operand 1: 0 | operand 2: 0
+imm: 4
+5
+read_data 0
+
+PC: 0x40
+pc:40|instruction:8c050004
+pc:40|read_data_1:0|read_data_2:8|imm:4|rt:5|rd:0|rs:0|opcode:23|funct:4|shamt:0|addr:50004
+branch_target:0|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
+read_data_mem:0|alu_out:0|write_reg:0
+
+CYCLE 164
+R[0]: 0
+R[1]: 8
+R[2]: 2
+R[3]: 1
+R[4]: 4
+R[5]: 8
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 1
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+
+CYCLE 165
+R[0]: 0
+R[1]: 8
+R[2]: 2
+R[3]: 1
+R[4]: 4
+R[5]: 8
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 1
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+operand 1: 0 | operand 2: 4
+imm: 4
+5
+pc:40|instruction:8c050004
+pc:0|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:0|funct:0|shamt:0|addr:0
+branch_target:50|alu_zero:0|alu_out:4|write_data_mem:8|write_reg:5|addr:50004|branch_reg:0
+read_data_mem:0|alu_out:0|write_reg:0
+
+CYCLE 166
+R[0]: 0
+R[1]: 8
+R[2]: 2
+R[3]: 1
+R[4]: 4
+R[5]: 8
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 1
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+0
+operand 1: 0 | operand 2: 0
+imm: 4
+5
+read_data 0
+
+PC: 0x40
+pc:40|instruction:8c050004
+pc:40|read_data_1:0|read_data_2:8|imm:4|rt:5|rd:0|rs:0|opcode:23|funct:4|shamt:0|addr:50004
+branch_target:0|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
+read_data_mem:0|alu_out:0|write_reg:0
+
+CYCLE 167
+R[0]: 0
+R[1]: 8
+R[2]: 2
+R[3]: 1
+R[4]: 4
+R[5]: 8
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 1
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+
+CYCLE 168
+R[0]: 0
+R[1]: 8
+R[2]: 2
+R[3]: 1
+R[4]: 4
+R[5]: 8
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 1
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+operand 1: 0 | operand 2: 4
+imm: 4
+5
+pc:40|instruction:8c050004
+pc:0|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:0|funct:0|shamt:0|addr:0
+branch_target:50|alu_zero:0|alu_out:4|write_data_mem:8|write_reg:5|addr:50004|branch_reg:0
+read_data_mem:0|alu_out:0|write_reg:0
+
+CYCLE 169
+R[0]: 0
+R[1]: 8
+R[2]: 2
+R[3]: 1
+R[4]: 4
+R[5]: 8
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 1
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+0
+operand 1: 0 | operand 2: 0
+imm: 4
+5
+read_data 0
+
+PC: 0x40
+pc:40|instruction:8c050004
+pc:40|read_data_1:0|read_data_2:8|imm:4|rt:5|rd:0|rs:0|opcode:23|funct:4|shamt:0|addr:50004
+branch_target:0|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
+read_data_mem:0|alu_out:0|write_reg:0
+
+CYCLE 170
+R[0]: 0
+R[1]: 8
+R[2]: 2
+R[3]: 1
+R[4]: 4
+R[5]: 8
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 1
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+
+CYCLE 171
+R[0]: 0
+R[1]: 8
+R[2]: 2
+R[3]: 1
+R[4]: 4
+R[5]: 8
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 1
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+operand 1: 0 | operand 2: 4
+imm: 4
+5
+pc:40|instruction:8c050004
+pc:0|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:0|funct:0|shamt:0|addr:0
+branch_target:50|alu_zero:0|alu_out:4|write_data_mem:8|write_reg:5|addr:50004|branch_reg:0
+read_data_mem:0|alu_out:0|write_reg:0
+
+CYCLE 172
+R[0]: 0
+R[1]: 8
+R[2]: 2
+R[3]: 1
+R[4]: 4
+R[5]: 8
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 1
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+0
+operand 1: 0 | operand 2: 0
+imm: 4
+5
+read_data 0
+
+PC: 0x40
+pc:40|instruction:8c050004
+pc:40|read_data_1:0|read_data_2:8|imm:4|rt:5|rd:0|rs:0|opcode:23|funct:4|shamt:0|addr:50004
+branch_target:0|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
+read_data_mem:0|alu_out:0|write_reg:0
+
+CYCLE 173
+R[0]: 0
+R[1]: 8
+R[2]: 2
+R[3]: 1
+R[4]: 4
+R[5]: 8
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 1
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+
+CYCLE 174
+R[0]: 0
+R[1]: 8
+R[2]: 2
+R[3]: 1
+R[4]: 4
+R[5]: 8
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 1
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+operand 1: 0 | operand 2: 4
+imm: 4
+5
+pc:40|instruction:8c050004
+pc:0|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:0|funct:0|shamt:0|addr:0
+branch_target:50|alu_zero:0|alu_out:4|write_data_mem:8|write_reg:5|addr:50004|branch_reg:0
+read_data_mem:0|alu_out:0|write_reg:0
+
+CYCLE 175
+R[0]: 0
+R[1]: 8
+R[2]: 2
+R[3]: 1
+R[4]: 4
+R[5]: 8
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 1
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+0
+operand 1: 0 | operand 2: 0
+imm: 4
+5
+read_data 0
+
+PC: 0x40
+pc:40|instruction:8c050004
+pc:40|read_data_1:0|read_data_2:8|imm:4|rt:5|rd:0|rs:0|opcode:23|funct:4|shamt:0|addr:50004
+branch_target:0|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
+read_data_mem:0|alu_out:0|write_reg:0
+
+CYCLE 176
+R[0]: 0
+R[1]: 8
+R[2]: 2
+R[3]: 1
+R[4]: 4
+R[5]: 8
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 1
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+
+CYCLE 177
+R[0]: 0
+R[1]: 8
+R[2]: 2
+R[3]: 1
+R[4]: 4
+R[5]: 8
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 1
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+operand 1: 0 | operand 2: 4
+imm: 4
+5
+pc:40|instruction:8c050004
+pc:0|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:0|funct:0|shamt:0|addr:0
+branch_target:50|alu_zero:0|alu_out:4|write_data_mem:8|write_reg:5|addr:50004|branch_reg:0
+read_data_mem:0|alu_out:0|write_reg:0
+
+CYCLE 178
+R[0]: 0
+R[1]: 8
+R[2]: 2
+R[3]: 1
+R[4]: 4
+R[5]: 8
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 1
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+0
+operand 1: 0 | operand 2: 0
+imm: 4
+5
+read_data 0
+
+PC: 0x40
+pc:40|instruction:8c050004
+pc:40|read_data_1:0|read_data_2:8|imm:4|rt:5|rd:0|rs:0|opcode:23|funct:4|shamt:0|addr:50004
+branch_target:0|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
+read_data_mem:0|alu_out:0|write_reg:0
+
+CYCLE 179
+R[0]: 0
+R[1]: 8
+R[2]: 2
+R[3]: 1
+R[4]: 4
+R[5]: 8
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 1
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+
+CYCLE 180
+R[0]: 0
+R[1]: 8
+R[2]: 2
+R[3]: 1
+R[4]: 4
+R[5]: 8
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 1
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+operand 1: 0 | operand 2: 4
+imm: 4
+5
+pc:40|instruction:8c050004
+pc:0|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:0|funct:0|shamt:0|addr:0
+branch_target:50|alu_zero:0|alu_out:4|write_data_mem:8|write_reg:5|addr:50004|branch_reg:0
+read_data_mem:0|alu_out:0|write_reg:0
+
+CYCLE 181
+R[0]: 0
+R[1]: 8
+R[2]: 2
+R[3]: 1
+R[4]: 4
+R[5]: 8
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 1
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+0
+operand 1: 0 | operand 2: 0
+imm: 4
+5
+read_data 0
+
+PC: 0x40
+pc:40|instruction:8c050004
+pc:40|read_data_1:0|read_data_2:8|imm:4|rt:5|rd:0|rs:0|opcode:23|funct:4|shamt:0|addr:50004
+branch_target:0|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
+read_data_mem:0|alu_out:0|write_reg:0
+
+CYCLE 182
+R[0]: 0
+R[1]: 8
+R[2]: 2
+R[3]: 1
+R[4]: 4
+R[5]: 8
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 1
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+
+CYCLE 183
+R[0]: 0
+R[1]: 8
+R[2]: 2
+R[3]: 1
+R[4]: 4
+R[5]: 8
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 1
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+operand 1: 0 | operand 2: 4
+imm: 4
+5
+pc:40|instruction:8c050004
+pc:0|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:0|funct:0|shamt:0|addr:0
+branch_target:50|alu_zero:0|alu_out:4|write_data_mem:8|write_reg:5|addr:50004|branch_reg:0
+read_data_mem:0|alu_out:0|write_reg:0
+
+CYCLE 184
+R[0]: 0
+R[1]: 8
+R[2]: 2
+R[3]: 1
+R[4]: 4
+R[5]: 8
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 1
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+0
+operand 1: 0 | operand 2: 0
+imm: 4
+5
+read_data 0
+
+PC: 0x40
+pc:40|instruction:8c050004
+pc:40|read_data_1:0|read_data_2:8|imm:4|rt:5|rd:0|rs:0|opcode:23|funct:4|shamt:0|addr:50004
+branch_target:0|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
+read_data_mem:0|alu_out:0|write_reg:0
+
+CYCLE 185
+R[0]: 0
+R[1]: 8
+R[2]: 2
+R[3]: 1
+R[4]: 4
+R[5]: 8
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 1
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+
+CYCLE 186
+R[0]: 0
+R[1]: 8
+R[2]: 2
+R[3]: 1
+R[4]: 4
+R[5]: 8
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 1
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+operand 1: 0 | operand 2: 4
+imm: 4
+5
+pc:40|instruction:8c050004
+pc:0|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:0|funct:0|shamt:0|addr:0
+branch_target:50|alu_zero:0|alu_out:4|write_data_mem:8|write_reg:5|addr:50004|branch_reg:0
+read_data_mem:0|alu_out:0|write_reg:0
+
+CYCLE 187
+R[0]: 0
+R[1]: 8
+R[2]: 2
+R[3]: 1
+R[4]: 4
+R[5]: 8
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 1
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+0
+operand 1: 0 | operand 2: 0
+imm: 4
+5
+read_data 0
+
+PC: 0x40
+pc:40|instruction:8c050004
+pc:40|read_data_1:0|read_data_2:8|imm:4|rt:5|rd:0|rs:0|opcode:23|funct:4|shamt:0|addr:50004
+branch_target:0|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
+read_data_mem:0|alu_out:0|write_reg:0
+
+CYCLE 188
+R[0]: 0
+R[1]: 8
+R[2]: 2
+R[3]: 1
+R[4]: 4
+R[5]: 8
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 1
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+
+CYCLE 189
+R[0]: 0
+R[1]: 8
+R[2]: 2
+R[3]: 1
+R[4]: 4
+R[5]: 8
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 1
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+operand 1: 0 | operand 2: 4
+imm: 4
+5
+pc:40|instruction:8c050004
+pc:0|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:0|funct:0|shamt:0|addr:0
+branch_target:50|alu_zero:0|alu_out:4|write_data_mem:8|write_reg:5|addr:50004|branch_reg:0
+read_data_mem:0|alu_out:0|write_reg:0
+
+CYCLE 190
+R[0]: 0
+R[1]: 8
+R[2]: 2
+R[3]: 1
+R[4]: 4
+R[5]: 8
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 1
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+0
+operand 1: 0 | operand 2: 0
+imm: 4
+5
+read_data 0
+
+PC: 0x40
+pc:40|instruction:8c050004
+pc:40|read_data_1:0|read_data_2:8|imm:4|rt:5|rd:0|rs:0|opcode:23|funct:4|shamt:0|addr:50004
+branch_target:0|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
+read_data_mem:0|alu_out:0|write_reg:0
+
+CYCLE 191
+R[0]: 0
+R[1]: 8
+R[2]: 2
+R[3]: 1
+R[4]: 4
+R[5]: 8
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 1
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+
+CYCLE 192
+R[0]: 0
+R[1]: 8
+R[2]: 2
+R[3]: 1
+R[4]: 4
+R[5]: 8
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 1
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+operand 1: 0 | operand 2: 4
+imm: 4
+5
+pc:40|instruction:8c050004
+pc:0|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:0|funct:0|shamt:0|addr:0
+branch_target:50|alu_zero:0|alu_out:4|write_data_mem:8|write_reg:5|addr:50004|branch_reg:0
+read_data_mem:0|alu_out:0|write_reg:0
+
+CYCLE 193
+R[0]: 0
+R[1]: 8
+R[2]: 2
+R[3]: 1
+R[4]: 4
+R[5]: 8
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 1
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+0
+operand 1: 0 | operand 2: 0
+imm: 4
+5
+read_data 0
+
+PC: 0x40
+pc:40|instruction:8c050004
+pc:40|read_data_1:0|read_data_2:8|imm:4|rt:5|rd:0|rs:0|opcode:23|funct:4|shamt:0|addr:50004
+branch_target:0|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
+read_data_mem:0|alu_out:0|write_reg:0
+
+CYCLE 194
+R[0]: 0
+R[1]: 8
+R[2]: 2
+R[3]: 1
+R[4]: 4
+R[5]: 8
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 1
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+
+CYCLE 195
+R[0]: 0
+R[1]: 8
+R[2]: 2
+R[3]: 1
+R[4]: 4
+R[5]: 8
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 1
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+operand 1: 0 | operand 2: 4
+imm: 4
+5
+pc:40|instruction:8c050004
+pc:0|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:0|funct:0|shamt:0|addr:0
+branch_target:50|alu_zero:0|alu_out:4|write_data_mem:8|write_reg:5|addr:50004|branch_reg:0
+read_data_mem:0|alu_out:0|write_reg:0
+
+CYCLE 196
+R[0]: 0
+R[1]: 8
+R[2]: 2
+R[3]: 1
+R[4]: 4
+R[5]: 8
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 1
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+0
+operand 1: 0 | operand 2: 0
+imm: 4
+5
+read_data 0
+
+PC: 0x40
+pc:40|instruction:8c050004
+pc:40|read_data_1:0|read_data_2:8|imm:4|rt:5|rd:0|rs:0|opcode:23|funct:4|shamt:0|addr:50004
+branch_target:0|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
+read_data_mem:0|alu_out:0|write_reg:0
+
+CYCLE 197
+R[0]: 0
+R[1]: 8
+R[2]: 2
+R[3]: 1
+R[4]: 4
+R[5]: 8
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 1
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+
+CYCLE 198
+R[0]: 0
+R[1]: 8
+R[2]: 2
+R[3]: 1
+R[4]: 4
+R[5]: 8
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 1
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+operand 1: 0 | operand 2: 4
+imm: 4
+5
+pc:40|instruction:8c050004
+pc:0|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:0|funct:0|shamt:0|addr:0
+branch_target:50|alu_zero:0|alu_out:4|write_data_mem:8|write_reg:5|addr:50004|branch_reg:0
+read_data_mem:0|alu_out:0|write_reg:0
+
+CYCLE 199
+R[0]: 0
+R[1]: 8
+R[2]: 2
+R[3]: 1
+R[4]: 4
+R[5]: 8
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 1
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+0
+operand 1: 0 | operand 2: 0
+imm: 4
+5
+read_data 0
+
+PC: 0x40
+pc:40|instruction:8c050004
+pc:40|read_data_1:0|read_data_2:8|imm:4|rt:5|rd:0|rs:0|opcode:23|funct:4|shamt:0|addr:50004
+branch_target:0|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
+read_data_mem:0|alu_out:0|write_reg:0
+
+CYCLE 200
+R[0]: 0
+R[1]: 8
+R[2]: 2
+R[3]: 1
+R[4]: 4
+R[5]: 8
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 1
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+
+CYCLE 201
+R[0]: 0
+R[1]: 8
+R[2]: 2
+R[3]: 1
+R[4]: 4
+R[5]: 8
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 1
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+operand 1: 0 | operand 2: 4
+imm: 4
+5
+pc:40|instruction:8c050004
+pc:0|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:0|funct:0|shamt:0|addr:0
+branch_target:50|alu_zero:0|alu_out:4|write_data_mem:8|write_reg:5|addr:50004|branch_reg:0
+read_data_mem:0|alu_out:0|write_reg:0
+
+CYCLE 202
+R[0]: 0
+R[1]: 8
+R[2]: 2
+R[3]: 1
+R[4]: 4
+R[5]: 8
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 1
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+0
+operand 1: 0 | operand 2: 0
+imm: 4
+5
+read_data 0
+
+PC: 0x40
+pc:40|instruction:8c050004
+pc:40|read_data_1:0|read_data_2:8|imm:4|rt:5|rd:0|rs:0|opcode:23|funct:4|shamt:0|addr:50004
+branch_target:0|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
+read_data_mem:0|alu_out:0|write_reg:0
+
+CYCLE 203
+R[0]: 0
+R[1]: 8
+R[2]: 2
+R[3]: 1
+R[4]: 4
+R[5]: 8
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 1
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+
+CYCLE 204
+R[0]: 0
+R[1]: 8
+R[2]: 2
+R[3]: 1
+R[4]: 4
+R[5]: 8
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 1
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+1
+operand 1: 0 | operand 2: 4
+imm: 4
+5
+pc:40|instruction:8c050004
+pc:0|read_data_1:0|read_data_2:0|imm:0|rt:0|rd:0|rs:0|opcode:0|funct:0|shamt:0|addr:0
+branch_target:50|alu_zero:0|alu_out:4|write_data_mem:8|write_reg:5|addr:50004|branch_reg:0
+read_data_mem:0|alu_out:0|write_reg:0
+
+CYCLE 205
+R[0]: 0
+R[1]: 8
+R[2]: 2
+R[3]: 1
+R[4]: 4
+R[5]: 8
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 1
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
+R[23]: 0
+R[24]: 0
+R[25]: 0
+R[26]: 0
+R[27]: 0
+R[28]: 0
+R[29]: 0
+R[30]: 0
+R[31]: 0
+0
+operand 1: 0 | operand 2: 0
+imm: 4
+5
+read_data 0
+
+PC: 0x40
+pc:44|instruction:0
+pc:40|read_data_1:0|read_data_2:8|imm:4|rt:5|rd:0|rs:0|opcode:23|funct:4|shamt:0|addr:50004
+branch_target:0|alu_zero:1|alu_out:0|write_data_mem:0|write_reg:0|addr:0|branch_reg:0
+read_data_mem:0|alu_out:0|write_reg:0
+
+CYCLE 206
+R[0]: 0
+R[1]: 8
+R[2]: 2
+R[3]: 1
+R[4]: 4
+R[5]: 8
+R[6]: 0
+R[7]: 0
+R[8]: 0
+R[9]: 0
+R[10]: 1
+R[11]: 0
+R[12]: 0
+R[13]: 0
+R[14]: 0
+R[15]: 0
+R[16]: 0
+R[17]: 0
+R[18]: 0
+R[19]: 0
+R[20]: 0
+R[21]: 0
+R[22]: 0
 R[23]: 0
 R[24]: 0
 R[25]: 0
@@ -8020,12 +8371,4 @@ R[29]: 0
 R[30]: 0
 R[31]: 0
 
-Completed execution in 74.5 nanoseconds.
-
-=======================================================
-                    FINAL SUMMARY                        
-=======================================================
-Test Name            : MIPSPipeline-simple_no_branch_no_dep
-Single-Cycle Cycles  : 28
-Pipelined Cycles     : 148
-                    
+Completed execution in 103.5 nanoseconds.
