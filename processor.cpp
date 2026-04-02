@@ -122,12 +122,14 @@ void Processor::pipelined_processor_advance() {
     // pipelined processor logic goes here
     // does nothing currently -- if you call it from the cmd line, you'll run into an infinite loop
     // might be helpful to implement stages in a separate module
-    if(!cache_hit) { //cache miss -> need to stall
-        memory_stage();
-        return;//replaced with just return. memory just needs to rerun
-    } 
     writeback_stage();
     memory_stage();
+
+    if(!cache_hit) { //cache miss -> need to stall
+        memset(&mem_wb_in, 0, sizeof(mem_wb_in));
+        mem_wb_out = mem_wb_in;
+        return;
+    }
 
 
 
@@ -215,7 +217,6 @@ void Processor::decode_stage() {
     uint32_t read_data_2 = 0;
 
 
-    //stall check
     if (id_ex_out.control.mem_read &&
         (id_ex_out.rt == rs || id_ex_out.rt == rt)) 
     {
@@ -400,4 +401,70 @@ void Processor::writeback_stage() {
     regfile.access(0, 0, read_data_2, read_data_2, mem_wb_out.write_reg, mem_wb_out.control.reg_write, write_data);
 
 }
+
+#include <iostream>
+#include <vector>
+#include <map>
+#include <iomanip>
+
+class PipelineLogger {
+private:
+    // Keeps track of the order we fetched PCs in, so we can print rows in order
+    std::vector<uint32_t> pc_order;
+
+    // Maps a PC to a vector of characters (the timeline). Index = cycle number.
+    std::map<uint32_t, std::vector<char>> grid;
+
+    int max_cycles = 0;
+
+    void recordStage(uint32_t pc, int cycle, char stage) {
+        // Assume PC 0 is a NOP/Bubble. Don't graph NOPs.
+        if (pc == 0) return;
+
+        // If this is the first time we've seen this PC, initialize its row
+        if (grid.find(pc) == grid.end()) {
+            pc_order.push_back(pc);
+            grid[pc] = std::vector<char>(500, ' '); // Pre-fill timeline with spaces
+        }
+
+        // Drop the stage character (F, D, E, M, W) into the correct cycle column
+        if (cycle < grid[pc].size()) {
+            grid[pc][cycle] = stage;
+        }
+    }
+
+public:
+    void logCycle(int cycle, uint32_t if_pc, uint32_t id_pc, uint32_t ex_pc, uint32_t mem_pc, uint32_t wb_pc) {
+        max_cycles = std::max(max_cycles, cycle);
+
+        recordStage(if_pc, cycle, 'F');
+        recordStage(id_pc, cycle, 'D');
+        recordStage(ex_pc, cycle, 'E');
+        recordStage(mem_pc, cycle, 'M');
+        recordStage(wb_pc, cycle, 'W');
+    }
+
+    void printGrid() {
+        std::cout << "\n=== PIPELINE SPACE-TIME DIAGRAM ===\n\n";
+
+        // 1. Print the X-Axis (Cycle Numbers)
+        std::cout << "  PC   | ";
+        for (int i = 1; i <= max_cycles; i++) {
+            std::cout << i % 10; // Print just the last digit to save horizontal space
+        }
+        std::cout << "\n-------+-";
+        for (int i = 1; i <= max_cycles; i++) std::cout << "-";
+        std::cout << "\n";
+
+        // 2. Print the Y-Axis (PCs) and their timelines
+        for (uint32_t pc : pc_order) {
+            std::cout << "0x" << std::setfill('0') << std::setw(4) << std::hex << pc << " | ";
+            for (int i = 1; i <= max_cycles; i++) {
+                std::cout << grid[pc][i];
+            }
+            std::cout << "\n";
+        }
+        std::cout << "\n";
+    }
+};
 
