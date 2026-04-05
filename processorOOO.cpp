@@ -36,7 +36,8 @@ void ProcessorOOO::initialize(int level) {
     // Optimization level-specific initialization
 }
 
-void ProcessorOOO::advance() {
-    
+void ProcessorOOO::out_of_order_advance() {
+    initialize(2);
+    //advance code
 };
 
