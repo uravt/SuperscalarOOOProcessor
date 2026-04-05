@@ -131,7 +131,7 @@ class Processor {
         bool flush_pipeline = false;
         bool cache_hit = false;
         bool stall = false;
-        uint32_t pc_history[5] = {0};
+        uint32_t pc_history[6] = {0};
 
         // pipelined processor
         void fetch_stage();

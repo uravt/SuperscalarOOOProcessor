@@ -141,8 +141,8 @@ void Processor::pipelined_processor_advance() {
 
     // Shift PC history — delays reported PC by pipeline depth
     // so the main loop doesn't exit before the pipeline drains
-    for (int i = 0; i < 4; i++) pc_history[i] = pc_history[i+1];
-    pc_history[4] = regfile.pc;
+    for (int i = 0; i < 5; i++) pc_history[i] = pc_history[i+1];
+    pc_history[5] = regfile.pc;
 
     DEBUG(std::cout << if_id_out.toString() << "\n";)
     DEBUG(std::cout << id_ex_out.toString() << "\n";)
