@@ -131,6 +131,7 @@ class Processor {
         bool flush_pipeline = false;
         bool cache_hit = false;
         bool stall = false;
+        uint32_t pc_history[6] = {0};
 
         // pipelined processor
         void fetch_stage();
@@ -162,7 +163,7 @@ class Processor {
         }
 
         // Get PC
-        uint32_t getPC() { return regfile.pc; }
+        uint32_t getPC() { return opt_level == 0 ? regfile.pc : pc_history[0]; }
 
         // Prints the Register File
         void printRegFile() { regfile.print(); }

@@ -128,20 +128,21 @@ void Processor::pipelined_processor_advance() {
     if(!cache_hit) { //cache miss -> need to stall
         memset(&mem_wb_in, 0, sizeof(mem_wb_in));
         mem_wb_out = mem_wb_in;
-        return;
+    } else {
+        execute_stage();
+        decode_stage();
+        fetch_stage();
+
+        if_id_out = if_id_in;
+        id_ex_out = id_ex_in;
+        ex_mem_out = ex_mem_in;
+        mem_wb_out = mem_wb_in;
     }
 
-
-
-    execute_stage();
-    decode_stage();
-    fetch_stage();
-
-
-    if_id_out = if_id_in;
-    id_ex_out = id_ex_in;
-    ex_mem_out = ex_mem_in;
-    mem_wb_out = mem_wb_in;
+    // Shift PC history — delays reported PC by pipeline depth
+    // so the main loop doesn't exit before the pipeline drains
+    for (int i = 0; i < 5; i++) pc_history[i] = pc_history[i+1];
+    pc_history[5] = regfile.pc;
 
     DEBUG(std::cout << if_id_out.toString() << "\n";)
     DEBUG(std::cout << id_ex_out.toString() << "\n";)
@@ -410,16 +411,16 @@ void Processor::writeback_stage() {
 class PipelineLogger {
 private:
     // Keeps track of the order we fetched PCs in, so we can print rows in order
-    std::vector<uint32_t> pc_order;
-
+    std::vector<uint32_t> pc_order; 
+    
     // Maps a PC to a vector of characters (the timeline). Index = cycle number.
     std::map<uint32_t, std::vector<char>> grid;
-
+    
     int max_cycles = 0;
 
     void recordStage(uint32_t pc, int cycle, char stage) {
         // Assume PC 0 is a NOP/Bubble. Don't graph NOPs.
-        if (pc == 0) return;
+        if (pc == 0) return; 
 
         // If this is the first time we've seen this PC, initialize its row
         if (grid.find(pc) == grid.end()) {
@@ -436,7 +437,7 @@ private:
 public:
     void logCycle(int cycle, uint32_t if_pc, uint32_t id_pc, uint32_t ex_pc, uint32_t mem_pc, uint32_t wb_pc) {
         max_cycles = std::max(max_cycles, cycle);
-
+        
         recordStage(if_pc, cycle, 'F');
         recordStage(id_pc, cycle, 'D');
         recordStage(ex_pc, cycle, 'E');
@@ -446,7 +447,7 @@ public:
 
     void printGrid() {
         std::cout << "\n=== PIPELINE SPACE-TIME DIAGRAM ===\n\n";
-
+        
         // 1. Print the X-Axis (Cycle Numbers)
         std::cout << "  PC   | ";
         for (int i = 1; i <= max_cycles; i++) {
