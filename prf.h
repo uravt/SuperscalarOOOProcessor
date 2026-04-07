@@ -48,8 +48,25 @@ class PhysicalRegisterFile {
             return R[reg].ready;
         }
         
+        int assign_mapping(int arch_reg) {
+            int phys_reg = rename_pool[0];
+            rename_pool.pop_front();
+            regmap[arch_reg] = phys_reg;
 
+            return phys_reg;
+        }
 
+        int get_mapping(int arch_reg) {
+            return regmap[arch_reg];
+        }
+
+        void reclaim(int phys_reg) {
+            rename_pool.push_back(phys_reg);
+        }
+
+        void undo_rename(int phys_reg) {
+            rename_pool.push_front(phys_reg);
+        }
 
         // Prints the contents of all the registers
         void print() {
