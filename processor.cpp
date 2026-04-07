@@ -3,8 +3,6 @@
 #include <cstdio>
 #include <iostream>
 #include "processor.h"
-#include "processorOOO.cpp"
-#include "processorOOO.h"
 
 using namespace std;
 
@@ -45,8 +43,11 @@ void Processor::advance() {
         case 1: pipelined_processor_advance();
                 break;
         case 2:
-                ProcessorOOO::initialize(2);
-                out_of_order_advance();
+                if (!processorOOO) {
+                    processorOOO = new ProcessorOOO(memory);
+                    processorOOO->initialize(2);
+                }
+                processorOOO->out_of_order_advance();
         // other optimization levels go here
         default: break;
     }

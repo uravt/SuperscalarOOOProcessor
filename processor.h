@@ -2,6 +2,7 @@
 #include "regfile.h"
 #include "ALU.h"
 #include "control.h"
+#include "processorOOO.h"
 #include <sstream>
 #include <queue>
 #include <set>
@@ -12,6 +13,7 @@ class Processor {
         control_t control;
         Memory *memory;
         Registers regfile;
+        ProcessorOOO *processorOOO = nullptr;
         // add other structures as needed
         //pipeline registers
         //values got based on diagram registers in and out

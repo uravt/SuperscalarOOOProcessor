@@ -4,7 +4,7 @@ CXXFLAGS= -g -Wall -std=c++11 #-DENABLE_DEBUG
 OPTFLAGS= -O3
 
 EXE_NAME=processor
-SRCS := main.cpp memory.cpp processor.cpp
+SRCS := main.cpp memory.cpp processor.cpp processorOOO.cpp
 OBJS := $(SRCS:.cpp=.o)
 
 ZIP_NAME = submission.zip
@@ -17,7 +17,8 @@ all: $(EXE_NAME)
 $(EXE_NAME): $(OBJS)
 	$(CXX) $(CXXFLAGS) -o $@ $^
 
-processor.o: regfile.h ALU.h control.h processor.h
+processor.o: regfile.h ALU.h control.h processor.h processorOOO.h
+processorOOO.o: processorOOO.h regfile.h ALU.h control.h memory.h
 memory.o: memory.h
 main.o: memory.h processor.h
 
