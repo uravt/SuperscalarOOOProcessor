@@ -2,6 +2,7 @@
 #include <cstdint>
 #include <iostream>
 #include <deque>
+#include "config.h"
 
 struct PhysReg {
     int32_t value;
@@ -17,14 +18,14 @@ class PhysicalRegisterFile {
     public:
         uint32_t pc;
         PhysicalRegisterFile() {
-            R.resize(96); //assuming 96 physical registers
-            for (int i = 0; i < 96; i++) {
+            R.resize(config::NUM_PHYSICAL_REGISTERS); //assuming 96 physical registers
+            for (int i = 0; i < config::NUM_PHYSICAL_REGISTERS; i++) {
                 R[i].value = 0;
                 R[i].ready = true;
             }
 
-            regmap.resize(32); //assuming 32 architectural registers
-            for(int i = 0; i < 96; i++) {
+            regmap.resize(config::NUM_ARCHITECTURAL_REGISTERS); //assuming 32 architectural registers
+            for(int i = 0; i < config::NUM_PHYSICAL_REGISTERS; i++) {
                 rename_pool.push_back(i);
             }
 
@@ -70,7 +71,7 @@ class PhysicalRegisterFile {
 
         // Prints the contents of all the registers
         void print() {
-            for(int i = 0; i < 96; ++i) {
+            for(int i = 0; i < config::NUM_PHYSICAL_REGISTERS; ++i) {
                 std::cout << std::dec << "R[" << i << "]: " << R[i].value << "\n";
             }
         }
