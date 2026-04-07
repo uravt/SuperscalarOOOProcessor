@@ -21,6 +21,7 @@ class ProcessorOOO {
 
         struct IF_ID
         {
+<<<<<<< Updated upstream
         };
 
         struct ID_RN
@@ -30,6 +31,45 @@ class ProcessorOOO {
         struct RN_IS
         {
         };
+=======
+            std::ostringstream oss;
+            oss << "pc:" << std::hex << pc
+                << "|instruction:" << std::hex << instruction;
+            return oss.str();
+        }
+    };
+    struct ID_RN
+    {
+        uint32_t pc;
+
+        uint8_t rs, rt, rd;
+        uint32_t imm;
+
+        uint8_t opcode, funct;
+
+        control_t control;
+    };
+    struct RN_IS
+    {
+        uint32_t pc;
+
+        int phys_rs;
+        int phys_rt;
+        int phys_rd;
+
+        bool rs_ready;
+        bool rt_ready;
+
+        uint32_t rs_val;
+        uint32_t rt_val;
+
+        control_t control;
+
+        int rob_index;
+    };
+    struct IS_DP
+    {
+>>>>>>> Stashed changes
 
         struct IS_DP
         {
