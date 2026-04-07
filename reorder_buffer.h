@@ -22,7 +22,7 @@ class ReorderBuffer {
         }
 
         bool insert(int dest_arch_reg, int dest_phys_reg, int old_phys_reg) {
-            if (size >= ROB_SIZE) {
+            if (isFull()) {
                 return false; // Buffer is full
             }
             buffer.push_back({dest_arch_reg, dest_phys_reg, old_phys_reg, false});
@@ -37,11 +37,8 @@ class ReorderBuffer {
                 size--;
 
                 prf.reclaim(entry.old_phys_reg); // Reclaim the old physical register
-
             }
         }
-
-
 
         bool isFull() {
             return size >= ROB_SIZE;
