@@ -8,7 +8,7 @@ SRCS := main.cpp memory.cpp processor.cpp processorOOO.cpp
 OBJS := $(SRCS:.cpp=.o)
 
 ZIP_NAME = submission.zip
-ZIP_FILES = main.cpp memory.cpp processor.cpp regfile.h ALU.h control.h processor.h memory.h Makefile
+ZIP_FILES = main.cpp memory.cpp processor.cpp regfile.h ALU.h control.h processor.h memory.h reorder_buffer.h prf.h Makefile
 
 .PHONY: all clean zip
 
@@ -18,7 +18,7 @@ $(EXE_NAME): $(OBJS)
 	$(CXX) $(CXXFLAGS) -o $@ $^
 
 processor.o: regfile.h ALU.h control.h processor.h processorOOO.h
-processorOOO.o: processorOOO.h regfile.h ALU.h control.h memory.h
+processorOOO.o: processorOOO.h regfile.h ALU.h control.h memory.h reorder_buffer.h prf.h
 memory.o: memory.h
 main.o: memory.h processor.h
 
