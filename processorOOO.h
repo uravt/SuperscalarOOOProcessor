@@ -19,56 +19,56 @@ class ProcessorOOO {
 
         // Pipeline registers for OOO: Fetch -> Decode -> Rename -> Issue -> Dispatch -> Execute -> Writeback -> Commit
 
-    struct IF_ID
-    {
-    };
+        struct IF_ID
+        {
+        };
 
-    struct ID_RN
-    {
-    };
+        struct ID_RN
+        {
+        };
 
-    struct RN_IS
-    {
-    };
+        struct RN_IS
+        {
+        };
 
-    struct IS_DP
-    {
-    };
+        struct IS_DP
+        {
+        };
 
-    struct DP_EX
-    {
-    };
+        struct DP_EX
+        {
+        };
 
-    struct EX_WB
-    {
-    };
+        struct EX_WB
+        {
+        };
 
-    struct WB_CM
-    {
-    };
+        struct WB_CM
+        {
+        };
 
-    // Pipeline register instances (in/out pairs)
-    IF_ID if_id_in, if_id_out;
-    ID_RN id_rn_in, id_rn_out;
-    RN_IS rn_is_in, rn_is_out;
-    IS_DP is_dp_in, is_dp_out;
-    DP_EX dp_ex_in, dp_ex_out;
-    EX_WB ex_wb_in, ex_wb_out;
-    WB_CM wb_cm_in, wb_cm_out;
+        // Pipeline register instances (in/out pairs)
+        IF_ID if_id_in, if_id_out;
+        ID_RN id_rn_in, id_rn_out;
+        RN_IS rn_is_in, rn_is_out;
+        IS_DP is_dp_in, is_dp_out;
+        DP_EX dp_ex_in, dp_ex_out;
+        EX_WB ex_wb_in, ex_wb_out;
+        WB_CM wb_cm_in, wb_cm_out;
 
-    bool flush_pipeline = false;
-    bool stall = false;
-    uint32_t pc_history[8] = {0};
+        bool flush_pipeline = false;
+        bool stall = false;
+        uint32_t pc_history[6] = {0};
 
-    // OOO stage functions
-    void fetch_stage();
-    void decode_stage();
-    void rename_stage();
-    void issue_stage();
-    void dispatch_stage();
-    void execute_stage();
-    void writeback_stage();
-    void commit_stage();
+        // OOO stage functions
+        void fetch_stage();
+        void decode_stage();
+        void rename_stage();
+        void issue_stage();
+        void dispatch_stage();
+        void execute_stage();
+        void writeback_stage();
+        void commit_stage();
 
     public:
         ProcessorOOO(Memory *mem)
