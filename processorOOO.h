@@ -129,13 +129,13 @@ class ProcessorOOO {
             regfile.pc = 0;
             memory = mem;
 
-            memset(&if_id 0, sizeof(if_id_in));
-            memset(&id_rn, 0, sizeof(id_rn_in));
-            memset(&rn_is, 0, sizeof(rn_is_in));
-            memset(&is_dp, 0, sizeof(is_dp_out));
-            memset(&dp_ex, 0, sizeof(dp_ex_out));
-            memset(&ex_wb, 0, sizeof(ex_wb_out));
-            memset(&wb_cm, 0, sizeof(wb_cm_out));
+            memset(&if_id, 0, sizeof(if_id));
+            memset(&id_rn, 0, sizeof(id_rn));
+            memset(&rn_is, 0, sizeof(rn_is));
+            memset(&is_dp, 0, sizeof(is_dp));
+            memset(&dp_ex, 0, sizeof(dp_ex));
+            memset(&ex_wb, 0, sizeof(ex_wb));
+            memset(&wb_cm, 0, sizeof(wb_cm));
 
         }
 
