@@ -3,6 +3,8 @@
 #include <cstdio>
 #include <iostream>
 #include "processorOOO.h"
+#include "reorder_buffer.h"
+#include "instruction_queue.h"
 
 using namespace std;
 
@@ -39,5 +41,88 @@ void ProcessorOOO::initialize(int level) {
 void ProcessorOOO::out_of_order_advance() {
     initialize(2);
     //advance code
-};
+}
+
+void fetch_stage() //IO
+{
+    //Check if instruction queue is full
+
+
+    uint32_t inst;
+    //Cache hit/miss needs to go though nbc
+    memory->access(regfile.pc, inst, 0, 1, 0);
+
+    if_id.instruction = inst;
+    if_id.pc = regfile.pc;
+
+    regfile.pc += 4;
+
+    //add to instruction queue
+}
+void decode_stage() //IO
+{
+    uint32_t inst = if_id.instruction;
+
+    control.decode(inst);
+
+    id_rn.rs = (inst >> 21) & 0x1f;
+    id_rn.rt = (inst >> 16) & 0x1f;
+    id_rn.rd = (inst >> 11) & 0x1f;
+    id_rn.imm = inst & 0xffff;
+    id_rn.pc = if_id.pc;
+    id_rn.control = control;
+}
+void rename_stage() //IO
+{
+    //add instruction to ROB
+    ROBEntry robEntry;
+    memset(&robEntry, 0, sizeof(robEntry));
+    robEntry.completed = false;
+    robEntry.dest_arch_reg = id_rn.control.reg_dest ? id_rn.rd : id_rn.rt;
+    robEntry.dest_phys_reg = prf.access(); // Allocate physical reg space
+    rob.insert(robEntry);
+
+    uint32_t operand_1 = id_rn.control.shift ? id_rn.shamt : id_rn.read_data_1;
+    uint32_t operand_2 = id_rn.control.ALU_src ? imm : id_rn.read_data_2;
+    
+
+    //preform register renaming
+    if(id_rn.control.write_reg)
+    {
+        prf.assign_mapping(id_rn.control.reg_dest);
+    }
+    prf.assign_mapping(operand_1);
+
+    if(!id_rn.control.ALU_src)
+    {
+        prf.assign_mapping(operand_2);
+    }
+
+
+}
+void issue_stage() //IO
+{
+    //add to issue queue
+}
+void dispatch_stage() //OOO
+{
+    //loop though issue queue
+    //send a ready instruction
+}
+void execute_stage() //OOO
+{
+    //execute
+    uint32_t result = alu.execute(op1, op2, *(new uint32_t));
+    //wakeup instruction
+}
+void writeback_stage() //OOO
+{
+    //add results to commit buffer
+}
+void commit_stage() //IO
+{
+    //commit results to reg file in order according to ROB
+}
+
+
 
