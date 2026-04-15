@@ -6,6 +6,7 @@
 #include "reorder_buffer.h"
 #include "instruction_queue.h"
 
+
 using namespace std;
 
 #define ENABLE_DEBUG
@@ -41,9 +42,17 @@ void ProcessorOOO::initialize(int level) {
 void ProcessorOOO::out_of_order_advance() {
     initialize(2);
     //advance code
+    commit_stage();
+    writeback_stage();
+    execute_stage();
+    dispatch_stage();
+    issue_stage();
+    rename_stage();
+    decode_stage();
+    fetch_stage();
 }
 
-void fetch_stage() //IO
+void ProcessorOOO::fetch_stage() //IO
 {
     //Check if instruction queue is full
 
@@ -59,7 +68,7 @@ void fetch_stage() //IO
 
     //add to instruction queue
 }
-void decode_stage() //IO
+void ProcessorOOO::decode_stage() //IO
 {
     uint32_t inst = if_id.instruction;
 
@@ -72,22 +81,23 @@ void decode_stage() //IO
     id_rn.pc = if_id.pc;
     id_rn.control = control;
 }
-void rename_stage() //IO
+void ProcessorOOO::rename_stage() //IO
 {
+    //this all needs to be redone tbh but i just want it to compile for now
     //add instruction to ROB
     ROBEntry robEntry;
     memset(&robEntry, 0, sizeof(robEntry));
     robEntry.completed = false;
     robEntry.dest_arch_reg = id_rn.control.reg_dest ? id_rn.rd : id_rn.rt;
-    robEntry.dest_phys_reg = prf.access(); // Allocate physical reg space
-    rob.insert(robEntry);
+    robEntry.dest_phys_reg = prf.assign_mapping(robEntry.dest_arch_reg); // Allocate physical reg space
+    rob.insert(robEntry.dest_arch_reg, robEntry.dest_phys_reg, prf.get_mapping(robEntry.dest_arch_reg)); // Insert into ROB with old_phys_reg as -1 for now
 
-    uint32_t operand_1 = id_rn.control.shift ? id_rn.shamt : id_rn.read_data_1;
-    uint32_t operand_2 = id_rn.control.ALU_src ? imm : id_rn.read_data_2;
+    uint32_t operand_1 = id_rn.control.shift ? 0 : 0; // TODO: shamt / read_data_1
+    uint32_t operand_2 = id_rn.control.ALU_src ? id_rn.imm : 0; // TODO: read_data_2
     
 
     //preform register renaming
-    if(id_rn.control.write_reg)
+    if(id_rn.control.reg_write)
     {
         prf.assign_mapping(id_rn.control.reg_dest);
     }
@@ -100,26 +110,27 @@ void rename_stage() //IO
 
 
 }
-void issue_stage() //IO
+void ProcessorOOO::issue_stage() //IO
 {
     //add to issue queue
 }
-void dispatch_stage() //OOO
+void ProcessorOOO::dispatch_stage() //OOO
 {
     //loop though issue queue
     //send a ready instruction
 }
-void execute_stage() //OOO
+void ProcessorOOO::execute_stage() //OOO
 {
     //execute
+    uint32_t op1 = 0, op2 = 0; // TODO: pull from pipeline register
     uint32_t result = alu.execute(op1, op2, *(new uint32_t));
     //wakeup instruction
 }
-void writeback_stage() //OOO
+void ProcessorOOO::writeback_stage() //OOO
 {
     //add results to commit buffer
 }
-void commit_stage() //IO
+void ProcessorOOO::commit_stage() //IO
 {
     //commit results to reg file in order according to ROB
 }

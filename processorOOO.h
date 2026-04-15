@@ -1,13 +1,18 @@
 #ifndef PROCESSOR_OOO_H
 #define PROCESSOR_OOO_H
 
+#include <sstream>
+#include <queue>
+#include <vector>
+
 #include "memory.h"
 #include "regfile.h"
 #include "ALU.h"
 #include "control.h"
-#include <sstream>
-#include <queue>
-#include <vector>
+#include "reorder_buffer.h"
+#include "instruction_queue.h"
+#include "prf.h"
+
 
 class ProcessorOOO {
     private:
@@ -106,8 +111,10 @@ class ProcessorOOO {
         DP_EX dp_ex;
         EX_WB ex_wb;
         WB_CM wb_cm;
+
         ReorderBuffer rob;
         PhysicalRegisterFile prf;
+        InstructionQueue iq;
 
         bool flush_pipeline = false;
         bool stall = false;
