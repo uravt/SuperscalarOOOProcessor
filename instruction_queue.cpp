@@ -1,15 +1,20 @@
 #include "instruction_queue.h"
-class Instruction_Queue
-{
-    public:
-        void push(iq_instr instr)
-        {
-            iq.push(instr);
-            instr.ready = true;
-        }
-        void pop()
-        {
-            iq.pop();
-        }
 
+bool InstructionQueue::add(iq_instr instr)
+{
+    for(int i = 0; i < config::INSTRUCTION_QUEUE_SIZE; i++)
+    {
+        if(!iq[i].valid)
+        {
+            iq[i] = instr;
+            iq[i].valid = true;
+            return true;
+        }
+    }
+    return false; // queue full -> stall
+}
+
+void InstructionQueue::pop()
+{
+    // TODO: implement pop semantics (shift entries / mark invalid)
 }

@@ -1,5 +1,13 @@
+#ifndef INSTRUCTION_QUEUE_H
+#define INSTRUCTION_QUEUE_H
+
 #include <iostream>
-#include <queue> 
+#include <queue>
+#include <cstdint>
+#include <array>
+
+#include "config.h"
+
 struct iq_instr
 {
     int opcode;
@@ -11,14 +19,22 @@ struct iq_instr
     uint32_t imm;
     int addr;
 
-    bool ready;
-}
-class Instruction_Queue
+    int rob_index; // Index in the reorder buffer
+    bool rs_ready;
+    bool rt_ready;
+    bool valid;
+};
+
+class InstructionQueue
 {
     private:
-        queue<iq_instr> iq;
+        std::array<iq_instr, config::INSTRUCTION_QUEUE_SIZE> iq;
     public:
-        void push(iq_instr instr);
+        bool add(iq_instr instr);
         void pop();
 
-}
+};
+
+
+
+#endif

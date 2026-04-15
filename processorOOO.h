@@ -1,13 +1,18 @@
 #ifndef PROCESSOR_OOO_H
 #define PROCESSOR_OOO_H
 
+#include <sstream>
+#include <queue>
+#include <vector>
+
 #include "memory.h"
 #include "regfile.h"
 #include "ALU.h"
 #include "control.h"
-#include <sstream>
-#include <queue>
-#include <vector>
+#include "reorder_buffer.h"
+#include "instruction_queue.h"
+#include "prf.h"
+
 
 class ProcessorOOO {
     private:
@@ -106,8 +111,10 @@ class ProcessorOOO {
         DP_EX dp_ex;
         EX_WB ex_wb;
         WB_CM wb_cm;
+
         ReorderBuffer rob;
         PhysicalRegisterFile prf;
+        InstructionQueue iq;
 
         bool flush_pipeline = false;
         bool stall = false;
@@ -129,13 +136,13 @@ class ProcessorOOO {
             regfile.pc = 0;
             memory = mem;
 
-            memset(&if_id 0, sizeof(if_id_in));
-            memset(&id_rn, 0, sizeof(id_rn_in));
-            memset(&rn_is, 0, sizeof(rn_is_in));
-            memset(&is_dp, 0, sizeof(is_dp_out));
-            memset(&dp_ex, 0, sizeof(dp_ex_out));
-            memset(&ex_wb, 0, sizeof(ex_wb_out));
-            memset(&wb_cm, 0, sizeof(wb_cm_out));
+            memset(&if_id, 0, sizeof(if_id));
+            memset(&id_rn, 0, sizeof(id_rn));
+            memset(&rn_is, 0, sizeof(rn_is));
+            memset(&is_dp, 0, sizeof(is_dp));
+            memset(&dp_ex, 0, sizeof(dp_ex));
+            memset(&ex_wb, 0, sizeof(ex_wb));
+            memset(&wb_cm, 0, sizeof(wb_cm));
 
         }
 

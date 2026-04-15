@@ -1,13 +1,12 @@
+#ifndef PRF_H
+#define PRF_H
+
 #include <vector>
 #include <cstdint>
 #include <iostream>
 #include <deque>
 #include "config.h"
-
-struct PhysReg {
-    int32_t value;
-    bool ready;
-};
+#include "regfile.h"
 
 class PhysicalRegisterFile {
 
@@ -80,5 +79,7 @@ class PhysicalRegisterFile {
         void print(int reg) {
             std::cout << "R[" << reg << "]: " << R[reg].value << "\n";
         }
-            
+
 };
+
+#endif
