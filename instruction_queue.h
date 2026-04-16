@@ -29,11 +29,13 @@ class InstructionQueue
 {
     private:
         std::vector<iq_instr> iq;
+        vector<int> getSourceRegs(iq_instr instr);
     public:
         bool add(iq_instr instr);
+        bool remove(int index);
         bool isNonHazard(iq_instr reg);
-        void readyDependicies(int reg);
-        bool getOldestReady(iq_instr&);
+        void readyDependicies();
+        bool getOldestReady(iq_instr&, int &index);
 };
 
 
