@@ -2,11 +2,11 @@
 #define INSTRUCTION_QUEUE_H
 
 #include <iostream>
-#include <queue>
+#include <vector>
 #include <cstdint>
-#include <array>
 
 #include "config.h"
+#include "control.h"
 
 struct iq_instr
 {
@@ -18,21 +18,21 @@ struct iq_instr
     int funct;
     uint32_t imm;
     int addr;
+    control_t control;
 
     bool ready;
 
     int rob_index; // Index in the reorder buffer
-    bool valid;
 };
 
 class InstructionQueue
 {
     private:
-        std::array<iq_instr, config::INSTRUCTION_QUEUE_SIZE> iq;
+        std::vector<iq_instr> iq;
     public:
         bool add(iq_instr instr);
-        void pop();
-        bool isHazard(int reg);
+        void push(iq_instr instr);
+        bool isNonHazard(iq_instr reg);
         void readyDependicies(int reg);
 
 };
