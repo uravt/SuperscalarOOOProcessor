@@ -1,29 +1,14 @@
 #include "instruction_queue.h"
-<<<<<<< Updated upstream
 
 bool InstructionQueue::add(iq_instr instr)
 {
-    for(int i = 0; i < config::INSTRUCTION_QUEUE_SIZE; i++)
+    if(iq.size() >= config::INSTRUCTION_QUEUE_SIZE)
     {
-        if(!iq[i].valid)
-        {
-            iq[i] = instr;
-            iq[i].valid = true;
-            return true;
-        }
+        return false; // queue full -> stall
     }
+    iq.push_back(instr);
+    instr.ready = isNonHazard(instr);
     return false; // queue full -> stall
-}
-
-void InstructionQueue::pop()
-{
-    // TODO: implement pop semantics (shift entries / mark invalid)
-}
-=======
-void InstructionQueue::push(iq_instr instr)
-{
-    iq.push(instr);
-    instr.ready = true;
 }
 /* void InstructionQueue::pop()
 {
@@ -31,24 +16,35 @@ void InstructionQueue::push(iq_instr instr)
     iq.pop();
     iv.erase(std::remove(iv.begin(), iv.end(), removedElement), iv.end());
 } */
-bool InstructionQueue::isHazard(int reg)
+bool InstructionQueue::isNonHazard(iq_instr instr)
 {
-    std::queue<iq_instr> temp = iq;
-    while(!temp.empty())
+    vector<int> sourceRegs;
+    if(instr.opcode == 0 || instr.control.mem_write || instr.control.branch) // r-type or store
     {
-        iq_instr instr = temp.front();
-        temp.pop();
-        if(instr.rs == reg || instr.rt == reg || instr.rd == reg)
+        sourceRegs.push_back(instr.rs);
+        sourceRegs.push_back(instr.rt);
+    }
+    else if(instr.control.mem_read)
+    {
+        sourceRegs.push_back(instr.rs);
+    }
+    for (auto &i : iq)
+    {
+        if(i.control.reg_write)
         {
-            instr.ready = false;
-            return true;
+            for(auto &sReg : sourceRegs)
+            {
+                if(i.control.reg_dest == sReg)
+                {
+                    return false;
+                }
+            }
         }
     }
-    return false;
+    return true;
 }
 void InstructionQueue::readyDependicies(int reg)
 {
-    std::queue<iq_instr> temp = iq;
     while(!temp.empty())
     {
         iq_instr instr = temp.front();
@@ -59,4 +55,3 @@ void InstructionQueue::readyDependicies(int reg)
         }
     }
 }
->>>>>>> Stashed changes
