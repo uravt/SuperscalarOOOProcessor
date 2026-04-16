@@ -12,6 +12,7 @@ class PhysicalRegisterFile {
 
     private:
         std::vector<PhysReg> R;
+        std::vector<int> commited_regmap;
         std::vector<int> regmap; //arch -> phys register mappings
         std::deque<int> rename_pool; //free list 
     public:
@@ -66,6 +67,10 @@ class PhysicalRegisterFile {
 
         void undo_rename(int phys_reg) {
             rename_pool.push_front(phys_reg);
+        }
+
+        void update_commited_registers(int arch_reg, int phys_reg) {
+            commited_regmap[arch_reg] = phys_reg;
         }
 
         // Prints the contents of all the registers
