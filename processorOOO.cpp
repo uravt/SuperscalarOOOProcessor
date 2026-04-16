@@ -91,14 +91,6 @@ void ProcessorOOO::rename_stage() //IO
     ROBEntry robEntry;
     memset(&robEntry, 0, sizeof(robEntry));
     robEntry.completed = false;
-<<<<<<< Updated upstream
-    robEntry.dest_arch_reg = id_rn.control.reg_dest ? id_rn.rd : id_rn.rt;
-    robEntry.dest_phys_reg = prf.assign_mapping(robEntry.dest_arch_reg); // Allocate physical reg space
-    rob.insert(robEntry.dest_arch_reg, robEntry.dest_phys_reg, prf.get_mapping(robEntry.dest_arch_reg)); // Insert into ROB with old_phys_reg as -1 for now
-
-    uint32_t operand_1 = id_rn.control.shift ? 0 : 0; // TODO: shamt / read_data_1
-    uint32_t operand_2 = id_rn.control.ALU_src ? id_rn.imm : 0; // TODO: read_data_2
-=======
     int dest_arch_reg = id_rn.control.reg_dest ? id_rn.rd : id_rn.rt;
     uint32_t read_data_1 = 0;
     uint32_t read_data_2 = 0;
@@ -107,7 +99,6 @@ void ProcessorOOO::rename_stage() //IO
 
     uint32_t operand_1 = id_rn.control.shift ? id_rn.shamt : id_rn.read_data_1;
     uint32_t operand_2 = id_rn.control.ALU_src ? id_rn.imm : id_rn.read_data_2;
->>>>>>> Stashed changes
     
 
     //preform register renaming
@@ -159,6 +150,14 @@ void ProcessorOOO::writeback_stage() //OOO
 void ProcessorOOO::commit_stage() //IO
 {
     //commit results to reg file in order according to ROB
+    int num_commited = 0;
+    while(num_commited < config::PIPELINE_WIDTH) {
+        if(rob.commit(prf)) {
+            num_commited++;
+        } else {
+            break; //as soon as we can't commit we should break
+        }
+    }
 }
 
 
