@@ -6,7 +6,6 @@
 #include "reorder_buffer.h"
 #include "instruction_queue.h"
 
-
 using namespace std;
 
 #define ENABLE_DEBUG
@@ -42,18 +41,13 @@ void ProcessorOOO::initialize(int level) {
 void ProcessorOOO::out_of_order_advance() {
     initialize(2);
     //advance code
-    commit_stage();
-    writeback_stage();
-    execute_stage();
-    dispatch_stage();
-    issue_stage();
-    rename_stage();
-    decode_stage();
-    fetch_stage();
 }
 
-void ProcessorOOO::fetch_stage() //IO
+ProcessorOOO::IF_ID ProcessorOOO::fetch_stage() //IO
 {
+    ProcessorOOO::IF_ID if_id;
+    memset(&if_id, 0, sizeof(if_id));
+
     //Check if instruction queue is full
 
 
@@ -66,10 +60,14 @@ void ProcessorOOO::fetch_stage() //IO
 
     regfile.pc += 4;
 
-    //add to instruction queue
+    return if_id;
+
 }
-void ProcessorOOO::decode_stage() //IO
+ProcessorOOO::ID_RN ProcessorOOO::decode_stage(ProcessorOOO::IF_ID if_id) //IO
 {
+    ProcessorOOO::ID_RN id_rn;
+    memset(&id_rn, 0, sizeof(id_rn));
+
     uint32_t inst = if_id.instruction;
 
     control.decode(inst);
@@ -83,10 +81,16 @@ void ProcessorOOO::decode_stage() //IO
     id_rn.funct = inst & 0x3f;
     id_rn.pc = if_id.pc;
     id_rn.control = control;
+    id_rn.addr = inst & 0x3ffffff;
+    return id_rn;
 }
-void ProcessorOOO::rename_stage() //IO
+
+//Rename Issue Combined
+ProcessorOOO::RN_DP ProcessorOOO::rename_stage(ProcessorOOO::ID_RN id_rn) //IO
 {
-    //this all needs to be redone tbh but i just want it to compile for now
+    ProcessorOOO::RN_DP rn_dp;
+    memset(&rn_dp, 0, sizeof(rn_dp));
+
     //add instruction to ROB
     ROBEntry robEntry;
     memset(&robEntry, 0, sizeof(robEntry));
@@ -124,32 +128,41 @@ void ProcessorOOO::rename_stage() //IO
     decoded_instruction.funct = id_rn.funct;
     decoded_instruction.imm = id_rn.imm;
     decoded_instruction.addr = id_rn.addr;
-    iq.push(decoded_instruction);
-    decoded_instruction.ready = true;
+    iq.add(decoded_instruction);
+
+    //rn_dp might just not need to pass any info. NEED TO verify
+    return rn_dp;
+    
 }
-void ProcessorOOO::issue_stage() //IO
+ProcessorOOO::DP_EX ProcessorOOO::dispatch_stage(ProcessorOOO::RN_DP rn_dp) //OOO
 {
-    //add to issue queue
-}
-void ProcessorOOO::dispatch_stage() //OOO
-{
+    ProcessorOOO::DP_EX dp_ex;
+    memset(&dp_ex, 0, sizeof(dp_ex));
+
     //loop though issue queue
     //send a ready instruction
+    return dp_ex;
 }
-void ProcessorOOO::execute_stage() //OOO
+ProcessorOOO::EX_WB ProcessorOOO::execute_stage(ProcessorOOO::DP_EX dp_ex) //OOO
 {
+    ProcessorOOO::EX_WB ex_wb;
+    memset(&ex_wb, 0, sizeof(ex_wb));
+    
     //execute
     uint32_t op1 = 0, op2 = 0; // TODO: pull from pipeline register
     uint32_t result = alu.execute(op1, op2, *(new uint32_t));
     //wakeup instruction
+    return ex_wb;
 }
-void ProcessorOOO::writeback_stage() //OOO
+ProcessorOOO::WB_CM ProcessorOOO::writeback_stage(ProcessorOOO::EX_WB ex_wb) //OOO
 {
+    ProcessorOOO::WB_CM wb_cm;
+    memset(&wb_cm, 0, sizeof(wb_cm));
     //add results to commit buffer
+    return wb_cm;
 }
-void ProcessorOOO::commit_stage() //IO
+void ProcessorOOO::commit_stage(ProcessorOOO::WB_CM wb_cm) //IO
 {
-    //commit results to reg file in order according to ROB
     int num_commited = 0;
     while(num_commited < config::PIPELINE_WIDTH) {
         if(rob.commit(prf)) {

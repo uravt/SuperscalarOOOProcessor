@@ -43,7 +43,7 @@ class ProcessorOOO {
             control_t control;
         };
 
-        struct RN_IS {
+        struct RN_DP {
             uint32_t pc;
 
             int phys_rs;
@@ -61,18 +61,6 @@ class ProcessorOOO {
             int rob_index;
         };
 
-        struct IS_DP {
-            uint32_t pc;
-
-            uint32_t operand_1;
-            uint32_t operand_2;
-
-            int phys_rd;
-
-            control_t control;
-
-            int rob_index;
-        };
 
         struct DP_EX {
             uint32_t operand_1;
@@ -107,13 +95,12 @@ class ProcessorOOO {
         };
 
         // Pipeline register instances
-        IF_ID if_id;
-        ID_RN id_rn;
-        RN_IS rn_is;
-        IS_DP is_dp;
-        DP_EX dp_ex;
-        EX_WB ex_wb;
-        WB_CM wb_cm;
+        IF_ID if_id_buffer[config::PIPELINE_WIDTH];
+        ID_RN id_rn_buffer[config::PIPELINE_WIDTH];
+        RN_DP rn_is_buffer[config::PIPELINE_WIDTH];
+        DP_EX dp_ex_buffer[config::PIPELINE_WIDTH];
+        EX_WB ex_wb_buffer[config::PIPELINE_WIDTH];
+        WB_CM wb_cm_buffer[config::PIPELINE_WIDTH];
 
         ReorderBuffer rob;
         PhysicalRegisterFile prf;
@@ -124,29 +111,19 @@ class ProcessorOOO {
         uint32_t pc_history[6] = {0};
 
         // OOO stage functions
-        void fetch_stage();
-        void decode_stage();
-        void rename_stage();
-        void issue_stage();
-        void dispatch_stage();
-        void execute_stage();
-        void writeback_stage();
-        void commit_stage();
+        IF_ID fetch_stage();
+        ID_RN decode_stage(IF_ID if_id);
+        RN_DP rename_stage(ID_RN id_rn);
+        DP_EX dispatch_stage(RN_DP rn_dp);
+        EX_WB execute_stage(DP_EX dp_ex);
+        WB_CM writeback_stage(EX_WB ex_wb);
+        void commit_stage(WB_CM wb_cm);
 
     public:
         ProcessorOOO(Memory *mem)
         {
             regfile.pc = 0;
             memory = mem;
-
-            memset(&if_id, 0, sizeof(if_id));
-            memset(&id_rn, 0, sizeof(id_rn));
-            memset(&rn_is, 0, sizeof(rn_is));
-            memset(&is_dp, 0, sizeof(is_dp));
-            memset(&dp_ex, 0, sizeof(dp_ex));
-            memset(&ex_wb, 0, sizeof(ex_wb));
-            memset(&wb_cm, 0, sizeof(wb_cm));
-
         }
 
         uint32_t getPC() { return opt_level == 0 ? regfile.pc : pc_history[0]; }
