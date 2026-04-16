@@ -19,9 +19,9 @@ struct iq_instr
     uint32_t imm;
     int addr;
 
+    bool ready;
+
     int rob_index; // Index in the reorder buffer
-    bool rs_ready;
-    bool rt_ready;
     bool valid;
 };
 
@@ -32,6 +32,8 @@ class InstructionQueue
     public:
         bool add(iq_instr instr);
         void pop();
+        bool isHazard(int reg);
+        void readyDependicies(int reg);
 
 };
 

@@ -34,6 +34,9 @@ class ProcessorOOO {
 
             uint8_t rs, rt, rd;
             uint32_t imm;
+            uint32_t read_data_1, read_data_2;
+            uint8_t shamt;
+            int addr;
 
             uint8_t opcode, funct;
 

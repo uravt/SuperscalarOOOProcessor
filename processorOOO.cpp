@@ -78,6 +78,9 @@ void ProcessorOOO::decode_stage() //IO
     id_rn.rt = (inst >> 16) & 0x1f;
     id_rn.rd = (inst >> 11) & 0x1f;
     id_rn.imm = inst & 0xffff;
+    id_rn.shamt = (inst >> 6) & 0x1f;
+    id_rn.opcode = (inst >> 26) & 0x3f;
+    id_rn.funct = inst & 0x3f;
     id_rn.pc = if_id.pc;
     id_rn.control = control;
 }
@@ -88,27 +91,50 @@ void ProcessorOOO::rename_stage() //IO
     ROBEntry robEntry;
     memset(&robEntry, 0, sizeof(robEntry));
     robEntry.completed = false;
+<<<<<<< Updated upstream
     robEntry.dest_arch_reg = id_rn.control.reg_dest ? id_rn.rd : id_rn.rt;
     robEntry.dest_phys_reg = prf.assign_mapping(robEntry.dest_arch_reg); // Allocate physical reg space
     rob.insert(robEntry.dest_arch_reg, robEntry.dest_phys_reg, prf.get_mapping(robEntry.dest_arch_reg)); // Insert into ROB with old_phys_reg as -1 for now
 
     uint32_t operand_1 = id_rn.control.shift ? 0 : 0; // TODO: shamt / read_data_1
     uint32_t operand_2 = id_rn.control.ALU_src ? id_rn.imm : 0; // TODO: read_data_2
+=======
+    int dest_arch_reg = id_rn.control.reg_dest ? id_rn.rd : id_rn.rt;
+    uint32_t read_data_1 = 0;
+    uint32_t read_data_2 = 0;
+    prf.access(id_rn.rs,id_rn.rt,read_data_1,read_data_2,0,0,0); // Allocate physical reg space
+    rob.insert(dest_arch_reg, prf.get_mapping(dest_arch_reg), id_rn.control.reg_write);
+
+    uint32_t operand_1 = id_rn.control.shift ? id_rn.shamt : id_rn.read_data_1;
+    uint32_t operand_2 = id_rn.control.ALU_src ? id_rn.imm : id_rn.read_data_2;
+>>>>>>> Stashed changes
     
 
     //preform register renaming
     if(id_rn.control.reg_write)
     {
-        prf.assign_mapping(id_rn.control.reg_dest);
+        prf.assign_mapping(id_rn.control.reg_dest ? id_rn.rd : id_rn.rt);
     }
-    prf.assign_mapping(operand_1);
+    prf.assign_mapping(id_rn.rs);
 
     if(!id_rn.control.ALU_src)
     {
-        prf.assign_mapping(operand_2);
+        prf.assign_mapping(id_rn.rt);
     }
 
-
+    //allocate abd bind ROB and IQ
+    iq_instr decoded_instruction;
+    memset(&decoded_instruction, 0, sizeof(decoded_instruction));
+    decoded_instruction.opcode = id_rn.opcode;
+    decoded_instruction.rs = prf.get_mapping(id_rn.rs);
+    decoded_instruction.rt = prf.get_mapping(id_rn.rt);
+    decoded_instruction.rd = prf.get_mapping(id_rn.rd);
+    decoded_instruction.shamt = id_rn.shamt;
+    decoded_instruction.funct = id_rn.funct;
+    decoded_instruction.imm = id_rn.imm;
+    decoded_instruction.addr = id_rn.addr;
+    iq.push(decoded_instruction);
+    decoded_instruction.ready = true;
 }
 void ProcessorOOO::issue_stage() //IO
 {
