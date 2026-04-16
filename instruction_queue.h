@@ -31,10 +31,9 @@ class InstructionQueue
         std::vector<iq_instr> iq;
     public:
         bool add(iq_instr instr);
-        void push(iq_instr instr);
         bool isNonHazard(iq_instr reg);
         void readyDependicies(int reg);
-
+        bool getOldestReady(iq_instr&);
 };
 
 

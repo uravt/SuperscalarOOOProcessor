@@ -8,18 +8,12 @@ bool InstructionQueue::add(iq_instr instr)
     }
     iq.push_back(instr);
     instr.ready = isNonHazard(instr);
-    return false; // queue full -> stall
+    return true;
 }
-/* void InstructionQueue::pop()
-{
-    iq_instr removedElement = iq.front();
-    iq.pop();
-    iv.erase(std::remove(iv.begin(), iv.end(), removedElement), iv.end());
-} */
-bool InstructionQueue::isNonHazard(iq_instr instr)
+bool InstructionQueue::isNonHazard(iq_instr instr) //checks if NEW instruction has a hazard
 {
     vector<int> sourceRegs;
-    if(instr.opcode == 0 || instr.control.mem_write || instr.control.branch) // r-type or store
+    if(instr.opcode == 0 || instr.control.mem_write || instr.control.branch) // r-type or store or branch
     {
         sourceRegs.push_back(instr.rs);
         sourceRegs.push_back(instr.rt);
@@ -54,4 +48,17 @@ void InstructionQueue::readyDependicies(int reg)
             instr.ready = true;
         }
     }
+}
+bool InstructionQueue::getOldestReady(iq_instr &instr)
+{
+    bool valid = false;
+    for(auto &i : iq)
+    {
+        if(i.ready)
+        {
+            instr = i;
+            valid = true;
+        }
+    }
+    return valid;
 }
