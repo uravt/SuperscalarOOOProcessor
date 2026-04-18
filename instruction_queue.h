@@ -23,6 +23,8 @@ struct iq_instr
     bool ready;
 
     int rob_index; // Index in the reorder buffer
+    bool rs_ready;
+    bool rt_ready;
 };
 
 class InstructionQueue
@@ -36,6 +38,7 @@ class InstructionQueue
         bool isNonHazard(iq_instr reg);
         void readyDependicies();
         bool getOldestReady(iq_instr&, int &index);
+        void broadcast_ready(int phys_reg)
 };
 
 

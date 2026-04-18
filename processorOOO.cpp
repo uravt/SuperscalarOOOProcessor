@@ -158,7 +158,15 @@ ProcessorOOO::WB_CM ProcessorOOO::writeback_stage(ProcessorOOO::EX_WB ex_wb) //O
 {
     ProcessorOOO::WB_CM wb_cm;
     memset(&wb_cm, 0, sizeof(wb_cm));
+
+    control_t sig = ex_wb.control;
     //add results to commit buffer
+    if(ex_wb.phys_rd != 0) { //we don't have to do writeback for the zero register
+        prf.write(ex_wb.phys_rd, ex_wb.result);
+
+        
+    }
+
     return wb_cm;
 }
 void ProcessorOOO::commit_stage(ProcessorOOO::WB_CM wb_cm) //IO

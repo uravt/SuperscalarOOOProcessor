@@ -40,7 +40,6 @@ void InstructionQueue::readyDependicies() //recalculates ready instructions
 {
     set<int> hazards;
 
-    
     for(int i = 0; i < iq.size(); i++)//loop though iq from oldest to newest
     {
         iq.at(i).ready = true;
@@ -85,4 +84,14 @@ bool InstructionQueue::getOldestReady(iq_instr &instr, int &index)
         }
     }
     return valid;
+}
+void InstructionQueue::broadcast_ready(int phys_reg) {
+    for(auto &i : iq) {
+        if(i.rs == phys_reg) {
+            i.rs_ready = true;
+        }
+        if(i.rt == phys_reg) {
+            i.rt_ready  = true;
+        }
+    }
 }

@@ -48,11 +48,18 @@ class PhysicalRegisterFile {
         bool ready(int reg) {
             return R[reg].ready;
         }
+
+        void write(int phys_reg, uint32_t result) {
+            R[phys_reg].value = result;
+            R[phys_reg].ready = true;
+        }
         
         int assign_mapping(int arch_reg) {
-            int phys_reg = rename_pool[0];
+            int phys_reg = rename_pool.front();
             rename_pool.pop_front();
             regmap[arch_reg] = phys_reg;
+            
+            R[phys_reg].ready = false;
 
             return phys_reg;
         }
