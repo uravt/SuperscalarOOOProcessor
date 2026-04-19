@@ -28,6 +28,7 @@ class ProcessorOOO {
         struct IF_ID {
             uint32_t pc;
             uint32_t instruction;
+            bool in_use;
         };
 
         struct ID_RN {
@@ -44,6 +45,7 @@ class ProcessorOOO {
             bool reads_rs, reads_rt;
 
             control_t control;
+            bool in_use;
         };
 
         struct RN_DP {
@@ -62,6 +64,7 @@ class ProcessorOOO {
             control_t control;
 
             int rob_index;
+            bool valid;
         };
 
 

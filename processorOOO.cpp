@@ -52,44 +52,58 @@ void ProcessorOOO::out_of_order_advance() {
 
 void ProcessorOOO::fetch_stage() //IO
 {
-    ProcessorOOO::IF_ID if_id;
-    memset(&if_id, 0, sizeof(if_id));
+    for(int i = 0; i < config::PIPELINE_WIDTH; i++) {
+        IF_ID &reg = if_id_buffer[i];
+        if(reg.in_use) {
+            continue;
+        }
 
-    //Check if instruction queue is full
+        uint32_t inst;
+        //Cache hit/miss needs to go though nbc
+        memory->access(regfile.pc, inst, 0, 1, 0);
 
+        reg.instruction = inst;
+        reg.pc = regfile.pc;
+        reg.in_use = true;
 
-    uint32_t inst;
-    //Cache hit/miss needs to go though nbc
-    memory->access(regfile.pc, inst, 0, 1, 0);
-
-    if_id.instruction = inst;
-    if_id.pc = regfile.pc;
-
-    regfile.pc += 4;
-
-    return if_id;
-
+        regfile.pc += 4;
+    }
 }
 void ProcessorOOO::decode_stage() //IO
 {
-    ProcessorOOO::ID_RN id_rn;
-    memset(&id_rn, 0, sizeof(id_rn));
+    for(int i = 0; i < config::PIPELINE_WIDTH; i++) {
+        ID_RN &reg = id_rn_buffer[i];
+        if(reg.in_use) {
+            continue;
+        }
 
-    uint32_t inst = if_id.instruction;
+        IF_ID to_decode;
+        for(int j = 0; j < config::PIPELINE_WIDTH; i++) {
+            if(if_id_buffer[j].in_use) {
+                to_decode = if_id_buffer[j];
+            }
+        }
 
-    control.decode(inst);
+        if(!to_decode.in_use) {//fetch was not able to send any new instrs, or there were no more instrs
+            break;
+        } 
 
-    id_rn.rs = (inst >> 21) & 0x1f;
-    id_rn.rt = (inst >> 16) & 0x1f;
-    id_rn.rd = (inst >> 11) & 0x1f;
-    id_rn.imm = inst & 0xffff;
-    id_rn.shamt = (inst >> 6) & 0x1f;
-    id_rn.opcode = (inst >> 26) & 0x3f;
-    id_rn.funct = inst & 0x3f;
-    id_rn.pc = if_id.pc;
-    id_rn.control = control;
-    id_rn.addr = inst & 0x3ffffff;
-    return id_rn;
+        uint32_t inst = to_decode.instruction;
+
+        control.decode(inst);
+        reg.rs = (inst >> 21) & 0x1f;
+        reg.rt = (inst >> 16) & 0x1f;
+        reg.rd = (inst >> 11) & 0x1f;
+        reg.imm = inst & 0xffff;
+        reg.shamt = (inst >> 6) & 0x1f;
+        reg.opcode = (inst >> 26) & 0x3f;
+        reg.funct = inst & 0x3f;
+        reg.pc = to_decode.pc;
+        reg.control = control;
+        reg.addr = inst & 0x3ffffff;
+    }
+
+    
 }
 
 //Rename Issue Combined
@@ -144,19 +158,17 @@ void ProcessorOOO::dispatch_stage() //OOO
 {
     //loop though issue queue
     int num_dispatched = 0;
-    while(num_dispatched < config::PIPELINE_WIDTH) {
+    while(num_dispatched < config::PIPELINE_WIDTH && !fu.full()) {
         //get a valid instr from iq, remove from iq, send it to a functional unit
         int oldest_ready = iq.get_oldest_ready();
+
         if(oldest_ready == -1) {
             break;
         }
+
         iq_instr instr = iq.get(oldest_ready);
         iq.remove(oldest_ready);
-
-        if(!fu.full()) {
-            fu.issue_to_unit(instr);
-        }
-
+        fu.issue_to_unit(instr);
     }
 }
 void ProcessorOOO::execute_stage() //OOO
@@ -170,19 +182,12 @@ void ProcessorOOO::writeback_stage() //OOO
 {
     for(int i = 0; i < config::NUM_ALUS; i++) { //this only works because NUM_ALUS == PIPELINE_WIDTH, maybe make this more robust
         FunctionalUnit unit = fu.get(i);
-        if(unit.has_result) {
+        if(unit.has_result && unit.instr.rd != 0) { //we don't have to do prf writeback for the zero register
             prf.write(unit.instr.rd, unit.result);
             iq.broadcast_ready(unit.instr.rd);
         }
+        rob.set_ready(unit.instr.rob_index);
     }
-
-    //add results to commit buffer, instead of using the pipeline register we need to pull from the FUs
-    if(ex_wb.phys_rd != 0) { //we don't have to do writeback for the zero register
-        prf.write(ex_wb.phys_rd, ex_wb.result);
-        iq.broadcast_ready(ex_wb.phys_rd);
-    }
-    rob.set_ready(ex_wb.rob_index);
-
 }
 void ProcessorOOO::commit_stage() //IO
 {
