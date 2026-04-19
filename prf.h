@@ -58,8 +58,6 @@ class PhysicalRegisterFile {
             int phys_reg = rename_pool.front();
             rename_pool.pop_front();
             regmap[arch_reg] = phys_reg;
-            
-            R[phys_reg].ready = false;
 
             return phys_reg;
         }

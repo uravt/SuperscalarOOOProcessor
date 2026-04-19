@@ -163,9 +163,9 @@ ProcessorOOO::WB_CM ProcessorOOO::writeback_stage(ProcessorOOO::EX_WB ex_wb) //O
     //add results to commit buffer
     if(ex_wb.phys_rd != 0) { //we don't have to do writeback for the zero register
         prf.write(ex_wb.phys_rd, ex_wb.result);
-
-        
+        iq.broadcast_ready(ex_wb.phys_rd);
     }
+    rob.set_ready(ex_wb.rob_index);
 
     return wb_cm;
 }

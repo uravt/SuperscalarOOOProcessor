@@ -26,6 +26,7 @@ class ReorderBuffer {
         int insert(int dest_arch_reg, int dest_phys_reg, int old_phys_reg);
         bool commit(PhysicalRegisterFile& prf);
         bool isFull();
+        void set_ready(int index);
 };
 
 #endif

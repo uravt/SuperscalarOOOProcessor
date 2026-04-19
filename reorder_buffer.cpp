@@ -34,6 +34,10 @@ bool ReorderBuffer::commit(PhysicalRegisterFile& prf) {
     return false;
 }
 
+void ReorderBuffer::set_ready(int index) {
+    buffer[index].completed = true;
+}
+
 bool ReorderBuffer::isFull() {
     return size >= config::REORDER_BUFFER_SIZE;
 }
