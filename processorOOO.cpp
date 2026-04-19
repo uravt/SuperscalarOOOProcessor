@@ -168,7 +168,14 @@ void ProcessorOOO::execute_stage() //OOO
 }
 void ProcessorOOO::writeback_stage() //OOO
 {
-    control_t sig = ex_wb.control;
+    for(int i = 0; i < config::NUM_ALUS; i++) { //this only works because NUM_ALUS == PIPELINE_WIDTH, maybe make this more robust
+        FunctionalUnit unit = fu.get(i);
+        if(unit.has_result) {
+            prf.write(unit.instr.rd, unit.result);
+            iq.broadcast_ready(unit.instr.rd);
+        }
+    }
+
     //add results to commit buffer, instead of using the pipeline register we need to pull from the FUs
     if(ex_wb.phys_rd != 0) { //we don't have to do writeback for the zero register
         prf.write(ex_wb.phys_rd, ex_wb.result);

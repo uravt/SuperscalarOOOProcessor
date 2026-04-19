@@ -6,8 +6,10 @@
 struct FunctionalUnit
 {
     bool ready;
+    bool has_result;
     iq_instr instr; 
     ALU alu;
+    uint32_t result;
 };
 
 
@@ -37,5 +39,8 @@ class FunctionalUnits {
                 }
             }
             return false;
+        }
+        FunctionalUnit get(int index) {
+            return units[index];
         }
 };       
