@@ -51,3 +51,9 @@ void InstructionQueue::broadcast_ready(int phys_reg) {
         }
     }
 }
+iq_instr InstructionQueue::get(int index) {
+    return iq.at(index);
+}
+bool InstructionQueue::full() {
+    return iq.size() >= config::INSTRUCTION_QUEUE_SIZE;
+}

@@ -7,7 +7,7 @@ ReorderBuffer::ReorderBuffer() {
 }
 
 int ReorderBuffer::insert(int dest_arch_reg, int dest_phys_reg, int old_phys_reg) {
-    if (isFull()) {
+    if (full()) {
         return -1; // Buffer is full we should stall
     }
     int rob_index = tail;
@@ -38,6 +38,6 @@ void ReorderBuffer::set_ready(int index) {
     buffer[index].completed = true;
 }
 
-bool ReorderBuffer::isFull() {
+bool ReorderBuffer::full() {
     return size >= config::REORDER_BUFFER_SIZE;
 }

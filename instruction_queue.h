@@ -31,11 +31,12 @@ class InstructionQueue
         std::vector<iq_instr> iq;
         std::vector<int> get_source_regs(iq_instr instr);
     public:
+        bool full();
         bool add(iq_instr instr);
         bool remove(int index);
         int get_oldest_ready();
         void broadcast_ready(int phys_reg);
-        bool can_dispatch(iq_instr &instr);
+        iq_instr get(int index);
 };
 
 

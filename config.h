@@ -7,6 +7,7 @@ namespace config {
     constexpr int REORDER_BUFFER_SIZE = 32; // from the MIPS R10000
     constexpr int PIPELINE_WIDTH = 1; 
     constexpr int INSTRUCTION_QUEUE_SIZE = 16;
+    constexpr int NUM_ALUS = 2; 
 }
 
 #endif

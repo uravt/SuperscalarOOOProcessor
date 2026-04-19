@@ -12,6 +12,7 @@
 #include "reorder_buffer.h"
 #include "instruction_queue.h"
 #include "prf.h"
+#include "functional_units.h"
 
 
 class ProcessorOOO {
@@ -39,6 +40,8 @@ class ProcessorOOO {
             int addr;
 
             uint8_t opcode, funct;
+
+            bool reads_rs, reads_rt;
 
             control_t control;
         };
@@ -105,19 +108,23 @@ class ProcessorOOO {
         ReorderBuffer rob;
         PhysicalRegisterFile prf;
         InstructionQueue iq;
+        FunctionalUnits fu;
 
         bool flush_pipeline = false;
         bool stall = false;
         uint32_t pc_history[6] = {0};
 
         // OOO stage functions
-        IF_ID fetch_stage();
-        ID_RN decode_stage(IF_ID if_id);
-        RN_DP rename_stage(ID_RN id_rn);
-        DP_EX dispatch_stage(RN_DP rn_dp);
-        EX_WB execute_stage(DP_EX dp_ex);
-        WB_CM writeback_stage(EX_WB ex_wb);
-        void commit_stage(WB_CM wb_cm);
+        void fetch_stage();
+        void decode_stage();
+        void rename_stage();
+        void dispatch_stage();
+        void execute_stage();
+        void writeback_stage();
+        void commit_stage();
+
+        //helpers
+        void update_reg_src_usage(int opcode, int funct, ID_RN &reg);
 
     public:
         ProcessorOOO(Memory *mem)

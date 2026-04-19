@@ -41,9 +41,16 @@ void ProcessorOOO::initialize(int level) {
 void ProcessorOOO::out_of_order_advance() {
     initialize(2);
     //advance code
+    commit_stage();
+    writeback_stage();
+    execute_stage();
+    dispatch_stage();
+    rename_stage();
+    decode_stage();
+    fetch_stage();
 }
 
-ProcessorOOO::IF_ID ProcessorOOO::fetch_stage() //IO
+void ProcessorOOO::fetch_stage() //IO
 {
     ProcessorOOO::IF_ID if_id;
     memset(&if_id, 0, sizeof(if_id));
@@ -63,7 +70,7 @@ ProcessorOOO::IF_ID ProcessorOOO::fetch_stage() //IO
     return if_id;
 
 }
-ProcessorOOO::ID_RN ProcessorOOO::decode_stage(ProcessorOOO::IF_ID if_id) //IO
+void ProcessorOOO::decode_stage() //IO
 {
     ProcessorOOO::ID_RN id_rn;
     memset(&id_rn, 0, sizeof(id_rn));
@@ -86,90 +93,91 @@ ProcessorOOO::ID_RN ProcessorOOO::decode_stage(ProcessorOOO::IF_ID if_id) //IO
 }
 
 //Rename Issue Combined
-ProcessorOOO::RN_DP ProcessorOOO::rename_stage(ProcessorOOO::ID_RN id_rn) //IO
+void ProcessorOOO::rename_stage() //IO
 {
-    ProcessorOOO::RN_DP rn_dp;
-    memset(&rn_dp, 0, sizeof(rn_dp));
+    for(int i = 0; i < config::PIPELINE_WIDTH; i++) {
+        if(rob.full() || iq.full()) {
+            break; //we want to stall, probably need to add more code for that here
+        }
 
-    //add instruction to ROB
-    ROBEntry robEntry;
-    memset(&robEntry, 0, sizeof(robEntry));
-    robEntry.completed = false;
-    int dest_arch_reg = id_rn.control.reg_dest ? id_rn.rd : id_rn.rt;
-    uint32_t read_data_1 = 0;
-    uint32_t read_data_2 = 0;
-    prf.access(id_rn.rs,id_rn.rt,read_data_1,read_data_2,0,0,0); // Allocate physical reg space
-    rob.insert(dest_arch_reg, prf.get_mapping(dest_arch_reg), id_rn.control.reg_write);
+        ID_RN id_rn = id_rn_buffer[i];
 
-    uint32_t operand_1 = id_rn.control.shift ? id_rn.shamt : id_rn.read_data_1;
-    uint32_t operand_2 = id_rn.control.ALU_src ? id_rn.imm : id_rn.read_data_2;
-    
+        int dest_arch_reg = id_rn.control.reg_dest ? id_rn.rd : id_rn.rt;
+        bool writes_reg = id_rn.control.reg_write && dest_arch_reg != 0;
 
-    //preform register renaming
-    if(id_rn.control.reg_write)
-    {
-        prf.assign_mapping(id_rn.control.reg_dest ? id_rn.rd : id_rn.rt);
+        if (writes_reg && !prf.has_free_phys_reg()) break;
+
+        int rs_phys_reg = id_rn.reads_rs ? prf.get_mapping(id_rn.rs) : 0;
+        int rt_phys_reg = id_rn.reads_rt ? prf.get_mapping(id_rn.rt) : 0;
+
+        bool rs_ready = !id_rn.reads_rs || prf.ready(rs_phys_reg) || id_rn.rs == 0;
+        bool rt_ready = !id_rn.reads_rt || prf.ready(rt_phys_reg) || id_rn.rt == 0;
+
+
+        int old_phys_reg = 0, new_phys_reg = 0;
+        if(writes_reg) {
+            old_phys_reg = prf.get_mapping(dest_arch_reg);
+            new_phys_reg = prf.assign_mapping(dest_arch_reg);
+        }
+
+        //add instruction to ROB
+        ROBEntry robEntry{};
+        int rob_index = rob.insert(dest_arch_reg, new_phys_reg, old_phys_reg);
+
+        //add instruction to IQ
+        iq_instr instr{};
+        instr.opcode = id_rn.opcode;
+        instr.rs = rs_phys_reg;
+        instr.rt = rt_phys_reg;
+        instr.rd = new_phys_reg;
+        instr.shamt = id_rn.shamt;
+        instr.funct = id_rn.funct;
+        instr.imm = id_rn.imm;
+        instr.addr = id_rn.addr;
+        instr.rob_index = rob_index;
+        instr.rs_ready = rs_ready;
+        instr.rt_ready = rt_ready;
+        iq.add(instr);
     }
-    prf.assign_mapping(id_rn.rs);
-
-    if(!id_rn.control.ALU_src)
-    {
-        prf.assign_mapping(id_rn.rt);
-    }
-
-    //allocate abd bind ROB and IQ
-    iq_instr decoded_instruction;
-    memset(&decoded_instruction, 0, sizeof(decoded_instruction));
-    decoded_instruction.opcode = id_rn.opcode;
-    decoded_instruction.rs = prf.get_mapping(id_rn.rs);
-    decoded_instruction.rt = prf.get_mapping(id_rn.rt);
-    decoded_instruction.rd = prf.get_mapping(id_rn.rd);
-    decoded_instruction.shamt = id_rn.shamt;
-    decoded_instruction.funct = id_rn.funct;
-    decoded_instruction.imm = id_rn.imm;
-    decoded_instruction.addr = id_rn.addr;
-    iq.add(decoded_instruction);
-
-    //rn_dp might just not need to pass any info. NEED TO verify
-    return rn_dp;
-    
 }
-ProcessorOOO::DP_EX ProcessorOOO::dispatch_stage(ProcessorOOO::RN_DP rn_dp) //OOO
+void ProcessorOOO::dispatch_stage() //OOO
 {
-    ProcessorOOO::DP_EX dp_ex;
-    memset(&dp_ex, 0, sizeof(dp_ex));
-
     //loop though issue queue
-    //send a ready instruction
-    return dp_ex;
+    int num_dispatched = 0;
+    while(num_dispatched < config::PIPELINE_WIDTH) {
+        //get a valid instr from iq, remove from iq, send it to a functional unit
+        int oldest_ready = iq.get_oldest_ready();
+        if(oldest_ready == -1) {
+            break;
+        }
+        iq_instr instr = iq.get(oldest_ready);
+        iq.remove(oldest_ready);
+
+        if(!fu.full()) {
+            fu.issue_to_unit(instr);
+        }
+
+    }
 }
-ProcessorOOO::EX_WB ProcessorOOO::execute_stage(ProcessorOOO::DP_EX dp_ex) //OOO
+void ProcessorOOO::execute_stage() //OOO
 {
-    ProcessorOOO::EX_WB ex_wb;
-    memset(&ex_wb, 0, sizeof(ex_wb));
-    
     //execute
     uint32_t op1 = 0, op2 = 0; // TODO: pull from pipeline register
     uint32_t result = alu.execute(op1, op2, *(new uint32_t));
     //wakeup instruction
-    return ex_wb;
 }
-ProcessorOOO::WB_CM ProcessorOOO::writeback_stage(ProcessorOOO::EX_WB ex_wb) //OOO
+void ProcessorOOO::writeback_stage() //OOO
 {
-    ProcessorOOO::WB_CM wb_cm;
-    memset(&wb_cm, 0, sizeof(wb_cm));
-
     control_t sig = ex_wb.control;
-    //add results to commit buffer
+    //add results to commit buffer, instead of using the pipeline register we need to pull from the FUs
     if(ex_wb.phys_rd != 0) { //we don't have to do writeback for the zero register
         prf.write(ex_wb.phys_rd, ex_wb.result);
         iq.broadcast_ready(ex_wb.phys_rd);
     }
     rob.set_ready(ex_wb.rob_index);
 
-    return wb_cm;
 }
-void ProcessorOOO::commit_stage(ProcessorOOO::WB_CM wb_cm) //IO
+void ProcessorOOO::commit_stage() //IO
 {
     int num_commited = 0;
     while(num_commited < config::PIPELINE_WIDTH) {
@@ -181,5 +189,41 @@ void ProcessorOOO::commit_stage(ProcessorOOO::WB_CM wb_cm) //IO
     }
 }
 
+void ProcessorOOO::update_reg_src_usage(int opcode, int funct, ProcessorOOO::ID_RN &reg) {
+    switch (opcode) {
+        case 0x00: // R-type
+            reg.reads_rs = (funct != 0x00 && funct != 0x02 && funct != 0x03); // not sll/srl/sra
+            reg.reads_rt = (funct != 0x08 && funct != 0x09); // not jr/jalr
+            break;
+        case 0x02: case 0x03: // j, jal
+            reg.reads_rs = false;
+            reg.reads_rt = false;
+            break;
+        case 0x0f: // lui
+            reg.reads_rs = false;
+            reg.reads_rt = false;
+            break;
+        case 0x04: case 0x05: // beq, bne
+            reg.reads_rs = true;
+            reg.reads_rt = true;
+            break;
+        case 0x01: case 0x06: case 0x07: // bltz/bgez, blez, bgtz
+            reg.reads_rs = true;
+            reg.reads_rt = false;
+            break;
+        case 0x23: case 0x20: case 0x21: case 0x24: case 0x25: // loads
+            reg.reads_rs = true;
+            reg.reads_rt = false;  // rt is destination
+            break;
+        case 0x2b: case 0x28: case 0x29: // stores
+            reg.reads_rs = true;
+            reg.reads_rt = true;   // store value
+            break;
+        default: // I-type ALU (addi, andi, ori, etc.)
+            reg.reads_rs = true;
+            reg.reads_rt = false;  // immediate replaces rt
+            break;
+    }
+}
 
 
