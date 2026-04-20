@@ -8,6 +8,7 @@ namespace config {
     constexpr int PIPELINE_WIDTH = 1; 
     constexpr int INSTRUCTION_QUEUE_SIZE = 16;
     constexpr int NUM_ALUS = 2; 
+    constexpr int NUM_MSHRS = 16; 
 }
 
 #endif
