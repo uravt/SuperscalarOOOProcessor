@@ -1,4 +1,5 @@
 #include "instruction_queue.h"
+#include <algorithm>
 #include <set>
 
 bool InstructionQueue::add(iq_instr instr)
@@ -40,6 +41,11 @@ int InstructionQueue::get_oldest_ready()
         }
     }
     return -1;
+}
+void InstructionQueue::squash(uint64_t branch_seq) {
+    iq.erase(std::remove_if(iq.begin(), iq.end(),
+        [branch_seq](const iq_instr &i) { return i.seq > branch_seq; }),
+        iq.end());
 }
 void InstructionQueue::broadcast_ready(int phys_reg) {
     for(auto &i : iq) {
