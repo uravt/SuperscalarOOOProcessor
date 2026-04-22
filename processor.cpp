@@ -42,13 +42,9 @@ void Processor::advance() {
                 break;
         case 1: pipelined_processor_advance();
                 break;
-        case 2:
-                if (!processorOOO) {
-                    processorOOO = new ProcessorOOO(memory);
-                    processorOOO->initialize(2);
-                }
-                processorOOO->out_of_order_advance();
         // other optimization levels go here
+        case 2: ooo.out_of_order_advance();
+                break;
         default: break;
     }
 }

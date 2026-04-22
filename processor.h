@@ -5,18 +5,22 @@
 #include <sstream>
 #include <queue>
 #include <set>
+#include "processorOOO.h"
 
-class Processor {
-    private:
-        int opt_level;
-        ALU alu;
-        control_t control;
-        Memory *memory;
-        Registers regfile;
-        // add other structures as needed
-        //pipeline registers
-        //values got based on diagram registers in and out
-        //data types based on single processor implementation
+class Processor
+{
+private:
+    int opt_level;
+    ProcessorOOO ooo;
+
+    ALU alu;
+    control_t control;
+    Memory *memory;
+    Registers regfile;
+    // add other structures as needed
+    // pipeline registers
+    // values got based on diagram registers in and out
+    // data types based on single processor implementation
 
     struct IF_ID
     {
@@ -37,17 +41,16 @@ class Processor {
         uint32_t pc;
         uint32_t read_data_1;
         uint32_t read_data_2;
-        uint32_t imm;     // instruction[15-0]
-        int rt;           // instruction[20-16]
-        int rd;           // instruction[15-11]
-        int rs; 
+        uint32_t imm; // instruction[15-0]
+        int rt;       // instruction[20-16]
+        int rd;       // instruction[15-11]
+        int rs;
         uint32_t opcode;
         uint32_t funct;
         uint32_t shamt;
         uint32_t addr;
         control_t control;
         bool stall;
-
 
         std::string toString() const
         {
@@ -78,9 +81,9 @@ class Processor {
         int write_reg;
         uint32_t addr;
         uint32_t branch_reg;
-        int rt;           // instruction[20-16]
-        int rd;           // instruction[15-11]
-        int rs; 
+        int rt; // instruction[20-16]
+        int rd; // instruction[15-11]
+        int rs;
         control_t control;
 
         std::string toString() const
@@ -104,9 +107,9 @@ class Processor {
         uint32_t read_data_mem;
         uint32_t alu_out;
         int write_reg;
-        int rt;           // instruction[20-16]
-        int rd;           // instruction[15-11]
-        int rs; 
+        int rt; // instruction[20-16]
+        int rd; // instruction[15-11]
+        int rs;
         control_t control;
 
         std::string toString() const
@@ -121,57 +124,73 @@ class Processor {
         }
     };
 
+    // two structs for reg in and reg out
+    // set reg out = reg in when stepping. dont set when stalling
+    // stage funcs modify reg in, processor step sets reg out
+    IF_ID if_id_in, if_id_out;
+    ID_EX id_ex_in, id_ex_out;
+    EX_MEM ex_mem_in, ex_mem_out;
+    MEM_WB mem_wb_in, mem_wb_out;
+    bool flush_pipeline = false;
+    bool cache_hit = false;
+    bool stall = false;
+    uint32_t pc_history[6] = {0};
 
-        //two structs for reg in and reg out
-        //set reg out = reg in when stepping. dont set when stalling
-        //stage funcs modify reg in, processor step sets reg out
-        IF_ID if_id_in, if_id_out;
-        ID_EX id_ex_in, id_ex_out;
-        EX_MEM ex_mem_in, ex_mem_out;
-        MEM_WB mem_wb_in, mem_wb_out;
-        bool flush_pipeline = false;
-        bool cache_hit = false;
-        bool stall = false;
-        uint32_t pc_history[6] = {0};
+    // pipelined processor
+    void fetch_stage();
+    void decode_stage();
+    void execute_stage();
+    void memory_stage();
+    void writeback_stage();
+    // add private functions
+    void single_cycle_processor_advance();
+    void pipelined_processor_advance();
 
-        // pipelined processor
-        void fetch_stage();
-        void decode_stage();
-        void execute_stage();
-        void memory_stage();
-        void writeback_stage();
-        // add private functions
-        void single_cycle_processor_advance();
-        void pipelined_processor_advance();
-        
-        void pop_hazard_regs();
-        void push_hazard_regs(int _reg);
- 
-    public:
-        Processor(Memory *mem)
+    void pop_hazard_regs();
+    void push_hazard_regs(int _reg);
+
+public:
+    Processor(Memory *mem) : ooo(mem)
+    {
+        regfile.pc = 0;
+        memory = mem;
+
+        memset(&if_id_in, 0, sizeof(if_id_in));
+        memset(&if_id_out, 0, sizeof(if_id_out));
+        memset(&id_ex_in, 0, sizeof(id_ex_in));
+        memset(&id_ex_out, 0, sizeof(id_ex_out));
+        memset(&ex_mem_in, 0, sizeof(ex_mem_in));
+        memset(&ex_mem_out, 0, sizeof(ex_mem_out));
+        memset(&mem_wb_in, 0, sizeof(mem_wb_in));
+        memset(&mem_wb_out, 0, sizeof(mem_wb_out));
+    }
+
+    // Get PC
+    uint32_t getPC()
+    {
+        if (opt_level == 2)
+            return ooo.getPC();
+        return opt_level == 0 ? regfile.pc : pc_history[0];
+    }
+
+    // Prints the Register File
+    void printRegFile()
+    {
+        if (opt_level == 2)
         {
-            regfile.pc = 0;
-            memory = mem;
-
-            memset(&if_id_in, 0, sizeof(if_id_in));
-            memset(&if_id_out, 0, sizeof(if_id_out));
-            memset(&id_ex_in, 0, sizeof(id_ex_in));
-            memset(&id_ex_out, 0, sizeof(id_ex_out));
-            memset(&ex_mem_in, 0, sizeof(ex_mem_in));
-            memset(&ex_mem_out, 0, sizeof(ex_mem_out));
-            memset(&mem_wb_in, 0, sizeof(mem_wb_in));
-            memset(&mem_wb_out, 0, sizeof(mem_wb_out));
+            ooo.printRegFile();
         }
+        else
+        {
+            regfile.print();
+        }
+    }
 
-        // Get PC
-        uint32_t getPC() { return opt_level == 0 ? regfile.pc : pc_history[0]; }
+    // Initializes the processor appropriately based on the optimization level
+    void initialize(int opt_level);
 
-        // Prints the Register File
-        void printRegFile() { regfile.print(); }
-        
-        // Initializes the processor appropriately based on the optimization level
-        void initialize(int opt_level);
+    void setEndPC(uint32_t e) { ooo.setEndPC(e); }
 
-        // Advances the processor to an appropriate state every cycle
-        void advance(); 
+    // Advances the processor to an appropriate state every cycle
+    void advance();
 };

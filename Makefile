@@ -8,9 +8,9 @@ SRCS := main.cpp memory.cpp processor.cpp processorOOO.cpp instruction_queue.cpp
 OBJS := $(SRCS:.cpp=.o)
 
 ZIP_NAME = submission.zip
-ZIP_FILES = main.cpp memory.cpp processor.cpp processorOOO.cpp instruction_queue.cpp reorder_buffer.cpp regfile.h ALU.h control.h processor.h processorOOO.h memory.h reorder_buffer.h prf.h instruction_queue.h config.h Makefile
+ZIP_FILES = main.cpp memory.cpp processor.cpp processorOOO.cpp instruction_queue.cpp reorder_buffer.cpp regfile.h ALU.h control.h processor.h processorOOO.h memory.h reorder_buffer.h prf.h instruction_queue.h functional_units.h config.h Makefile
 
-.PHONY: all clean zip
+.PHONY: all clean zip debug
 
 all: $(EXE_NAME)
 
@@ -18,11 +18,14 @@ $(EXE_NAME): $(OBJS)
 	$(CXX) $(CXXFLAGS) -o $@ $^
 
 processor.o: regfile.h ALU.h control.h processor.h processorOOO.h
-processorOOO.o: processorOOO.h regfile.h ALU.h control.h memory.h reorder_buffer.h prf.h instruction_queue.h config.h
+processorOOO.o: processorOOO.h regfile.h ALU.h control.h memory.h reorder_buffer.h prf.h instruction_queue.h functional_units.h config.h
 reorder_buffer.o: reorder_buffer.h prf.h config.h
 instruction_queue.o: instruction_queue.h config.h
 memory.o: memory.h
-main.o: memory.h processor.h
+main.o: memory.h processor.h processorOOO.h
+
+debug: $(EXE_NAME)
+	gdb $(EXE_NAME)
 
 zip:
 	zip $(ZIP_NAME) $(ZIP_FILES)

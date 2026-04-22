@@ -13,7 +13,7 @@ bool InstructionQueue::add(iq_instr instr)
 }
 bool InstructionQueue::remove(int index)
 {
-    if(index >= iq.size() || index < 0) return false;   
+    if(index >= (int) iq.size() || index < 0) return false;   
     iq.erase(iq.begin() + index);
     return true;
 }
@@ -30,10 +30,12 @@ std::vector<int> get_source_regs(iq_instr instr)
     {
         sourceRegs.push_back(instr.rs);
     }
+
+    return sourceRegs;
 }
 int InstructionQueue::get_oldest_ready()
 {
-    for(int i = 0; i < iq.size(); i++)
+    for(int i = 0; i <  (int) iq.size(); i++)
     {
         if(iq[i].rs_ready && iq[i].rt_ready)
         {
