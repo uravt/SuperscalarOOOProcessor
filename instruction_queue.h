@@ -10,6 +10,8 @@
 
 struct iq_instr
 {
+    uint64_t seq;
+    uint32_t pc;
     int opcode;
     int rs;
     int rt;
@@ -36,6 +38,7 @@ class InstructionQueue
         bool remove(int index);
         int get_oldest_ready();
         void broadcast_ready(int phys_reg);
+        void squash(uint64_t branch_seq);
         iq_instr get(int index);
 };
 

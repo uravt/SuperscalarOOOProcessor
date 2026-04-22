@@ -9,6 +9,7 @@
 #include "config.h"
 
 struct ROBEntry {
+    uint64_t seq;
     int dest_arch_reg;
     int dest_phys_reg;
     int old_phys_reg;
@@ -23,10 +24,11 @@ class ReorderBuffer {
         int tail;
     public:
         ReorderBuffer();
-        int insert(int dest_arch_reg, int dest_phys_reg, int old_phys_reg);
+        int insert(uint64_t seq, int dest_arch_reg, int dest_phys_reg, int old_phys_reg);
         bool commit(PhysicalRegisterFile& prf);
         bool full();
         void set_ready(int index);
+        void squash(uint64_t branch_seq, PhysicalRegisterFile& prf);
 };
 
 #endif

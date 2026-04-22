@@ -134,12 +134,16 @@ void ProcessorOOO::rename_stage() //IO
             new_phys_reg = prf.assign_mapping(dest_arch_reg);
         }
 
+        uint64_t seq = next_seq++;
+
         //add instruction to ROB
         ROBEntry robEntry{};
-        int rob_index = rob.insert(dest_arch_reg, new_phys_reg, old_phys_reg);
+        int rob_index = rob.insert(seq, dest_arch_reg, new_phys_reg, old_phys_reg);
 
         //add instruction to IQ
         iq_instr instr{};
+        instr.seq = seq;
+        instr.pc = id_rn.pc;
         instr.opcode = id_rn.opcode;
         instr.rs = rs_phys_reg;
         instr.rt = rt_phys_reg;
@@ -173,16 +177,86 @@ void ProcessorOOO::dispatch_stage() //OOO
 }
 void ProcessorOOO::execute_stage() //OOO
 {
-    //execute
-    uint32_t op1 = 0, op2 = 0; // TODO: pull from pipeline register
-    uint32_t result = alu.execute(op1, op2, *(new uint32_t));
-    //wakeup instruction
+    for(int i = 0; i < config::PIPELINE_WIDTH; i++) {
+        FunctionalUnit &unit = fu.get(i);
+        if(!unit.ready) { //we have something to execute
+            iq_instr instr = unit.instr;
+
+            unit.alu.generate_control_inputs(instr.control.ALU_op, instr.funct, instr.opcode);
+            uint32_t imm = instr.control.zero_extend ? instr.imm : (instr.imm >> 15) ? 0xffff0000 | instr.imm : instr.imm;
+            uint32_t operand_1 = instr.control.shift ? instr.shamt : prf.read(instr.rs);
+            uint32_t operand_2 = instr.control.ALU_src ? imm : prf.read(instr.rt);
+            uint32_t alu_zero = 0;
+
+
+            uint32_t alu_result = unit.alu.execute(operand_1, operand_2, alu_zero);
+
+            bool branch_taken = instr.control.branch && 
+            ((instr.control.bne && !alu_zero) || 
+            (!instr.control.bne && alu_zero));
+
+            bool jump = instr.control.jump || instr.control.jump_reg;
+
+            if(branch_taken || jump) {
+                uint32_t target;
+                if(branch_taken) {
+                    target = instr.pc + (imm << 2);
+                }
+                else if(instr.control.jump) {
+                    target = (instr.pc & 0xf0000000) | (instr.addr << 2);
+                }
+                else {
+                    target = prf.read(instr.rs);
+                }
+
+                // Track oldest mispredicted branch across all FUs this cycle
+                if(!squash_pending || instr.seq < squash_seq) {
+                    squash_pending = true;
+                    squash_seq = instr.seq;
+                    squash_target_pc = target;
+                }
+            }
+
+            unit.result = alu_result;
+            unit.ready = true;
+        }
+
+    }
+
+    if(squash_pending) {
+        perform_squash();
+    }
+    
+   
+    // Sign Extend Or Zero Extend the immediate
+    // Using Arithmetic right shift in order to replicate 1 
+    
+    
+    // Find operands for the ALU Execution
+    // Operand 1 is always R[rs] -> read_data_1, except sll and srl
+    // Operand 2 is immediate if ALU_src = 1, for I-type
+
+
+    
+
+    ex_mem_in.branch_target = id_ex_out.pc + (imm << 2); //NOTE: accurate???
+    ex_mem_in.alu_zero = alu_zero;
+    ex_mem_in.alu_out = alu_result;
+    ex_mem_in.write_data_mem = store_data;
+    ex_mem_in.write_reg = id_ex_out.control.reg_dest ? id_ex_out.rd : id_ex_out.rt;//from end of single cycle.
+    ex_mem_in.addr = id_ex_out.addr;
+    ex_mem_in.branch_reg = id_ex_out.read_data_1;
+    ex_mem_in.control = id_ex_out.control;
+
+    ex_mem_in.rt = id_ex_out.rt;
+    ex_mem_in.rd = id_ex_out.rd;
+    
 }
 void ProcessorOOO::writeback_stage() //OOO
 {
     for(int i = 0; i < config::NUM_ALUS; i++) { //this only works because NUM_ALUS == PIPELINE_WIDTH, maybe make this more robust
         FunctionalUnit unit = fu.get(i);
-        if(unit.has_result && unit.instr.rd != 0) { //we don't have to do prf writeback for the zero register
+        if(unit.instr.control.reg_write && unit.has_result && unit.instr.rd != 0) { //we don't have to do prf writeback for the zero register
             prf.write(unit.instr.rd, unit.result);
             iq.broadcast_ready(unit.instr.rd);
         }
@@ -199,6 +273,22 @@ void ProcessorOOO::commit_stage() //IO
             break; //as soon as we can't commit we should break
         }
     }
+}
+
+void ProcessorOOO::perform_squash() {
+    iq.squash(squash_seq);
+    fu.squash(squash_seq);
+    rob.squash(squash_seq, prf);
+
+    for(int i = 0; i < config::PIPELINE_WIDTH; i++) {
+        if_id_buffer[i].in_use = false;
+        id_rn_buffer[i].in_use = false;
+    }
+
+    regfile.pc = squash_target_pc;
+    squash_pending = false;
+    squash_seq = 0;
+    squash_target_pc = 0;
 }
 
 void ProcessorOOO::update_reg_src_usage(int opcode, int funct, ProcessorOOO::ID_RN &reg) {

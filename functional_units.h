@@ -40,7 +40,15 @@ class FunctionalUnits {
             }
             return false;
         }
-        FunctionalUnit get(int index) {
+        FunctionalUnit& get(int index) {
             return units[index];
         }
-};       
+        void squash(uint64_t branch_seq) {
+            for(int i = 0; i < config::NUM_ALUS; i++) {
+                if(!units[i].ready && units[i].instr.seq > branch_seq) {
+                    units[i].ready = true;
+                    units[i].has_result = false;
+                }
+            }
+        }
+};

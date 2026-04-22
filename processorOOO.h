@@ -117,6 +117,11 @@ class ProcessorOOO {
         bool stall = false;
         uint32_t pc_history[6] = {0};
 
+        uint64_t next_seq = 0;
+        bool squash_pending = false;
+        uint64_t squash_seq = 0;
+        uint32_t squash_target_pc = 0;
+
         // OOO stage functions
         void fetch_stage();
         void decode_stage();
@@ -128,6 +133,7 @@ class ProcessorOOO {
 
         //helpers
         void update_reg_src_usage(int opcode, int funct, ID_RN &reg);
+        void perform_squash();
 
     public:
         ProcessorOOO(Memory *mem)

@@ -6,15 +6,28 @@ ReorderBuffer::ReorderBuffer() {
     tail = 0;
 }
 
-int ReorderBuffer::insert(int dest_arch_reg, int dest_phys_reg, int old_phys_reg) {
+int ReorderBuffer::insert(uint64_t seq, int dest_arch_reg, int dest_phys_reg, int old_phys_reg) {
     if (full()) {
         return -1; // Buffer is full we should stall
     }
     int rob_index = tail;
-    buffer[tail] = {dest_arch_reg, dest_phys_reg, old_phys_reg, false};
+    buffer[tail] = {seq, dest_arch_reg, dest_phys_reg, old_phys_reg, false};
     tail = (tail + 1) % config::REORDER_BUFFER_SIZE;
     size++;
     return rob_index;
+}
+
+void ReorderBuffer::squash(uint64_t branch_seq, PhysicalRegisterFile& prf) {
+    while (size > 0) {
+        int prev = (tail - 1 + config::REORDER_BUFFER_SIZE) % config::REORDER_BUFFER_SIZE;
+        ROBEntry &entry = buffer[prev];
+        if (entry.seq <= branch_seq) break;
+        if (entry.dest_phys_reg != entry.old_phys_reg) {
+            prf.rollback_rename(entry.dest_arch_reg, entry.dest_phys_reg, entry.old_phys_reg);
+        }
+        tail = prev;
+        size--;
+    }
 }
 
 bool ReorderBuffer::commit(PhysicalRegisterFile& prf) {
