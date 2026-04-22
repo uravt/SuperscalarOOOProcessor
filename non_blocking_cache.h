@@ -20,10 +20,11 @@ struct CacheResponse {
 class NonBlockingCache
 {
     private:
-        Memory *memory;
+        
         std::vector<MSHREntry> MSHRs;
         
     public:
+        Memory *memory;
         std::vector<CacheResponse> readyResponses;
         void initialize();
         bool allocateMSHR(uint32_t block_addr, int rob_index, int reg);
