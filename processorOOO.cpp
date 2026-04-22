@@ -36,6 +36,11 @@ void ProcessorOOO::initialize(int level)
                .zero_extend = 0};
 
     opt_level = level;
+    // Optimization level-specific initialization
+    i_nbc.initialize();
+    d_nbc.initialize();
+    i_nbc.memory = memory;
+    d_nbc.memory = memory;
 }
 
 void ProcessorOOO::out_of_order_advance()
@@ -44,6 +49,17 @@ void ProcessorOOO::out_of_order_advance()
     rob.print();
     iq.print();
     fu.print();
+
+    i_nbc.checkReady();
+    d_nbc.checkReady();
+
+    for (auto &r : d_nbc.readyResponses) //data cache found ready instructions. wake up components
+    {
+        prf.write(r.reg, r.data);
+        iq.broadcast_ready(r.reg);
+        rob.set_ready(r.rob_index);
+    }
+    d_nbc.readyResponses.clear();
     // advance code
     commit_stage();
     writeback_stage();
@@ -225,6 +241,17 @@ void ProcessorOOO::execute_stage() // OOO
             uint32_t alu_zero = 0;
 
             uint32_t alu_result = unit.alu.execute(operand_1, operand_2, alu_zero);
+
+            if(instr.control.mem_read)//We have a load. stop from going to writeback stage
+            {
+                bool success = d_nbc.allocateMSHR(alu_result, instr.rob_index, instr.rd);
+                if (success)// MSHR is allocated successfully
+                {
+                    unit.ready = true;
+                    unit.has_result = false;
+                }
+                continue;
+            }
 
             bool branch_taken = instr.control.branch &&
                                 ((instr.control.bne && !alu_zero) ||

@@ -13,6 +13,7 @@
 #include "instruction_queue.h"
 #include "prf.h"
 #include "functional_units.h"
+#include "non_blocking_cache.h"
 
 class ProcessorOOO
 {
@@ -57,6 +58,8 @@ private:
     PhysicalRegisterFile prf;
     InstructionQueue iq;
     FunctionalUnits fu;
+    NonBlockingCache i_nbc;
+    NonBlockingCache d_nbc;
 
     bool flush_pipeline = false;
     bool stall = false;
@@ -114,7 +117,6 @@ public:
         prf.print();
     }
     void initialize(int opt_level);
-    void advance();
     void out_of_order_advance();
 };
 
