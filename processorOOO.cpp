@@ -3,8 +3,7 @@
 #include <cstdio>
 #include <iostream>
 #include "processorOOO.h"
-#include "reorder_buffer.h"
-#include "instruction_queue.h"
+
 
 using namespace std;
 
@@ -46,9 +45,9 @@ void ProcessorOOO::initialize(int level)
 void ProcessorOOO::out_of_order_advance()
 {
     // prf.print_debug();
-    rob.print();
-    iq.print();
-    fu.print();
+    // rob.print();
+    // iq.print();
+    // fu.print();
 
     i_nbc.checkReady();
     d_nbc.checkReady();
@@ -151,14 +150,15 @@ void ProcessorOOO::rename_stage() // IO
 {
     for (int i = 0; i < config::PIPELINE_WIDTH; i++)
     {
-        if (rob.full() || iq.full())
-        {
-            break; // we want to stall, probably need to add more code for that here
-        }
-
         ID_RN &id_rn = id_rn_buffer[i];
         if (!id_rn.in_use)
             continue;
+
+        if (rob.full() || iq.full() ||
+            (id_rn.control.mem_read  && lsq.lq_full()) ||
+            (id_rn.control.mem_write && lsq.sq_full())) {
+            break; //we want to stall, potentially more code needed
+        }
 
         int dest_arch_reg = id_rn.control.reg_dest ? id_rn.rd : id_rn.rt;
         bool writes_reg = id_rn.control.reg_write && dest_arch_reg != 0;
@@ -184,6 +184,27 @@ void ProcessorOOO::rename_stage() // IO
         // add instruction to ROB
         int rob_index = rob.insert(seq, dest_arch_reg, new_phys_reg, old_phys_reg);
 
+        //add to lsq
+        int lsq_index = -1;
+        if(id_rn.control.mem_read) { //load
+            LoadEntry entry{};
+            entry.seq = seq;
+            entry.pc = id_rn.pc;
+            entry.rob_index = rob_index;
+            entry.dest_phys_reg = new_phys_reg;
+            entry.byte = id_rn.control.byte;
+            entry.halfword = id_rn.control.halfword;
+            lsq_index = lsq.add_load(entry);
+        } else if(id_rn.control.mem_write) {
+            StoreEntry entry{};
+            entry.seq = seq;
+            entry.pc = id_rn.pc;
+            entry.rob_index = rob_index;
+            entry.byte = id_rn.control.byte;
+            entry.halfword = id_rn.control.halfword;
+            lsq_index = lsq.add_store(entry);
+        }
+
         // add instruction to IQ
         iq_instr instr{};
         instr.seq = seq;
@@ -200,6 +221,7 @@ void ProcessorOOO::rename_stage() // IO
         instr.rs_ready = rs_ready;
         instr.rt_ready = rt_ready;
         instr.control = id_rn.control;
+        instr.lsq_index = lsq_index;
         iq.add(instr);
 
         id_rn.in_use = false;
@@ -242,15 +264,31 @@ void ProcessorOOO::execute_stage() // OOO
 
             uint32_t alu_result = unit.alu.execute(operand_1, operand_2, alu_zero);
 
-            if(instr.control.mem_read)//We have a load. stop from going to writeback stage
-            {
-                bool success = d_nbc.allocateMSHR(alu_result, instr.rob_index, instr.rd);
-                if (success)// MSHR is allocated successfully
-                {
-                    unit.ready = true;
-                    unit.has_result = false;
+            // if(instr.control.mem_read)//We have a load. stop from going to writeback stage
+            // {
+            //     bool success = d_nbc.allocateMSHR(alu_result, instr.rob_index, instr.rd);
+            //     if (success)// MSHR is allocated successfully
+            //     {
+            //         unit.ready = true;
+            //         unit.has_result = false;
+            //     }
+            //     continue;
+            // } 
+
+            uint32_t load_result = 0;
+            if(instr.control.mem_read) {
+                LoadEntry &entry = lsq.get_load(instr.lsq_index);
+                entry.addr = alu_result;
+                entry.addr_ready = true;
+
+                uint32_t val = 0;
+                if(lsq.try_forward(entry.seq, val)) { //store to load forwarding
+                    load_result = val;
+                    lsq.mark_load_complete(entry.seq);
                 }
-                continue;
+                else if(memory->access(entry.addr, val, 0, true, false)) { //cache hit
+                    load_result = val;
+                }
             }
 
             bool branch_taken = instr.control.branch &&
@@ -284,7 +322,7 @@ void ProcessorOOO::execute_stage() // OOO
                 }
             }
 
-            unit.result = alu_result;
+            unit.result = instr.control.mem_read ? alu_result : load_result;
             unit.result_instr = instr;
             unit.has_result = true;
             unit.ready = true;

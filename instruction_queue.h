@@ -26,6 +26,7 @@ struct iq_instr
     control_t control;
 
     int rob_index; // Index in the reorder buffer
+    int lsq_index;
     bool rs_ready;
     bool rt_ready;
 };

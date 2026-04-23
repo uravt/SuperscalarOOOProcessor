@@ -15,6 +15,7 @@ struct ROBEntry {
     int dest_arch_reg;
     int dest_phys_reg;
     int old_phys_reg;
+    int lsq_index;
     bool completed;
 };
 

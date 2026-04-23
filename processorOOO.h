@@ -14,6 +14,7 @@
 #include "prf.h"
 #include "functional_units.h"
 #include "non_blocking_cache.h"
+#include "load_store_queue.h"
 
 class ProcessorOOO
 {
@@ -58,6 +59,7 @@ private:
     PhysicalRegisterFile prf;
     InstructionQueue iq;
     FunctionalUnits fu;
+    LoadStoreQueue lsq;
     NonBlockingCache i_nbc;
     NonBlockingCache d_nbc;
 
