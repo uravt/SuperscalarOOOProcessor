@@ -30,13 +30,16 @@ void ReorderBuffer::squash(uint64_t branch_seq, PhysicalRegisterFile& prf) {
     }
 }
 
-bool ReorderBuffer::commit(PhysicalRegisterFile& prf) {
+bool ReorderBuffer::commit(PhysicalRegisterFile& prf, LoadStoreQueue &lsq) {
     if (size > 0 && buffer[head].completed) {
         ROBEntry entry = buffer[head];
         head = (head + 1) % config::REORDER_BUFFER_SIZE;
         size--;
 
         if(entry.dest_arch_reg != 0) {
+            if(entry.lsq_index != -1) {
+                lsq.get_load(entry.lsq_index).completed = true;
+            }
             prf.reclaim(entry.old_phys_reg); // Reclaim the old physical register
             prf.update_commited_registers(entry.dest_arch_reg, entry.dest_phys_reg); //update the retirement rat, allows us to recover from mispredictions
         }

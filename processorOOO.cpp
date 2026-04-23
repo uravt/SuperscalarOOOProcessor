@@ -45,23 +45,14 @@ void ProcessorOOO::initialize(int level)
 void ProcessorOOO::out_of_order_advance()
 {
     // prf.print_debug();
-    // rob.print();
-    // iq.print();
-    // fu.print();
+    rob.print();
+    iq.print();
+    fu.print();
 
-    i_nbc.checkReady();
-    d_nbc.checkReady();
-
-    for (auto &r : d_nbc.readyResponses) //data cache found ready instructions. wake up components
-    {
-        prf.write(r.reg, r.data);
-        iq.broadcast_ready(r.reg);
-        rob.set_ready(r.rob_index);
-    }
-    d_nbc.readyResponses.clear();
     // advance code
     commit_stage();
     writeback_stage();
+    memory_stage();
     execute_stage();
     dispatch_stage();
     rename_stage();
@@ -140,6 +131,7 @@ void ProcessorOOO::decode_stage() // IO
         reg.addr = inst & 0x3ffffff;
         update_reg_src_usage(reg.opcode, reg.funct, reg);
         reg.in_use = true;
+        
 
         to_decode.in_use = false;
     }
@@ -151,6 +143,7 @@ void ProcessorOOO::rename_stage() // IO
     for (int i = 0; i < config::PIPELINE_WIDTH; i++)
     {
         ID_RN &id_rn = id_rn_buffer[i];
+        std::cout << ProcessorOOO::toString(id_rn) << "\n";
         if (!id_rn.in_use)
             continue;
 
@@ -264,31 +257,32 @@ void ProcessorOOO::execute_stage() // OOO
 
             uint32_t alu_result = unit.alu.execute(operand_1, operand_2, alu_zero);
 
-            // if(instr.control.mem_read)//We have a load. stop from going to writeback stage
-            // {
-            //     bool success = d_nbc.allocateMSHR(alu_result, instr.rob_index, instr.rd);
-            //     if (success)// MSHR is allocated successfully
-            //     {
-            //         unit.ready = true;
-            //         unit.has_result = false;
-            //     }
-            //     continue;
-            // } 
-
             uint32_t load_result = 0;
-            if(instr.control.mem_read) {
+            if(instr.control.mem_read) { //loads
                 LoadEntry &entry = lsq.get_load(instr.lsq_index);
                 entry.addr = alu_result;
                 entry.addr_ready = true;
 
                 uint32_t val = 0;
-                if(lsq.try_forward(entry.seq, val)) { //store to load forwarding
+                if(lsq.try_forward(entry.seq, val, prf)) { //store to load forwarding
                     load_result = val;
                     lsq.mark_load_complete(entry.seq);
-                }
+                }\
                 else if(memory->access(entry.addr, val, 0, true, false)) { //cache hit
                     load_result = val;
+                    lsq.mark_load_complete(entry.seq);
+                } else { //cache miss
+                    bool success = d_nbc.allocateMSHR(entry.addr, instr.rob_index, instr.control.reg_dest);
+                    if(success) {
+                        unit.ready = true;
+                        unit.has_result = false;
+                    }
+                    continue;
                 }
+            } else if(instr.control.mem_write) { //stores
+                StoreEntry &entry = lsq.get_store(instr.lsq_index);
+                entry.addr = alu_result;
+                entry.addr_ready = true;
             }
 
             bool branch_taken = instr.control.branch &&
@@ -322,7 +316,7 @@ void ProcessorOOO::execute_stage() // OOO
                 }
             }
 
-            unit.result = instr.control.mem_read ? alu_result : load_result;
+            unit.result = !instr.control.mem_read ? alu_result : load_result;
             unit.result_instr = instr;
             unit.has_result = true;
             unit.ready = true;
@@ -333,6 +327,21 @@ void ProcessorOOO::execute_stage() // OOO
     {
         perform_squash();
     }
+}
+void ProcessorOOO::memory_stage() {
+    i_nbc.checkReady();
+    d_nbc.checkReady();
+
+    for (auto &r : d_nbc.readyResponses) //data cache found ready instructions. wake up components
+    {
+        prf.write(r.reg, r.data);
+        iq.broadcast_ready(r.reg);
+        lsq.broadcast_ready(r.reg);
+        rob.set_ready(r.rob_index);
+    }
+    d_nbc.readyResponses.clear();
+
+    //add code here so that loads which now can do store load forwarding actually do it
 }
 void ProcessorOOO::writeback_stage() // OOO
 {
@@ -346,6 +355,7 @@ void ProcessorOOO::writeback_stage() // OOO
         {
             prf.write(unit.result_instr.rd, unit.result);
             iq.broadcast_ready(unit.result_instr.rd);
+            lsq.broadcast_ready(unit.result_instr.rd);
         }
         rob.set_ready(unit.result_instr.rob_index);
 
@@ -357,7 +367,7 @@ void ProcessorOOO::commit_stage() // IO
     int num_commited = 0;
     while (num_commited < config::PIPELINE_WIDTH)
     {
-        if (rob.commit(prf))
+        if (rob.commit(prf, lsq))
         {
             num_commited++;
         }
@@ -367,6 +377,7 @@ void ProcessorOOO::commit_stage() // IO
         }
     }
 }
+
 
 void ProcessorOOO::perform_squash()
 {

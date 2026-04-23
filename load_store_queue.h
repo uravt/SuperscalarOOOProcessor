@@ -9,6 +9,7 @@
 #include <iomanip>
 
 #include "config.h"
+#include "prf.h"
 
 struct LoadEntry
 {
@@ -38,8 +39,8 @@ struct StoreEntry
     uint32_t addr;
     bool addr_ready;
 
-    uint32_t data;
-    bool data_ready;
+    int src;
+    int src_ready; 
 
     bool byte;
     bool halfword;
@@ -80,7 +81,7 @@ public:
 
     void set_load_address(uint64_t seq, uint32_t addr);
     void set_store_address(uint64_t seq, uint32_t addr);
-    void set_store_data(uint64_t seq, uint32_t data);
+    void set_store_data(uint64_t seq, uint32_t data, PhysicalRegisterFile &prf);
 
     void mark_load_issued(uint64_t seq);
     void mark_store_issued(uint64_t seq);
@@ -90,7 +91,7 @@ public:
     int oldest_ready_load() const;
     int oldest_ready_store() const;
 
-    bool try_forward(uint64_t load_seq, uint32_t &value) const;
+    bool try_forward(uint64_t load_seq, uint32_t &value, PhysicalRegisterFile &prf) const;
     bool has_unresolved_earlier_store(uint64_t load_seq) const;
 
     bool load_head_completed() const;
@@ -99,6 +100,8 @@ public:
     void pop_store_head();
 
     void squash(uint64_t branch_seq);
+    
+    void broadcast_ready(int phys_reg);
 
     std::string to_string() const
     {
@@ -150,8 +153,8 @@ public:
                    << "   | 0x" << std::hex << e.pc << std::dec
                    << " | 0x" << std::hex << e.addr << std::dec
                    << " (" << (e.addr_ready ? "T" : "F") << ") | "
-                   << e.data
-                   << " (" << (e.data_ready ? "T" : "F") << ") | "
+                   << e.src
+                   << " (" << (e.src_ready ? "T" : "F") << ") | "
                    << (e.issued ? "T" : "F") << "   | "
                    << (e.completed ? "T" : "F") << "   | "
                    << e.rob_index << "\n";

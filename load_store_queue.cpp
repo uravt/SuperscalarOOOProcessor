@@ -60,14 +60,6 @@ void LoadStoreQueue::set_store_address(uint64_t seq, uint32_t addr)
     sq[idx].addr_ready = true;
 }
 
-void LoadStoreQueue::set_store_data(uint64_t seq, uint32_t data)
-{
-    int idx = find_store_by_seq(seq);
-    if (idx == -1) return;
-    sq[idx].data = data;
-    sq[idx].data_ready = true;
-}
-
 void LoadStoreQueue::mark_load_issued(uint64_t seq)
 {
     int idx = find_load_by_seq(seq);
@@ -111,11 +103,11 @@ int LoadStoreQueue::oldest_ready_store() const
 {
     if (sq_size == 0) return -1;
     const StoreEntry &h = sq[sq_head];
-    if (!h.issued && !h.completed && h.addr_ready && h.data_ready) return sq_head;
+    if (!h.issued && !h.completed && h.addr_ready && h.src_ready) return sq_head;
     return -1;
 }
 
-bool LoadStoreQueue::try_forward(uint64_t load_seq, uint32_t &value) const
+bool LoadStoreQueue::try_forward(uint64_t load_seq, uint32_t &value, PhysicalRegisterFile &prf) const
 {
     int load_idx = find_load_by_seq(load_seq);
     if (load_idx == -1 || !lq[load_idx].addr_ready) return false;
@@ -127,11 +119,11 @@ bool LoadStoreQueue::try_forward(uint64_t load_seq, uint32_t &value) const
         int idx = (sq_head + i) % config::STORE_QUEUE_SIZE;
         const StoreEntry &s = sq[idx];
         if (s.seq >= load_seq) continue;
-        if (!s.addr_ready || !s.data_ready) continue;
+        if (!s.addr_ready || !s.src_ready) continue;
         if (s.addr != target_addr) continue;
         if (s.byte != lq[load_idx].byte) continue;
         if (s.halfword != lq[load_idx].halfword) continue;
-        value = s.data;
+        value = prf.read(s.src);
         return true;
     }
     return false;
@@ -188,5 +180,13 @@ void LoadStoreQueue::squash(uint64_t branch_seq)
         if (sq[prev].seq <= branch_seq) break;
         sq_tail = prev;
         sq_size--;
+    }
+}
+
+void LoadStoreQueue::broadcast_ready(int phys_reg) {
+    for(auto &i : sq) {
+        if(i.src == phys_reg) {
+            i.src_ready = true;
+        }
     }
 }
