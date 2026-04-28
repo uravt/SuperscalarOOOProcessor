@@ -9,14 +9,16 @@
 #include <sstream>   
 #include "prf.h"
 #include "config.h"
-#include "load_store_queue.h"
+
+class LoadStoreQueue;
 
 struct ROBEntry {
     uint64_t seq;
     int dest_arch_reg;
     int dest_phys_reg;
     int old_phys_reg;
-    int lsq_index;
+    int load_index;
+    int store_index;
     bool completed;
 };
 
@@ -28,7 +30,7 @@ class ReorderBuffer {
         int tail;
     public:
         ReorderBuffer();
-        int insert(uint64_t seq, int dest_arch_reg, int dest_phys_reg, int old_phys_reg);
+        int insert(uint64_t seq, int dest_arch_reg, int dest_phys_reg, int old_phys_reg, int load_index, int store_index);
         bool commit(PhysicalRegisterFile& prf, LoadStoreQueue &lsq);
         bool full();
         bool empty() const { return size == 0; }

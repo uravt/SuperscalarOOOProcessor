@@ -1,0 +1,58 @@
+
+bin/SpeculativeMIPS-3bit_100.mips:     file format elf32-tradlittlemips
+
+
+Disassembly of section .text:
+
+00000000 <__start>:
+__start():
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/SpeculativeMIPS-3bit_100/test.s:8
+  .align	2
+  .globl	__start
+  .ent	__start
+  .type	__start, @function
+__start:
+  addiu $1, $0, 0x492
+   0:	24010492 	li	at,1170
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/SpeculativeMIPS-3bit_100/test.s:9
+  sll $1, $1, 12
+   4:	00010b00 	sll	at,at,0xc
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/SpeculativeMIPS-3bit_100/test.s:10
+  addiu $1, $1, 0x492
+   8:	24210492 	addiu	at,at,1170
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/SpeculativeMIPS-3bit_100/test.s:11
+  sll $1, $1, 8
+   c:	00010a00 	sll	at,at,0x8
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/SpeculativeMIPS-3bit_100/test.s:12
+  addiu $1, $1, 0x49
+  10:	24210049 	addiu	at,at,73
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/SpeculativeMIPS-3bit_100/test.s:13
+  add $2, $0, $0
+  14:	00001020 	add	v0,zero,zero
+
+00000018 <loop1>:
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/SpeculativeMIPS-3bit_100/test.s:15
+loop1:
+  andi $3, $1, 1
+  18:	30230001 	andi	v1,at,0x1
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/SpeculativeMIPS-3bit_100/test.s:16
+  beq $3, $0, skip
+  1c:	10600002 	beqz	v1,28 <skip>
+  20:	00000000 	nop
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/SpeculativeMIPS-3bit_100/test.s:17
+  addi $2, $2, 1
+  24:	20420001 	addi	v0,v0,1
+
+00000028 <skip>:
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/SpeculativeMIPS-3bit_100/test.s:19
+skip:
+  srl $1, $1, 1
+  28:	00010842 	srl	at,at,0x1
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/SpeculativeMIPS-3bit_100/test.s:20
+  bne $1, $0, loop1
+  2c:	1420fffa 	bnez	at,18 <loop1>
+  30:	00000000 	nop
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/SpeculativeMIPS-3bit_100/test.s:21
+  sw $2, 0($0)
+  34:	ac020000 	sw	v0,0(zero)
+	...

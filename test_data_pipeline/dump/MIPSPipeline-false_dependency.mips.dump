@@ -1,0 +1,44 @@
+
+bin/MIPSPipeline-false_dependency.mips:     file format elf32-tradlittlemips
+
+
+Disassembly of section .text:
+
+00000000 <__start>:
+__start():
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-false_dependency/test.s:8
+	.align	2
+	.globl	__start
+	.ent	__start
+	.type	__start, @function
+__start:
+   addi $1, $0, 1
+   0:	20010001 	addi	at,zero,1
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-false_dependency/test.s:9
+   addi $2, $0, 2
+   4:	20020002 	addi	v0,zero,2
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-false_dependency/test.s:10
+   beq $1, $2, endlabel
+   8:	10220007 	beq	at,v0,28 <endlabel>
+   c:	00000000 	nop
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-false_dependency/test.s:11
+   add $3, $1, $2
+  10:	00221820 	add	v1,at,v0
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-false_dependency/test.s:12
+   sw $3, 0($0)
+  14:	ac030000 	sw	v1,0(zero)
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-false_dependency/test.s:13
+   sub $6, $2, $3
+  18:	00433022 	sub	a2,v0,v1
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-false_dependency/test.s:14
+   add $4, $1, $2
+  1c:	00222020 	add	a0,at,v0
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-false_dependency/test.s:15
+   sw $4, 0($0)
+  20:	ac040000 	sw	a0,0(zero)
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-false_dependency/test.s:16
+   sub $6, $4, $3
+  24:	00833022 	sub	a2,a0,v1
+
+00000028 <endlabel>:
+	...

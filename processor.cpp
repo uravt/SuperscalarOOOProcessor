@@ -34,6 +34,9 @@ void Processor::initialize(int level) {
    
     opt_level = level;
     // Optimization level-specific initialization
+    if (opt_level == 2) {
+        ooo.initialize(level);
+    }
 }
 
 void Processor::advance() {
@@ -375,10 +378,6 @@ void Processor::memory_stage() {
     // Loads: lbu or lhu modify read data by masking
     read_data_mem &= ex_mem_out.control.halfword ? 0xffff : ex_mem_out.control.byte ? 0xff : 0xffffffff;
 
-    int write_reg = ex_mem_out.control.link ? 31 : ex_mem_out.write_reg;
-
-    uint32_t write_data = ex_mem_out.control.link ? regfile.pc+8 : ex_mem_out.control.mem_to_reg ? read_data_mem : ex_mem_out.alu_out;  //NOTE: unused?
-
     /*
     regfile.pc += (control.branch && !control.bne && alu_zero) || (control.bne && !alu_zero) ? imm << 2 : 0; 
     regfile.pc = control.jump_reg ? read_data_1 : control.jump ? (regfile.pc & 0xf0000000) & (addr << 2): regfile.pc;
@@ -431,7 +430,7 @@ private:
         }
 
         // Drop the stage character (F, D, E, M, W) into the correct cycle column
-        if (cycle < grid[pc].size()) {
+        if (cycle < (int) grid[pc].size()) {
             grid[pc][cycle] = stage;
         }
     }

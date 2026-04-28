@@ -1,0 +1,87 @@
+
+bin/SpeculativeMIPS-3bit_double.mips:     file format elf32-tradlittlemips
+
+
+Disassembly of section .text:
+
+00000000 <__start>:
+__start():
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/SpeculativeMIPS-3bit_double/test.s:8
+  .align	2
+  .globl	__start
+  .ent	__start
+  .type	__start, @function
+__start:
+  addiu $1, $0, 0x492
+   0:	24010492 	li	at,1170
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/SpeculativeMIPS-3bit_double/test.s:9
+  sll $1, $1, 12
+   4:	00010b00 	sll	at,at,0xc
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/SpeculativeMIPS-3bit_double/test.s:10
+  addiu $1, $1, 0x492
+   8:	24210492 	addiu	at,at,1170
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/SpeculativeMIPS-3bit_double/test.s:11
+  sll $1, $1, 8
+   c:	00010a00 	sll	at,at,0x8
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/SpeculativeMIPS-3bit_double/test.s:12
+  addiu $1, $1, 0x49
+  10:	24210049 	addiu	at,at,73
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/SpeculativeMIPS-3bit_double/test.s:13
+  addiu $4, $0, 0xb6d
+  14:	24040b6d 	li	a0,2925
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/SpeculativeMIPS-3bit_double/test.s:14
+  sll $4, $4, 12
+  18:	00042300 	sll	a0,a0,0xc
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/SpeculativeMIPS-3bit_double/test.s:15
+  addiu $4, $4, 0xb6d
+  1c:	24840b6d 	addiu	a0,a0,2925
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/SpeculativeMIPS-3bit_double/test.s:16
+  sll $4, $4, 8
+  20:	00042200 	sll	a0,a0,0x8
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/SpeculativeMIPS-3bit_double/test.s:17
+  addiu $4, $4, 0xb6
+  24:	248400b6 	addiu	a0,a0,182
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/SpeculativeMIPS-3bit_double/test.s:18
+  add $2, $0, $0
+  28:	00001020 	add	v0,zero,zero
+
+0000002c <loop1>:
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/SpeculativeMIPS-3bit_double/test.s:20
+loop1:
+  andi $3, $1, 1
+  2c:	30230001 	andi	v1,at,0x1
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/SpeculativeMIPS-3bit_double/test.s:21
+  beq $3, $0, skip1
+  30:	10600002 	beqz	v1,3c <skip1>
+  34:	00000000 	nop
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/SpeculativeMIPS-3bit_double/test.s:22
+  addi $2, $2, 1
+  38:	20420001 	addi	v0,v0,1
+
+0000003c <skip1>:
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/SpeculativeMIPS-3bit_double/test.s:24
+skip1:
+  andi $5, $4, 1
+  3c:	30850001 	andi	a1,a0,0x1
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/SpeculativeMIPS-3bit_double/test.s:25
+  beq $5, $0, skip2
+  40:	10a00002 	beqz	a1,4c <skip2>
+  44:	00000000 	nop
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/SpeculativeMIPS-3bit_double/test.s:26
+  addi $2, $2, 1
+  48:	20420001 	addi	v0,v0,1
+
+0000004c <skip2>:
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/SpeculativeMIPS-3bit_double/test.s:28
+skip2:
+  srl $1, $1, 1
+  4c:	00010842 	srl	at,at,0x1
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/SpeculativeMIPS-3bit_double/test.s:29
+  bne $1, $0, loop1
+  50:	1420fff6 	bnez	at,2c <loop1>
+  54:	00000000 	nop
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/SpeculativeMIPS-3bit_double/test.s:30
+  sw $2, 0($0)
+  58:	ac020000 	sw	v0,0(zero)
+skip2():
+  5c:	00000000 	nop

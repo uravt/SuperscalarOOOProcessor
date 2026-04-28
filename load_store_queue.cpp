@@ -1,4 +1,5 @@
 #include "load_store_queue.h"
+#include <stdio.h>
 
 LoadStoreQueue::LoadStoreQueue()
     : lq_size(0), lq_head(0), lq_tail(0),
@@ -123,7 +124,7 @@ bool LoadStoreQueue::try_forward(uint64_t load_seq, uint32_t &value, PhysicalReg
         if (s.addr != target_addr) continue;
         if (s.byte != lq[load_idx].byte) continue;
         if (s.halfword != lq[load_idx].halfword) continue;
-        value = prf.read(s.src);
+        value = s.data;
         return true;
     }
     return false;
@@ -189,4 +190,24 @@ void LoadStoreQueue::broadcast_ready(int phys_reg) {
             i.src_ready = true;
         }
     }
+}
+
+LoadStoreQueue::EvictResult LoadStoreQueue::evict_commited_stores(MemoryOOO *mem,
+        PhysicalRegisterFile &prf, uint32_t smc_text_end) {
+    EvictResult result{false, 0, 0};
+    while(!sq_empty() && sq[sq_head].completed) {
+        uint32_t read_data = 0;
+        StoreEntry &s = sq[sq_head];
+        if(!mem->access(s.addr, read_data, s.data, false, true)) {
+            break;
+        }
+        if (s.addr < smc_text_end &&
+            (!result.smc_detected || s.seq < result.smc_seq)) {
+            result.smc_detected = true;
+            result.smc_seq = s.seq;
+            result.smc_pc = s.pc;
+        }
+        pop_store_head();
+    }
+    return result;
 }

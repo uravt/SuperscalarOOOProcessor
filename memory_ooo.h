@@ -10,25 +10,14 @@
 #include "config.h"
 #include "memory.h"  // for CacheLine + CACHE_LINE_SIZE
 
-struct NBCacheMSHR
-{
-    uint32_t block_addr;
-    int countdown;
-    bool valid;
-};
-
 class NBCacheLevel
 {
 private:
     std::vector<CacheLine> line;
-    std::vector<NBCacheMSHR> mshrs;
     int size;
     int assoc;
     int missPenalty;
     std::string name;
-
-    int findMSHR(uint32_t block_addr) const;
-    int allocateMSHR(uint32_t block_addr);
 
 public:
     NBCacheLevel(std::string nm, int sz, int asc, int penalty)
@@ -39,13 +28,13 @@ public:
         missPenalty = penalty;
         line.resize(size / CACHE_LINE_SIZE);
         for (int i = 0; i < (int)line.size(); i++) line[i].valid = false;
-        mshrs.resize(config::NUM_MSHRS);
-        for (auto &m : mshrs) m.valid = false;
     }
 
+    int getMissPenalty() const { return missPenalty; }
+
     int getOffset(uint32_t address) const { return address & (CACHE_LINE_SIZE - 1); }
-    int getIndex(uint32_t address) const { return (address >> (int)log2(CACHE_LINE_SIZE)) & (size / CACHE_LINE_SIZE - 1); }
-    int getTag(uint32_t address) const { return address >> (int)log2(size); }
+    int getIndex(uint32_t address) const { return (address >> (int)log2(CACHE_LINE_SIZE)) & (size / (CACHE_LINE_SIZE * assoc) - 1); }
+    int getTag(uint32_t address) const { return address >> (int)log2(size / assoc); }
     uint32_t blockOf(uint32_t address) const { return address & ~(uint32_t)(CACHE_LINE_SIZE - 1); }
 
     bool isHit(uint32_t address, uint32_t &loc);
@@ -58,8 +47,6 @@ public:
     void writeBackLine(CacheLine evictedLine);
     void replace(uint32_t address, CacheLine newLine, CacheLine &evictedLine);
     void invalidateLine(uint32_t address);
-
-    bool blockInFlight(uint32_t address) const { return findMSHR(blockOf(address)) != -1; }
 };
 
 class MemoryOOO
@@ -78,7 +65,24 @@ public:
     }
     void setOptLevel(int level) { opt_level = level; }
 
+    int getL1MissPenalty() const { return L1.getMissPenalty(); }
+
+    // Side-effect-free L1 probe used by the issue stage so an L1 miss falls through
+    // to the NBC (rather than `access` walking the hierarchy and burning L2 latency for free).
+    bool probeL1(uint32_t address, uint32_t &read_data)
+    {
+        if (opt_level == 0)
+        {
+            read_data = mem[address / 4];
+            return true;
+        }
+        return L1.read(address, read_data);
+    }
+
     bool access(uint32_t address, uint32_t &read_data, uint32_t write_data, bool mem_read, bool mem_write);
+
+    // Direct (no-cache) write into backing memory, used by the loader.
+    void loadWord(uint32_t address, uint32_t word) { mem[address / 4] = word; }
 
     void print(uint32_t address, int num_words)
     {
@@ -87,6 +91,47 @@ public:
             std::cout << "MEM[" << std::hex << i << "]: " << mem[i] << std::dec << "\n";
         }
     }
+};
+
+struct MSHRTarget
+{
+    int rob_index;
+    int reg;
+    uint32_t addr;   // full byte address — used to extract the right word from the filled line
+    uint64_t seq;    // sequence number — used to drop targets squashed by a misprediction
+};
+
+struct MSHREntry
+{
+    uint32_t block_addr;
+    bool valid;
+    int countdown;       // cycles remaining until the line can be filled
+    bool fill_pending;   // countdown hit zero; do the L2/mem walk on the next tick
+    std::vector<MSHRTarget> targets;
+};
+
+struct CacheResponse
+{
+    int rob_index;
+    int reg;
+    uint32_t data;
+};
+
+class NonBlockingCache
+{
+private:
+    std::vector<MSHREntry> MSHRs;
+    int miss_penalty;
+
+public:
+    MemoryOOO *memory;
+    std::vector<CacheResponse> readyResponses;
+
+    void initialize(int penalty);
+    bool allocateMSHR(uint32_t addr, int rob_index, int reg, uint64_t seq);
+    bool findOpenMSHR(int &index);
+    void checkReady();
+    void squash(uint64_t branch_seq);
 };
 
 #endif

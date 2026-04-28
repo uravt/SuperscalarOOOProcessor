@@ -36,10 +36,10 @@ void ProcessorOOO::initialize(int level)
 
     opt_level = level;
     // Optimization level-specific initialization
-    i_nbc.initialize();
-    d_nbc.initialize();
     i_nbc.memory = memory;
     d_nbc.memory = memory;
+    i_nbc.initialize(memory->getL1MissPenalty());
+    d_nbc.initialize(memory->getL1MissPenalty());
 }
 
 void ProcessorOOO::out_of_order_advance()
@@ -47,6 +47,7 @@ void ProcessorOOO::out_of_order_advance()
     // prf.print_debug();
     rob.print();
     iq.print();
+    lsq.print();
     fu.print();
 
     // advance code
@@ -92,6 +93,33 @@ void ProcessorOOO::fetch_stage() // IO
 }
 void ProcessorOOO::decode_stage() // IO
 {
+    // Compact id_rn so any leftover (unrenamed) entries sit at low indices in
+    // program order. Without this, a partial rename stall leaves holes that
+    // decode refills with newer instructions, breaking program order at rename.
+    int w = 0;
+    for (int r = 0; r < config::PIPELINE_WIDTH; r++) {
+        if (id_rn_buffer[r].in_use) {
+            if (w != r) {
+                id_rn_buffer[w] = id_rn_buffer[r];
+                id_rn_buffer[r].in_use = false;
+            }
+            w++;
+        }
+    }
+
+    // Same for if_id: a partial decode stall must not let fetch interleave
+    // newer instructions ahead of older ones in slot order.
+    int wf = 0;
+    for (int r = 0; r < config::PIPELINE_WIDTH; r++) {
+        if (if_id_buffer[r].in_use) {
+            if (wf != r) {
+                if_id_buffer[wf] = if_id_buffer[r];
+                if_id_buffer[r].in_use = false;
+            }
+            wf++;
+        }
+    }
+
     for (int i = 0; i < config::PIPELINE_WIDTH; i++)
     {
         ID_RN &reg = id_rn_buffer[i];
@@ -174,29 +202,34 @@ void ProcessorOOO::rename_stage() // IO
 
         uint64_t seq = next_seq++;
 
-        // add instruction to ROB
-        int rob_index = rob.insert(seq, dest_arch_reg, new_phys_reg, old_phys_reg);
-
         //add to lsq
-        int lsq_index = -1;
+        int load_index = -1;
+        int store_index = -1;
         if(id_rn.control.mem_read) { //load
             LoadEntry entry{};
             entry.seq = seq;
             entry.pc = id_rn.pc;
-            entry.rob_index = rob_index;
             entry.dest_phys_reg = new_phys_reg;
             entry.byte = id_rn.control.byte;
             entry.halfword = id_rn.control.halfword;
-            lsq_index = lsq.add_load(entry);
-        } else if(id_rn.control.mem_write) {
+            load_index = lsq.add_load(entry);
+        } else if(id_rn.control.mem_write) { //store
             StoreEntry entry{};
+            entry.src = rt_phys_reg;
+            entry.src_ready = rt_ready;
             entry.seq = seq;
             entry.pc = id_rn.pc;
-            entry.rob_index = rob_index;
             entry.byte = id_rn.control.byte;
             entry.halfword = id_rn.control.halfword;
-            lsq_index = lsq.add_store(entry);
+            store_index = lsq.add_store(entry);
         }
+
+        // add instruction to ROB
+        int rob_index = rob.insert(seq, dest_arch_reg, new_phys_reg, old_phys_reg, load_index, store_index);
+
+        // backfill rob_index in the LSQ entry for display/debug
+        if(load_index != -1)  lsq.get_load(load_index).rob_index = rob_index;
+        if(store_index != -1) lsq.get_store(store_index).rob_index = rob_index;
 
         // add instruction to IQ
         iq_instr instr{};
@@ -214,7 +247,8 @@ void ProcessorOOO::rename_stage() // IO
         instr.rs_ready = rs_ready;
         instr.rt_ready = rt_ready;
         instr.control = id_rn.control;
-        instr.lsq_index = lsq_index;
+        instr.load_index = load_index;
+        instr.store_index = store_index;
         iq.add(instr);
 
         id_rn.in_use = false;
@@ -227,7 +261,7 @@ void ProcessorOOO::dispatch_stage() // OOO
     while (num_dispatched < config::PIPELINE_WIDTH && !fu.full())
     {
         // get a valid instr from iq, remove from iq, send it to a functional unit
-        int oldest_ready = iq.get_oldest_ready();
+        int oldest_ready = iq.get_oldest_ready(lsq);
 
         if (oldest_ready == -1)
         {
@@ -259,7 +293,7 @@ void ProcessorOOO::execute_stage() // OOO
 
             uint32_t load_result = 0;
             if(instr.control.mem_read) { //loads
-                LoadEntry &entry = lsq.get_load(instr.lsq_index);
+                LoadEntry &entry = lsq.get_load(instr.load_index);
                 entry.addr = alu_result;
                 entry.addr_ready = true;
 
@@ -267,12 +301,13 @@ void ProcessorOOO::execute_stage() // OOO
                 if(lsq.try_forward(entry.seq, val, prf)) { //store to load forwarding
                     load_result = val;
                     lsq.mark_load_complete(entry.seq);
-                }\
-                else if(memory->access(entry.addr, val, 0, true, false)) { //cache hit
+                }
+                else if(memory->probeL1(entry.addr, val)) { //L1 hit
                     load_result = val;
                     lsq.mark_load_complete(entry.seq);
-                } else { //cache miss
-                    bool success = d_nbc.allocateMSHR(entry.addr, instr.rob_index, instr.control.reg_dest);
+                } else { //L1 miss — route through NBC, which models full miss latency
+                         //and walks the hierarchy when the countdown elapses
+                    bool success = d_nbc.allocateMSHR(entry.addr, instr.rob_index, instr.rd, instr.seq);
                     if(success) {
                         unit.ready = true;
                         unit.has_result = false;
@@ -280,9 +315,10 @@ void ProcessorOOO::execute_stage() // OOO
                     continue;
                 }
             } else if(instr.control.mem_write) { //stores
-                StoreEntry &entry = lsq.get_store(instr.lsq_index);
+                StoreEntry &entry = lsq.get_store(instr.store_index);
                 entry.addr = alu_result;
                 entry.addr_ready = true;
+                entry.data = prf.read(entry.src);
             }
 
             bool branch_taken = instr.control.branch &&
@@ -341,7 +377,16 @@ void ProcessorOOO::memory_stage() {
     }
     d_nbc.readyResponses.clear();
 
-    //add code here so that loads which now can do store load forwarding actually do it
+    //committed stores which can now be written to the cache should be evicted from the sq
+    //(usually already drained in commit_stage; this picks up any stalled by mem backpressure)
+    auto er = lsq.evict_commited_stores(memory, prf, end_pc);
+    if (er.smc_detected &&
+        (!squash_pending || er.smc_seq < squash_seq)) {
+        squash_pending = true;
+        squash_seq = er.smc_seq;
+        squash_target_pc = er.smc_pc + 4;
+    }
+
 }
 void ProcessorOOO::writeback_stage() // OOO
 {
@@ -367,13 +412,23 @@ void ProcessorOOO::commit_stage() // IO
     int num_commited = 0;
     while (num_commited < config::PIPELINE_WIDTH)
     {
-        if (rob.commit(prf, lsq))
-        {
-            num_commited++;
-        }
-        else
+        if (!rob.commit(prf, lsq))
         {
             break; // as soon as we can't commit we should break
+        }
+        num_commited++;
+
+        // Drain just-committed stores to memory now, so that if a store wrote
+        // into the instruction-memory range (SMC), we can squash everything
+        // that follows it before any of those entries commit this same cycle.
+        auto er = lsq.evict_commited_stores(memory, prf, end_pc);
+        if (er.smc_detected &&
+            (!squash_pending || er.smc_seq < squash_seq))
+        {
+            squash_pending = true;
+            squash_seq = er.smc_seq;
+            squash_target_pc = er.smc_pc + 4;
+            break;
         }
     }
 }
@@ -384,6 +439,8 @@ void ProcessorOOO::perform_squash()
     iq.squash(squash_seq);
     fu.squash(squash_seq);
     rob.squash(squash_seq, prf);
+    lsq.squash(squash_seq);
+    d_nbc.squash(squash_seq);
 
     for (int i = 0; i < config::PIPELINE_WIDTH; i++)
     {

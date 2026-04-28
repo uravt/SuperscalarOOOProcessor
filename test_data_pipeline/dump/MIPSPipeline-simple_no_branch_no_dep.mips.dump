@@ -1,0 +1,89 @@
+
+bin/MIPSPipeline-simple_no_branch_no_dep.mips:     file format elf32-tradlittlemips
+
+
+Disassembly of section .text:
+
+00000000 <__start>:
+__start():
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-simple_no_branch_no_dep/test.s:8
+	.align	2
+	.globl	__start
+	.ent	__start
+	.type	__start, @function
+__start:
+   addi $1, $0, 5
+   0:	20010005 	addi	at,zero,5
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-simple_no_branch_no_dep/test.s:9
+   addiu $2, $0, 10
+   4:	2402000a 	li	v0,10
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-simple_no_branch_no_dep/test.s:10
+   andi $3, $0, 2
+   8:	30030002 	andi	v1,zero,0x2
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-simple_no_branch_no_dep/test.s:11
+   sw $0, 0($0)
+   c:	ac000000 	sw	zero,0(zero)
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-simple_no_branch_no_dep/test.s:12
+   sw $0, 0($0)
+  10:	ac000000 	sw	zero,0(zero)
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-simple_no_branch_no_dep/test.s:13
+   sw $0, 0($0)
+  14:	ac000000 	sw	zero,0(zero)
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-simple_no_branch_no_dep/test.s:14
+   lw $4, 0($0)
+  18:	8c040000 	lw	a0,0(zero)
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-simple_no_branch_no_dep/test.s:15
+   lw $5, 0($0)
+  1c:	8c050000 	lw	a1,0(zero)
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-simple_no_branch_no_dep/test.s:16
+   lw $6, 0($0)
+  20:	8c060000 	lw	a2,0(zero)
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-simple_no_branch_no_dep/test.s:17
+   lw $7, 0($0)
+  24:	8c070000 	lw	a3,0(zero)
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-simple_no_branch_no_dep/test.s:18
+   lui $8, 35
+  28:	3c080023 	lui	t0,0x23
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-simple_no_branch_no_dep/test.s:19
+   ori $9, $0, 2
+  2c:	34090002 	li	t1,0x2
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-simple_no_branch_no_dep/test.s:20
+   slti $10, $0, 1
+  30:	280a0001 	slti	t2,zero,1
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-simple_no_branch_no_dep/test.s:21
+   sltiu $11, $0, 1
+  34:	2c0b0001 	sltiu	t3,zero,1
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-simple_no_branch_no_dep/test.s:22
+   add $12, $1, $2
+  38:	00226020 	add	t4,at,v0
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-simple_no_branch_no_dep/test.s:23
+   addu $13, $1, $2
+  3c:	00226821 	addu	t5,at,v0
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-simple_no_branch_no_dep/test.s:24
+   and $14, $1, $2
+  40:	00227024 	and	t6,at,v0
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-simple_no_branch_no_dep/test.s:25
+   nor $15, $1, $2
+  44:	00227827 	nor	t7,at,v0
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-simple_no_branch_no_dep/test.s:26
+   or $16, $1, $2
+  48:	00228025 	or	s0,at,v0
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-simple_no_branch_no_dep/test.s:27
+   slt $17, $1, $2
+  4c:	0022882a 	slt	s1,at,v0
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-simple_no_branch_no_dep/test.s:28
+   sltu $18, $2, $1
+  50:	0041902b 	sltu	s2,v0,at
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-simple_no_branch_no_dep/test.s:29
+   sll $19, $1, 2
+  54:	00019880 	sll	s3,at,0x2
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-simple_no_branch_no_dep/test.s:30
+   srl $20, $2, 1
+  58:	0002a042 	srl	s4,v0,0x1
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-simple_no_branch_no_dep/test.s:31
+   sub $21, $1, $2
+  5c:	0022a822 	sub	s5,at,v0
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-simple_no_branch_no_dep/test.s:32
+   subu $22, $1, $2
+  60:	0022b023 	subu	s6,at,v0
+	...

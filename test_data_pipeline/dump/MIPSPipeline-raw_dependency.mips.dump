@@ -1,0 +1,44 @@
+
+bin/MIPSPipeline-raw_dependency.mips:     file format elf32-tradlittlemips
+
+
+Disassembly of section .text:
+
+00000000 <__start>:
+__start():
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-raw_dependency/test.s:8
+	.align	2
+	.globl	__start
+	.ent	__start
+	.type	__start, @function
+__start:
+   addi $2, $1, 1
+   0:	20220001 	addi	v0,at,1
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-raw_dependency/test.s:9
+   addi $3, $1, 1
+   4:	20230001 	addi	v1,at,1
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-raw_dependency/test.s:10
+   add $3, $3, $2
+   8:	00621820 	add	v1,v1,v0
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-raw_dependency/test.s:11
+   add $4, $3, $2
+   c:	00622020 	add	a0,v1,v0
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-raw_dependency/test.s:12
+   add $5, $4, $3
+  10:	00832820 	add	a1,a0,v1
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-raw_dependency/test.s:13
+   add $6, $5, $4
+  14:	00a43020 	add	a2,a1,a0
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-raw_dependency/test.s:14
+   add $7, $6, $5
+  18:	00c53820 	add	a3,a2,a1
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-raw_dependency/test.s:15
+   add $8, $7, $6
+  1c:	00e64020 	add	t0,a3,a2
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-raw_dependency/test.s:16
+   add $9, $8, $7
+  20:	01074820 	add	t1,t0,a3
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-raw_dependency/test.s:17
+   add $10, $9, $8
+  24:	01285020 	add	t2,t1,t0
+	...

@@ -1,0 +1,80 @@
+
+bin/MIPSPipeline-hidden.mips:     file format elf32-tradlittlemips
+
+
+Disassembly of section .text:
+
+00000000 <__start>:
+__start():
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-hidden/test.s:8
+	.align	2
+	.globl	__start
+	.ent	__start
+	.type	__start, @function
+__start:
+   addi $16, $0, 5
+   0:	20100005 	addi	s0,zero,5
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-hidden/test.s:9
+   addi $17, $0, 5
+   4:	20110005 	addi	s1,zero,5
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-hidden/test.s:10
+   addi $18, $0, 300
+   8:	2012012c 	addi	s2,zero,300
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-hidden/test.s:11
+   add $8, $0, $0
+   c:	00004020 	add	t0,zero,zero
+
+00000010 <loopi>:
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-hidden/test.s:13
+loopi:
+   slt $12, $8, $16
+  10:	0110602a 	slt	t4,t0,s0
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-hidden/test.s:14
+   beq $12, $0, endi
+  14:	1180000f 	beqz	t4,54 <endi>
+  18:	00000000 	nop
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-hidden/test.s:15
+   add $9, $0, $0
+  1c:	00004820 	add	t1,zero,zero
+
+00000020 <loopj>:
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-hidden/test.s:17
+loopj:
+   slt $12, $9, $17
+  20:	0131602a 	slt	t4,t1,s1
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-hidden/test.s:18
+   beq $12, $9, endj
+  24:	11890008 	beq	t4,t1,48 <endj>
+  28:	00000000 	nop
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-hidden/test.s:19
+   add $10, $8, $9
+  2c:	01095020 	add	t2,t0,t1
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-hidden/test.s:20
+   sll $11, $9, 5
+  30:	00095940 	sll	t3,t1,0x5
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-hidden/test.s:21
+   add $11, $18, $11
+  34:	024b5820 	add	t3,s2,t3
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-hidden/test.s:22
+   sw $10, 0($11)
+  38:	ad6a0000 	sw	t2,0(t3)
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-hidden/test.s:23
+   addi $9, $9, 1
+  3c:	21290001 	addi	t1,t1,1
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-hidden/test.s:24
+   j loopj
+  40:	1000fff7 	b	20 <loopj>
+  44:	00000000 	nop
+
+00000048 <endj>:
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-hidden/test.s:26
+endj:
+   addi $8, $8, 1
+  48:	21080001 	addi	t0,t0,1
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-hidden/test.s:27
+   j loopi
+  4c:	1000fff0 	b	10 <loopi>
+  50:	00000000 	nop
+
+00000054 <endi>:
+	...

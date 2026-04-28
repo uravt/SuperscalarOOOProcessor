@@ -1,0 +1,229 @@
+
+bin/Customize-superscalar_R10000.mips:     file format elf32-tradlittlemips
+
+
+Disassembly of section .text:
+
+00000000 <__start>:
+__start():
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-superscalar_R10000/test.s:8
+	.align	2
+	.globl	__start
+	.ent	__start
+	.type	__start, @function
+__start:
+    addi $20, $0, 4
+   0:	20140004 	addi	s4,zero,4
+
+00000004 <loop_start>:
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-superscalar_R10000/test.s:11
+    
+loop_start:
+    addi $3, $3, 45
+   4:	2063002d 	addi	v1,v1,45
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-superscalar_R10000/test.s:12
+    addi $7, $7, 12
+   8:	20e7000c 	addi	a3,a3,12
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-superscalar_R10000/test.s:13
+    addi $11, $11, 78
+   c:	216b004e 	addi	t3,t3,78
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-superscalar_R10000/test.s:14
+    addi $15, $15, 23
+  10:	21ef0017 	addi	t7,t7,23
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-superscalar_R10000/test.s:16
+
+    addi $4, $4, 91
+  14:	2084005b 	addi	a0,a0,91
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-superscalar_R10000/test.s:17
+    addi $8, $8, 34
+  18:	21080022 	addi	t0,t0,34
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-superscalar_R10000/test.s:18
+    addi $12, $12, 56
+  1c:	218c0038 	addi	t4,t4,56
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-superscalar_R10000/test.s:19
+    addi $16, $16, 89
+  20:	22100059 	addi	s0,s0,89
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-superscalar_R10000/test.s:21
+
+    andi $1, $1, 15
+  24:	3021000f 	andi	at,at,0xf
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-superscalar_R10000/test.s:22
+    ori $5, $5, 240
+  28:	34a500f0 	ori	a1,a1,0xf0
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-superscalar_R10000/test.s:23
+    addi $9, $9, 51
+  2c:	21290033 	addi	t1,t1,51
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-superscalar_R10000/test.s:24
+    andi $13, $13, 63
+  30:	31ad003f 	andi	t5,t5,0x3f
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-superscalar_R10000/test.s:26
+
+    addi $2, $2, 67
+  34:	20420043 	addi	v0,v0,67
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-superscalar_R10000/test.s:27
+    addi $6, $6, 43
+  38:	20c6002b 	addi	a2,a2,43
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-superscalar_R10000/test.s:28
+    addi $10, $10, 29
+  3c:	214a001d 	addi	t2,t2,29
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-superscalar_R10000/test.s:29
+    addi $14, $14, 88
+  40:	21ce0058 	addi	t6,t6,88
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-superscalar_R10000/test.s:31
+
+    ori $17, $17, 127
+  44:	3631007f 	ori	s1,s1,0x7f
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-superscalar_R10000/test.s:32
+    addi $21, $21, 45
+  48:	22b5002d 	addi	s5,s5,45
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-superscalar_R10000/test.s:33
+    addi $25, $25, 91
+  4c:	2339005b 	addi	t9,t9,91
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-superscalar_R10000/test.s:34
+    andi $29, $29, 31
+  50:	33bd001f 	andi	sp,sp,0x1f
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-superscalar_R10000/test.s:36
+
+    addi $18, $18, 15
+  54:	2252000f 	addi	s2,s2,15
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-superscalar_R10000/test.s:37
+    ori $22, $22, 192
+  58:	36d600c0 	ori	s6,s6,0xc0
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-superscalar_R10000/test.s:38
+    andi $26, $26, 127
+  5c:	335a007f 	andi	k0,k0,0x7f
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-superscalar_R10000/test.s:39
+    addi $30, $30, 85
+  60:	23de0055 	addi	s8,s8,85
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-superscalar_R10000/test.s:41
+
+    sw $9, 0x4000($0)
+  64:	ac094000 	sw	t1,16384(zero)
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-superscalar_R10000/test.s:42
+    sw $3, 0x5000($0)
+  68:	ac035000 	sw	v1,20480(zero)
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-superscalar_R10000/test.s:43
+    sw $7, 0x6000($0)
+  6c:	ac076000 	sw	a3,24576(zero)
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-superscalar_R10000/test.s:44
+    sw $1, 0x7000($0)
+  70:	ac017000 	sw	at,28672(zero)
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-superscalar_R10000/test.s:46
+
+    ori $4, $4, 170
+  74:	348400aa 	ori	a0,a0,0xaa
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-superscalar_R10000/test.s:47
+    addi $24, $24, 153
+  78:	23180099 	addi	t8,t8,153
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-superscalar_R10000/test.s:48
+    andi $28, $28, 252
+  7c:	339c00fc 	andi	gp,gp,0xfc
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-superscalar_R10000/test.s:49
+    addi $1, $1, 94
+  80:	2021005e 	addi	at,at,94
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-superscalar_R10000/test.s:51
+
+    beq $3, $7, label1
+  84:	10670007 	beq	v1,a3,a4 <label1>
+  88:	00000000 	nop
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-superscalar_R10000/test.s:52
+    bne $11, $4, label2
+  8c:	15640009 	bne	t3,a0,b4 <label2>
+  90:	00000000 	nop
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-superscalar_R10000/test.s:53
+    beq $15, $8, label3
+  94:	11e8000b 	beq	t7,t0,c4 <label3>
+  98:	00000000 	nop
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-superscalar_R10000/test.s:54
+    bne $2, $6, label4
+  9c:	1446000d 	bne	v0,a2,d4 <label4>
+  a0:	00000000 	nop
+
+000000a4 <label1>:
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-superscalar_R10000/test.s:57
+
+label1:
+    addi $2, $2, 45
+  a4:	2042002d 	addi	v0,v0,45
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-superscalar_R10000/test.s:58
+    addi $6, $6, 170
+  a8:	20c600aa 	addi	a2,a2,170
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-superscalar_R10000/test.s:59
+    ori $10, $10, 240
+  ac:	354a00f0 	ori	t2,t2,0xf0
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-superscalar_R10000/test.s:60
+    andi $14, $14, 15
+  b0:	31ce000f 	andi	t6,t6,0xf
+
+000000b4 <label2>:
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-superscalar_R10000/test.s:63
+
+label2:
+    addi $4, $4, 51
+  b4:	20840033 	addi	a0,a0,51
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-superscalar_R10000/test.s:64
+    addi $8, $8, 82
+  b8:	21080052 	addi	t0,t0,82
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-superscalar_R10000/test.s:65
+    ori $12, $12, 192
+  bc:	358c00c0 	ori	t4,t4,0xc0
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-superscalar_R10000/test.s:66
+    andi $16, $16, 63
+  c0:	3210003f 	andi	s0,s0,0x3f
+
+000000c4 <label3>:
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-superscalar_R10000/test.s:69
+
+label3:
+    addi $5, $5, 67
+  c4:	20a50043 	addi	a1,a1,67
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-superscalar_R10000/test.s:70
+    addi $9, $9, 153
+  c8:	21290099 	addi	t1,t1,153
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-superscalar_R10000/test.s:71
+    andi $13, $13, 252
+  cc:	31ad00fc 	andi	t5,t5,0xfc
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-superscalar_R10000/test.s:72
+    ori $17, $17, 170
+  d0:	363100aa 	ori	s1,s1,0xaa
+
+000000d4 <label4>:
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-superscalar_R10000/test.s:75
+
+label4:
+    addi $18, $18, 85
+  d4:	22520055 	addi	s2,s2,85
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-superscalar_R10000/test.s:76
+    addi $22, $22, 73
+  d8:	22d60049 	addi	s6,s6,73
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-superscalar_R10000/test.s:77
+    ori $26, $26, 127
+  dc:	375a007f 	ori	k0,k0,0x7f
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-superscalar_R10000/test.s:78
+    andi $30, $30, 31
+  e0:	33de001f 	andi	s8,s8,0x1f
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-superscalar_R10000/test.s:80
+
+    addi $20, $20, -1
+  e4:	2294ffff 	addi	s4,s4,-1
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-superscalar_R10000/test.s:81
+    bne $20, $0, loop_start
+  e8:	1680ffc6 	bnez	s4,4 <loop_start>
+  ec:	00000000 	nop
+	...
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-superscalar_R10000/test.s:85
+    nop
+    nop
+
+    lw $19, 0x4000($0)
+  f8:	8c134000 	lw	s3,16384(zero)
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-superscalar_R10000/test.s:86
+    lw $23, 0x5000($0)
+  fc:	8c175000 	lw	s7,20480(zero)
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-superscalar_R10000/test.s:87
+    lw $27, 0x6000($0)
+ 100:	8c1b6000 	lw	k1,24576(zero)
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-superscalar_R10000/test.s:88
+    lw $31, 0x7000($0)
+ 104:	8c1f7000 	lw	ra,28672(zero)
+	...

@@ -1,0 +1,41 @@
+
+bin/MIPSPipeline-forward_to_rs.mips:     file format elf32-tradlittlemips
+
+
+Disassembly of section .text:
+
+00000000 <__start>:
+__start():
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-forward_to_rs/test.s:8
+	.align	2
+	.globl	__start
+	.ent	__start
+	.type	__start, @function
+__start:
+   addi $4, $1, 2
+   0:	20240002 	addi	a0,at,2
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-forward_to_rs/test.s:9
+   addi $2, $1, 1
+   4:	20220001 	addi	v0,at,1
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-forward_to_rs/test.s:10
+   addi $3, $1, 4
+   8:	20230004 	addi	v1,at,4
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-forward_to_rs/test.s:11
+   addi $2, $2, 2
+   c:	20420002 	addi	v0,v0,2
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-forward_to_rs/test.s:12
+   add $3, $2, $1
+  10:	00411820 	add	v1,v0,at
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-forward_to_rs/test.s:13
+   sw $4, 0($3)
+  14:	ac640000 	sw	a0,0(v1)
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-forward_to_rs/test.s:14
+   lw $5, 0($3)
+  18:	8c650000 	lw	a1,0(v1)
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-forward_to_rs/test.s:15
+   addi $4, $4, 15
+  1c:	2084000f 	addi	a0,a0,15
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-forward_to_rs/test.s:16
+   add $6, $5, $5
+  20:	00a53020 	add	a2,a1,a1
+	...

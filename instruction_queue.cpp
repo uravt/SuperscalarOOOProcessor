@@ -1,4 +1,5 @@
 #include "instruction_queue.h"
+#include "load_store_queue.h"
 #include <algorithm>
 #include <set>
 
@@ -33,11 +34,12 @@ std::vector<int> get_source_regs(iq_instr instr)
 
     return sourceRegs;
 }
-int InstructionQueue::get_oldest_ready()
+int InstructionQueue::get_oldest_ready(LoadStoreQueue &lsq)
 {
-    for(int i = 0; i <  (int) iq.size(); i++)
+    for(int i = 0; i < (int) iq.size(); i++)
     {
-        if(iq[i].rs_ready && iq[i].rt_ready)
+        if(iq[i].rs_ready && iq[i].rt_ready && 
+            (!iq[i].control.mem_read || !lsq.has_unresolved_earlier_store(iq[i].seq))) // don't issue a load if there are older unresolved stores
         {
             return i;
         }

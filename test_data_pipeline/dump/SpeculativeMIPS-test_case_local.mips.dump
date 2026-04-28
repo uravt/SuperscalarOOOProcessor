@@ -1,0 +1,43 @@
+
+bin/SpeculativeMIPS-test_case_local.mips:     file format elf32-tradlittlemips
+
+
+Disassembly of section .text:
+
+00000000 <__start>:
+__start():
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/SpeculativeMIPS-test_case_local/test.s:8
+  .align	2
+  .globl	__start
+  .ent	__start
+  .type	__start, @function
+__start:
+  addi $1, $0, 500
+   0:	200101f4 	addi	at,zero,500
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/SpeculativeMIPS-test_case_local/test.s:9
+  add $2, $0, $0
+   4:	00001020 	add	v0,zero,zero
+
+00000008 <loop1>:
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/SpeculativeMIPS-test_case_local/test.s:11
+loop1:
+  andi $3, $1, 1
+   8:	30230001 	andi	v1,at,0x1
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/SpeculativeMIPS-test_case_local/test.s:12
+  beq $3, $0, skipif
+   c:	10600002 	beqz	v1,18 <skipif>
+  10:	00000000 	nop
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/SpeculativeMIPS-test_case_local/test.s:13
+  addi $2, $2, 1
+  14:	20420001 	addi	v0,v0,1
+
+00000018 <skipif>:
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/SpeculativeMIPS-test_case_local/test.s:15
+skipif:
+  addi $1, $1, -1
+  18:	2021ffff 	addi	at,at,-1
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/SpeculativeMIPS-test_case_local/test.s:16
+  bne $1, $0, loop1
+  1c:	1420fffa 	bnez	at,8 <loop1>
+  20:	00000000 	nop
+	...

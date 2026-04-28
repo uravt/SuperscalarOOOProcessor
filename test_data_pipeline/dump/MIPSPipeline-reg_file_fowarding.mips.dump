@@ -1,0 +1,25 @@
+
+bin/MIPSPipeline-reg_file_fowarding.mips:     file format elf32-tradlittlemips
+
+
+Disassembly of section .text:
+
+00000000 <__start>:
+__start():
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-reg_file_fowarding/test.s:8
+	.align	2
+	.globl	__start
+	.ent	__start
+	.type	__start, @function
+__start:
+   addi $1, $0, 5
+   0:	20010005 	addi	at,zero,5
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-reg_file_fowarding/test.s:9
+   addi $2, $0, 1
+   4:	20020001 	addi	v0,zero,1
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-reg_file_fowarding/test.s:10
+   addi $3, $0, 2
+   8:	20030002 	addi	v1,zero,2
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-reg_file_fowarding/test.s:11
+   add $4, $1, $1
+   c:	00212020 	add	a0,at,at

@@ -11,6 +11,8 @@
 #include "config.h"
 #include "control.h"
 
+class LoadStoreQueue;
+
 struct iq_instr
 {
     uint64_t seq;
@@ -26,7 +28,8 @@ struct iq_instr
     control_t control;
 
     int rob_index; // Index in the reorder buffer
-    int lsq_index;
+    int load_index;
+    int store_index;
     bool rs_ready;
     bool rt_ready;
 };
@@ -41,7 +44,7 @@ class InstructionQueue
         bool empty() const { return iq.empty(); }
         bool add(iq_instr instr);
         bool remove(int index);
-        int get_oldest_ready();
+        int get_oldest_ready(LoadStoreQueue &lsq);
         void broadcast_ready(int phys_reg);
         void squash(uint64_t branch_seq);
         iq_instr get(int index);

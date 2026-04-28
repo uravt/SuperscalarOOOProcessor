@@ -6,6 +6,7 @@
 #include <vector>
 
 #include "memory.h"
+#include "memory_ooo.h"
 #include "regfile.h"
 #include "ALU.h"
 #include "control.h"
@@ -13,7 +14,6 @@
 #include "instruction_queue.h"
 #include "prf.h"
 #include "functional_units.h"
-#include "non_blocking_cache.h"
 #include "load_store_queue.h"
 
 class ProcessorOOO
@@ -22,7 +22,7 @@ private:
     int opt_level;
     ALU alu;
     control_t control;
-    Memory *memory;
+    MemoryOOO *memory;
 
     // Pipeline registers for OOO: Fetch -> Decode -> Rename -> Issue -> Dispatch -> Execute -> Writeback -> Commit
 
@@ -51,33 +51,35 @@ private:
         bool in_use;
     };
 
-    std::string toString(const ID_RN& stage) {
-    if (!stage.in_use) return "ID_RN: Not in use";
+    std::string toString(const ID_RN &stage)
+    {
+        if (!stage.in_use)
+            return "ID_RN: Not in use";
 
-    std::stringstream ss;
-    ss << "=== ID_RN Stage ===" << "\n";
-    ss << "PC:         0x" << std::hex << std::setw(8) << std::setfill('0') << stage.pc << std::dec << "\n";
-    ss << "Opcode:     0x" << std::hex << (int)stage.opcode << " | Funct: 0x" << (int)stage.funct << std::dec << "\n";
-    
-    ss << "Registers:  rs: " << (int)stage.rs 
-       << " (" << (stage.reads_rs ? "R" : "-") << "), "
-       << "rt: " << (int)stage.rt 
-       << " (" << (stage.reads_rt ? "R" : "-") << "), "
-       << "rd: " << (int)stage.rd << "\n";
+        std::stringstream ss;
+        ss << "=== ID_RN Stage ===" << "\n";
+        ss << "PC:         0x" << std::hex << std::setw(8) << std::setfill('0') << stage.pc << std::dec << "\n";
+        ss << "Opcode:     0x" << std::hex << (int)stage.opcode << " | Funct: 0x" << (int)stage.funct << std::dec << "\n";
 
-    ss << "Data:       Read1: " << stage.read_data_1 
-       << " | Read2: " << stage.read_data_2 << "\n";
-    
-    ss << "Imm:        0x" << std::hex << stage.imm 
-       << " | Addr: 0x" << stage.addr << std::dec << "\n";
-       
-    ss << "Shamt:      " << (int)stage.shamt << "\n";
-    
-    // Note: This assumes your control_t has its own logic or you just want a placeholder
-    ss << "Control:    [Mapped]"; 
-    
-    return ss.str();
-}
+        ss << "Registers:  rs: " << (int)stage.rs
+           << " (" << (stage.reads_rs ? "R" : "-") << "), "
+           << "rt: " << (int)stage.rt
+           << " (" << (stage.reads_rt ? "R" : "-") << "), "
+           << "rd: " << (int)stage.rd << "\n";
+
+        ss << "Data:       Read1: " << stage.read_data_1
+           << " | Read2: " << stage.read_data_2 << "\n";
+
+        ss << "Imm:        0x" << std::hex << stage.imm
+           << " | Addr: 0x" << stage.addr << std::dec << "\n";
+
+        ss << "Shamt:      " << (int)stage.shamt << "\n";
+
+        // Note: This assumes your control_t has its own logic or you just want a placeholder
+        ss << "Control:    [Mapped]";
+
+        return ss.str();
+    }
 
     // Pipeline register instances
     IF_ID if_id_buffer[config::PIPELINE_WIDTH];
@@ -116,7 +118,7 @@ private:
     void perform_squash();
 
 public:
-    ProcessorOOO(Memory *mem)
+    ProcessorOOO(MemoryOOO *mem)
     {
         prf.pc = 0;
         memory = mem;

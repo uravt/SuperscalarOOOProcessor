@@ -1,0 +1,65 @@
+
+bin/MIPSPipeline-load_use.mips:     file format elf32-tradlittlemips
+
+
+Disassembly of section .text:
+
+00000000 <__start>:
+__start():
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-load_use/test.s:8
+	.align	2
+	.globl	__start
+	.ent	__start
+	.type	__start, @function
+__start:
+    addi $1, $0, 1
+   0:	20010001 	addi	at,zero,1
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-load_use/test.s:9
+    sw $1, 0($0)
+   4:	ac010000 	sw	at,0(zero)
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-load_use/test.s:10
+    lw $2, 0($0)
+   8:	8c020000 	lw	v0,0(zero)
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-load_use/test.s:11
+    add $3, $2, $2
+   c:	00421820 	add	v1,v0,v0
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-load_use/test.s:12
+    sw $3, 0($0)
+  10:	ac030000 	sw	v1,0(zero)
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-load_use/test.s:13
+    lw $4, 0($0)
+  14:	8c040000 	lw	a0,0(zero)
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-load_use/test.s:14
+    addi $5, $4, 1
+  18:	20850001 	addi	a1,a0,1
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-load_use/test.s:15
+    sw $5, 0($0)
+  1c:	ac050000 	sw	a1,0(zero)
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-load_use/test.s:16
+    lw $6, 0($0)
+  20:	8c060000 	lw	a2,0(zero)
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-load_use/test.s:17
+    addi $6, $5, 1
+  24:	20a60001 	addi	a2,a1,1
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-load_use/test.s:18
+    sw $6, 0($0)
+  28:	ac060000 	sw	a2,0(zero)
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-load_use/test.s:19
+    lw $7, 0($0)
+  2c:	8c070000 	lw	a3,0(zero)
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-load_use/test.s:20
+    sw $6, 0($7)
+  30:	ace60000 	sw	a2,0(a3)
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-load_use/test.s:21
+    lw $8, 0($7)
+  34:	8ce80000 	lw	t0,0(a3)
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-load_use/test.s:22
+    beq $8, $8, endlabel
+  38:	11080002 	beq	t0,t0,44 <endlabel>
+  3c:	00000000 	nop
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-load_use/test.s:23
+    addi $10, $10, 1
+  40:	214a0001 	addi	t2,t2,1
+
+00000044 <endlabel>:
+	...

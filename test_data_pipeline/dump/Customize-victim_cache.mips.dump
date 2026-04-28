@@ -1,0 +1,67 @@
+
+bin/Customize-victim_cache.mips:     file format elf32-tradlittlemips
+
+
+Disassembly of section .text:
+
+00000000 <__start>:
+__start():
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-victim_cache/test.s:8
+   .align	2
+   .globl	__start
+   .ent	__start
+   .type	__start, @function
+__start:
+    addi $5, $0, 10
+   0:	2005000a 	addi	a1,zero,10
+
+00000004 <outer_loop>:
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-victim_cache/test.s:10
+outer_loop:
+    addi $8, $0, 5
+   4:	20080005 	addi	t0,zero,5
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-victim_cache/test.s:11
+    addi $9, $0, 10
+   8:	2009000a 	addi	t1,zero,10
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-victim_cache/test.s:12
+    addi $30, $0, 0x4000
+   c:	201e4000 	addi	s8,zero,16384
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-victim_cache/test.s:13
+    sll $30, $30, 2
+  10:	001ef080 	sll	s8,s8,0x2
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-victim_cache/test.s:14
+    addi $31, $30, 0
+  14:	23df0000 	addi	ra,s8,0
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-victim_cache/test.s:15
+    addi $4, $0, 9
+  18:	20040009 	addi	a0,zero,9
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-victim_cache/test.s:16
+    addi $6, $0, 0x800
+  1c:	20060800 	addi	a2,zero,2048
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-victim_cache/test.s:17
+    sll $6, $6, 4
+  20:	00063100 	sll	a2,a2,0x4
+
+00000024 <inner_loop>:
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-victim_cache/test.s:19
+inner_loop:
+    sw $8, 0x7C0($30)
+  24:	afc807c0 	sw	t0,1984(s8)
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-victim_cache/test.s:20
+    add $30, $30, $6
+  28:	03c6f020 	add	s8,s8,a2
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-victim_cache/test.s:21
+    addi $4, $4, -1
+  2c:	2084ffff 	addi	a0,a0,-1
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-victim_cache/test.s:22
+    bne $4, $0, inner_loop
+  30:	1480fffc 	bnez	a0,24 <inner_loop>
+  34:	00000000 	nop
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-victim_cache/test.s:23
+    addi $5, $5, -1
+  38:	20a5ffff 	addi	a1,a1,-1
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-victim_cache/test.s:24
+    bne $5, $0, outer_loop
+  3c:	14a0fff1 	bnez	a1,4 <outer_loop>
+  40:	00000000 	nop
+	...

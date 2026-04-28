@@ -1,0 +1,74 @@
+
+bin/Customize-store_to_load_2.mips:     file format elf32-tradlittlemips
+
+
+Disassembly of section .text:
+
+00000000 <__start>:
+__start():
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-store_to_load_2/test.s:8
+	.align	2
+	.globl	__start
+	.ent	__start
+	.type	__start, @function
+__start:
+    addi $31, $0, 10
+   0:	201f000a 	addi	ra,zero,10
+
+00000004 <loop>:
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-store_to_load_2/test.s:10
+loop:
+    addi $1, $0, 100
+   4:	20010064 	addi	at,zero,100
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-store_to_load_2/test.s:11
+    addi $2, $0, 12768
+   8:	200231e0 	addi	v0,zero,12768
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-store_to_load_2/test.s:12
+    addi $4, $0, 12768
+   c:	200431e0 	addi	a0,zero,12768
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-store_to_load_2/test.s:13
+    addi $6, $0, 12768
+  10:	200631e0 	addi	a2,zero,12768
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-store_to_load_2/test.s:14
+    addi $8, $0, 12768
+  14:	200831e0 	addi	t0,zero,12768
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-store_to_load_2/test.s:15
+    sw $1, 0($2)
+  18:	ac410000 	sw	at,0(v0)
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-store_to_load_2/test.s:16
+    addi $1, $1, 50
+  1c:	20210032 	addi	at,at,50
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-store_to_load_2/test.s:17
+    addi $7, $7, 200
+  20:	20e700c8 	addi	a3,a3,200
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-store_to_load_2/test.s:18
+    addi $9, $9, 100
+  24:	21290064 	addi	t1,t1,100
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-store_to_load_2/test.s:19
+    xor $3, $7, $9
+  28:	00e91826 	xor	v1,a3,t1
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-store_to_load_2/test.s:20
+    addi $10, $10, 250
+  2c:	214a00fa 	addi	t2,t2,250
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-store_to_load_2/test.s:21
+    sw $1, 0($2)
+  30:	ac410000 	sw	at,0(v0)
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-store_to_load_2/test.s:22
+    lw $3, 0($4)
+  34:	8c830000 	lw	v1,0(a0)
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-store_to_load_2/test.s:23
+    lw $5, 0($6)
+  38:	8cc50000 	lw	a1,0(a2)
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-store_to_load_2/test.s:24
+    lw $7, 0($8)
+  3c:	8d070000 	lw	a3,0(t0)
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-store_to_load_2/test.s:25
+    add $9, $3, $7
+  40:	00674820 	add	t1,v1,a3
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-store_to_load_2/test.s:26
+    addi $31, $31, -1
+  44:	23ffffff 	addi	ra,ra,-1
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-store_to_load_2/test.s:27
+    bne $31, $0, loop
+  48:	17e0ffee 	bnez	ra,4 <loop>
+  4c:	00000000 	nop

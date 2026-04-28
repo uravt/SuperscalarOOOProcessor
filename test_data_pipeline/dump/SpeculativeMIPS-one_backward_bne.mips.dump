@@ -1,0 +1,37 @@
+
+bin/SpeculativeMIPS-one_backward_bne.mips:     file format elf32-tradlittlemips
+
+
+Disassembly of section .text:
+
+00000000 <__start>:
+__start():
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/SpeculativeMIPS-one_backward_bne/test.s:8
+  .align	2
+  .globl	__start
+  .ent	__start
+  .type	__start, @function
+__start:
+  addi $1, $0, 500
+   0:	200101f4 	addi	at,zero,500
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/SpeculativeMIPS-one_backward_bne/test.s:9
+  add $2, $0, $0
+   4:	00001020 	add	v0,zero,zero
+
+00000008 <loop>:
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/SpeculativeMIPS-one_backward_bne/test.s:11
+loop:
+  addi $2, $2, 2
+   8:	20420002 	addi	v0,v0,2
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/SpeculativeMIPS-one_backward_bne/test.s:12
+  addi $1, $1, -1
+   c:	2021ffff 	addi	at,at,-1
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/SpeculativeMIPS-one_backward_bne/test.s:13
+  bne $1, $0, loop
+  10:	1420fffd 	bnez	at,8 <loop>
+  14:	00000000 	nop
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/SpeculativeMIPS-one_backward_bne/test.s:14
+  sw $2, 0($0)
+  18:	ac020000 	sw	v0,0(zero)
+loop():
+  1c:	00000000 	nop

@@ -1,0 +1,100 @@
+
+bin/Customize-value_prediction.mips:     file format elf32-tradlittlemips
+
+
+Disassembly of section .text:
+
+00000000 <__start>:
+__start():
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-value_prediction/test.s:8
+   .align	2
+   .globl	__start
+   .ent	__start
+   .type	__start, @function
+__start:
+    addi $5, $0, 2
+   0:	20050002 	addi	a1,zero,2
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-value_prediction/test.s:10
+
+    addi $30, $0, 0x4000
+   4:	201e4000 	addi	s8,zero,16384
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-value_prediction/test.s:11
+    sll $30, $30, 2
+   8:	001ef080 	sll	s8,s8,0x2
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-value_prediction/test.s:12
+    addi $31, $30, 0
+   c:	23df0000 	addi	ra,s8,0
+
+00000010 <outer_loop_sw>:
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-value_prediction/test.s:14
+outer_loop_sw:
+    addi $8, $0, 0x1000
+  10:	20081000 	addi	t0,zero,4096
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-value_prediction/test.s:15
+    addi $4, $0, 8
+  14:	20040008 	addi	a0,zero,8
+
+00000018 <inner_loop_sw>:
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-value_prediction/test.s:17
+inner_loop_sw:
+    sw $8, 0x7C0($30)
+  18:	afc807c0 	sw	t0,1984(s8)
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-value_prediction/test.s:18
+    add $30, $30, $8
+  1c:	03c8f020 	add	s8,s8,t0
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-value_prediction/test.s:19
+    addi $8, $8, 0x1000
+  20:	21081000 	addi	t0,t0,4096
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-value_prediction/test.s:20
+    addi $4, $4, -1
+  24:	2084ffff 	addi	a0,a0,-1
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-value_prediction/test.s:21
+    bne $4, $0, inner_loop_sw
+  28:	1480fffb 	bnez	a0,18 <inner_loop_sw>
+  2c:	00000000 	nop
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-value_prediction/test.s:22
+    addi $5, $5, -1
+  30:	20a5ffff 	addi	a1,a1,-1
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-value_prediction/test.s:23
+    bne $5, $0, outer_loop_sw
+  34:	14a0fff6 	bnez	a1,10 <outer_loop_sw>
+  38:	00000000 	nop
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-value_prediction/test.s:25
+
+    addi $4, $0, 7
+  3c:	20040007 	addi	a0,zero,7
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-value_prediction/test.s:26
+    lw $9, 0x7C0($31)
+  40:	8fe907c0 	lw	t1,1984(ra)
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-value_prediction/test.s:27
+    add $11, $31, $9
+  44:	03e95820 	add	t3,ra,t1
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-value_prediction/test.s:28
+    addi $4, $4, -1
+  48:	2084ffff 	addi	a0,a0,-1
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-value_prediction/test.s:29
+    lw $9, 0x7C0($11)
+  4c:	8d6907c0 	lw	t1,1984(t3)
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-value_prediction/test.s:30
+    add $12, $11, $9
+  50:	01696020 	add	t4,t3,t1
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-value_prediction/test.s:31
+    addi $4, $4, -1
+  54:	2084ffff 	addi	a0,a0,-1
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-value_prediction/test.s:32
+    lw $9, 0x7C0($12)
+  58:	8d8907c0 	lw	t1,1984(t4)
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-value_prediction/test.s:33
+    add $13, $12, $9
+  5c:	01896820 	add	t5,t4,t1
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-value_prediction/test.s:34
+    addi $4, $4, -1
+  60:	2084ffff 	addi	a0,a0,-1
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-value_prediction/test.s:35
+    lw $9, 0x7C0($13)
+  64:	8da907c0 	lw	t1,1984(t5)
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-value_prediction/test.s:36
+    add $14, $12, $9
+  68:	01897020 	add	t6,t4,t1
+inner_loop_sw():
+  6c:	00000000 	nop

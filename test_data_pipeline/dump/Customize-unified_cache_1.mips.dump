@@ -1,0 +1,50 @@
+
+bin/Customize-unified_cache_1.mips:     file format elf32-tradlittlemips
+
+
+Disassembly of section .text:
+
+00000000 <__start>:
+__start():
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-unified_cache_1/test.s:8
+	.align	2
+	.globl	__start
+	.ent	__start
+	.type	__start, @function
+__start:
+   addi $8, $0, 1001
+   0:	200803e9 	addi	t0,zero,1001
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-unified_cache_1/test.s:9
+   sw $8, 24($1)
+   4:	ac280018 	sw	t0,24(at)
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-unified_cache_1/test.s:10
+   addi $9, $9, 5
+   8:	21290005 	addi	t1,t1,5
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-unified_cache_1/test.s:12
+   #addi $9, $10, 1
+   beq $9, $10, label1
+   c:	112a0004 	beq	t1,t2,20 <label1>
+  10:	00000000 	nop
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-unified_cache_1/test.s:13
+   addi $10, $10, 3
+  14:	214a0003 	addi	t2,t2,3
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-unified_cache_1/test.s:14
+   addi $8, $8, 1
+  18:	21080001 	addi	t0,t0,1
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-unified_cache_1/test.s:15
+   addi $9, $9, 2
+  1c:	21290002 	addi	t1,t1,2
+
+00000020 <label1>:
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-unified_cache_1/test.s:17
+label1:
+   addi $10, $10, 4
+  20:	214a0004 	addi	t2,t2,4
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-unified_cache_1/test.s:18
+   sll $11, $10, 2
+  24:	000a5880 	sll	t3,t2,0x2
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/Customize-unified_cache_1/test.s:19
+   addi $12, $12, 8
+  28:	218c0008 	addi	t4,t4,8
+label1():
+  2c:	00000000 	nop

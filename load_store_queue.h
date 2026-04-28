@@ -10,6 +10,8 @@
 
 #include "config.h"
 #include "prf.h"
+#include "memory.h"
+#include "memory_ooo.h"
 
 struct LoadEntry
 {
@@ -40,7 +42,8 @@ struct StoreEntry
     bool addr_ready;
 
     int src;
-    int src_ready; 
+    int src_ready;
+    uint32_t data;
 
     bool byte;
     bool halfword;
@@ -100,8 +103,19 @@ public:
     void pop_store_head();
 
     void squash(uint64_t branch_seq);
-    
+
     void broadcast_ready(int phys_reg);
+
+    // Result of evicting committed stores. If a store wrote into the
+    // instruction-memory range [0, smc_text_end), SMC was detected and the
+    // caller must squash everything seq > smc_seq and re-fetch from smc_pc + 4.
+    struct EvictResult {
+        bool smc_detected;
+        uint64_t smc_seq;
+        uint32_t smc_pc;
+    };
+    EvictResult evict_commited_stores(MemoryOOO *mem, PhysicalRegisterFile &prf,
+                                      uint32_t smc_text_end);
 
     std::string to_string() const
     {

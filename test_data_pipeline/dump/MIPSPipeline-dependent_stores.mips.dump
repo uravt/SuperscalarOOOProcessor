@@ -1,0 +1,61 @@
+
+bin/MIPSPipeline-dependent_stores.mips:     file format elf32-tradlittlemips
+
+
+Disassembly of section .text:
+
+00000000 <__start>:
+__start():
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-dependent_stores/test.s:8
+	.align	2
+	.globl	__start
+	.ent	__start
+	.type	__start, @function
+__start:
+   addi $1, $0, 1
+   0:	20010001 	addi	at,zero,1
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-dependent_stores/test.s:9
+   sw $1, 0($0)
+   4:	ac010000 	sw	at,0(zero)
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-dependent_stores/test.s:10
+   lw $10, 0($0)
+   8:	8c0a0000 	lw	t2,0(zero)
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-dependent_stores/test.s:11
+   nop
+   c:	00000000 	nop
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-dependent_stores/test.s:12
+   sw $10, 4($0)
+  10:	ac0a0004 	sw	t2,4(zero)
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-dependent_stores/test.s:13
+   lw $2, 4($0)
+  14:	8c020004 	lw	v0,4(zero)
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-dependent_stores/test.s:14
+   add $1, $1, $1
+  18:	00210820 	add	at,at,at
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-dependent_stores/test.s:15
+   sw $2, 8($0)
+  1c:	ac020008 	sw	v0,8(zero)
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-dependent_stores/test.s:16
+   lw $3, 8($0)
+  20:	8c030008 	lw	v1,8(zero)
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-dependent_stores/test.s:17
+   add $1, $1, $1
+  24:	00210820 	add	at,at,at
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-dependent_stores/test.s:18
+   sw $1, 0($0)
+  28:	ac010000 	sw	at,0(zero)
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-dependent_stores/test.s:19
+   lw $4, 0($0)
+  2c:	8c040000 	lw	a0,0(zero)
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-dependent_stores/test.s:20
+   add $1, $1, $1
+  30:	00210820 	add	at,at,at
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-dependent_stores/test.s:21
+   add $2, $2, $2
+  34:	00421020 	add	v0,v0,v0
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-dependent_stores/test.s:22
+   sw $1, 4($0)
+  38:	ac010004 	sw	at,4(zero)
+/home/uravt/Coding/CS4330/cs4330-sp26-project-team_1/test_data_pipeline/MIPSPipeline-dependent_stores/test.s:23
+   lw $5, 4($0)
+  3c:	8c050004 	lw	a1,4(zero)

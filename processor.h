@@ -1,4 +1,5 @@
 #include "memory.h"
+#include "memory_ooo.h"
 #include "regfile.h"
 #include "ALU.h"
 #include "control.h"
@@ -11,6 +12,7 @@ class Processor
 {
 private:
     int opt_level;
+    MemoryOOO memory_ooo;
     ProcessorOOO ooo;
 
     ALU alu;
@@ -150,7 +152,7 @@ private:
     void push_hazard_regs(int _reg);
 
 public:
-    Processor(Memory *mem) : ooo(mem)
+    Processor(Memory *mem) : memory_ooo(), ooo(&memory_ooo)
     {
         regfile.pc = 0;
         memory = mem;
@@ -190,6 +192,10 @@ public:
     void initialize(int opt_level);
 
     void setEndPC(uint32_t e) { ooo.setEndPC(e); }
+
+    // Mirror a word from the loader into MemoryOOO so the OOO pipeline sees the program.
+    void loadWordOOO(uint32_t addr, uint32_t word) { memory_ooo.loadWord(addr, word); }
+    void setOOOOptLevel(int level) { memory_ooo.setOptLevel(level); }
 
     // Advances the processor to an appropriate state every cycle
     void advance();
