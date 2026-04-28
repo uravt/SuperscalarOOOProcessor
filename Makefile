@@ -18,7 +18,7 @@ $(EXE_NAME): $(OBJS)
 	$(CXX) $(CXXFLAGS) -o $@ $^
 
 processor.o: processor.cpp regfile.h ALU.h control.h processor.h processorOOO.h
-processorOOO.o: processorOOO.cpp processorOOO.h regfile.h ALU.h control.h memory.h memory_ooo.h reorder_buffer.h prf.h instruction_queue.h load_store_queue.h functional_units.h config.h
+processorOOO.o: processorOOO.cpp processorOOO.h regfile.h ALU.h control.h memory.h memory_ooo.h reorder_buffer.h prf.h instruction_queue.h load_store_queue.h functional_units.h config.h branch_predictor.h
 reorder_buffer.o: reorder_buffer.cpp reorder_buffer.h load_store_queue.h prf.h config.h
 instruction_queue.o: instruction_queue.cpp instruction_queue.h load_store_queue.h control.h config.h
 load_store_queue.o: load_store_queue.cpp load_store_queue.h prf.h config.h

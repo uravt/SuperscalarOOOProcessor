@@ -15,6 +15,7 @@
 #include "prf.h"
 #include "functional_units.h"
 #include "load_store_queue.h"
+#include "branch_predictor.h"
 
 class ProcessorOOO
 {
@@ -31,6 +32,8 @@ private:
         uint32_t pc;
         uint32_t instruction;
         bool in_use;
+        bool predicted_taken;
+        uint32_t predicted_target;
     };
 
     struct ID_RN
@@ -49,6 +52,9 @@ private:
 
         control_t control;
         bool in_use;
+
+        bool predicted_taken;
+        uint32_t predicted_target;
     };
 
     std::string toString(const ID_RN &stage)
@@ -92,6 +98,7 @@ private:
     LoadStoreQueue lsq;
     NonBlockingCache i_nbc;
     NonBlockingCache d_nbc;
+    BranchPredictor bp;
 
     bool flush_pipeline = false;
     bool stall = false;

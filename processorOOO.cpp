@@ -88,7 +88,19 @@ void ProcessorOOO::fetch_stage() // IO
         reg.pc = prf.pc;
         reg.in_use = true;
 
-        prf.pc += 4;
+        bool taken = bp.predictBranch(reg.pc);
+        BTBResult lookup = bp.get_target(prf.pc);
+
+        if(taken && lookup.hit) {
+            prf.pc = lookup.targetPC;
+            reg.predicted_taken = true;
+            reg.predicted_target = prf.pc;
+        } else {
+            prf.pc += 4;
+            reg.predicted_taken = false;
+            reg.predicted_target = prf.pc;
+        }
+        
     }
 }
 void ProcessorOOO::decode_stage() // IO
@@ -159,7 +171,8 @@ void ProcessorOOO::decode_stage() // IO
         reg.addr = inst & 0x3ffffff;
         update_reg_src_usage(reg.opcode, reg.funct, reg);
         reg.in_use = true;
-        
+        reg.predicted_taken = to_decode.predicted_taken;
+        reg.predicted_target = to_decode.predicted_target;
 
         to_decode.in_use = false;
     }
@@ -201,7 +214,6 @@ void ProcessorOOO::rename_stage() // IO
         }
 
         uint64_t seq = next_seq++;
-
         //add to lsq
         int load_index = -1;
         int store_index = -1;
@@ -249,6 +261,7 @@ void ProcessorOOO::rename_stage() // IO
         instr.control = id_rn.control;
         instr.load_index = load_index;
         instr.store_index = store_index;
+        instr.predicted_taken = id_rn.predicted_taken;
         iq.add(instr);
 
         id_rn.in_use = false;
@@ -297,6 +310,14 @@ void ProcessorOOO::execute_stage() // OOO
                 entry.addr = alu_result;
                 entry.addr_ready = true;
 
+                // If an older store to this same address has its addr but not
+                // its data yet, we can't safely forward (try_forward would skip
+                // it and fall through to stale L1). Stall the load in the FU
+                // until the store's data is broadcast.
+                if(lsq.has_pending_forward(entry.seq, entry.addr)) {
+                    continue;
+                }
+
                 uint32_t val = 0;
                 if(lsq.try_forward(entry.seq, val, prf)) { //store to load forwarding
                     load_result = val;
@@ -325,32 +346,55 @@ void ProcessorOOO::execute_stage() // OOO
                                 ((instr.control.bne && !alu_zero) ||
                                  (!instr.control.bne && alu_zero));
 
-            bool jump = instr.control.jump || instr.control.jump_reg;
+            if(instr.control.branch) {
+                bp.updatePredictor(instr.pc, branch_taken);
+            }
 
+            bool jump = instr.control.jump || instr.control.jump_reg;
+            // Default to fall-through so a predicted-taken-but-not-taken branch
+            // squashes to instr.pc + 4 instead of uninitialized memory.
+            uint32_t target = instr.pc + 4;
             if (branch_taken || jump)
             {
-                uint32_t target;
                 if (branch_taken)
                 {
                     target = instr.pc + 4 + (imm << 2);
+                    bp.update_btb(instr.pc, target, branch_taken);
                 }
                 else if (instr.control.jump)
                 {
                     target = ((instr.pc + 4) & 0xf0000000) | (instr.addr << 2);
+                    bp.update_btb(instr.pc, target, branch_taken);
                 }
                 else
                 {
                     target = prf.read(instr.rs);
                 }
+            }
 
-                // Track oldest mispredicted branch across all FUs this cycle
-                if (!squash_pending || instr.seq < squash_seq)
-                {
-                    squash_pending = true;
-                    squash_seq = instr.seq;
-                    squash_target_pc = target;
+
+            bool mispredicted = false;
+
+            if (instr.control.branch) {
+                // Direction was wrong, OR we jumped to the wrong place
+                if (instr.predicted_taken != branch_taken || (branch_taken && instr.predicted_target != target)) {
+                    mispredicted = true;
+                }
+            } else if (jump) {
+                // Jumps are always taken, but BTB might have missed or given wrong address (e.g. jr $ra)
+                if (instr.predicted_target != target) {
+                    mispredicted = true;
                 }
             }
+
+            if (mispredicted) {
+                if (!squash_pending || instr.seq < squash_seq) {
+                    squash_pending = true;
+                    squash_seq = instr.seq;
+                    squash_target_pc = target; // or PC+4 if we wrongly predicted a jump
+                }
+            }
+
 
             unit.result = !instr.control.mem_read ? alu_result : load_result;
             unit.result_instr = instr;

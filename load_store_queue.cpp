@@ -142,6 +142,22 @@ bool LoadStoreQueue::has_unresolved_earlier_store(uint64_t load_seq) const
     return false;
 }
 
+bool LoadStoreQueue::has_pending_forward(uint64_t load_seq, uint32_t load_addr) const
+{
+    // After the load's address is known, check whether any older store to the
+    // same address still has its data unready. If so, try_forward would skip
+    // it (because of !src_ready) and silently forward from a stale older
+    // store or fall through to L1 — both wrong. Caller should stall the load.
+    for (int i = 0; i < sq_size; i++)
+    {
+        int idx = (sq_head + i) % config::STORE_QUEUE_SIZE;
+        const StoreEntry &s = sq[idx];
+        if (s.seq >= load_seq) break;
+        if (s.addr_ready && s.addr == load_addr && !s.src_ready) return true;
+    }
+    return false;
+}
+
 bool LoadStoreQueue::load_head_completed() const
 {
     return lq_size > 0 && lq[lq_head].completed;

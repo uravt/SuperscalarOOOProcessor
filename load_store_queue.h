@@ -96,6 +96,7 @@ public:
 
     bool try_forward(uint64_t load_seq, uint32_t &value, PhysicalRegisterFile &prf) const;
     bool has_unresolved_earlier_store(uint64_t load_seq) const;
+    bool has_pending_forward(uint64_t load_seq, uint32_t load_addr) const;
 
     bool load_head_completed() const;
     bool store_head_completed() const;

@@ -95,8 +95,11 @@ void Processor::single_cycle_processor_advance() {
     uint32_t alu_zero = 0;
 
     uint32_t alu_result = alu.execute(operand_1, operand_2, alu_zero);
-    
-    
+    if (regfile.pc == 0x828 || regfile.pc == 0x7f4) {
+        fprintf(stderr, "[IO PC=0x%x] op1(rs=%d)=%u op2(rt=%d)=%u result=%u\n",
+            regfile.pc - 4, rs, operand_1, rt, operand_2, alu_result);
+    }
+
     uint32_t read_data_mem = 0;
     uint32_t write_data_mem = 0;
 
