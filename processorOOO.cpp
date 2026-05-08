@@ -4,7 +4,6 @@
 #include <iostream>
 #include "processorOOO.h"
 
-
 using namespace std;
 
 #define ENABLE_DEBUG
@@ -61,17 +60,31 @@ void ProcessorOOO::out_of_order_advance()
     fetch_stage();
     // DEBUG(fprintf(stderr, "[advance] pc=%u if_id.in_use=%d id_rn.in_use=%d rob.full=%d iq.full=%d\n",
     //     regfile.pc, if_id_buffer[0].in_use, id_rn_buffer[0].in_use, rob.full(), iq.full());)
+    cout << "Commited Instrs: " << commited_instrs << "\n";
 }
 
 void ProcessorOOO::fetch_stage() // IO
 {
-    for (int i = 0; i < config::PIPELINE_WIDTH; i++)
+    // Compact if_id so leftover in_use entries sit at low indices and new fetches
+    // append after them. Without this, holes left by an early-return on a predicted
+    // branch get refilled out of program order in later cycles, mangling rename order.
+    int wfid = 0;
+    for (int r = 0; r < config::PIPELINE_WIDTH; r++)
+    {
+        if (if_id_buffer[r].in_use)
+        {
+            if (wfid != r)
+            {
+                if_id_buffer[wfid] = if_id_buffer[r];
+                if_id_buffer[r].in_use = false;
+            }
+            wfid++;
+        }
+    }
+
+    for (int i = wfid; i < config::PIPELINE_WIDTH; i++)
     {
         IF_ID &reg = if_id_buffer[i];
-        if (reg.in_use)
-        {
-            continue;
-        }
 
         if (prf.pc >= end_pc)
         {
@@ -85,8 +98,20 @@ void ProcessorOOO::fetch_stage() // IO
         }
 
         reg.instruction = inst;
-        reg.pc = prf.pc;
         reg.in_use = true;
+        reg.pc = prf.pc;
+        reg.branch_taken = false;
+
+        if(bp.is_branch(reg.pc)) {
+            BTBResult res = bp.predict(reg.pc);
+            reg.branch_taken = res.taken;
+            if(res.taken) {
+                prf.pc = res.target;
+            } else {
+                prf.pc += 4;
+            }
+            return;
+        }
 
         prf.pc += 4;
     }
@@ -97,9 +122,12 @@ void ProcessorOOO::decode_stage() // IO
     // program order. Without this, a partial rename stall leaves holes that
     // decode refills with newer instructions, breaking program order at rename.
     int w = 0;
-    for (int r = 0; r < config::PIPELINE_WIDTH; r++) {
-        if (id_rn_buffer[r].in_use) {
-            if (w != r) {
+    for (int r = 0; r < config::PIPELINE_WIDTH; r++)
+    {
+        if (id_rn_buffer[r].in_use)
+        {
+            if (w != r)
+            {
                 id_rn_buffer[w] = id_rn_buffer[r];
                 id_rn_buffer[r].in_use = false;
             }
@@ -110,9 +138,12 @@ void ProcessorOOO::decode_stage() // IO
     // Same for if_id: a partial decode stall must not let fetch interleave
     // newer instructions ahead of older ones in slot order.
     int wf = 0;
-    for (int r = 0; r < config::PIPELINE_WIDTH; r++) {
-        if (if_id_buffer[r].in_use) {
-            if (wf != r) {
+    for (int r = 0; r < config::PIPELINE_WIDTH; r++)
+    {
+        if (if_id_buffer[r].in_use)
+        {
+            if (wf != r)
+            {
                 if_id_buffer[wf] = if_id_buffer[r];
                 if_id_buffer[r].in_use = false;
             }
@@ -159,7 +190,7 @@ void ProcessorOOO::decode_stage() // IO
         reg.addr = inst & 0x3ffffff;
         update_reg_src_usage(reg.opcode, reg.funct, reg);
         reg.in_use = true;
-        
+        reg.branch_taken = to_decode.branch_taken;
 
         to_decode.in_use = false;
     }
@@ -176,9 +207,10 @@ void ProcessorOOO::rename_stage() // IO
             continue;
 
         if (rob.full() || iq.full() ||
-            (id_rn.control.mem_read  && lsq.lq_full()) ||
-            (id_rn.control.mem_write && lsq.sq_full())) {
-            break; //we want to stall, potentially more code needed
+            (id_rn.control.mem_read && lsq.lq_full()) ||
+            (id_rn.control.mem_write && lsq.sq_full()))
+        {
+            break; // we want to stall, potentially more code needed
         }
 
         int dest_arch_reg = id_rn.control.reg_dest ? id_rn.rd : id_rn.rt;
@@ -202,10 +234,11 @@ void ProcessorOOO::rename_stage() // IO
 
         uint64_t seq = next_seq++;
 
-        //add to lsq
+        // add to lsq
         int load_index = -1;
         int store_index = -1;
-        if(id_rn.control.mem_read) { //load
+        if (id_rn.control.mem_read)
+        { // load
             LoadEntry entry{};
             entry.seq = seq;
             entry.pc = id_rn.pc;
@@ -213,7 +246,9 @@ void ProcessorOOO::rename_stage() // IO
             entry.byte = id_rn.control.byte;
             entry.halfword = id_rn.control.halfword;
             load_index = lsq.add_load(entry);
-        } else if(id_rn.control.mem_write) { //store
+        }
+        else if (id_rn.control.mem_write)
+        { // store
             StoreEntry entry{};
             entry.src = rt_phys_reg;
             entry.src_ready = rt_ready;
@@ -228,8 +263,10 @@ void ProcessorOOO::rename_stage() // IO
         int rob_index = rob.insert(seq, dest_arch_reg, new_phys_reg, old_phys_reg, load_index, store_index);
 
         // backfill rob_index in the LSQ entry for display/debug
-        if(load_index != -1)  lsq.get_load(load_index).rob_index = rob_index;
-        if(store_index != -1) lsq.get_store(store_index).rob_index = rob_index;
+        if (load_index != -1)
+            lsq.get_load(load_index).rob_index = rob_index;
+        if (store_index != -1)
+            lsq.get_store(store_index).rob_index = rob_index;
 
         // add instruction to IQ
         iq_instr instr{};
@@ -249,6 +286,7 @@ void ProcessorOOO::rename_stage() // IO
         instr.control = id_rn.control;
         instr.load_index = load_index;
         instr.store_index = store_index;
+        instr.branch_taken = id_rn.branch_taken;
         iq.add(instr);
 
         id_rn.in_use = false;
@@ -292,43 +330,49 @@ void ProcessorOOO::execute_stage() // OOO
             uint32_t alu_result = unit.alu.execute(operand_1, operand_2, alu_zero);
 
             uint32_t load_result = 0;
-            if(instr.control.mem_read) { //loads
+            if (instr.control.mem_read)
+            { // loads
                 LoadEntry &entry = lsq.get_load(instr.load_index);
                 entry.addr = alu_result;
                 entry.addr_ready = true;
 
                 uint32_t val = 0;
-                if(lsq.try_forward(entry.seq, val, prf)) { //store to load forwarding
+                if (lsq.try_forward(entry.seq, val, prf))
+                { // store to load forwarding
                     load_result = val;
                     lsq.mark_load_complete(entry.seq);
                 }
-                else if(memory->probeL1(entry.addr, val)) { //L1 hit
+                else if (memory->probeL1(entry.addr, val))
+                { // L1 hit
                     load_result = val;
                     lsq.mark_load_complete(entry.seq);
-                } else { //L1 miss — route through NBC, which models full miss latency
-                         //and walks the hierarchy when the countdown elapses
+                }
+                else
+                { // L1 miss — route through NBC, which models full miss latency
+                  // and walks the hierarchy when the countdown elapses
                     bool success = d_nbc.allocateMSHR(entry.addr, instr.rob_index, instr.rd, instr.seq);
-                    if(success) {
+                    if (success)
+                    {
                         unit.ready = true;
                         unit.has_result = false;
                     }
                     continue;
                 }
-            } else if(instr.control.mem_write) { //stores
+            }
+            else if (instr.control.mem_write)
+            { // stores
                 StoreEntry &entry = lsq.get_store(instr.store_index);
                 entry.addr = alu_result;
                 entry.addr_ready = true;
                 entry.data = prf.read(entry.src);
             }
 
-            bool branch_taken = instr.control.branch &&
-                                ((instr.control.bne && !alu_zero) ||
-                                 (!instr.control.bne && alu_zero));
-
-            bool jump = instr.control.jump || instr.control.jump_reg;
-
-            if (branch_taken || jump)
-            {
+            //branch instrs
+            if(instr.control.branch || instr.control.jump || instr.control.jump_reg) {
+                //calculate target, set prf.pc to target, update bp, squash
+                bool branch_taken = ((instr.control.bne && !alu_zero) ||(!instr.control.bne && alu_zero));
+                bool jump = instr.control.jump || instr.control.jump_reg;
+                
                 uint32_t target;
                 if (branch_taken)
                 {
@@ -338,19 +382,60 @@ void ProcessorOOO::execute_stage() // OOO
                 {
                     target = ((instr.pc + 4) & 0xf0000000) | (instr.addr << 2);
                 }
-                else
+                else if(instr.control.jump_reg)
                 {
                     target = prf.read(instr.rs);
                 }
+                else //branch not taken
+                { 
+                    target = instr.pc + 4;
+                }
 
-                // Track oldest mispredicted branch across all FUs this cycle
-                if (!squash_pending || instr.seq < squash_seq)
-                {
-                    squash_pending = true;
-                    squash_seq = instr.seq;
-                    squash_target_pc = target;
+                branch_taken = branch_taken || jump; //jumps count as a taken branch
+                bool target_match = bp.target_match(instr.pc, target);
+                bp.update(branch_taken, instr.pc, target);
+
+                if(branch_taken != instr.branch_taken || !target_match) { //misprediction, need to squash
+                    // Track oldest mispredicted branch across all FUs this cycle
+                    if (!squash_pending || instr.seq < squash_seq)
+                    {
+                        squash_pending = true;
+                        squash_seq = instr.seq;
+                        squash_target_pc = target;
+                    }
                 }
             }
+
+            // bool branch_taken = instr.control.branch &&
+            //                     ((instr.control.bne && !alu_zero) ||
+            //                      (!instr.control.bne && alu_zero));
+
+            // bool jump = instr.control.jump || instr.control.jump_reg;
+
+            // if (branch_taken || jump)
+            // {
+            //     uint32_t target;
+            //     if (branch_taken)
+            //     {
+            //         target = instr.pc + 4 + (imm << 2);
+            //     }
+            //     else if (instr.control.jump)
+            //     {
+            //         target = ((instr.pc + 4) & 0xf0000000) | (instr.addr << 2);
+            //     }
+            //     else
+            //     {
+            //         target = prf.read(instr.rs);
+            //     }
+
+            //     // Track oldest mispredicted branch across all FUs this cycle
+            //     if (!squash_pending || instr.seq < squash_seq)
+            //     {
+            //         squash_pending = true;
+            //         squash_seq = instr.seq;
+            //         squash_target_pc = target;
+            //     }
+            // }
 
             unit.result = !instr.control.mem_read ? alu_result : load_result;
             unit.result_instr = instr;
@@ -364,11 +449,12 @@ void ProcessorOOO::execute_stage() // OOO
         perform_squash();
     }
 }
-void ProcessorOOO::memory_stage() {
+void ProcessorOOO::memory_stage()
+{
     i_nbc.checkReady();
     d_nbc.checkReady();
 
-    for (auto &r : d_nbc.readyResponses) //data cache found ready instructions. wake up components
+    for (auto &r : d_nbc.readyResponses) // data cache found ready instructions. wake up components
     {
         prf.write(r.reg, r.data);
         iq.broadcast_ready(r.reg);
@@ -377,16 +463,16 @@ void ProcessorOOO::memory_stage() {
     }
     d_nbc.readyResponses.clear();
 
-    //committed stores which can now be written to the cache should be evicted from the sq
+    // committed stores which can now be written to the cache should be evicted from the sq
     //(usually already drained in commit_stage; this picks up any stalled by mem backpressure)
     auto er = lsq.evict_commited_stores(memory, prf, end_pc);
     if (er.smc_detected &&
-        (!squash_pending || er.smc_seq < squash_seq)) {
+        (!squash_pending || er.smc_seq < squash_seq))
+    {
         squash_pending = true;
         squash_seq = er.smc_seq;
         squash_target_pc = er.smc_pc + 4;
     }
-
 }
 void ProcessorOOO::writeback_stage() // OOO
 {
@@ -417,6 +503,7 @@ void ProcessorOOO::commit_stage() // IO
             break; // as soon as we can't commit we should break
         }
         num_commited++;
+        commited_instrs++;
 
         // Drain just-committed stores to memory now, so that if a store wrote
         // into the instruction-memory range (SMC), we can squash everything
@@ -432,7 +519,6 @@ void ProcessorOOO::commit_stage() // IO
         }
     }
 }
-
 
 void ProcessorOOO::perform_squash()
 {

@@ -67,4 +67,23 @@ echo "======================================================="
 printf "%-20s : %s\n" "Test Name" "$test_name"
 printf "%-20s : %s\n" "Single-Cycle Cycles" "${single_cycles:-ERR/CRASH}"
 printf "%-20s : %s\n" "Pipelined Cycles" "${pipe_cycles:-ERR/CRASH}"
-printf "%-20s"
+
+# IPC / CPI for the pipelined run.
+# -O0 is single-cycle (1 instr/cycle), so its cycle count == dynamic instr count.
+if [[ "$single_cycles" =~ ^[0-9]+$ ]] && [[ "$pipe_cycles" =~ ^[0-9]+$ ]] && [[ "$pipe_cycles" -gt 0 ]]; then
+    ipc=$(awk -v i="$single_cycles" -v c="$pipe_cycles" 'BEGIN{printf "%.4f", i/c}')
+    cpi=$(awk -v i="$single_cycles" -v c="$pipe_cycles" 'BEGIN{printf "%.4f", c/i}')
+    printf "%-20s : %s\n" "Instructions"   "$single_cycles"
+    printf "%-20s : %s\n" "IPC (pipelined)" "$ipc"
+    printf "%-20s : %s\n" "CPI (pipelined)" "$cpi"
+else
+    printf "%-20s : %s\n" "IPC (pipelined)" "N/A"
+    printf "%-20s : %s\n" "CPI (pipelined)" "N/A"
+fi
+
+if [[ "$single_regs" == "$pipe_regs" ]] && [[ -n "$single_regs" ]]; then
+    printf "%-20s : %s\n" "Reg Match" "YES"
+else
+    printf "%-20s : %s\n" "Reg Match" "NO"
+fi
+echo "======================================================="

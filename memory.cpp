@@ -110,6 +110,7 @@ void Cache::replace(uint32_t address, CacheLine newLine, CacheLine &evictedLine)
     newLine.address = address;
     newLine.tag = getTag(address);
     newLine.valid = true;
+    newLine.replBits = 0; // LRU default; first hit will promote via updateReplacementBits
    
     /* Return if replacement already completed. */ 
     for (int w=0; w<assoc; w++) {
@@ -141,7 +142,7 @@ void Cache::invalidateLine(uint32_t address) {
 }
 
 bool Memory::access(uint32_t address, uint32_t &read_data, uint32_t write_data, bool mem_read, bool mem_write) {
-    if (opt_level == 0 || opt_level == 2) {
+    if (opt_level == 0) {
         if (mem_read) {
             read_data = mem[address/4];
         }
