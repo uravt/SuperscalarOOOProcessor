@@ -32,6 +32,8 @@ struct iq_instr
     int store_index;
     bool rs_ready;
     bool rt_ready;
+
+    bool branch_taken;
 };
 
 class InstructionQueue

@@ -15,6 +15,7 @@
 #include "prf.h"
 #include "functional_units.h"
 #include "load_store_queue.h"
+#include "branch_predictor.h"
 
 class ProcessorOOO
 {
@@ -31,6 +32,8 @@ private:
         uint32_t pc;
         uint32_t instruction;
         bool in_use;
+
+        bool branch_taken;
     };
 
     struct ID_RN
@@ -49,6 +52,8 @@ private:
 
         control_t control;
         bool in_use;
+
+        bool branch_taken;
     };
 
     std::string toString(const ID_RN &stage)
@@ -90,6 +95,7 @@ private:
     InstructionQueue iq;
     FunctionalUnits fu;
     LoadStoreQueue lsq;
+    BranchPredictor bp;
     NonBlockingCache i_nbc;
     NonBlockingCache d_nbc;
 
@@ -102,6 +108,8 @@ private:
     uint64_t squash_seq = 0;
     uint32_t squash_target_pc = 0;
     uint32_t end_pc = UINT32_MAX;
+
+    int commited_instrs = 0;
 
     // OOO stage functions
     void fetch_stage();
@@ -135,7 +143,7 @@ public:
         // drained: fetch past end-of-program AND every stage empty.
         if (prf.pc < end_pc)
             return 0;
-        if (!rob.empty() || !fu.empty())
+        if (!rob.empty() || !fu.empty() || !lsq.sq_empty())
             return 0;
         for (int i = 0; i < config::PIPELINE_WIDTH; i++)
         {

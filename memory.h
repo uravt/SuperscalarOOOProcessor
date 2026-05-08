@@ -44,10 +44,12 @@ class Cache {
             return address & (CACHE_LINE_SIZE-1);
         }
         int getIndex(uint32_t address) {
-            return (address >> (int)log2(CACHE_LINE_SIZE)) & (size/CACHE_LINE_SIZE-1);
+            int num_sets = size / (CACHE_LINE_SIZE * assoc);
+            return (address >> (int)log2(CACHE_LINE_SIZE)) & (num_sets - 1);
         }
         int getTag(uint32_t address) {
-            return address >> (int)log2(size);
+            int num_sets = size / (CACHE_LINE_SIZE * assoc);
+            return address >> ((int)log2(CACHE_LINE_SIZE) + (int)log2(num_sets));
         }
 
         // Check if hit in the cache

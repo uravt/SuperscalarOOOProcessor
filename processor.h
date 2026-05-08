@@ -126,16 +126,15 @@ private:
         }
     };
 
-    // two structs for reg in and reg out
-    // set reg out = reg in when stepping. dont set when stalling
-    // stage funcs modify reg in, processor step sets reg out
-    IF_ID if_id_in, if_id_out;
-    ID_EX id_ex_in, id_ex_out;
-    EX_MEM ex_mem_in, ex_mem_out;
-    MEM_WB mem_wb_in, mem_wb_out;
+    IF_ID if_id{};
+    ID_EX id_ex{};
+    EX_MEM ex_mem{};
+    MEM_WB mem_wb{};
+    MEM_WB mem_wb_prev{}; // snapshot of mem_wb at start of cycle, for EX-stage MEM/WB forwarding
     bool flush_pipeline = false;
     bool cache_hit = false;
-    bool stall = false;
+    bool load_use_stall = false;
+    bool memory_stall = false;
     uint32_t pc_history[6] = {0};
 
     // pipelined processor
@@ -144,6 +143,8 @@ private:
     void execute_stage();
     void memory_stage();
     void writeback_stage();
+
+    void flush();
     // add private functions
     void single_cycle_processor_advance();
     void pipelined_processor_advance();
@@ -156,15 +157,6 @@ public:
     {
         regfile.pc = 0;
         memory = mem;
-
-        memset(&if_id_in, 0, sizeof(if_id_in));
-        memset(&if_id_out, 0, sizeof(if_id_out));
-        memset(&id_ex_in, 0, sizeof(id_ex_in));
-        memset(&id_ex_out, 0, sizeof(id_ex_out));
-        memset(&ex_mem_in, 0, sizeof(ex_mem_in));
-        memset(&ex_mem_out, 0, sizeof(ex_mem_out));
-        memset(&mem_wb_in, 0, sizeof(mem_wb_in));
-        memset(&mem_wb_out, 0, sizeof(mem_wb_out));
     }
 
     // Get PC

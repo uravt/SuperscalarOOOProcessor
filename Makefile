@@ -8,7 +8,7 @@ SRCS := main.cpp memory.cpp memory_ooo.cpp processor.cpp processorOOO.cpp instru
 OBJS := $(SRCS:.cpp=.o)
 
 ZIP_NAME = submission.zip
-ZIP_FILES = main.cpp memory.cpp memory_ooo.cpp processor.cpp processorOOO.cpp instruction_queue.cpp reorder_buffer.cpp load_store_queue.cpp regfile.h ALU.h control.h processor.h processorOOO.h memory.h memory_ooo.h reorder_buffer.h prf.h instruction_queue.h functional_units.h load_store_queue.h config.h Makefile
+ZIP_FILES = main.cpp memory.cpp memory_ooo.cpp processor.cpp processorOOO.cpp instruction_queue.cpp reorder_buffer.cpp load_store_queue.cpp regfile.h ALU.h control.h processor.h processorOOO.h memory.h memory_ooo.h reorder_buffer.h prf.h instruction_queue.h functional_units.h load_store_queue.h config.h Makefile branch_predictor.h
 
 .PHONY: all clean zip debug
 
