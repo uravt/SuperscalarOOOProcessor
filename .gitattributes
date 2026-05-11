@@ -1,0 +1,4 @@
+test_data_pipeline/** linguist-vendored
+benchmarking/results/** linguist-generated
+benchmarking/graphs/** linguist-generated
+*.s linguist-vendored
