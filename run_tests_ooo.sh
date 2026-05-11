@@ -15,9 +15,9 @@ if [[ ! -d "$TEST_DIR" ]]; then
 fi
 
 # Print table header
-echo "=========================================================================="
-printf "%-25s | %-12s | %-12s | %-10s\n" "Test Name" "Single (-O0)" "OOO (-O2)" "Reg Match?"
-echo "--------------------------------------------------------------------------"
+echo "========================================================================================="
+printf "%-25s | %-12s | %-12s | %-10s | %-8s\n" "Test Name" "Single (-O0)" "OOO (-O2)" "Reg Match?" "BP Acc"
+echo "-----------------------------------------------------------------------------------------"
 
 # Loop through all subdirectories inside test_data_pipeline
 for dir in "$TEST_DIR"/*/; do
@@ -37,7 +37,7 @@ for dir in "$TEST_DIR"/*/; do
     mipsel-linux-gnu-gcc -mips32 "$asm_file" -nostartfiles -Ttext=0 -o "$exec_file" 2>/dev/null
 
     if [[ $? -ne 0 ]]; then
-        printf "%-25s | %-12s | %-12s | %-10s\n" "$test_name" "COMPILE ERR" "COMPILE ERR" "N/A"
+        printf "%-25s | %-12s | %-12s | %-10s | %-8s\n" "$test_name" "COMPILE ERR" "COMPILE ERR" "N/A" "N/A"
         continue
     fi
 
@@ -50,6 +50,8 @@ for dir in "$TEST_DIR"/*/; do
     ooo_out=$($PROCESSOR --bmk="$exec_file" -O2 2>/dev/null)
     ooo_cycles=$(echo "$ooo_out" | grep -i "^CYCLE" | tail -n 1 | awk '{print $2}')
     ooo_regs=$(echo "$ooo_out" | grep "^R\[" | tail -n 32)
+    bp_acc=$(echo "$ooo_out" | grep "^BP_ACCURACY" | tail -n 1 | awk '{print $2}')
+    [[ -z "$bp_acc" ]] && bp_acc="N/A"
 
     # Handle crashes/empty outputs
     [[ -z "$single_cycles" ]] && single_cycles="ERR/CRASH"
@@ -63,10 +65,10 @@ for dir in "$TEST_DIR"/*/; do
     fi
 
     # 5. Print the formatted result row
-    printf "%-25s | %-12s | %-12s | %-10s\n" "$test_name" "$single_cycles" "$ooo_cycles" "$match_status"
+    printf "%-25s | %-12s | %-12s | %-10s | %-8s\n" "$test_name" "$single_cycles" "$ooo_cycles" "$match_status" "$bp_acc"
 
     # 6. Cleanup: delete the compiled executable so folders stay clean
     rm -f "$exec_file"
 done
 
-echo "=========================================================================="
+echo "========================================================================================="

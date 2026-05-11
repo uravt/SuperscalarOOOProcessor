@@ -1,0 +1,5 @@
+test,width,num_alus,cycles,instructions,cpi,ipc,speedup_vs_w1,regs_match_single_cycle,status
+LinkedList,1,1,8728,5270,1.656167,0.603804,1.0,True,OK
+LinkedList,2,2,7451,5270,1.413852,0.707288,1.171386,True,OK
+LinkedList,4,4,6658,5270,1.263378,0.791529,1.310904,True,OK
+LinkedList,8,8,6571,5270,1.246869,0.802009,1.328261,True,OK

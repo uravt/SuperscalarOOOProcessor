@@ -180,6 +180,20 @@ public:
         }
     }
 
+    // Print branch-prediction stats (OOO only; otherwise no-op).
+    void printBranchStats()
+    {
+        if (opt_level == 2)
+        {
+            uint64_t total = ooo.getBranchTotal();
+            uint64_t mis = ooo.getBranchMispredicts();
+            double acc = total > 0 ? 100.0 * (double)(total - mis) / (double)total : 0.0;
+            std::cout << "BP_TOTAL " << total << "\n";
+            std::cout << "BP_MISPREDICTS " << mis << "\n";
+            std::cout << "BP_ACCURACY " << acc << "%\n";
+        }
+    }
+
     // Initializes the processor appropriately based on the optimization level
     void initialize(int opt_level);
 

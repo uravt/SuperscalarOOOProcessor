@@ -1,0 +1,5 @@
+test,width,num_alus,cycles,instructions,cpi,ipc,speedup_vs_w1,regs_match_single_cycle,status
+BubbleSort,1,1,4920,2695,1.825603,0.547764,1.0,True,OK
+BubbleSort,2,2,4149,2695,1.539518,0.649554,1.185828,True,OK
+BubbleSort,4,4,3794,2695,1.407792,0.710332,1.296784,True,OK
+BubbleSort,8,8,3702,2695,1.373655,0.727985,1.329011,True,OK

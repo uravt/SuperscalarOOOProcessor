@@ -395,7 +395,11 @@ void ProcessorOOO::execute_stage() // OOO
                 bool target_match = bp.target_match(instr.pc, target);
                 bp.update(branch_taken, instr.pc, target);
 
-                if(branch_taken != instr.branch_taken || !target_match) { //misprediction, need to squash
+                bool mispredict = (branch_taken != instr.branch_taken) || !target_match;
+                bp.total_branches++;
+                if (mispredict) bp.mispredictions++;
+
+                if(mispredict) { //misprediction, need to squash
                     // Track oldest mispredicted branch across all FUs this cycle
                     if (!squash_pending || instr.seq < squash_seq)
                     {

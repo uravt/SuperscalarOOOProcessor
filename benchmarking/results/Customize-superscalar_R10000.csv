@@ -1,0 +1,5 @@
+test,width,num_alus,cycles,instructions,cpi,ipc,speedup_vs_w1,regs_match_single_cycle,status
+Customize-superscalar_R10000,1,1,236,206,1.145631,0.872881,1.0,True,OK
+Customize-superscalar_R10000,2,2,133,206,0.645631,1.548872,1.774436,True,OK
+Customize-superscalar_R10000,4,4,84,206,0.407767,2.452381,2.809524,True,OK
+Customize-superscalar_R10000,8,8,58,206,0.281553,3.551724,4.068966,True,OK

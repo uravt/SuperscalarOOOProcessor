@@ -1,0 +1,5 @@
+test,width,num_alus,cycles,instructions,cpi,ipc,speedup_vs_w1,regs_match_single_cycle,status
+Customize-memory_random,1,1,46901,46808,1.001987,0.998017,1.0,True,OK
+Customize-memory_random,2,2,23509,46808,0.502243,1.991067,1.995023,True,OK
+Customize-memory_random,4,4,11877,46808,0.253739,3.941063,3.948893,True,OK
+Customize-memory_random,8,8,7256,46808,0.155016,6.450937,6.463754,True,OK

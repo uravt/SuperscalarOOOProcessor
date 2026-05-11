@@ -1,7 +1,7 @@
-BubbleSort
-MatrixMult
+Customize-memory_bound_L1
+Customize-memory_bound_L2
+Customize-memory_bound_memory
+Customize-memory_random
 LinkedList
-ILP-issue_width
-ILP-load_parallel
-ILP-loop_body
-ILP-stlf_parallel
+PointerChase
+

@@ -22,9 +22,12 @@ class BranchPredictor
         std::array<BTBEntry, (1 << config::BTB_BITS)> btb;
 
     public:
+        uint64_t total_branches = 0;
+        uint64_t mispredictions = 0;
+
         BranchPredictor()
         {
-            btb.fill({false, 0, 0, 0}); 
+            btb.fill({false, 0, 0, 0});
         }
 
         bool is_branch(int pc)

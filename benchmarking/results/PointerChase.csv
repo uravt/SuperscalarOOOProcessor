@@ -1,0 +1,5 @@
+test,width,num_alus,cycles,instructions,cpi,ipc,speedup_vs_w1,regs_match_single_cycle,status
+PointerChase,1,1,10900,10167,1.072096,0.932752,1.0,True,OK
+PointerChase,2,2,7628,10167,0.75027,1.332853,1.428946,True,OK
+PointerChase,4,4,7588,10167,0.746336,1.339879,1.436479,True,OK
+PointerChase,8,8,7585,10167,0.746041,1.340409,1.437047,True,OK

@@ -1,0 +1,5 @@
+test,width,num_alus,cycles,instructions,cpi,ipc,speedup_vs_w1,regs_match_single_cycle,status
+Customize-memory_bound_L1,1,1,3921,3303,1.187103,0.842387,1.0,True,OK
+Customize-memory_bound_L1,2,2,2322,3303,0.702997,1.422481,1.68863,True,OK
+Customize-memory_bound_L1,4,4,2017,3303,0.610657,1.637581,1.943976,True,OK
+Customize-memory_bound_L1,8,8,1917,3303,0.580381,1.723005,2.045383,True,OK

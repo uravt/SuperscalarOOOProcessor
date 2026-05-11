@@ -1,0 +1,55 @@
+{
+  "test": "Customize-memory_bound_L2",
+  "single_cycle_cycles": 1055,
+  "instructions": 1055,
+  "rows": [
+    {
+      "test": "Customize-memory_bound_L2",
+      "width": 1,
+      "num_alus": 1,
+      "cycles": 1127,
+      "instructions": 1055,
+      "cpi": 1.068246,
+      "ipc": 0.936114,
+      "speedup_vs_w1": 1.0,
+      "regs_match_single_cycle": true,
+      "status": "OK"
+    },
+    {
+      "test": "Customize-memory_bound_L2",
+      "width": 2,
+      "num_alus": 2,
+      "cycles": 622,
+      "instructions": 1055,
+      "cpi": 0.589573,
+      "ipc": 1.696141,
+      "speedup_vs_w1": 1.811897,
+      "regs_match_single_cycle": true,
+      "status": "OK"
+    },
+    {
+      "test": "Customize-memory_bound_L2",
+      "width": 4,
+      "num_alus": 4,
+      "cycles": 483,
+      "instructions": 1055,
+      "cpi": 0.45782,
+      "ipc": 2.184265,
+      "speedup_vs_w1": 2.333333,
+      "regs_match_single_cycle": true,
+      "status": "OK"
+    },
+    {
+      "test": "Customize-memory_bound_L2",
+      "width": 8,
+      "num_alus": 8,
+      "cycles": 472,
+      "instructions": 1055,
+      "cpi": 0.447393,
+      "ipc": 2.235169,
+      "speedup_vs_w1": 2.387712,
+      "regs_match_single_cycle": true,
+      "status": "OK"
+    }
+  ]
+}

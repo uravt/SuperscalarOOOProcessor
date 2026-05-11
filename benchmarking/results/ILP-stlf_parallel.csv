@@ -1,0 +1,5 @@
+test,width,num_alus,cycles,instructions,cpi,ipc,speedup_vs_w1,regs_match_single_cycle,status
+ILP-stlf_parallel,1,1,926,906,1.022075,0.978402,1.0,True,OK
+ILP-stlf_parallel,2,2,475,906,0.524283,1.907368,1.949474,True,OK
+ILP-stlf_parallel,4,4,265,906,0.292494,3.418868,3.49434,True,OK
+ILP-stlf_parallel,8,8,156,906,0.172185,5.807692,5.935897,True,OK

@@ -1,0 +1,55 @@
+{
+  "test": "ILP-issue_width",
+  "single_cycle_cycles": 682,
+  "instructions": 682,
+  "rows": [
+    {
+      "test": "ILP-issue_width",
+      "width": 1,
+      "num_alus": 1,
+      "cycles": 704,
+      "instructions": 682,
+      "cpi": 1.032258,
+      "ipc": 0.96875,
+      "speedup_vs_w1": 1.0,
+      "regs_match_single_cycle": true,
+      "status": "OK"
+    },
+    {
+      "test": "ILP-issue_width",
+      "width": 2,
+      "num_alus": 2,
+      "cycles": 365,
+      "instructions": 682,
+      "cpi": 0.535191,
+      "ipc": 1.868493,
+      "speedup_vs_w1": 1.928767,
+      "regs_match_single_cycle": true,
+      "status": "OK"
+    },
+    {
+      "test": "ILP-issue_width",
+      "width": 4,
+      "num_alus": 4,
+      "cycles": 202,
+      "instructions": 682,
+      "cpi": 0.296188,
+      "ipc": 3.376238,
+      "speedup_vs_w1": 3.485149,
+      "regs_match_single_cycle": true,
+      "status": "OK"
+    },
+    {
+      "test": "ILP-issue_width",
+      "width": 8,
+      "num_alus": 8,
+      "cycles": 175,
+      "instructions": 682,
+      "cpi": 0.256598,
+      "ipc": 3.897143,
+      "speedup_vs_w1": 4.022857,
+      "regs_match_single_cycle": true,
+      "status": "OK"
+    }
+  ]
+}

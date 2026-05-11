@@ -1,0 +1,14 @@
+test,total_branches,mispredicts,accuracy_pct,status
+Customize-branch_prediction_1,15,7,53.3333,OK
+Customize-branch_prediction_2,16,7,56.25,OK
+Customize-branch_prediction_3,62,11,82.2581,OK
+MIPSPipeline-branch,2,2,0.0,OK
+MIPSPipeline-hidden,44,14,68.1818,OK
+SpeculativeMIPS-3bit_011,96,35,63.5417,OK
+SpeculativeMIPS-3bit_100,74,15,79.7297,OK
+SpeculativeMIPS-3bit_double,106,15,85.8491,OK
+SpeculativeMIPS-hidden,5601,3416,39.0109,OK
+SpeculativeMIPS-one_backward_beq,501,2,99.6008,OK
+SpeculativeMIPS-one_backward_bne,500,2,99.6,OK
+SpeculativeMIPS-one_forward_beq,1003,3,99.7009,OK
+SpeculativeMIPS-one_forward_bne,1007,3,99.7021,OK

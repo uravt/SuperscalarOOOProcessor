@@ -1,0 +1,55 @@
+{
+  "test": "Customize-memory_random",
+  "single_cycle_cycles": 46808,
+  "instructions": 46808,
+  "rows": [
+    {
+      "test": "Customize-memory_random",
+      "width": 1,
+      "num_alus": 1,
+      "cycles": 46901,
+      "instructions": 46808,
+      "cpi": 1.001987,
+      "ipc": 0.998017,
+      "speedup_vs_w1": 1.0,
+      "regs_match_single_cycle": true,
+      "status": "OK"
+    },
+    {
+      "test": "Customize-memory_random",
+      "width": 2,
+      "num_alus": 2,
+      "cycles": 23509,
+      "instructions": 46808,
+      "cpi": 0.502243,
+      "ipc": 1.991067,
+      "speedup_vs_w1": 1.995023,
+      "regs_match_single_cycle": true,
+      "status": "OK"
+    },
+    {
+      "test": "Customize-memory_random",
+      "width": 4,
+      "num_alus": 4,
+      "cycles": 11877,
+      "instructions": 46808,
+      "cpi": 0.253739,
+      "ipc": 3.941063,
+      "speedup_vs_w1": 3.948893,
+      "regs_match_single_cycle": true,
+      "status": "OK"
+    },
+    {
+      "test": "Customize-memory_random",
+      "width": 8,
+      "num_alus": 8,
+      "cycles": 7256,
+      "instructions": 46808,
+      "cpi": 0.155016,
+      "ipc": 6.450937,
+      "speedup_vs_w1": 6.463754,
+      "regs_match_single_cycle": true,
+      "status": "OK"
+    }
+  ]
+}

@@ -17,10 +17,10 @@ fi
 # Note: -O0 is single-cycle (1 instruction per cycle), so we use its cycle
 # count as the dynamic instruction count for IPC/CPI on the pipelined run.
 
-echo "================================================================================================"
-printf "%-25s | %-12s | %-15s | %-10s | %-6s | %-6s\n" \
-    "Test Name" "Single (-O0)" "Pipelined (-O1)" "Reg Match?" "IPC" "CPI"
-echo "------------------------------------------------------------------------------------------------"
+echo "============================================================================================================="
+printf "%-25s | %-12s | %-15s | %-10s | %-6s | %-6s | %-8s\n" \
+    "Test Name" "Single (-O0)" "Pipelined (-O1)" "Reg Match?" "IPC" "CPI" "BP Acc"
+echo "-------------------------------------------------------------------------------------------------------------"
 
 for dir in "$TEST_DIR"/*/; do
     test_name=$(basename "$dir")
@@ -35,8 +35,8 @@ for dir in "$TEST_DIR"/*/; do
     mipsel-linux-gnu-gcc -mips32 "$asm_file" -nostartfiles -Ttext=0 -o "$exec_file" 2>/dev/null
 
     if [[ $? -ne 0 ]]; then
-        printf "%-25s | %-12s | %-15s | %-10s | %-6s | %-6s\n" \
-            "$test_name" "COMPILE ERR" "COMPILE ERR" "N/A" "N/A" "N/A"
+        printf "%-25s | %-12s | %-15s | %-10s | %-6s | %-6s | %-8s\n" \
+            "$test_name" "COMPILE ERR" "COMPILE ERR" "N/A" "N/A" "N/A" "N/A"
         continue
     fi
 
@@ -47,6 +47,11 @@ for dir in "$TEST_DIR"/*/; do
     pipe_out=$($PROCESSOR --bmk="$exec_file" -O1 2>/dev/null)
     pipe_cycles=$(echo "$pipe_out" | grep -i "^CYCLE" | tail -n 1 | awk '{print $2}')
     pipe_regs=$(echo "$pipe_out" | grep "^R\[" | tail -n 32)
+
+    # Branch-prediction accuracy (only emitted by -O2; run separately)
+    ooo_out=$($PROCESSOR --bmk="$exec_file" -O2 2>/dev/null)
+    bp_acc=$(echo "$ooo_out" | grep "^BP_ACCURACY" | tail -n 1 | awk '{print $2}')
+    [[ -z "$bp_acc" ]] && bp_acc="N/A"
 
     [[ -z "$single_cycles" ]] && single_cycles="ERR/CRASH"
     [[ -z "$pipe_cycles" ]] && pipe_cycles="ERR/CRASH"
@@ -66,10 +71,10 @@ for dir in "$TEST_DIR"/*/; do
         cpi="N/A"
     fi
 
-    printf "%-25s | %-12s | %-15s | %-10s | %-6s | %-6s\n" \
-        "$test_name" "$single_cycles" "$pipe_cycles" "$match_status" "$ipc" "$cpi"
+    printf "%-25s | %-12s | %-15s | %-10s | %-6s | %-6s | %-8s\n" \
+        "$test_name" "$single_cycles" "$pipe_cycles" "$match_status" "$ipc" "$cpi" "$bp_acc"
 
     rm -f "$exec_file"
 done
 
-echo "================================================================================================"
+echo "============================================================================================================="

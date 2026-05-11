@@ -1,0 +1,5 @@
+test,width,num_alus,cycles,instructions,cpi,ipc,speedup_vs_w1,regs_match_single_cycle,status
+ILP-issue_width,1,1,704,682,1.032258,0.96875,1.0,True,OK
+ILP-issue_width,2,2,365,682,0.535191,1.868493,1.928767,True,OK
+ILP-issue_width,4,4,202,682,0.296188,3.376238,3.485149,True,OK
+ILP-issue_width,8,8,175,682,0.256598,3.897143,4.022857,True,OK

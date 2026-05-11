@@ -1,0 +1,55 @@
+{
+  "test": "MatrixMult",
+  "single_cycle_cycles": 720,
+  "instructions": 720,
+  "rows": [
+    {
+      "test": "MatrixMult",
+      "width": 1,
+      "num_alus": 1,
+      "cycles": 1229,
+      "instructions": 720,
+      "cpi": 1.706944,
+      "ipc": 0.585842,
+      "speedup_vs_w1": 1.0,
+      "regs_match_single_cycle": true,
+      "status": "OK"
+    },
+    {
+      "test": "MatrixMult",
+      "width": 2,
+      "num_alus": 2,
+      "cycles": 957,
+      "instructions": 720,
+      "cpi": 1.329167,
+      "ipc": 0.752351,
+      "speedup_vs_w1": 1.284222,
+      "regs_match_single_cycle": true,
+      "status": "OK"
+    },
+    {
+      "test": "MatrixMult",
+      "width": 4,
+      "num_alus": 4,
+      "cycles": 821,
+      "instructions": 720,
+      "cpi": 1.140278,
+      "ipc": 0.876979,
+      "speedup_vs_w1": 1.496955,
+      "regs_match_single_cycle": true,
+      "status": "OK"
+    },
+    {
+      "test": "MatrixMult",
+      "width": 8,
+      "num_alus": 8,
+      "cycles": 752,
+      "instructions": 720,
+      "cpi": 1.044444,
+      "ipc": 0.957447,
+      "speedup_vs_w1": 1.634309,
+      "regs_match_single_cycle": true,
+      "status": "OK"
+    }
+  ]
+}

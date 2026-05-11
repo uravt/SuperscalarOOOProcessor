@@ -1,0 +1,5 @@
+test,width,num_alus,cycles,instructions,cpi,ipc,speedup_vs_w1,regs_match_single_cycle,status
+MatrixMult,1,1,1229,720,1.706944,0.585842,1.0,True,OK
+MatrixMult,2,2,957,720,1.329167,0.752351,1.284222,True,OK
+MatrixMult,4,4,821,720,1.140278,0.876979,1.496955,True,OK
+MatrixMult,8,8,752,720,1.044444,0.957447,1.634309,True,OK

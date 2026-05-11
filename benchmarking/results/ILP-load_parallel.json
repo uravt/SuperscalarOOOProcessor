@@ -1,0 +1,55 @@
+{
+  "test": "ILP-load_parallel",
+  "single_cycle_cycles": 537,
+  "instructions": 537,
+  "rows": [
+    {
+      "test": "ILP-load_parallel",
+      "width": 1,
+      "num_alus": 1,
+      "cycles": 557,
+      "instructions": 537,
+      "cpi": 1.037244,
+      "ipc": 0.964093,
+      "speedup_vs_w1": 1.0,
+      "regs_match_single_cycle": true,
+      "status": "OK"
+    },
+    {
+      "test": "ILP-load_parallel",
+      "width": 2,
+      "num_alus": 2,
+      "cycles": 303,
+      "instructions": 537,
+      "cpi": 0.564246,
+      "ipc": 1.772277,
+      "speedup_vs_w1": 1.838284,
+      "regs_match_single_cycle": true,
+      "status": "OK"
+    },
+    {
+      "test": "ILP-load_parallel",
+      "width": 4,
+      "num_alus": 4,
+      "cycles": 177,
+      "instructions": 537,
+      "cpi": 0.329609,
+      "ipc": 3.033898,
+      "speedup_vs_w1": 3.146893,
+      "regs_match_single_cycle": true,
+      "status": "OK"
+    },
+    {
+      "test": "ILP-load_parallel",
+      "width": 8,
+      "num_alus": 8,
+      "cycles": 114,
+      "instructions": 537,
+      "cpi": 0.212291,
+      "ipc": 4.710526,
+      "speedup_vs_w1": 4.885965,
+      "regs_match_single_cycle": true,
+      "status": "OK"
+    }
+  ]
+}

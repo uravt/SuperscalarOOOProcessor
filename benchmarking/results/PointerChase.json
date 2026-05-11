@@ -1,0 +1,55 @@
+{
+  "test": "PointerChase",
+  "single_cycle_cycles": 10167,
+  "instructions": 10167,
+  "rows": [
+    {
+      "test": "PointerChase",
+      "width": 1,
+      "num_alus": 1,
+      "cycles": 10900,
+      "instructions": 10167,
+      "cpi": 1.072096,
+      "ipc": 0.932752,
+      "speedup_vs_w1": 1.0,
+      "regs_match_single_cycle": true,
+      "status": "OK"
+    },
+    {
+      "test": "PointerChase",
+      "width": 2,
+      "num_alus": 2,
+      "cycles": 7628,
+      "instructions": 10167,
+      "cpi": 0.75027,
+      "ipc": 1.332853,
+      "speedup_vs_w1": 1.428946,
+      "regs_match_single_cycle": true,
+      "status": "OK"
+    },
+    {
+      "test": "PointerChase",
+      "width": 4,
+      "num_alus": 4,
+      "cycles": 7588,
+      "instructions": 10167,
+      "cpi": 0.746336,
+      "ipc": 1.339879,
+      "speedup_vs_w1": 1.436479,
+      "regs_match_single_cycle": true,
+      "status": "OK"
+    },
+    {
+      "test": "PointerChase",
+      "width": 8,
+      "num_alus": 8,
+      "cycles": 7585,
+      "instructions": 10167,
+      "cpi": 0.746041,
+      "ipc": 1.340409,
+      "speedup_vs_w1": 1.437047,
+      "regs_match_single_cycle": true,
+      "status": "OK"
+    }
+  ]
+}

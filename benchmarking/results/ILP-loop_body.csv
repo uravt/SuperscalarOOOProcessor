@@ -1,0 +1,5 @@
+test,width,num_alus,cycles,instructions,cpi,ipc,speedup_vs_w1,regs_match_single_cycle,status
+ILP-loop_body,1,1,1820,1802,1.009989,0.99011,1.0,True,OK
+ILP-loop_body,2,2,920,1802,0.510544,1.958696,1.978261,True,OK
+ILP-loop_body,4,4,520,1802,0.288568,3.465385,3.5,True,OK
+ILP-loop_body,8,8,320,1802,0.17758,5.63125,5.6875,True,OK

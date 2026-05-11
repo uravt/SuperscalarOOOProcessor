@@ -157,6 +157,8 @@ public:
     {
         prf.print();
     }
+    uint64_t getBranchTotal() const { return bp.total_branches; }
+    uint64_t getBranchMispredicts() const { return bp.mispredictions; }
     void initialize(int opt_level);
     void out_of_order_advance();
 };

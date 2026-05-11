@@ -1,0 +1,55 @@
+{
+  "test": "ILP-stlf_parallel",
+  "single_cycle_cycles": 906,
+  "instructions": 906,
+  "rows": [
+    {
+      "test": "ILP-stlf_parallel",
+      "width": 1,
+      "num_alus": 1,
+      "cycles": 926,
+      "instructions": 906,
+      "cpi": 1.022075,
+      "ipc": 0.978402,
+      "speedup_vs_w1": 1.0,
+      "regs_match_single_cycle": true,
+      "status": "OK"
+    },
+    {
+      "test": "ILP-stlf_parallel",
+      "width": 2,
+      "num_alus": 2,
+      "cycles": 475,
+      "instructions": 906,
+      "cpi": 0.524283,
+      "ipc": 1.907368,
+      "speedup_vs_w1": 1.949474,
+      "regs_match_single_cycle": true,
+      "status": "OK"
+    },
+    {
+      "test": "ILP-stlf_parallel",
+      "width": 4,
+      "num_alus": 4,
+      "cycles": 265,
+      "instructions": 906,
+      "cpi": 0.292494,
+      "ipc": 3.418868,
+      "speedup_vs_w1": 3.49434,
+      "regs_match_single_cycle": true,
+      "status": "OK"
+    },
+    {
+      "test": "ILP-stlf_parallel",
+      "width": 8,
+      "num_alus": 8,
+      "cycles": 156,
+      "instructions": 906,
+      "cpi": 0.172185,
+      "ipc": 5.807692,
+      "speedup_vs_w1": 5.935897,
+      "regs_match_single_cycle": true,
+      "status": "OK"
+    }
+  ]
+}

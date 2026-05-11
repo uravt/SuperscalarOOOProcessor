@@ -1,0 +1,5 @@
+test,width,num_alus,cycles,instructions,cpi,ipc,speedup_vs_w1,regs_match_single_cycle,status
+ILP-load_parallel,1,1,557,537,1.037244,0.964093,1.0,True,OK
+ILP-load_parallel,2,2,303,537,0.564246,1.772277,1.838284,True,OK
+ILP-load_parallel,4,4,177,537,0.329609,3.033898,3.146893,True,OK
+ILP-load_parallel,8,8,114,537,0.212291,4.710526,4.885965,True,OK
