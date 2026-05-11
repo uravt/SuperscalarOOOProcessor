@@ -1,12 +1,9 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/jNleW1eE)
-
 # Superscalar Out-of-Order MIPS Simulator
 
 A cycle-accurate MIPS32 simulator written in C++ that models three execution
 modes selectable at runtime:
 
-- `-O0` — single-cycle reference (one instruction per cycle, used as the
-  golden register-state oracle).
+- `-O0` — single-cycle reference (one instruction per cycle, used to verify correctness for other optimization levels).
 - `-O1` — 5-stage in-order pipeline with hazard handling.
 - `-O2` — superscalar, out-of-order core with register renaming, a reorder
   buffer, an issue queue, a load/store queue, a non-blocking cache with
